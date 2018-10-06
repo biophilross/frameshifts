@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+<meta name="date" content="2018-01-10" />
+
+<title>Parse Blast Results</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-5.0.13/css/fa-svg-with-js.css" rel="stylesheet" />
+<script src="site_libs/font-awesome-5.0.13/js/fontawesome-all.min.js"></script>
+<script src="site_libs/font-awesome-5.0.13/js/fa-v4-shims.min.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+  padding-left: 25px;
+  text-indent: 0;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Frameshifts</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="about.html">About</a>
+</li>
+<li>
+  <a href="license.html">License</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="https://github.com/jdblischak/workflowr">
+    <span class="fa fa-github"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+<!-- Add a small amount of space between sections. -->
+<style type="text/css">
+div.section {
+  padding-top: 12px;
+}
+</style>
+
+<!-- Add a small amount of space between sections. -->
+<style type="text/css">
+div.section {
+  padding-top: 12px;
+}
+</style>
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Parse Blast Results</h1>
+<h4 class="date"><em>2018-01-10</em></h4>
+
+</div>
+
+
+<p><strong>Last updated:</strong> 2018-10-06</p>
+<strong>workflowr checks:</strong> <small>(Click a bullet for more information)</small>
+<ul>
+<li>
+<details>
+<p><summary> <strong style="color:red;">✖</strong> <strong>R Markdown file:</strong> uncommitted changes </summary> The R Markdown is untracked by Git. To know which version of the R Markdown file created these results, you’ll want to first commit it to the Git repo. If you’re still working on the analysis, you can ignore this warning. When you’re finished, you can run <code>wflow_publish</code> to commit the R Markdown file and build the HTML.</p>
+</details>
+</li>
+<li>
+<details>
+<p><summary> <strong style="color:blue;">✔</strong> <strong>Environment:</strong> empty </summary></p>
+<p>Great job! The global environment was empty. Objects defined in the global environment can affect the analysis in your R Markdown file in unknown ways. For reproduciblity it’s best to always run the code in an empty environment.</p>
+</details>
+</li>
+<li>
+<details>
+<p><summary> <strong style="color:blue;">✔</strong> <strong>Seed:</strong> <code>set.seed(12345)</code> </summary></p>
+<p>The command <code>set.seed(12345)</code> was run prior to running the code in the R Markdown file. Setting a seed ensures that any results that rely on randomness, e.g. subsampling or permutations, are reproducible.</p>
+</details>
+</li>
+<li>
+<details>
+<p><summary> <strong style="color:blue;">✔</strong> <strong>Session information:</strong> recorded </summary></p>
+<p>Great job! Recording the operating system, R version, and package versions is critical for reproducibility.</p>
+</details>
+</li>
+<li>
+<details>
+<p><summary> <strong style="color:blue;">✔</strong> <strong>Repository version:</strong> a3906b7 </summary></p>
+Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility. The version displayed above was the version of the Git repository at the time these results were generated. <br><br> Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
+<pre><code>
+Ignored files:
+    Ignored:    .RData
+    Ignored:    .Rhistory
+    Ignored:    .Rproj.user/
+
+Untracked files:
+    Untracked:  _workflowr.yml
+    Untracked:  analysis.R
+    Untracked:  analysis/aging.Rmd
+    Untracked:  analysis/parse_blast.Rmd
+    Untracked:  code/blast_script.pbs
+    Untracked:  code/parse_blast.R
+    Untracked:  data/CCDS_nucleotide.current.fna
+    Untracked:  data/GTEx_Analysis_2016-01-15_v7_RNASeQCv1.1.8_gene_median_tpm.gct
+    Untracked:  data/Homo_sapiens.GRCh38.91.chr.gff3
+    Untracked:  data/firstset.txt
+    Untracked:  data/martquery_0305163211_800.txt
+    Untracked:  data/referencetable.txt
+    Untracked:  data/refseq.fna
+    Untracked:  data/secondset.txt
+    Untracked:  data/secondset_processed.txt
+    Untracked:  data/thirdset.txt
+    Untracked:  data/thirdset_processed.txt
+    Untracked:  output/firstset/
+    Untracked:  output/secondset/
+    Untracked:  output/thirdset/
+
+Unstaged changes:
+    Modified:   analysis/_site.yml
+    Modified:   analysis/about.Rmd
+    Deleted:    analysis/chunks.R
+    Modified:   analysis/index.Rmd
+    Modified:   analysis/license.Rmd
+    Modified:   code/script.R
+    Modified:   code/script.py
+    Modified:   code/script.sh
+
+</code></pre>
+Note that any generated files, e.g. HTML, png, CSS, etc., are not included in this status report because it is ok for generated content to have uncommitted changes.
+</details>
+</li>
+</ul>
+<hr />
+<pre class="r"><code># load libraries
+library(readr)
+library(dplyr)</code></pre>
+<pre><code>
+Attaching package: &#39;dplyr&#39;</code></pre>
+<pre><code>The following objects are masked from &#39;package:stats&#39;:
+
+    filter, lag</code></pre>
+<pre><code>The following objects are masked from &#39;package:base&#39;:
+
+    intersect, setdiff, setequal, union</code></pre>
+<p>First we need to split up the query and subject IDs so we’re matching just on Ensmbl gene IDs.</p>
+<pre class="bash"><code>cat thirdset.txt | awk &#39;{split($1,x,&quot;|&quot;);split($2,y,&quot;|&quot;);  print x[1],y[1],$3,$4,$5,$6,$7,$8,$9,$10}&#39; &gt; thirdset_processed.txt</code></pre>
+<p>Now we parse the BLAST results, filter them, and write those to an output file.</p>
+<pre class="r"><code># read in file
+data &lt;- readr::read_tsv(&quot;../data/thirdset_processed.txt&quot;,
+                        comment = &quot;#&quot;, 
+                        col_names=c(&quot;query&quot;,&quot;subject&quot;,&quot;evalue&quot;,&quot;alnlength&quot;,
+                                    &quot;identity&quot;,&quot;identical&quot;,&quot;mismatches&quot;,
+                                    &quot;qframe&quot;,&quot;sframe&quot;,&quot;bframe&quot;)) %&gt;%
+  dplyr::filter(!(query == subject)) %&gt;% # query does not equal subject
+  dplyr::filter(!(qframe == sframe)) %&gt;% # frames are not equal
+  dplyr::filter(identity &gt;= 80.0) %&gt;% # minimum percentage identity
+  dplyr::filter(evalue &lt;= 1e-10) # minimum E-value</code></pre>
+<pre><code>Parsed with column specification:
+cols(
+  query = col_character(),
+  subject = col_character(),
+  evalue = col_double(),
+  alnlength = col_integer(),
+  identity = col_double(),
+  identical = col_integer(),
+  mismatches = col_integer(),
+  qframe = col_integer(),
+  sframe = col_integer(),
+  bframe = col_character()
+)</code></pre>
+<pre class="r"><code># get maximum alignment length
+aln_lookup_table &lt;- data %&gt;%
+  dplyr::group_by(query, subject) %&gt;% 
+  dplyr::summarise(max_aln_length = max(alnlength))
+
+# filter by maximum alignment length
+data &lt;- dplyr::inner_join(data, aln_lookup_table, 
+                          by = c(&quot;query&quot;,&quot;subject&quot;,&quot;alnlength&quot;=&quot;max_aln_length&quot;))
+
+# get maximum percent identity
+id_lookup_table &lt;- data %&gt;%
+  dplyr::group_by(query, subject) %&gt;% 
+  dplyr::summarise(max_identity = max(identity))
+
+# filter by maximum percent identity
+data &lt;- dplyr::inner_join(data, id_lookup_table, 
+                          by = c(&quot;query&quot;,&quot;subject&quot;,&quot;identity&quot;=&quot;max_identity&quot;))
+  
+# write standard file
+standard &lt;- data %&gt;%
+  dplyr::filter(alnlength &gt;= 50) # minimum sequence alignment length
+  
+readr::write_tsv(x = standard, path=&quot;../output/thirdset/standardset.tsv&quot;)
+
+# write conservative file
+conservative &lt;- data %&gt;%
+  dplyr::filter(alnlength &gt;= 100) # minimum sequence alignment length
+  
+readr::write_tsv(conservative, path=&quot;../output/thirdset/conservativeset.tsv&quot;)</code></pre>
+<p>Now to find only the reciprocal best hits. We do this by making sure the best match for the query gene is also the best match for the subject gene. They each need to have the highest percent identity for each other and have complementary frame shifts. An aligment of query to subject with frame shifts of 1 and 3 respectively, should have reciprocal frame shifts of 3 and 1 or -3 and -1 or -1 and -3 or 1 and 3, respectively.</p>
+<p>We do this using the not so pretty code below.</p>
+<pre class="r"><code># make an empty table placeholder
+otable &lt;- tibble::tibble(query=character(),
+                           subject=character(),
+                           evalue=double(),
+                           alnlength=integer(),
+                           identity=double(),
+                           identical=integer(),
+                           mismatches=integer(),
+                           qframe=integer(),
+                           sframe=integer())
+
+# first make sure we&#39;re looping through IDs that are both in subject or query
+interIDs &lt;- dplyr::intersect(conservative$query, conservative$subject)
+
+# make a dump list - anything that doesn&#39;t meet the criteria is added to this list
+# if any future matches come up and either ID is in this list, don&#39;t add it
+dump_list &lt;- c()
+
+# go through each ID in our intersected list
+for (i in 1:length(interIDs)) {
+  
+  # loop through each query ID
+  q &lt;- interIDs[i]
+  
+  # if the ID is already in the dump list, go to the next one
+  ifelse(q %in% dump_list, next(), TRUE)
+  
+  # create tables of every instance of this ID found in the query column
+  # and in the subject column
+  qtable &lt;- dplyr::filter(conservative, query == q)
+  stable &lt;- dplyr::filter(conservative, subject == q)
+  
+  # take product of the two frames for comparison
+  qqframe &lt;- qtable$qframe
+  qsframe &lt;- qtable$sframe
+  sqframe &lt;- stable$qframe
+  ssframe &lt;- stable$sframe
+  qtable$frameprod &lt;- qqframe * qsframe
+  stable$frameprod &lt;- sqframe * ssframe
+  
+  # only keep the entries where the product is the same - 
+  # we assume that this likely signifies a similar event for reciprocal
+  # alignments
+  tmp &lt;- dplyr::inner_join(qtable, stable, by = &quot;frameprod&quot;)
+  
+  # split back into two tables
+  qtable &lt;- dplyr::select(tmp, c(query=query.x,
+                                 subject=subject.x,
+                                 evalue=evalue.x,
+                                 alnlength=alnlength.x,
+                                 identity=identity.x,
+                                 identical=identical.x,
+                                 mismatches=mismatches.x,
+                                 qframe=qframe.x,
+                                 sframe=sframe.x))
+  stable &lt;- dplyr::select(tmp, c(query=query.y,
+                                 subject=subject.y,
+                                 evalue=evalue.y,
+                                 alnlength=alnlength.y,
+                                 identity=identity.y,
+                                 identical=identical.y,
+                                 mismatches=mismatches.y,
+                                 qframe=qframe.y,
+                                 sframe=sframe.y))
+  
+  # if this is empty, next iteration - this indicates the frameshifts are not
+  # equivalent
+  if (nrow(tmp)&gt;0) {
+         qmax_id &lt;- max(qtable$identity)
+         smax_id &lt;- max(stable$identity)
+  }
+  else {
+    next()
+  }
+
+  # only keep the entries where you have the maximum percent identity
+  qtable &lt;- dplyr::filter(qtable, identity == qmax_id)
+  stable &lt;- dplyr::filter(stable, identity == smax_id)
+  
+  # add entries to the dump list where the query aligns to a subject, but the
+  # subject aligns better to another gene. These are very similar to one another
+  # but are not reciprocal best hits to one another
+  if (length(intersect(qtable$subject,stable$query))&gt;0) {
+    TRUE
+  }
+  else {
+    dump_list &lt;- c(dump_list, stable$query, qtable$subject)
+    next()
+  }
+  
+  # finally, merge rows
+  otable &lt;- dplyr::bind_rows(otable,qtable,stable)
+}
+
+# and only keep unique rows
+otable &lt;- unique(otable)
+
+# sometimes duplicates of nearly reciprocal best hits remain
+# lets remove the duplicate queries
+dup_queries &lt;- unique(otable[,1:2])[duplicated(unique(otable[,1:2])$query),]$query
+
+# temporary place holder
+dupqtable &lt;- tibble::tibble(query=character(),
+                           subject=character(),
+                           evalue=double(),
+                           alnlength=integer(),
+                           identity=double(),
+                           identical=integer(),
+                           mismatches=integer(),
+                           qframe=integer(),
+                           sframe=integer())
+
+for (i in 1:length(dup_queries)) {
+  dq &lt;- dup_queries[i]
+  out &lt;- dplyr::filter(otable, query == dq) %&gt;% dplyr::arrange(desc(identity))
+  dupqtable &lt;- dplyr::bind_rows(dupqtable,out[2:nrow(out),])
+}
+
+# now lets remove the duplicate subjects
+dup_subjects &lt;- unique(otable[,1:2])[duplicated(unique(otable[,1:2])$subject),]$subject
+
+# temporary placeholder
+dupstable &lt;- tibble::tibble(query=character(),
+                           subject=character(),
+                           evalue=double(),
+                           alnlength=integer(),
+                           identity=double(),
+                           identical=integer(),
+                           mismatches=integer(),
+                           qframe=integer(),
+                           sframe=integer())
+
+for (i in 1:length(dup_subjects)) {
+  ds &lt;- dup_subjects[i]
+  out &lt;- dplyr::filter(otable, subject == ds) %&gt;% dplyr::arrange(desc(identity))
+  dupstable &lt;- dplyr::bind_rows(dupstable,out[2:nrow(out),])
+}
+
+# remove those duplicates
+otable &lt;- dplyr::anti_join(otable,dupqtable)</code></pre>
+<pre><code>Joining, by = c(&quot;query&quot;, &quot;subject&quot;, &quot;evalue&quot;, &quot;alnlength&quot;, &quot;identity&quot;, &quot;identical&quot;, &quot;mismatches&quot;, &quot;qframe&quot;, &quot;sframe&quot;)</code></pre>
+<pre class="r"><code>otable &lt;- dplyr::anti_join(otable,dupstable)</code></pre>
+<pre><code>Joining, by = c(&quot;query&quot;, &quot;subject&quot;, &quot;evalue&quot;, &quot;alnlength&quot;, &quot;identity&quot;, &quot;identical&quot;, &quot;mismatches&quot;, &quot;qframe&quot;, &quot;sframe&quot;)</code></pre>
+<pre class="r"><code># remove things that were added to dump list,but due to ordering of queries
+# and matches, they were not removed
+otable &lt;- dplyr::filter(otable, !(query %in% dump_list))
+otable &lt;- dplyr::filter(otable, !(subject %in% dump_list))
+# the union and intersection of these lists should be equal
+reciprocal_best_hits &lt;- unique(otable[,1:2])
+length(intersect(reciprocal_best_hits[[1]],reciprocal_best_hits[[2]]))</code></pre>
+<pre><code>[1] 630</code></pre>
+<pre class="r"><code>length(union(reciprocal_best_hits[[1]],reciprocal_best_hits[[2]]))</code></pre>
+<pre><code>[1] 630</code></pre>
+<pre class="r"><code># these should contain the same elements
+sum(intersect(reciprocal_best_hits[[1]],reciprocal_best_hits[[2]]) == union(reciprocal_best_hits[[1]],reciprocal_best_hits[[2]]))</code></pre>
+<pre><code>[1] 630</code></pre>
+<pre class="r"><code># write to an output file
+readr::write_tsv(x=otable,path=&quot;../output/thirdset/conservative_otable.tsv&quot;)
+readr::write_tsv(x=reciprocal_best_hits,path=&quot;../output/thirdset/conservative_reciprocal_best_hits.tsv&quot;)</code></pre>
+<p>Now we should have our list of reciprocal best hits! And we can do the same thing for the standard set as well.</p>
+<pre><code>Joining, by = c(&quot;query&quot;, &quot;subject&quot;, &quot;evalue&quot;, &quot;alnlength&quot;, &quot;identity&quot;, &quot;identical&quot;, &quot;mismatches&quot;, &quot;qframe&quot;, &quot;sframe&quot;)
+Joining, by = c(&quot;query&quot;, &quot;subject&quot;, &quot;evalue&quot;, &quot;alnlength&quot;, &quot;identity&quot;, &quot;identical&quot;, &quot;mismatches&quot;, &quot;qframe&quot;, &quot;sframe&quot;)</code></pre>
+<pre><code>[1] 779</code></pre>
+<pre><code>[1] 781</code></pre>
+<pre><code>Warning in intersect(reciprocal_best_hits[[1]], reciprocal_best_hits[[2]])
+== : longer object length is not a multiple of shorter object length</code></pre>
+<pre><code>[1] 411</code></pre>
+<div id="session-information" class="section level2">
+<h2>Session information</h2>
+<pre class="r"><code>sessionInfo()</code></pre>
+<pre><code>R version 3.5.0 (2018-04-23)
+Platform: x86_64-pc-linux-gnu (64-bit)
+Running under: Gentoo/Linux
+
+Matrix products: default
+BLAS: /usr/local/lib64/R/lib/libRblas.so
+LAPACK: /usr/local/lib64/R/lib/libRlapack.so
+
+locale:
+ [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
+ [3] LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    
+ [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8   
+ [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                 
+ [9] LC_ADDRESS=C               LC_TELEPHONE=C            
+[11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+[1] bindrcpp_0.2.2 dplyr_0.7.6    readr_1.1.1   
+
+loaded via a namespace (and not attached):
+ [1] Rcpp_0.12.19      bindr_0.1.1       knitr_1.20       
+ [4] whisker_0.3-2     magrittr_1.5      workflowr_1.1.1  
+ [7] hms_0.4.2         tidyselect_0.2.4  R6_2.3.0         
+[10] rlang_0.2.2       stringr_1.3.1     tools_3.5.0      
+[13] R.oo_1.22.0       git2r_0.23.0      htmltools_0.3.6  
+[16] assertthat_0.2.0  yaml_2.2.0        rprojroot_1.3-2  
+[19] digest_0.6.17     tibble_1.4.2      crayon_1.3.4     
+[22] purrr_0.2.5       R.utils_2.7.0     glue_1.3.0       
+[25] evaluate_0.11     rmarkdown_1.10    stringi_1.2.4    
+[28] compiler_3.5.0    pillar_1.3.0      backports_1.1.2  
+[31] R.methodsS3_1.7.1 pkgconfig_2.0.2  </code></pre>
+</div>
+
+<!-- Adjust MathJax settings so that all math formulae are shown using
+TeX fonts only; see
+http://docs.mathjax.org/en/latest/configuration.html.  This will make
+the presentation more consistent at the cost of the webpage sometimes
+taking slightly longer to load. Note that this only works because the
+footer is added to webpages before the MathJax javascript. -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    "HTML-CSS": { availableFonts: ["TeX"] }
+  });
+</script>
+
+<hr>
+<p>
+    
+</p>
+<hr>
+
+<!-- To enable disqus, uncomment the section below and provide your disqus_shortname -->
+
+<!-- disqus
+  <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'rmarkdown'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+-->
+<!-- Adjust MathJax settings so that all math formulae are shown using
+TeX fonts only; see
+http://docs.mathjax.org/en/latest/configuration.html.  This will make
+the presentation more consistent at the cost of the webpage sometimes
+taking slightly longer to load. Note that this only works because the
+footer is added to webpages before the MathJax javascript. -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    "HTML-CSS": { availableFonts: ["TeX"] }
+  });
+</script>
+
+<hr>
+<p>
+  This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a>
+  analysis was created with
+  <a href="https://github.com/jdblischak/workflowr">workflowr</a> 1.1.1
+</p>
+<hr>
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
