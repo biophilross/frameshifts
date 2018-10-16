@@ -7,3 +7,7 @@ output:
 ---
 
 ### [Parse Blast](parse_blast.html)
+
+### [Analyze frameshifts](analyze_frameshifts.html)
+
+### [Aging frameshifted genes](aging.html)
