@@ -329,12 +329,13 @@ div.section {
 </div>
 
 
-<p><strong>Last updated:</strong> 2018-10-12</p>
+<p><strong>Last updated:</strong> 2018-10-16</p>
 <strong>workflowr checks:</strong> <small>(Click a bullet for more information)</small>
 <ul>
 <li>
 <details>
-<p><summary> <strong style="color:red;">✖</strong> <strong>R Markdown file:</strong> uncommitted changes </summary> The R Markdown file has unstaged changes. To know which version of the R Markdown file created these results, you’ll want to first commit it to the Git repo. If you’re still working on the analysis, you can ignore this warning. When you’re finished, you can run <code>wflow_publish</code> to commit the R Markdown file and build the HTML.</p>
+<p><summary> <strong style="color:blue;">✔</strong> <strong>R Markdown file:</strong> up-to-date </summary></p>
+<p>Great! Since the R Markdown file has been committed to the Git repository, you know the exact version of the code that produced these results.</p>
 </details>
 </li>
 <li>
@@ -357,14 +358,13 @@ div.section {
 </li>
 <li>
 <details>
-<p><summary> <strong style="color:blue;">✔</strong> <strong>Repository version:</strong> <a href="https://github.com/pzross/frameshifts/tree/0fbcc9fd30ef15a0f0afd5cdfd225b84c39ad7d4" target="_blank">0fbcc9f</a> </summary></p>
+<p><summary> <strong style="color:blue;">✔</strong> <strong>Repository version:</strong> <a href="https://github.com/pzross/frameshifts/tree/6be1a496ed207469eaaf11f26a534c8c15767537" target="_blank">6be1a49</a> </summary></p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility. The version displayed above was the version of the Git repository at the time these results were generated. <br><br> Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
 <pre><code>
 Ignored files:
     Ignored:    .RData
     Ignored:    .Rhistory
     Ignored:    .Rproj.user/
-    Ignored:    analysis/figure/
     Ignored:    docs/figure/
     Ignored:    output/analyze/
 
@@ -372,13 +372,6 @@ Untracked files:
     Untracked:  analysis/analyze_frameshifts.Rmd
     Untracked:  output/aging/
     Untracked:  output/thirdset/standard_hits.tsv
-
-Unstaged changes:
-    Modified:   README.md
-    Deleted:    analysis.R
-    Modified:   analysis/aging.Rmd
-    Modified:   analysis/parse_blast.Rmd
-    Deleted:    code/parse_blast.R
 
 </code></pre>
 Note that any generated files, e.g. HTML, png, CSS, etc., are not included in this status report because it is ok for generated content to have uncommitted changes.
@@ -409,6 +402,23 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td style="text-align:left;">
+Rmd
+</td>
+<td style="text-align:left;">
+<a href="https://github.com/pzross/frameshifts/blob/6be1a496ed207469eaaf11f26a534c8c15767537/analysis/aging.Rmd" target="_blank">6be1a49</a>
+</td>
+<td style="text-align:left;">
+Philipp Ross
+</td>
+<td style="text-align:left;">
+2018-10-16
+</td>
+<td style="text-align:left;">
+workflowr::wflow_publish(all = T)
+</td>
+</tr>
 <tr>
 <td style="text-align:left;">
 Rmd
@@ -497,23 +507,37 @@ frog       &lt;- biomaRt::useMart(&quot;ensembl&quot;, dataset = &quot;xtropical
 coelacanth &lt;- biomaRt::useMart(&quot;ensembl&quot;, dataset = &quot;lchalumnae_gene_ensembl&quot;)
 fugu       &lt;- biomaRt::useMart(&quot;ensembl&quot;, dataset = &quot;ttruncatus_gene_ensembl&quot;)
 zebrafish  &lt;- biomaRt::useMart(&quot;ensembl&quot;, dataset = &quot;drerio_gene_ensembl&quot;)
-hagfish    &lt;- biomaRt::useMart(&quot;ensembl&quot;, dataset = &quot;eburgeri_gene_ensembl&quot;)
-lamprey    &lt;- biomaRt::useMart(&quot;ensembl&quot;, dataset = &quot;pmarinus_gene_ensembl&quot;)
+#hagfish    &lt;- biomaRt::useMart(&quot;ensembl&quot;, dataset = &quot;eburgeri_gene_ensembl&quot;)
+#lamprey    &lt;- biomaRt::useMart(&quot;ensembl&quot;, dataset = &quot;pmarinus_gene_ensembl&quot;)
 worm       &lt;- biomaRt::useMart(&quot;ensembl&quot;, dataset = &quot;celegans_gene_ensembl&quot;)
 fly        &lt;- biomaRt::useMart(&quot;ensembl&quot;, dataset = &quot;dmelanogaster_gene_ensembl&quot;)
 yeast      &lt;- biomaRt::useMart(&quot;ensembl&quot;, dataset = &quot;scerevisiae_gene_ensembl&quot;)
 
+#species_lookup_table &lt;- c(&quot;human&quot;,&quot;chimp&quot;,&quot;orangutan&quot;,&quot;rhesus&quot;,&quot;marmoset&quot;,&quot;mouse&quot;,
+#                  &quot;guinea_pig&quot;,&quot;dog&quot;,&quot;cow&quot;,&quot;armadillo&quot;,&quot;oppossum&quot;,&quot;platypus&quot;,
+#                  &quot;chicken&quot;,&quot;lizard&quot;,&quot;frog&quot;,&quot;coelacanth&quot;,&quot;fugu&quot;,&quot;zebrafish&quot;,
+#                  &quot;hagfish&quot;,&quot;lamprey&quot;,&quot;worm&quot;,&quot;fly&quot;,&quot;yeast&quot;)
+
 species_lookup_table &lt;- c(&quot;human&quot;,&quot;chimp&quot;,&quot;orangutan&quot;,&quot;rhesus&quot;,&quot;marmoset&quot;,&quot;mouse&quot;,
                   &quot;guinea_pig&quot;,&quot;dog&quot;,&quot;cow&quot;,&quot;armadillo&quot;,&quot;oppossum&quot;,&quot;platypus&quot;,
                   &quot;chicken&quot;,&quot;lizard&quot;,&quot;frog&quot;,&quot;coelacanth&quot;,&quot;fugu&quot;,&quot;zebrafish&quot;,
-                  &quot;hagfish&quot;,&quot;lamprey&quot;,&quot;worm&quot;,&quot;fly&quot;,&quot;yeast&quot;)
+                  &quot;worm&quot;,&quot;fly&quot;,&quot;yeast&quot;)
 
-branch_lookup_table &lt;- c(&quot;16&quot;,&quot;15&quot;,&quot;14&quot;,&quot;13&quot;,&quot;12&quot;,&quot;11&quot;,&quot;11&quot;,&quot;10&quot;,&quot;10&quot;,&quot;9&quot;,&quot;8&quot;,
-                         &quot;7&quot;,&quot;6&quot;,&quot;6&quot;,&quot;5&quot;,&quot;4&quot;,&quot;3&quot;,&quot;3&quot;,&quot;2&quot;,&quot;2&quot;,&quot;1&quot;,&quot;1&quot;,&quot;0&quot;)
+#branch_lookup_table &lt;- c(&quot;16&quot;,&quot;15&quot;,&quot;14&quot;,&quot;13&quot;,&quot;12&quot;,&quot;11&quot;,&quot;11&quot;,&quot;10&quot;,&quot;10&quot;,&quot;9&quot;,&quot;8&quot;,
+#                         &quot;7&quot;,&quot;6&quot;,&quot;6&quot;,&quot;5&quot;,&quot;4&quot;,&quot;3&quot;,&quot;3&quot;,&quot;2&quot;,&quot;2&quot;,&quot;1&quot;,&quot;1&quot;,&quot;0&quot;)
+
+branch_lookup_table &lt;- c(&quot;15&quot;,&quot;14&quot;,&quot;13&quot;,&quot;12&quot;,&quot;11&quot;,&quot;10&quot;,&quot;10&quot;,&quot;9&quot;,&quot;9&quot;,&quot;8&quot;,
+                         &quot;7&quot;,&quot;6&quot;,&quot;5&quot;,&quot;5&quot;,&quot;4&quot;,&quot;3&quot;,&quot;2&quot;,&quot;2&quot;,&quot;1&quot;,&quot;1&quot;,&quot;0&quot;)
+
+branch_lengths &lt;- tibble(branch=c(15:1),mya=c(6,6,7,12,18,27,30,60,60,90,60,30,50,350,500))
+
+#dbs &lt;- c(human,chimp,orangutan,rhesus,marmoset,mouse,guinea_pig,dog,cow,
+#         armadillo,opossum,platypus,chicken,lizard,frog,coelacanth,fugu,
+#         zebrafish,hagfish,lamprey,worm,fly,yeast)
 
 dbs &lt;- c(human,chimp,orangutan,rhesus,marmoset,mouse,guinea_pig,dog,cow,
          armadillo,opossum,platypus,chicken,lizard,frog,coelacanth,fugu,
-         zebrafish,hagfish,lamprey,worm,fly,yeast)</code></pre>
+         zebrafish,worm,fly,yeast)</code></pre>
 <pre class="r"><code>retrieve_orhologs &lt;- function(species_lookup_table, branch_lookup_table, dbs, gene_list) {
   out &lt;- tibble::tibble(human_id=character(),
                         ortholog_id=character(),
@@ -548,11 +572,16 @@ g &lt;- conservative_orthos %&gt;%
   dplyr::summarize(oldest=(min(as.integer(branch)))) %&gt;%
   dplyr::ungroup() %&gt;%
   dplyr::bind_rows(.,tibble::tibble(human_id=as.character(1:in_humans),oldest=rep(16,in_humans))) %&gt;%
-  ggplot(aes(x=oldest)) + geom_histogram(stat=&quot;count&quot;) +
+  dplyr::group_by(oldest) %&gt;%
+  dplyr::summarize(n=n()) %&gt;%
+  dplyr::ungroup() %&gt;%
+  dplyr::inner_join(branch_lengths,by=c(&quot;oldest&quot;=&quot;branch&quot;)) %&gt;%
+  ggplot(aes(x=oldest,y=n/mya)) + geom_bar(stat=&quot;identity&quot;) +
   xlab(&quot;Oldest Branch&quot;) + 
-  scale_x_continuous(breaks=0:16,labels=c(&quot;0&quot;,&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,&quot;5&quot;,&quot;6&quot;,&quot;7&quot;,&quot;8&quot;,&quot;9&quot;,&quot;10&quot;,&quot;11&quot;,&quot;12&quot;,&quot;13&quot;,&quot;14&quot;,&quot;15&quot;,&quot;16&quot;))</code></pre>
-<pre><code>Warning: Ignoring unknown parameters: binwidth, bins, pad</code></pre>
-<pre class="r"><code>print(g)</code></pre>
+  ylab(&quot;Events per Million Years&quot;) +
+  scale_x_continuous(breaks=0:15,labels=c(&quot;0&quot;,&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,&quot;5&quot;,&quot;6&quot;,&quot;7&quot;,&quot;8&quot;,&quot;9&quot;,&quot;10&quot;,&quot;11&quot;,&quot;12&quot;,&quot;13&quot;,&quot;14&quot;,&quot;15&quot;))
+
+print(g)</code></pre>
 <p><img src="figure/aging.Rmd/unnamed-chunk-4-1.png" width="672" style="display: block; margin: auto;" /></p>
 <pre class="r"><code>cowplot::save_plot(&quot;../output/aging/conservative_ages.svg&quot;,g)
 cowplot::save_plot(&quot;../output/aging/conservative_ages.png&quot;,g)</code></pre>
@@ -568,11 +597,16 @@ g &lt;- standard_orthos %&gt;%
   dplyr::summarize(oldest=(min(as.integer(branch)))) %&gt;%
   dplyr::ungroup() %&gt;%
   dplyr::bind_rows(.,tibble::tibble(human_id=as.character(1:in_humans),oldest=rep(16,in_humans))) %&gt;%
-  ggplot(aes(x=oldest)) + geom_histogram(stat=&quot;count&quot;) +
+  dplyr::group_by(oldest) %&gt;%
+  dplyr::summarize(n=n()) %&gt;%
+  dplyr::ungroup() %&gt;%
+  dplyr::inner_join(branch_lengths,by=c(&quot;oldest&quot;=&quot;branch&quot;)) %&gt;%
+  ggplot(aes(x=oldest,y=n/mya)) + geom_bar(stat=&quot;identity&quot;) +
   xlab(&quot;Oldest Branch&quot;) + 
-  scale_x_continuous(breaks=0:16,labels=c(&quot;0&quot;,&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,&quot;5&quot;,&quot;6&quot;,&quot;7&quot;,&quot;8&quot;,&quot;9&quot;,&quot;10&quot;,&quot;11&quot;,&quot;12&quot;,&quot;13&quot;,&quot;14&quot;,&quot;15&quot;,&quot;16&quot;))</code></pre>
-<pre><code>Warning: Ignoring unknown parameters: binwidth, bins, pad</code></pre>
-<pre class="r"><code>print(g)</code></pre>
+  ylab(&quot;Events per Million Years&quot;) +
+  scale_x_continuous(breaks=0:15,labels=c(&quot;0&quot;,&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,&quot;5&quot;,&quot;6&quot;,&quot;7&quot;,&quot;8&quot;,&quot;9&quot;,&quot;10&quot;,&quot;11&quot;,&quot;12&quot;,&quot;13&quot;,&quot;14&quot;,&quot;15&quot;))
+
+print(g)</code></pre>
 <p><img src="figure/aging.Rmd/unnamed-chunk-5-1.png" width="672" style="display: block; margin: auto;" /></p>
 <pre class="r"><code>cowplot::save_plot(&quot;../output/aging/standard_ages.svg&quot;,g)
 cowplot::save_plot(&quot;../output/aging/standard_ages.png&quot;,g)</code></pre>
@@ -642,11 +676,11 @@ gtex$gene_id &lt;- sapply(stringr::str_split(gtex$gene_id,&quot;[.]&quot;), func
 fgtex &lt;- dplyr::inner_join(gtex,potbl) %&gt;%
   dplyr::distinct()</code></pre>
 <pre><code>Joining, by = &quot;gene_id&quot;</code></pre>
-<pre class="r"><code>for (relation in relationships) {
+<pre class="r"><code>for (r in relationships) {
   tissue_expression &lt;- fgtex %&gt;%
-    dplyr::filter(relation==relation) %&gt;%
+    dplyr::filter(relation==r) %&gt;%
     dplyr::filter(exp &gt; tpm_threshold) %&gt;%
-    dplyr::group_by(tissue,) %&gt;%
+    dplyr::group_by(tissue) %&gt;%
     dplyr::summarise(n=n()) %&gt;%
     dplyr::arrange(desc(n))
   
@@ -655,9 +689,9 @@ fgtex &lt;- dplyr::inner_join(gtex,potbl) %&gt;%
     coord_flip() +
     ylab(&quot;Number of genes&quot;) +
     xlab(&quot;&quot;) + 
-    ggtitle(relation)
+    ggtitle(r)
   
-  cowplot::save_plot(paste0(&quot;../output/aging/&quot;,relation,&quot;_tissue_expression_barplot.png&quot;),plot=g)
+  cowplot::save_plot(paste0(&quot;../output/aging/&quot;,r,&quot;_tissue_expression_barplot.png&quot;),plot=g)
   
   print(g)
 }</code></pre>
