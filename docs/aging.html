@@ -329,12 +329,12 @@ div.section {
 </div>
 
 
-<p><strong>Last updated:</strong> 2018-10-06</p>
+<p><strong>Last updated:</strong> 2018-10-12</p>
 <strong>workflowr checks:</strong> <small>(Click a bullet for more information)</small>
 <ul>
 <li>
 <details>
-<p><summary> <strong style="color:red;">✖</strong> <strong>R Markdown file:</strong> uncommitted changes </summary> The R Markdown is untracked by Git. To know which version of the R Markdown file created these results, you’ll want to first commit it to the Git repo. If you’re still working on the analysis, you can ignore this warning. When you’re finished, you can run <code>wflow_publish</code> to commit the R Markdown file and build the HTML.</p>
+<p><summary> <strong style="color:red;">✖</strong> <strong>R Markdown file:</strong> uncommitted changes </summary> The R Markdown file has unstaged changes. To know which version of the R Markdown file created these results, you’ll want to first commit it to the Git repo. If you’re still working on the analysis, you can ignore this warning. When you’re finished, you can run <code>wflow_publish</code> to commit the R Markdown file and build the HTML.</p>
 </details>
 </li>
 <li>
@@ -357,52 +357,349 @@ div.section {
 </li>
 <li>
 <details>
-<p><summary> <strong style="color:blue;">✔</strong> <strong>Repository version:</strong> a3906b7 </summary></p>
+<p><summary> <strong style="color:blue;">✔</strong> <strong>Repository version:</strong> <a href="https://github.com/pzross/frameshifts/tree/0fbcc9fd30ef15a0f0afd5cdfd225b84c39ad7d4" target="_blank">0fbcc9f</a> </summary></p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility. The version displayed above was the version of the Git repository at the time these results were generated. <br><br> Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
 <pre><code>
 Ignored files:
     Ignored:    .RData
     Ignored:    .Rhistory
     Ignored:    .Rproj.user/
+    Ignored:    analysis/figure/
+    Ignored:    docs/figure/
+    Ignored:    output/analyze/
 
 Untracked files:
-    Untracked:  _workflowr.yml
-    Untracked:  analysis.R
-    Untracked:  analysis/aging.Rmd
-    Untracked:  analysis/parse_blast.Rmd
-    Untracked:  code/blast_script.pbs
-    Untracked:  code/parse_blast.R
-    Untracked:  data/CCDS_nucleotide.current.fna
-    Untracked:  data/GTEx_Analysis_2016-01-15_v7_RNASeQCv1.1.8_gene_median_tpm.gct
-    Untracked:  data/Homo_sapiens.GRCh38.91.chr.gff3
-    Untracked:  data/firstset.txt
-    Untracked:  data/martquery_0305163211_800.txt
-    Untracked:  data/referencetable.txt
-    Untracked:  data/refseq.fna
-    Untracked:  data/secondset.txt
-    Untracked:  data/secondset_processed.txt
-    Untracked:  data/thirdset.txt
-    Untracked:  data/thirdset_processed.txt
-    Untracked:  output/firstset/
-    Untracked:  output/secondset/
-    Untracked:  output/thirdset/
+    Untracked:  analysis/analyze_frameshifts.Rmd
+    Untracked:  output/aging/
+    Untracked:  output/thirdset/standard_hits.tsv
 
 Unstaged changes:
-    Modified:   analysis/_site.yml
-    Modified:   analysis/about.Rmd
-    Deleted:    analysis/chunks.R
-    Modified:   analysis/index.Rmd
-    Modified:   analysis/license.Rmd
-    Modified:   code/script.R
-    Modified:   code/script.py
-    Modified:   code/script.sh
+    Modified:   README.md
+    Deleted:    analysis.R
+    Modified:   analysis/aging.Rmd
+    Modified:   analysis/parse_blast.Rmd
+    Deleted:    code/parse_blast.R
 
 </code></pre>
 Note that any generated files, e.g. HTML, png, CSS, etc., are not included in this status report because it is ok for generated content to have uncommitted changes.
 </details>
 </li>
 </ul>
+<details>
+<summary> <small><strong>Expand here to see past versions:</strong></small> </summary>
+<ul>
+<table style="border-collapse:separate; border-spacing:5px;">
+<thead>
+<tr>
+<th style="text-align:left;">
+File
+</th>
+<th style="text-align:left;">
+Version
+</th>
+<th style="text-align:left;">
+Author
+</th>
+<th style="text-align:left;">
+Date
+</th>
+<th style="text-align:left;">
+Message
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Rmd
+</td>
+<td style="text-align:left;">
+<a href="https://github.com/pzross/frameshifts/blob/0fbcc9fd30ef15a0f0afd5cdfd225b84c39ad7d4/analysis/aging.Rmd" target="_blank">0fbcc9f</a>
+</td>
+<td style="text-align:left;">
+Philipp Ross
+</td>
+<td style="text-align:left;">
+2018-10-06
+</td>
+<td style="text-align:left;">
+first commit; finished parsing blast results
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+html
+</td>
+<td style="text-align:left;">
+<a href="https://cdn.rawgit.com/pzross/frameshifts/0fbcc9fd30ef15a0f0afd5cdfd225b84c39ad7d4/docs/aging.html" target="_blank">0fbcc9f</a>
+</td>
+<td style="text-align:left;">
+Philipp Ross
+</td>
+<td style="text-align:left;">
+2018-10-06
+</td>
+<td style="text-align:left;">
+first commit; finished parsing blast results
+</td>
+</tr>
+</tbody>
+</table>
+</ul>
+</details>
 <hr />
+<p>We woud like to categorize the genes into parent and offspring pairs. In order to do this, we need to estimate the earliest common ancestor with an orthologue of these genes.</p>
+<pre class="r"><code>library(tidyverse)</code></pre>
+<pre><code>── Attaching packages ──────────────────────────────────────────────────────────────────────────────────────── tidyverse 1.2.1 ──</code></pre>
+<pre><code>✔ ggplot2 3.0.0     ✔ purrr   0.2.5
+✔ tibble  1.4.2     ✔ dplyr   0.7.6
+✔ tidyr   0.8.1     ✔ stringr 1.3.1
+✔ readr   1.1.1     ✔ forcats 0.3.0</code></pre>
+<pre><code>── Conflicts ─────────────────────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()</code></pre>
+<pre class="r"><code>library(cowplot)</code></pre>
+<pre><code>
+Attaching package: &#39;cowplot&#39;</code></pre>
+<pre><code>The following object is masked from &#39;package:ggplot2&#39;:
+
+    ggsave</code></pre>
+<div id="ortholog-retrieval" class="section level2">
+<h2>Ortholog retrieval</h2>
+<p>We can use biomart to download several orthologs and find out how far back we can date these genes.</p>
+<pre class="r"><code>conservative_gene_list &lt;- readr::read_tsv(&quot;../output/thirdset/conservative_reciprocal_best_hits.tsv&quot;,col_names=T)$query</code></pre>
+<pre><code>Parsed with column specification:
+cols(
+  query = col_character(),
+  subject = col_character()
+)</code></pre>
+<pre class="r"><code>standard_gene_list &lt;- readr::read_tsv(&quot;../output/thirdset/standard_hits.tsv&quot;,col_names=T)$query</code></pre>
+<pre><code>Parsed with column specification:
+cols(
+  query = col_character(),
+  subject = col_character()
+)</code></pre>
+<pre class="r"><code>human      &lt;- biomaRt::useMart(&quot;ensembl&quot;, dataset = &quot;hsapiens_gene_ensembl&quot;)
+chimp      &lt;- biomaRt::useMart(&quot;ensembl&quot;, dataset = &quot;ptroglodytes_gene_ensembl&quot;)
+orangutan  &lt;- biomaRt::useMart(&quot;ensembl&quot;, dataset = &quot;pabelii_gene_ensembl&quot;)
+rhesus     &lt;- biomaRt::useMart(&quot;ensembl&quot;, dataset = &quot;mmulatta_gene_ensembl&quot;)
+marmoset   &lt;- biomaRt::useMart(&quot;ensembl&quot;, dataset = &quot;cjacchus_gene_ensembl&quot;)
+mouse      &lt;- biomaRt::useMart(&quot;ensembl&quot;, dataset = &quot;mmusculus_gene_ensembl&quot;)
+guinea_pig &lt;- biomaRt::useMart(&quot;ensembl&quot;, dataset = &quot;cporcellus_gene_ensembl&quot;)
+dog        &lt;- biomaRt::useMart(&quot;ensembl&quot;, dataset = &quot;cfamiliaris_gene_ensembl&quot;)
+cow        &lt;- biomaRt::useMart(&quot;ensembl&quot;, dataset = &quot;btaurus_gene_ensembl&quot;)
+armadillo  &lt;- biomaRt::useMart(&quot;ensembl&quot;, dataset = &quot;dnovemcinctus_gene_ensembl&quot;)
+opossum    &lt;- biomaRt::useMart(&quot;ensembl&quot;, dataset = &quot;mdomestica_gene_ensembl&quot;)
+platypus   &lt;- biomaRt::useMart(&quot;ensembl&quot;, dataset = &quot;oanatinus_gene_ensembl&quot;)
+chicken    &lt;- biomaRt::useMart(&quot;ensembl&quot;, dataset = &quot;ggallus_gene_ensembl&quot;)
+lizard     &lt;- biomaRt::useMart(&quot;ensembl&quot;, dataset = &quot;acarolinensis_gene_ensembl&quot;)
+frog       &lt;- biomaRt::useMart(&quot;ensembl&quot;, dataset = &quot;xtropicalis_gene_ensembl&quot;)
+coelacanth &lt;- biomaRt::useMart(&quot;ensembl&quot;, dataset = &quot;lchalumnae_gene_ensembl&quot;)
+fugu       &lt;- biomaRt::useMart(&quot;ensembl&quot;, dataset = &quot;ttruncatus_gene_ensembl&quot;)
+zebrafish  &lt;- biomaRt::useMart(&quot;ensembl&quot;, dataset = &quot;drerio_gene_ensembl&quot;)
+hagfish    &lt;- biomaRt::useMart(&quot;ensembl&quot;, dataset = &quot;eburgeri_gene_ensembl&quot;)
+lamprey    &lt;- biomaRt::useMart(&quot;ensembl&quot;, dataset = &quot;pmarinus_gene_ensembl&quot;)
+worm       &lt;- biomaRt::useMart(&quot;ensembl&quot;, dataset = &quot;celegans_gene_ensembl&quot;)
+fly        &lt;- biomaRt::useMart(&quot;ensembl&quot;, dataset = &quot;dmelanogaster_gene_ensembl&quot;)
+yeast      &lt;- biomaRt::useMart(&quot;ensembl&quot;, dataset = &quot;scerevisiae_gene_ensembl&quot;)
+
+species_lookup_table &lt;- c(&quot;human&quot;,&quot;chimp&quot;,&quot;orangutan&quot;,&quot;rhesus&quot;,&quot;marmoset&quot;,&quot;mouse&quot;,
+                  &quot;guinea_pig&quot;,&quot;dog&quot;,&quot;cow&quot;,&quot;armadillo&quot;,&quot;oppossum&quot;,&quot;platypus&quot;,
+                  &quot;chicken&quot;,&quot;lizard&quot;,&quot;frog&quot;,&quot;coelacanth&quot;,&quot;fugu&quot;,&quot;zebrafish&quot;,
+                  &quot;hagfish&quot;,&quot;lamprey&quot;,&quot;worm&quot;,&quot;fly&quot;,&quot;yeast&quot;)
+
+branch_lookup_table &lt;- c(&quot;16&quot;,&quot;15&quot;,&quot;14&quot;,&quot;13&quot;,&quot;12&quot;,&quot;11&quot;,&quot;11&quot;,&quot;10&quot;,&quot;10&quot;,&quot;9&quot;,&quot;8&quot;,
+                         &quot;7&quot;,&quot;6&quot;,&quot;6&quot;,&quot;5&quot;,&quot;4&quot;,&quot;3&quot;,&quot;3&quot;,&quot;2&quot;,&quot;2&quot;,&quot;1&quot;,&quot;1&quot;,&quot;0&quot;)
+
+dbs &lt;- c(human,chimp,orangutan,rhesus,marmoset,mouse,guinea_pig,dog,cow,
+         armadillo,opossum,platypus,chicken,lizard,frog,coelacanth,fugu,
+         zebrafish,hagfish,lamprey,worm,fly,yeast)</code></pre>
+<pre class="r"><code>retrieve_orhologs &lt;- function(species_lookup_table, branch_lookup_table, dbs, gene_list) {
+  out &lt;- tibble::tibble(human_id=character(),
+                        ortholog_id=character(),
+                        organism=character())
+  
+  for (i in 2:length(species_lookup_table)) {
+      
+      result &lt;- biomaRt::getLDS(
+        attributes = c(&quot;ensembl_gene_id&quot;), 
+        filters = &quot;ensembl_gene_id&quot;, 
+        values = gene_list,
+        mart = human,
+        attributesL = c(&quot;ensembl_gene_id&quot;), 
+        martL = dbs[[i]])
+      
+      result &lt;- dplyr::rename(result,human_id=Gene.stable.ID,ortholog_id=Gene.stable.ID.1) %&gt;%
+        dplyr::mutate(organism=species_lookup_table[i],branch=branch_lookup_table[i]) %&gt;%
+        tibble::as_tibble()
+      
+      out &lt;- dplyr::bind_rows(out,result)
+  }
+  return(out)
+}</code></pre>
+<div id="conservative-set-orthologs" class="section level3">
+<h3>Conservative set orthologs</h3>
+<pre class="r"><code>conservative_orthos &lt;- retrieve_orhologs(species_lookup_table,branch_lookup_table,dbs,conservative_gene_list)
+
+in_humans &lt;- length(unique(conservative_gene_list)) - length(unique(conservative_orthos$human_id))
+
+g &lt;- conservative_orthos %&gt;% 
+  dplyr::group_by(human_id) %&gt;% 
+  dplyr::summarize(oldest=(min(as.integer(branch)))) %&gt;%
+  dplyr::ungroup() %&gt;%
+  dplyr::bind_rows(.,tibble::tibble(human_id=as.character(1:in_humans),oldest=rep(16,in_humans))) %&gt;%
+  ggplot(aes(x=oldest)) + geom_histogram(stat=&quot;count&quot;) +
+  xlab(&quot;Oldest Branch&quot;) + 
+  scale_x_continuous(breaks=0:16,labels=c(&quot;0&quot;,&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,&quot;5&quot;,&quot;6&quot;,&quot;7&quot;,&quot;8&quot;,&quot;9&quot;,&quot;10&quot;,&quot;11&quot;,&quot;12&quot;,&quot;13&quot;,&quot;14&quot;,&quot;15&quot;,&quot;16&quot;))</code></pre>
+<pre><code>Warning: Ignoring unknown parameters: binwidth, bins, pad</code></pre>
+<pre class="r"><code>print(g)</code></pre>
+<p><img src="figure/aging.Rmd/unnamed-chunk-4-1.png" width="672" style="display: block; margin: auto;" /></p>
+<pre class="r"><code>cowplot::save_plot(&quot;../output/aging/conservative_ages.svg&quot;,g)
+cowplot::save_plot(&quot;../output/aging/conservative_ages.png&quot;,g)</code></pre>
+</div>
+<div id="standard-set-orthologs" class="section level3">
+<h3>Standard set orthologs</h3>
+<pre class="r"><code>standard_orthos &lt;- retrieve_orhologs(species_lookup_table,branch_lookup_table,dbs,standard_gene_list)
+
+in_humans &lt;- length(unique(standard_gene_list)) - length(unique(standard_orthos$human_id))
+
+g &lt;- standard_orthos %&gt;% 
+  dplyr::group_by(human_id) %&gt;% 
+  dplyr::summarize(oldest=(min(as.integer(branch)))) %&gt;%
+  dplyr::ungroup() %&gt;%
+  dplyr::bind_rows(.,tibble::tibble(human_id=as.character(1:in_humans),oldest=rep(16,in_humans))) %&gt;%
+  ggplot(aes(x=oldest)) + geom_histogram(stat=&quot;count&quot;) +
+  xlab(&quot;Oldest Branch&quot;) + 
+  scale_x_continuous(breaks=0:16,labels=c(&quot;0&quot;,&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,&quot;5&quot;,&quot;6&quot;,&quot;7&quot;,&quot;8&quot;,&quot;9&quot;,&quot;10&quot;,&quot;11&quot;,&quot;12&quot;,&quot;13&quot;,&quot;14&quot;,&quot;15&quot;,&quot;16&quot;))</code></pre>
+<pre><code>Warning: Ignoring unknown parameters: binwidth, bins, pad</code></pre>
+<pre class="r"><code>print(g)</code></pre>
+<p><img src="figure/aging.Rmd/unnamed-chunk-5-1.png" width="672" style="display: block; margin: auto;" /></p>
+<pre class="r"><code>cowplot::save_plot(&quot;../output/aging/standard_ages.svg&quot;,g)
+cowplot::save_plot(&quot;../output/aging/standard_ages.png&quot;,g)</code></pre>
+</div>
+</div>
+<div id="parent-offspring-assignments" class="section level2">
+<h2>Parent-offspring assignments</h2>
+<pre class="r"><code>conservative_rbh &lt;- readr::read_tsv(&quot;../output/thirdset/conservative_reciprocal_best_hits.tsv&quot;,col_names=T)</code></pre>
+<pre><code>Parsed with column specification:
+cols(
+  query = col_character(),
+  subject = col_character()
+)</code></pre>
+<pre class="r"><code>tmp1 &lt;- conservative_orthos %&gt;% 
+  dplyr::group_by(human_id) %&gt;% 
+  dplyr::summarize(oldest=(min(as.integer(branch)))) %&gt;%
+  dplyr::ungroup() %&gt;%
+  dplyr::inner_join(conservative_rbh, by=c(&quot;human_id&quot;=&quot;query&quot;)) %&gt;%
+  dplyr::rename(query=human_id,query_branch=oldest)
+
+tmp2 &lt;- conservative_orthos %&gt;% 
+  dplyr::group_by(human_id) %&gt;% 
+  dplyr::summarize(oldest=(min(as.integer(branch)))) %&gt;%
+  dplyr::ungroup() %&gt;%
+  dplyr::inner_join(conservative_rbh, by=c(&quot;human_id&quot;=&quot;subject&quot;)) %&gt;%
+  dplyr::rename(subject=human_id,subject_branch=oldest)
+
+potbl &lt;- dplyr::inner_join(tmp1,tmp2)</code></pre>
+<pre><code>Joining, by = c(&quot;query&quot;, &quot;subject&quot;)</code></pre>
+<pre class="r"><code>rm(tmp1,tmp2)
+
+potbl$query_relation &lt;- apply(potbl, 1, function(row) {ifelse(row[[2]] == row[[4]],&quot;same&quot;,ifelse(row[[2]] &lt; row[[4]],&quot;parent&quot;,&quot;offspring&quot;))})
+potbl$subject_relation &lt;- apply(potbl, 1, function(row) {ifelse(row[[2]] == row[[4]],&quot;same&quot;,ifelse(row[[2]] &gt; row[[4]],&quot;parent&quot;,&quot;offspring&quot;))})
+
+query   &lt;- potbl[,c(1,2,5)] %&gt;% dplyr::rename(gene_id=query,branch=query_branch,relation=query_relation)
+subject &lt;- potbl[,c(3,4,6)] %&gt;% dplyr::rename(gene_id=subject,branch=subject_branch,relation=subject_relation)
+potbl   &lt;- dplyr::bind_rows(query,subject) %&gt;% dplyr::distinct()
+
+g &lt;- ggplot(potbl,aes(x=branch)) + 
+  geom_bar(stat=&quot;count&quot;) + 
+  facet_grid(~relation)
+
+print(g)</code></pre>
+<p><img src="figure/aging.Rmd/unnamed-chunk-6-1.png" width="672" style="display: block; margin: auto;" /></p>
+<pre class="r"><code>cowplot::save_plot(&quot;../output/aging/parent_offspring.svg&quot;,g)
+cowplot::save_plot(&quot;../output/aging/parent_offspring.png&quot;,g)</code></pre>
+</div>
+<div id="tissue-expression-analysis" class="section level2">
+<h2>Tissue expression analysis</h2>
+<div id="what-tissues-are-these-genes-expressed-in" class="section level3">
+<h3>What tissues are these genes expressed in?</h3>
+<pre class="r"><code>tpm_threshold &lt;- 2
+relationships &lt;- c(&quot;same&quot;,&quot;parent&quot;,&quot;offspring&quot;)
+gtex &lt;- readr::read_tsv(&quot;../data/GTEx_Analysis_2016-01-15_v7_RNASeQCv1.1.8_gene_median_tpm.gct&quot;,skip=2,col_names=T) %&gt;%
+  dplyr::select(-Description) %&gt;%
+  tidyr::gather(key = tissue, value = exp, -gene_id)</code></pre>
+<pre><code>Parsed with column specification:
+cols(
+  .default = col_double(),
+  gene_id = col_character(),
+  Description = col_character()
+)</code></pre>
+<pre><code>See spec(...) for full column specifications.</code></pre>
+<pre class="r"><code># remove annoying &quot;.#&quot; parts of each gene ID
+gtex$gene_id &lt;- sapply(stringr::str_split(gtex$gene_id,&quot;[.]&quot;), function(x) {x[1]})
+
+fgtex &lt;- dplyr::inner_join(gtex,potbl) %&gt;%
+  dplyr::distinct()</code></pre>
+<pre><code>Joining, by = &quot;gene_id&quot;</code></pre>
+<pre class="r"><code>for (relation in relationships) {
+  tissue_expression &lt;- fgtex %&gt;%
+    dplyr::filter(relation==relation) %&gt;%
+    dplyr::filter(exp &gt; tpm_threshold) %&gt;%
+    dplyr::group_by(tissue,) %&gt;%
+    dplyr::summarise(n=n()) %&gt;%
+    dplyr::arrange(desc(n))
+  
+  g &lt;- ggplot(tissue_expression, aes(x=reorder(tissue, n),y=n)) +
+    geom_bar(stat=&quot;identity&quot;) +
+    coord_flip() +
+    ylab(&quot;Number of genes&quot;) +
+    xlab(&quot;&quot;) + 
+    ggtitle(relation)
+  
+  cowplot::save_plot(paste0(&quot;../output/aging/&quot;,relation,&quot;_tissue_expression_barplot.png&quot;),plot=g)
+  
+  print(g)
+}</code></pre>
+<p><img src="figure/aging.Rmd/unnamed-chunk-7-1.png" width="672" style="display: block; margin: auto;" /><img src="figure/aging.Rmd/unnamed-chunk-7-2.png" width="672" style="display: block; margin: auto;" /><img src="figure/aging.Rmd/unnamed-chunk-7-3.png" width="672" style="display: block; margin: auto;" /></p>
+</div>
+<div id="how-many-tissues-are-most-genes-expressed-in" class="section level3">
+<h3>How many tissues are most genes expressed in?</h3>
+<pre class="r"><code>for (relation in relationships) {
+  gene_expression &lt;- fgtex %&gt;%
+    dplyr::filter(relation==relation) %&gt;%
+    dplyr::group_by(gene_id) %&gt;%
+    dplyr::summarise(n = sum(exp &gt; tpm_threshold))
+  
+  g &lt;- ggplot(gene_expression, aes(x=n)) +
+    geom_histogram(color=&quot;grey70&quot;) +
+    xlab(&quot;Number of Tissues&quot;) +
+    ylab(&quot;Number of Genes&quot;)
+  
+  cowplot::save_plot(paste0(&quot;../output/aging/&quot;,relation,&quot;_gene_expression_distribution.png&quot;),plot=g)
+  
+  print(g)
+}</code></pre>
+<pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+<p><img src="figure/aging.Rmd/unnamed-chunk-8-1.png" width="672" style="display: block; margin: auto;" /></p>
+<pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+<p><img src="figure/aging.Rmd/unnamed-chunk-8-2.png" width="672" style="display: block; margin: auto;" /></p>
+<pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+<p><img src="figure/aging.Rmd/unnamed-chunk-8-3.png" width="672" style="display: block; margin: auto;" /></p>
+<pre class="r"><code>g &lt;- ggplot(fgtex, aes(x=relation,y=log2(exp+1))) +
+  geom_boxplot() +
+  xlab(&quot;Relationship&quot;) +
+  ylab(&quot;Log2 Expression&quot;)
+  
+cowplot::save_plot(paste0(&quot;../output/aging/&quot;,relation,&quot;_gene_expression_distribution.png&quot;),plot=g)
+  
+print(g)</code></pre>
+<p><img src="figure/aging.Rmd/unnamed-chunk-9-1.png" width="672" style="display: block; margin: auto;" /></p>
+</div>
+</div>
 <div id="session-information" class="section level2">
 <h2>Session information</h2>
 <pre class="r"><code>sessionInfo()</code></pre>
@@ -425,14 +722,37 @@ locale:
 attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
+other attached packages:
+ [1] gdtools_0.1.7   bindrcpp_0.2.2  cowplot_0.9.3   forcats_0.3.0  
+ [5] stringr_1.3.1   dplyr_0.7.6     purrr_0.2.5     readr_1.1.1    
+ [9] tidyr_0.8.1     tibble_1.4.2    ggplot2_3.0.0   tidyverse_1.2.1
+
 loaded via a namespace (and not attached):
- [1] workflowr_1.1.1   Rcpp_0.12.19      digest_0.6.17    
- [4] rprojroot_1.3-2   R.methodsS3_1.7.1 backports_1.1.2  
- [7] git2r_0.23.0      magrittr_1.5      evaluate_0.11    
-[10] stringi_1.2.4     whisker_0.3-2     R.oo_1.22.0      
-[13] R.utils_2.7.0     rmarkdown_1.10    tools_3.5.0      
-[16] stringr_1.3.1     yaml_2.2.0        compiler_3.5.0   
-[19] htmltools_0.3.6   knitr_1.20       </code></pre>
+ [1] Biobase_2.40.0       httr_1.3.1           bit64_0.9-7         
+ [4] jsonlite_1.5         R.utils_2.7.0        modelr_0.1.2        
+ [7] assertthat_0.2.0     stats4_3.5.0         blob_1.1.1          
+[10] cellranger_1.1.0     yaml_2.2.0           progress_1.2.0      
+[13] pillar_1.3.0         RSQLite_2.1.1        backports_1.1.2     
+[16] lattice_0.20-35      glue_1.3.0           digest_0.6.17       
+[19] rvest_0.3.2          colorspace_1.3-2     htmltools_0.3.6     
+[22] R.oo_1.22.0          plyr_1.8.4           XML_3.98-1.16       
+[25] pkgconfig_2.0.2      broom_0.5.0          biomaRt_2.36.1      
+[28] haven_1.1.2          scales_1.0.0         svglite_1.2.1       
+[31] whisker_0.3-2        git2r_0.23.0         IRanges_2.14.12     
+[34] withr_2.1.2          BiocGenerics_0.26.0  lazyeval_0.2.1      
+[37] cli_1.0.1            magrittr_1.5         crayon_1.3.4        
+[40] readxl_1.1.0         memoise_1.1.0        evaluate_0.11       
+[43] R.methodsS3_1.7.1    nlme_3.1-137         xml2_1.2.0          
+[46] tools_3.5.0          prettyunits_1.0.2    hms_0.4.2           
+[49] S4Vectors_0.18.3     munsell_0.5.0        AnnotationDbi_1.42.1
+[52] compiler_3.5.0       rlang_0.2.2          grid_3.5.0          
+[55] RCurl_1.95-4.11      rstudioapi_0.8       bitops_1.0-6        
+[58] labeling_0.3         rmarkdown_1.10       gtable_0.2.0        
+[61] DBI_1.0.0            curl_3.2             reshape2_1.4.3      
+[64] R6_2.3.0             lubridate_1.7.4      knitr_1.20          
+[67] bit_1.1-14           bindr_0.1.1          workflowr_1.1.1     
+[70] rprojroot_1.3-2      stringi_1.2.4        parallel_3.5.0      
+[73] Rcpp_0.12.19         tidyselect_0.2.4    </code></pre>
 </div>
 
 <!-- Adjust MathJax settings so that all math formulae are shown using

@@ -1,16 +1,21 @@
 ---
 title: "Parse Blast Results"
+author: "Philipp Ross"
 date: 2018-01-10
 output: workflowr::wflow_html
 editor_options: 
   chunk_output_type: console
 ---
 
+Here we want to parse the TBLASTX results such that we remove spurious alignments and determine the reciporical best hits. We will filter the alignments by a "standard" and "conservative" criteria.
+
 ```{r}
 # load libraries
 library(readr)
 library(dplyr)
 ```
+
+## Filtering initial BLAST results
 
 First we need to split up the query and subject IDs so we're matching just on Ensmbl gene IDs.
 
@@ -63,9 +68,11 @@ conservative <- data %>%
 readr::write_tsv(conservative, path="../output/thirdset/conservativeset.tsv")
 ```
 
+## Finding reciprocal best hits for the conservative set
+
 Now to find only the reciprocal best hits. We do this by making sure the best match for the query gene is also the best match for the subject gene. They each need to have the highest percent identity for each other and have complementary frame shifts. An aligment of query to subject with frame shifts of 1 and 3 respectively, should have reciprocal frame shifts of 3 and 1 or -3 and -1 or -1 and -3 or 1 and 3, respectively.
 
-We do this using the not so pretty code below.
+We do this using the not so pretty code below:
 
 ```{r}
 # make an empty table placeholder
@@ -219,170 +226,50 @@ length(intersect(reciprocal_best_hits[[1]],reciprocal_best_hits[[2]]))
 length(union(reciprocal_best_hits[[1]],reciprocal_best_hits[[2]]))
 # these should contain the same elements
 sum(intersect(reciprocal_best_hits[[1]],reciprocal_best_hits[[2]]) == union(reciprocal_best_hits[[1]],reciprocal_best_hits[[2]]))
+```
 
+```{r}
 # write to an output file
 readr::write_tsv(x=otable,path="../output/thirdset/conservative_otable.tsv")
 readr::write_tsv(x=reciprocal_best_hits,path="../output/thirdset/conservative_reciprocal_best_hits.tsv")
 ```
 
-Now we should have our list of reciprocal best hits! And we can do the same thing for the standard set as well.
+How many frameshift events in our conservative set?
 
-```{r,echo=F}
-# make an empty table placeholder
-otable <- tibble::tibble(query=character(),
-                           subject=character(),
-                           evalue=double(),
-                           alnlength=integer(),
-                           identity=double(),
-                           identical=integer(),
-                           mismatches=integer(),
-                           qframe=integer(),
-                           sframe=integer())
-
-# first make sure we're looping through IDs that are both in subject or query
-interIDs <- dplyr::intersect(standard$query, standard$subject)
-
-# make a dump list - anything that doesn't meet the criteria is added to this list
-# if any future matches come up and either ID is in this list, don't add it
-dump_list <- c()
-
-# go through each ID in our intersected list
-for (i in 1:length(interIDs)) {
-  
-  # loop through each query ID
-  q <- interIDs[i]
-  
-  # if the ID is already in the dump list, go to the next one
-  ifelse(q %in% dump_list, next(), TRUE)
-  
-  # create tables of every instance of this ID found in the query column
-  # and in the subject column
-  qtable <- dplyr::filter(standard, query == q)
-  stable <- dplyr::filter(standard, subject == q)
-  
-  # take product of the two frames for comparison
-  qqframe <- qtable$qframe
-  qsframe <- qtable$sframe
-  sqframe <- stable$qframe
-  ssframe <- stable$sframe
-  qtable$frameprod <- qqframe * qsframe
-  stable$frameprod <- sqframe * ssframe
-  
-  # only keep the entries where the product is the same - 
-  # we assume that this likely signifies a similar event for reciprocal
-  # alignments
-  tmp <- dplyr::inner_join(qtable, stable, by = "frameprod")
-  
-  # split back into two tables
-  qtable <- dplyr::select(tmp, c(query=query.x,
-                                 subject=subject.x,
-                                 evalue=evalue.x,
-                                 alnlength=alnlength.x,
-                                 identity=identity.x,
-                                 identical=identical.x,
-                                 mismatches=mismatches.x,
-                                 qframe=qframe.x,
-                                 sframe=sframe.x))
-  stable <- dplyr::select(tmp, c(query=query.y,
-                                 subject=subject.y,
-                                 evalue=evalue.y,
-                                 alnlength=alnlength.y,
-                                 identity=identity.y,
-                                 identical=identical.y,
-                                 mismatches=mismatches.y,
-                                 qframe=qframe.y,
-                                 sframe=sframe.y))
-  
-  # if this is empty, next iteration - this indicates the frameshifts are not
-  # equivalent
-  if (nrow(tmp)>0) {
-         qmax_id <- max(qtable$identity)
-         smax_id <- max(stable$identity)
-  }
-  else {
-    next()
-  }
-
-  # only keep the entries where you have the maximum percent identity
-  qtable <- dplyr::filter(qtable, identity == qmax_id)
-  stable <- dplyr::filter(stable, identity == smax_id)
-  
-  # add entries to the dump list where the query aligns to a subject, but the
-  # subject aligns better to another gene. These are very similar to one another
-  # but are not reciprocal best hits to one another
-  if (length(intersect(qtable$subject,stable$query))>0) {
-    TRUE
-  }
-  else {
-    dump_list <- c(dump_list, stable$query, qtable$subject)
-    next()
-  }
-  
-  # finally, merge rows
-  otable <- dplyr::bind_rows(otable,qtable,stable)
-}
-
-# and only keep unique rows
-otable <- unique(otable)
-
-# sometimes duplicates of nearly reciprocal best hits remain
-# lets remove the duplicate queries
-dup_queries <- unique(otable[,1:2])[duplicated(unique(otable[,1:2])$query),]$query
-
-# temporary place holder
-dupqtable <- tibble::tibble(query=character(),
-                           subject=character(),
-                           evalue=double(),
-                           alnlength=integer(),
-                           identity=double(),
-                           identical=integer(),
-                           mismatches=integer(),
-                           qframe=integer(),
-                           sframe=integer())
-
-for (i in 1:length(dup_queries)) {
-  dq <- dup_queries[i]
-  out <- dplyr::filter(otable, query == dq) %>% dplyr::arrange(desc(identity))
-  dupqtable <- dplyr::bind_rows(dupqtable,out[2:nrow(out),])
-}
-
-# now lets remove the duplicate subjects
-dup_subjects <- unique(otable[,1:2])[duplicated(unique(otable[,1:2])$subject),]$subject
-
-# temporary placeholder
-dupstable <- tibble::tibble(query=character(),
-                           subject=character(),
-                           evalue=double(),
-                           alnlength=integer(),
-                           identity=double(),
-                           identical=integer(),
-                           mismatches=integer(),
-                           qframe=integer(),
-                           sframe=integer())
-
-for (i in 1:length(dup_subjects)) {
-  ds <- dup_subjects[i]
-  out <- dplyr::filter(otable, subject == ds) %>% dplyr::arrange(desc(identity))
-  dupstable <- dplyr::bind_rows(dupstable,out[2:nrow(out),])
-}
-
-# remove those duplicates
-otable <- dplyr::anti_join(otable,dupqtable)
-otable <- dplyr::anti_join(otable,dupstable)
-# remove things that were added to dump list,but due to ordering of queries
-# and matches, they were not removed
-otable <- dplyr::filter(otable, !(query %in% dump_list))
-otable <- dplyr::filter(otable, !(subject %in% dump_list))
-# the union and intersection of these lists should be equal
-reciprocal_best_hits <- unique(otable[,1:2])
-length(intersect(reciprocal_best_hits[[1]],reciprocal_best_hits[[2]]))
-length(union(reciprocal_best_hits[[1]],reciprocal_best_hits[[2]]))
-# these should contain the same elements
-sum(intersect(reciprocal_best_hits[[1]],reciprocal_best_hits[[2]]) == union(reciprocal_best_hits[[1]],reciprocal_best_hits[[2]]))
-
-# write to an output file
-readr::write_tsv(x=otable,path="../output/thirdset/standard_otable.tsv")
-readr::write_tsv(x=reciprocal_best_hits,path="../output/thirdset/standard_reciprocal_best_hits.tsv")
+```{r}
+length(reciprocal_best_hits[[1]])/2
 ```
 
+How many genes in our conservative set?
 
+```{r}
+length(reciprocal_best_hits[[1]])
+```
+
+## Total events in standard set
+
+Now we should have our list of reciprocal best hits! For the standard set, we don't care about the reciporical best hits so we will just remove duplicate rows.
+
+```{r}
+standard_hits <- standard %>% 
+  dplyr::select(query, subject) %>% 
+  dplyr::distinct() %>%
+  dplyr::anti_join(reciprocal_best_hits)
+```
+
+```{r}
+# write to an output file
+readr::write_tsv(x=standard_hits,path="../output/thirdset/standard_hits.tsv")
+```
+
+How many frameshift events in our standard set?
+
+```{r}
+length(standard_hits[[1]])/2
+```
+
+How many genes in our standard set?
+
+```{r}
+length(standard_hits[[1]])
+```
