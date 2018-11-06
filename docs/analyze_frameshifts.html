@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+<meta name="author" content="Philipp Ross" />
+
+<meta name="date" content="2018-10-06" />
+
+<title>Analyze_frameshifts</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-5.0.13/css/fa-svg-with-js.css" rel="stylesheet" />
+<script src="site_libs/font-awesome-5.0.13/js/fontawesome-all.min.js"></script>
+<script src="site_libs/font-awesome-5.0.13/js/fa-v4-shims.min.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+  padding-left: 25px;
+  text-indent: 0;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Frameshifts</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="about.html">About</a>
+</li>
+<li>
+  <a href="license.html">License</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="https://github.com/jdblischak/workflowr">
+    <span class="fa fa-github"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+<!-- Add a small amount of space between sections. -->
+<style type="text/css">
+div.section {
+  padding-top: 12px;
+}
+</style>
+
+<!-- Add a small amount of space between sections. -->
+<style type="text/css">
+div.section {
+  padding-top: 12px;
+}
+</style>
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Analyze_frameshifts</h1>
+<h4 class="author"><em>Philipp Ross</em></h4>
+<h4 class="date"><em>2018-10-06</em></h4>
+
+</div>
+
+
+<p><strong>Last updated:</strong> 2018-11-05</p>
+<strong>workflowr checks:</strong> <small>(Click a bullet for more information)</small>
+<ul>
+<li>
+<details>
+<p><summary> <strong style="color:red;">✖</strong> <strong>R Markdown file:</strong> uncommitted changes </summary> The R Markdown file has unstaged changes. To know which version of the R Markdown file created these results, you’ll want to first commit it to the Git repo. If you’re still working on the analysis, you can ignore this warning. When you’re finished, you can run <code>wflow_publish</code> to commit the R Markdown file and build the HTML.</p>
+</details>
+</li>
+<li>
+<details>
+<p><summary> <strong style="color:blue;">✔</strong> <strong>Environment:</strong> empty </summary></p>
+<p>Great job! The global environment was empty. Objects defined in the global environment can affect the analysis in your R Markdown file in unknown ways. For reproduciblity it’s best to always run the code in an empty environment.</p>
+</details>
+</li>
+<li>
+<details>
+<p><summary> <strong style="color:blue;">✔</strong> <strong>Seed:</strong> <code>set.seed(12345)</code> </summary></p>
+<p>The command <code>set.seed(12345)</code> was run prior to running the code in the R Markdown file. Setting a seed ensures that any results that rely on randomness, e.g. subsampling or permutations, are reproducible.</p>
+</details>
+</li>
+<li>
+<details>
+<p><summary> <strong style="color:blue;">✔</strong> <strong>Session information:</strong> recorded </summary></p>
+<p>Great job! Recording the operating system, R version, and package versions is critical for reproducibility.</p>
+</details>
+</li>
+<li>
+<details>
+<p><summary> <strong style="color:blue;">✔</strong> <strong>Repository version:</strong> <a href="https://github.com/pzross/frameshifts/tree/8720c9677e74df0f16076dc44add2350307d457a" target="_blank">8720c96</a> </summary></p>
+Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility. The version displayed above was the version of the Git repository at the time these results were generated. <br><br> Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
+<pre><code>
+Ignored files:
+    Ignored:    .RData
+    Ignored:    .Rhistory
+    Ignored:    .Rproj.user/
+
+Untracked files:
+    Untracked:  analysis/working.R
+    Untracked:  output/aging/conservative_events_over_time.svg
+    Untracked:  output/aging/conservative_normalized_events.tsv
+    Untracked:  output/aging/normalized_events.tsv
+    Untracked:  output/aging/standard_events_over_time.svg
+    Untracked:  output/aging/standard_normalized_events.tsv
+    Untracked:  output/all_bp_genes.tsv
+    Untracked:  output/all_mf_genes.tsv
+    Untracked:  output/all_tissues.tsv
+    Untracked:  output/analyze/
+    Untracked:  output/conservative_data_table.tsv
+    Untracked:  output/offspring_botable.tsv
+    Untracked:  output/offspring_bptable.tsv
+    Untracked:  output/offspring_mftable.tsv
+    Untracked:  output/offspring_tissues.tsv
+    Untracked:  output/parent_bptable.tsv
+    Untracked:  output/parent_mftable.tsv
+    Untracked:  output/parent_tissues.tsv
+    Untracked:  output/standard_data_table.tsv
+
+Unstaged changes:
+    Modified:   analysis/aging.Rmd
+    Modified:   analysis/analyze_frameshifts.Rmd
+    Modified:   analysis/index.Rmd
+    Modified:   analysis/parse_blast.Rmd
+    Deleted:    output/aging/conservative_ages.svg
+    Deleted:    output/aging/parent_offspring.svg
+    Deleted:    output/aging/standard_ages.svg
+    Deleted:    output/aging/standard_aging.svg
+    Modified:   output/thirdset/standard_hits.tsv
+
+</code></pre>
+Note that any generated files, e.g. HTML, png, CSS, etc., are not included in this status report because it is ok for generated content to have uncommitted changes.
+</details>
+</li>
+</ul>
+<details>
+<summary> <small><strong>Expand here to see past versions:</strong></small> </summary>
+<ul>
+<table style="border-collapse:separate; border-spacing:5px;">
+<thead>
+<tr>
+<th style="text-align:left;">
+File
+</th>
+<th style="text-align:left;">
+Version
+</th>
+<th style="text-align:left;">
+Author
+</th>
+<th style="text-align:left;">
+Date
+</th>
+<th style="text-align:left;">
+Message
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Rmd
+</td>
+<td style="text-align:left;">
+<a href="https://github.com/pzross/frameshifts/blob/6001ee19ad0262238ed28ca679690ffbc8da0425/analysis/analyze_frameshifts.Rmd" target="_blank">6001ee1</a>
+</td>
+<td style="text-align:left;">
+Philipp Ross
+</td>
+<td style="text-align:left;">
+2018-10-16
+</td>
+<td style="text-align:left;">
+more stuff
+</td>
+</tr>
+</tbody>
+</table>
+</ul>
+</details>
+<hr />
+<p>In order to analyze the frameshift events we’ve identified, we can perform gene ontology enrichment analyses and study the tissue expression of the genes.</p>
+<pre class="r"><code># Necessary libraries in order to do this analysis
+library(tidyverse)</code></pre>
+<pre><code>── Attaching packages ──────────────────────────────────────────────────────────────────────────────────────── tidyverse 1.2.1 ──</code></pre>
+<pre><code>✔ ggplot2 3.0.0     ✔ purrr   0.2.5
+✔ tibble  1.4.2     ✔ dplyr   0.7.6
+✔ tidyr   0.8.1     ✔ stringr 1.3.1
+✔ readr   1.1.1     ✔ forcats 0.3.0</code></pre>
+<pre><code>── Conflicts ─────────────────────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()</code></pre>
+<pre class="r"><code>library(cowplot)</code></pre>
+<pre><code>
+Attaching package: &#39;cowplot&#39;</code></pre>
+<pre><code>The following object is masked from &#39;package:ggplot2&#39;:
+
+    ggsave</code></pre>
+<pre class="r"><code>library(org.Hs.eg.db)</code></pre>
+<pre><code>Loading required package: AnnotationDbi</code></pre>
+<pre><code>Loading required package: stats4</code></pre>
+<pre><code>Loading required package: BiocGenerics</code></pre>
+<pre><code>Loading required package: parallel</code></pre>
+<pre><code>
+Attaching package: &#39;BiocGenerics&#39;</code></pre>
+<pre><code>The following objects are masked from &#39;package:parallel&#39;:
+
+    clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,
+    clusterExport, clusterMap, parApply, parCapply, parLapply,
+    parLapplyLB, parRapply, parSapply, parSapplyLB</code></pre>
+<pre><code>The following objects are masked from &#39;package:dplyr&#39;:
+
+    combine, intersect, setdiff, union</code></pre>
+<pre><code>The following objects are masked from &#39;package:stats&#39;:
+
+    IQR, mad, sd, var, xtabs</code></pre>
+<pre><code>The following objects are masked from &#39;package:base&#39;:
+
+    anyDuplicated, append, as.data.frame, basename, cbind,
+    colMeans, colnames, colSums, dirname, do.call, duplicated,
+    eval, evalq, Filter, Find, get, grep, grepl, intersect,
+    is.unsorted, lapply, lengths, Map, mapply, match, mget, order,
+    paste, pmax, pmax.int, pmin, pmin.int, Position, rank, rbind,
+    Reduce, rowMeans, rownames, rowSums, sapply, setdiff, sort,
+    table, tapply, union, unique, unsplit, which, which.max,
+    which.min</code></pre>
+<pre><code>Loading required package: Biobase</code></pre>
+<pre><code>Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    &#39;browseVignettes()&#39;. To cite Bioconductor, see
+    &#39;citation(&quot;Biobase&quot;)&#39;, and for packages &#39;citation(&quot;pkgname&quot;)&#39;.</code></pre>
+<pre><code>Loading required package: IRanges</code></pre>
+<pre><code>Loading required package: S4Vectors</code></pre>
+<pre><code>
+Attaching package: &#39;S4Vectors&#39;</code></pre>
+<pre><code>The following objects are masked from &#39;package:dplyr&#39;:
+
+    first, rename</code></pre>
+<pre><code>The following object is masked from &#39;package:tidyr&#39;:
+
+    expand</code></pre>
+<pre><code>The following object is masked from &#39;package:base&#39;:
+
+    expand.grid</code></pre>
+<pre><code>
+Attaching package: &#39;IRanges&#39;</code></pre>
+<pre><code>The following objects are masked from &#39;package:dplyr&#39;:
+
+    collapse, desc, slice</code></pre>
+<pre><code>The following object is masked from &#39;package:purrr&#39;:
+
+    reduce</code></pre>
+<pre><code>
+Attaching package: &#39;AnnotationDbi&#39;</code></pre>
+<pre><code>The following object is masked from &#39;package:dplyr&#39;:
+
+    select</code></pre>
+<pre><code></code></pre>
+<pre class="r"><code>library(clusterProfiler)</code></pre>
+<pre><code></code></pre>
+<pre><code>clusterProfiler v3.8.1  For help: https://guangchuangyu.github.io/software/clusterProfiler
+
+If you use clusterProfiler in published research, please cite:
+Guangchuang Yu, Li-Gen Wang, Yanyan Han, Qing-Yu He. clusterProfiler: an R package for comparing biological themes among gene clusters. OMICS: A Journal of Integrative Biology. 2012, 16(5):284-287.</code></pre>
+<pre><code>
+Attaching package: &#39;clusterProfiler&#39;</code></pre>
+<pre><code>The following object is masked from &#39;package:purrr&#39;:
+
+    simplify</code></pre>
+<div id="go-enrichment" class="section level2">
+<h2>GO enrichment</h2>
+<div id="conservative-set" class="section level3">
+<h3>Conservative set</h3>
+<pre class="r"><code>conservative_hits &lt;- readr::read_tsv(&quot;../output/thirdset/conservative_reciprocal_best_hits.tsv&quot;,col_names=T)</code></pre>
+<pre><code>Parsed with column specification:
+cols(
+  query = col_character(),
+  subject = col_character()
+)</code></pre>
+<pre class="r"><code>conservative_genes &lt;- conservative_hits$query
+
+# we need the EntrzIDs of these genes to use enrichGO
+# use the biological ID translator function for this
+conservative_gene_df &lt;- clusterProfiler::bitr(conservative_genes, fromType = &quot;ENSEMBL&quot;,
+                toType = c(&quot;ENSEMBL&quot;, &quot;SYMBOL&quot;, &quot;ENTREZID&quot;),
+                OrgDb = org.Hs.eg.db)</code></pre>
+<pre><code>&#39;select()&#39; returned 1:many mapping between keys and columns</code></pre>
+<pre><code>Warning in clusterProfiler::bitr(conservative_genes, fromType =
+&quot;ENSEMBL&quot;, : 0.16% of input gene IDs are fail to map...</code></pre>
+<pre class="r"><code>conservative_gobp &lt;- clusterProfiler::enrichGO(
+                gene          = conservative_gene_df$ENTREZID,
+                OrgDb         = org.Hs.eg.db,
+                ont           = &quot;BP&quot;,
+                pAdjustMethod = &quot;BH&quot;,
+                pvalueCutoff  = 0.05,
+                qvalueCutoff  = 0.10)
+
+conservative_bpcount &lt;- tibble::tibble(GOID=conservative_gobp@result$ID,
+                          `Biological Process`=conservative_gobp@result$Description,
+                          `Number of genes`=conservative_gobp@result$Count,
+                          Genes=conservative_gobp@result$geneID) %&gt;%
+  dplyr::arrange(desc(`Number of genes`)) %&gt;%
+  tidyr::separate(col=Genes,into=paste0(rep(&quot;gene&quot;,31),1:31),sep=&quot;/&quot;) %&gt;%
+  tidyr::gather(key=Number,value=ENTREZID,-`Biological Process`,-`Number of genes`,-GOID) %&gt;% 
+  dplyr::inner_join(conservative_gene_df) %&gt;%
+  dplyr::select(-Number)</code></pre>
+<pre><code>Warning: Expected 31 pieces. Missing pieces filled with `NA` in 4192
+rows [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+21, ...].</code></pre>
+<pre><code>Joining, by = &quot;ENTREZID&quot;</code></pre>
+<pre class="r"><code>readr::write_tsv(x=conservative_bpcount,path=&quot;../output/analyze/conservative_bpcount_table.tsv&quot;)
+
+conservative_gomf &lt;- clusterProfiler::enrichGO(
+                 gene          = conservative_gene_df$ENTREZID,
+                 OrgDb         = org.Hs.eg.db,
+                 ont           = &quot;MF&quot;,
+                 pAdjustMethod = &quot;BH&quot;,
+                 pvalueCutoff  = 0.05,
+                 qvalueCutoff  = 0.10)
+
+conservative_mfcount &lt;- tibble::tibble(GOID=conservative_gomf@result$ID,
+                          `Molecular function`=conservative_gomf@result$Description,
+                          `Number of genes`=conservative_gomf@result$Count,
+                          Genes=conservative_gomf@result$geneID) %&gt;%
+  dplyr::arrange(desc(`Number of genes`)) %&gt;%
+  tidyr::separate(col=Genes,into=paste0(rep(&quot;gene&quot;,31),1:31),sep=&quot;/&quot;) %&gt;%
+  tidyr::gather(key=Number,value=ENTREZID,-`Molecular function`,-`Number of genes`,-GOID) %&gt;% 
+  dplyr::inner_join(conservative_gene_df) %&gt;%
+  dplyr::select(-Number)</code></pre>
+<pre><code>Warning: Expected 31 pieces. Additional pieces discarded in 8 rows [1, 2,
+3, 4, 5, 6, 7, 8].</code></pre>
+<pre><code>Warning: Expected 31 pieces. Missing pieces filled with `NA` in 721 rows
+[9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27,
+28, ...].</code></pre>
+<pre><code>Joining, by = &quot;ENTREZID&quot;</code></pre>
+<pre class="r"><code>readr::write_tsv(x=conservative_mfcount,path=&quot;../output/analyze/conservative_mfcount_table.tsv&quot;)
+
+# Plot these enrichments
+g &lt;- clusterProfiler::dotplot(conservative_gobp,showCategory=30)
+cowplot::save_plot(&quot;../output/analyze/conservative_biological_process_go_enrichment.png&quot;,plot=g)
+cowplot::save_plot(&quot;../output/analyze/conservative_biological_process_go_enrichment.svg&quot;,plot=g)
+print(g)</code></pre>
+<p><img src="figure/analyze_frameshifts.Rmd/unnamed-chunk-2-1.png" width="960" style="display: block; margin: auto;" /></p>
+<pre class="r"><code>g &lt;- clusterProfiler::dotplot(conservative_gomf,showCategory=20)
+cowplot::save_plot(&quot;../output/analyze/conservative_molecular_function_go_enrichment.png&quot;,plot=g)
+cowplot::save_plot(&quot;../output/analyze/conservative_molecular_function_go_enrichment.svg&quot;,plot=g)
+print(g)</code></pre>
+<p><img src="figure/analyze_frameshifts.Rmd/unnamed-chunk-2-2.png" width="960" style="display: block; margin: auto;" /></p>
+</div>
+<div id="standard-set" class="section level3">
+<h3>Standard set</h3>
+<pre class="r"><code>standard_hits &lt;- readr::read_tsv(&quot;../output/thirdset/standard_hits.tsv&quot;,col_names=T)</code></pre>
+<pre><code>Parsed with column specification:
+cols(
+  query = col_character(),
+  subject = col_character()
+)</code></pre>
+<pre class="r"><code>standard_genes &lt;- dplyr::union(standard_hits$query,standard_hits$subject)
+
+# we need the EntrzIDs of these genes to use enrichGO
+# use the biological ID translator function for this
+standard_gene_df &lt;- clusterProfiler::bitr(standard_genes, fromType = &quot;ENSEMBL&quot;,
+                toType = c(&quot;ENSEMBL&quot;, &quot;SYMBOL&quot;, &quot;ENTREZID&quot;),
+                OrgDb = org.Hs.eg.db)</code></pre>
+<pre><code>&#39;select()&#39; returned 1:many mapping between keys and columns</code></pre>
+<pre><code>Warning in clusterProfiler::bitr(standard_genes, fromType = &quot;ENSEMBL&quot;,
+toType = c(&quot;ENSEMBL&quot;, : 0.19% of input gene IDs are fail to map...</code></pre>
+<pre class="r"><code>standard_gobp &lt;- clusterProfiler::enrichGO(
+                gene          = standard_gene_df$ENTREZID,
+                OrgDb         = org.Hs.eg.db,
+                ont           = &quot;BP&quot;,
+                pAdjustMethod = &quot;BH&quot;,
+                pvalueCutoff  = 0.05,
+                qvalueCutoff  = 0.10)
+
+standard_bpcount &lt;- tibble::tibble(GOID=standard_gobp@result$ID,
+                          `Biological Process`=standard_gobp@result$Description,
+                          `Number of genes`=standard_gobp@result$Count,
+                          Genes=standard_gobp@result$geneID) %&gt;%
+  dplyr::arrange(desc(`Number of genes`)) %&gt;%
+  tidyr::separate(col=Genes,into=paste0(rep(&quot;gene&quot;,87),1:87),sep=&quot;/&quot;) %&gt;%
+  tidyr::gather(key=Number,value=ENTREZID,-`Biological Process`,-`Number of genes`,-GOID) %&gt;% 
+  dplyr::inner_join(standard_gene_df) %&gt;%
+  dplyr::select(-Number)</code></pre>
+<pre><code>Warning: Expected 87 pieces. Missing pieces filled with `NA` in 4795
+rows [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
+20, ...].</code></pre>
+<pre><code>Joining, by = &quot;ENTREZID&quot;</code></pre>
+<pre class="r"><code>readr::write_tsv(x=standard_bpcount,path=&quot;../output/analyze/standard_bpcount_table.tsv&quot;)
+
+standard_gomf &lt;- clusterProfiler::enrichGO(
+                 gene          = standard_gene_df$ENTREZID,
+                 OrgDb         = org.Hs.eg.db,
+                 ont           = &quot;MF&quot;,
+                 pAdjustMethod = &quot;BH&quot;,
+                 pvalueCutoff  = 0.05,
+                 qvalueCutoff  = 0.10)
+
+standard_mfcount &lt;- tibble::tibble(GOID=standard_gomf @result$ID,
+                          `Molecular function`=standard_gomf @result$Description,
+                          `Number of genes`=standard_gomf @result$Count,
+                          Genes=standard_gomf @result$geneID) %&gt;%
+  dplyr::arrange(desc(`Number of genes`)) %&gt;%
+  tidyr::separate(col=Genes,into=paste0(rep(&quot;gene&quot;,94),1:94),sep=&quot;/&quot;) %&gt;%
+  tidyr::gather(key=Number,value=ENTREZID,-`Molecular function`,-`Number of genes`,-GOID) %&gt;% 
+  dplyr::inner_join(standard_gene_df) %&gt;%
+  dplyr::select(-Number)</code></pre>
+<pre><code>Warning: Expected 94 pieces. Missing pieces filled with `NA` in 818
+rows [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
+20, ...].</code></pre>
+<pre><code>Joining, by = &quot;ENTREZID&quot;</code></pre>
+<pre class="r"><code>readr::write_tsv(x=standard_mfcount,path=&quot;../output/analyze/standard_mfcount_table.tsv&quot;)
+
+# Plot these enrichments
+g &lt;- clusterProfiler::dotplot(standard_gobp, showCategory=30)
+cowplot::save_plot(&quot;../output/analyze/standard_biological_process_go_enrichment.png&quot;, plot=g)
+cowplot::save_plot(&quot;../output/analyze/standard_biological_process_go_enrichment.svg&quot;, plot=g)
+print(g)</code></pre>
+<p><img src="figure/analyze_frameshifts.Rmd/unnamed-chunk-3-1.png" width="960" style="display: block; margin: auto;" /></p>
+<pre class="r"><code>g &lt;- clusterProfiler::dotplot(standard_gomf, showCategory=20)
+cowplot::save_plot(&quot;../output/analyze/standard_molecular_function_go_enrichment.png&quot;, plot=g)
+cowplot::save_plot(&quot;../output/analyze/standard_molecular_function_go_enrichment.svg&quot;, plot=g)
+print(g)</code></pre>
+<p><img src="figure/analyze_frameshifts.Rmd/unnamed-chunk-3-2.png" width="960" style="display: block; margin: auto;" /></p>
+</div>
+</div>
+<div id="gtex-tissue-expression-analysis" class="section level2">
+<h2>GTEX tissue expression analysis</h2>
+<div id="conservative-set-1" class="section level3">
+<h3>Conservative set</h3>
+<pre class="r"><code>tpm_threshold &lt;- 2
+gtex &lt;- readr::read_tsv(&quot;../data/GTEx_Analysis_2016-01-15_v7_RNASeQCv1.1.8_gene_median_tpm.gct&quot;,skip=2,col_names=T) %&gt;%
+  dplyr::select(-Description) %&gt;%
+  tidyr::gather(key = tissue, value = exp, -gene_id)</code></pre>
+<pre><code>Parsed with column specification:
+cols(
+  .default = col_double(),
+  gene_id = col_character(),
+  Description = col_character()
+)</code></pre>
+<pre><code>See spec(...) for full column specifications.</code></pre>
+<pre class="r"><code># remove annoying &quot;.#&quot; parts of each gene ID
+gtex$gene_id &lt;- sapply(stringr::str_split(gtex$gene_id,&quot;[.]&quot;), function(x) {x[1]})
+
+# only include genes in our gene list
+fgtex &lt;- gtex %&gt;% filter(gene_id %in% conservative_genes)
+
+# group by gene ID to create histogram of how many tissues these genes are
+# expressed in
+gene_expression &lt;- fgtex %&gt;%
+  dplyr::group_by(gene_id) %&gt;%
+  dplyr::summarise(n = sum(exp &gt; tpm_threshold))
+
+g &lt;- ggplot(gene_expression, aes(x=n)) +
+  geom_histogram(color=&quot;grey70&quot;) +
+  xlab(&quot;Number of Tissues&quot;) +
+  ylab(&quot;Number of Genes&quot;)
+
+cowplot::save_plot(&quot;../output/analyze/conservative_gene_expression_distribution.png&quot;,plot=g)</code></pre>
+<pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+<pre class="r"><code>cowplot::save_plot(&quot;../output/analyze/conservative_gene_expression_distribution.svg&quot;,plot=g)</code></pre>
+<pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+<pre class="r"><code>print(g)</code></pre>
+<pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+<p><img src="figure/analyze_frameshifts.Rmd/unnamed-chunk-4-1.png" width="672" style="display: block; margin: auto;" /></p>
+<pre class="r"><code># group by tissue to create a table of how many genes are express in each
+# tissue type
+tissue_expression &lt;- fgtex %&gt;%
+  dplyr::filter(exp &gt; tpm_threshold) %&gt;%
+  dplyr::group_by(tissue) %&gt;%
+  dplyr::summarise(n = n()) %&gt;%
+  dplyr::arrange(desc(n))
+
+g &lt;- ggplot(tissue_expression, aes(x=reorder(tissue, n),y=n)) +
+  geom_bar(stat=&quot;identity&quot;) +
+  coord_flip() +
+  ylab(&quot;Number of genes&quot;) +
+  xlab(&quot;&quot;)
+
+cowplot::save_plot(&quot;../output/analyze/conservative_tissue_expression_barplot.png&quot;,plot=g)
+cowplot::save_plot(&quot;../output/analyze/conservative_tissue_expression_barplot.svg&quot;,plot=g)
+print(g)</code></pre>
+<p><img src="figure/analyze_frameshifts.Rmd/unnamed-chunk-4-2.png" width="672" style="display: block; margin: auto;" /></p>
+</div>
+</div>
+<div id="standard-set-1" class="section level2">
+<h2>Standard set</h2>
+<pre class="r"><code># only include genes in our gene list
+fgtex &lt;- gtex %&gt;% filter(gene_id %in% standard_genes)
+
+# group by gene ID to create histogram of how many tissues these genes are
+# expressed in
+gene_expression &lt;- fgtex %&gt;%
+  dplyr::group_by(gene_id) %&gt;%
+  dplyr::summarise(n = sum(exp &gt; tpm_threshold))
+
+g &lt;- ggplot(gene_expression, aes(x=n)) +
+  geom_histogram(color=&quot;grey70&quot;) +
+  xlab(&quot;Number of Tissues&quot;) +
+  ylab(&quot;Number of Genes&quot;)
+
+cowplot::save_plot(&quot;../output/analyze/standard_gene_expression_distribution.png&quot;,plot=g)</code></pre>
+<pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+<pre class="r"><code>cowplot::save_plot(&quot;../output/analyze/standard_gene_expression_distribution.svg&quot;,plot=g)</code></pre>
+<pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+<pre class="r"><code>print(g)</code></pre>
+<pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+<p><img src="figure/analyze_frameshifts.Rmd/unnamed-chunk-5-1.png" width="672" style="display: block; margin: auto;" /></p>
+<pre class="r"><code># group by tissue to create a table of how many genes are express in each
+# tissue type
+tissue_expression &lt;- fgtex %&gt;%
+  dplyr::filter(exp &gt; tpm_threshold) %&gt;%
+  dplyr::group_by(tissue) %&gt;%
+  dplyr::summarise(n = n()) %&gt;%
+  dplyr::arrange(desc(n))
+
+g &lt;- ggplot(tissue_expression, aes(x=reorder(tissue, n),y=n)) +
+  geom_bar(stat=&quot;identity&quot;) +
+  coord_flip() +
+  ylab(&quot;Number of genes&quot;) +
+  xlab(&quot;&quot;)
+
+cowplot::save_plot(&quot;../output/analyze/standard_tissue_expression_barplot.png&quot;,plot=g)
+cowplot::save_plot(&quot;../output/analyze/standard_tissue_expression_barplot.svg&quot;,plot=g)
+print(g)</code></pre>
+<p><img src="figure/analyze_frameshifts.Rmd/unnamed-chunk-5-2.png" width="672" style="display: block; margin: auto;" /></p>
+</div>
+<div id="session-information" class="section level2">
+<h2>Session information</h2>
+<pre class="r"><code>sessionInfo()</code></pre>
+<pre><code>R version 3.5.0 (2018-04-23)
+Platform: x86_64-pc-linux-gnu (64-bit)
+Running under: Gentoo/Linux
+
+Matrix products: default
+BLAS: /usr/local/lib64/R/lib/libRblas.so
+LAPACK: /usr/local/lib64/R/lib/libRlapack.so
+
+locale:
+ [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
+ [3] LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    
+ [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8   
+ [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                 
+ [9] LC_ADDRESS=C               LC_TELEPHONE=C            
+[11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
+
+attached base packages:
+[1] parallel  stats4    stats     graphics  grDevices utils     datasets 
+[8] methods   base     
+
+other attached packages:
+ [1] gdtools_0.1.7         bindrcpp_0.2.2        clusterProfiler_3.8.1
+ [4] org.Hs.eg.db_3.6.0    AnnotationDbi_1.42.1  IRanges_2.14.12      
+ [7] S4Vectors_0.18.3      Biobase_2.40.0        BiocGenerics_0.26.0  
+[10] cowplot_0.9.3         forcats_0.3.0         stringr_1.3.1        
+[13] dplyr_0.7.6           purrr_0.2.5           readr_1.1.1          
+[16] tidyr_0.8.1           tibble_1.4.2          ggplot2_3.0.0        
+[19] tidyverse_1.2.1      
+
+loaded via a namespace (and not attached):
+ [1] nlme_3.1-137        enrichplot_1.0.2    lubridate_1.7.4    
+ [4] bit64_0.9-7         httr_1.3.1          UpSetR_1.3.3       
+ [7] rprojroot_1.3-2     tools_3.5.0         backports_1.1.2    
+[10] R6_2.3.0            DBI_1.0.0           lazyeval_0.2.1     
+[13] colorspace_1.3-2    withr_2.1.2         tidyselect_0.2.4   
+[16] gridExtra_2.3       bit_1.1-14          compiler_3.5.0     
+[19] git2r_0.23.0        cli_1.0.1           rvest_0.3.2        
+[22] xml2_1.2.0          labeling_0.3        scales_1.0.0       
+[25] ggridges_0.5.1      digest_0.6.17       svglite_1.2.1      
+[28] rmarkdown_1.10      DOSE_3.6.1          R.utils_2.7.0      
+[31] pkgconfig_2.0.2     htmltools_0.3.6     rlang_0.2.2        
+[34] readxl_1.1.0        rstudioapi_0.8      RSQLite_2.1.1      
+[37] farver_1.0          bindr_0.1.1         jsonlite_1.5       
+[40] BiocParallel_1.14.2 GOSemSim_2.6.2      R.oo_1.22.0        
+[43] magrittr_1.5        GO.db_3.6.0         Matrix_1.2-14      
+[46] Rcpp_0.12.19        munsell_0.5.0       viridis_0.5.1      
+[49] R.methodsS3_1.7.1   stringi_1.2.4       whisker_0.3-2      
+[52] yaml_2.2.0          ggraph_1.0.2        MASS_7.3-49        
+[55] plyr_1.8.4          qvalue_2.12.0       grid_3.5.0         
+[58] blob_1.1.1          ggrepel_0.8.0       DO.db_2.9          
+[61] crayon_1.3.4        lattice_0.20-35     haven_1.1.2        
+[64] splines_3.5.0       hms_0.4.2           knitr_1.20         
+[67] pillar_1.3.0        igraph_1.2.2        fgsea_1.6.0        
+[70] reshape2_1.4.3      fastmatch_1.1-0     glue_1.3.0         
+[73] evaluate_0.11       data.table_1.11.8   modelr_0.1.2       
+[76] tweenr_1.0.0        cellranger_1.1.0    gtable_0.2.0       
+[79] assertthat_0.2.0    ggforce_0.1.3       broom_0.5.0        
+[82] viridisLite_0.3.0   rvcheck_0.1.1       memoise_1.1.0      
+[85] units_0.6-1         workflowr_1.1.1    </code></pre>
+</div>
+
+<!-- Adjust MathJax settings so that all math formulae are shown using
+TeX fonts only; see
+http://docs.mathjax.org/en/latest/configuration.html.  This will make
+the presentation more consistent at the cost of the webpage sometimes
+taking slightly longer to load. Note that this only works because the
+footer is added to webpages before the MathJax javascript. -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    "HTML-CSS": { availableFonts: ["TeX"] }
+  });
+</script>
+
+<!-- To enable disqus, uncomment the section below and provide your disqus_shortname -->
+
+<!-- disqus
+  <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'rmarkdown'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+-->
+<!-- Adjust MathJax settings so that all math formulae are shown using
+TeX fonts only; see
+http://docs.mathjax.org/en/latest/configuration.html.  This will make
+the presentation more consistent at the cost of the webpage sometimes
+taking slightly longer to load. Note that this only works because the
+footer is added to webpages before the MathJax javascript. -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    "HTML-CSS": { availableFonts: ["TeX"] }
+  });
+</script>
+
+<hr>
+<p>
+  This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a>
+  analysis was created with
+  <a href="https://github.com/jdblischak/workflowr">workflowr</a> 1.1.1
+</p>
+<hr>
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

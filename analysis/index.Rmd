@@ -6,8 +6,14 @@ output:
     toc: false
 ---
 
-### [Parse Blast](parse_blast.html)
+Turns out new genes might frequently be generated through frameshift duplication events. Here I analyze the results of TBLASTX run of all human genes against all other human genes, isolating hits that are out of frame from one another.
 
-### [Analyze frameshifts](analyze_frameshifts.html)
+### Workflow
 
-### [Aging frameshifted genes](aging.html)
+* [Parse Blast](parse_blast.html)
+
+* [Analyze frameshifts](analyze_frameshifts.html)
+
+* [Aging frameshifted genes](aging.html)
+
+* [Making final tables](final_tables.html)

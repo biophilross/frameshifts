@@ -1,7 +1,7 @@
 ---
 title: "Parse Blast Results"
 author: "Philipp Ross"
-date: 2018-01-10
+date: "2018-01-10"
 output: workflowr::wflow_html
 editor_options: 
   chunk_output_type: console
@@ -11,8 +11,8 @@ Here we want to parse the TBLASTX results such that we remove spurious alignment
 
 ```{r}
 # load libraries
-library(readr)
-library(dplyr)
+library(tidyverse)
+library(magrittr)
 ```
 
 ## Filtering initial BLAST results
@@ -70,7 +70,7 @@ readr::write_tsv(conservative, path="../output/thirdset/conservativeset.tsv")
 
 ## Finding reciprocal best hits for the conservative set
 
-Now to find only the reciprocal best hits. We do this by making sure the best match for the query gene is also the best match for the subject gene. They each need to have the highest percent identity for each other and have complementary frame shifts. An aligment of query to subject with frame shifts of 1 and 3 respectively, should have reciprocal frame shifts of 3 and 1 or -3 and -1 or -1 and -3 or 1 and 3, respectively.
+Now to find only the reciprocal best hits. We do this by making sure the best match for the query gene is also the best match for the subject gene. They each need to have the highest percent identity for each other and have complementary frame shifts. An aligment of query to subject with frame shifts of 1 and 3 respectively, should have reciprocal frame shifts of 3 and 1 or -3 and -1 or -1 and -3 or 1 and 3.
 
 We do this using the not so pretty code below:
 
@@ -216,7 +216,7 @@ for (i in 1:length(dup_subjects)) {
 # remove those duplicates
 otable <- dplyr::anti_join(otable,dupqtable)
 otable <- dplyr::anti_join(otable,dupstable)
-# remove things that were added to dump list,but due to ordering of queries
+# remove things that were added to dump list, but due to ordering of queries
 # and matches, they were not removed
 otable <- dplyr::filter(otable, !(query %in% dump_list))
 otable <- dplyr::filter(otable, !(subject %in% dump_list))
@@ -248,13 +248,41 @@ length(reciprocal_best_hits[[1]])
 
 ## Total events in standard set
 
+Now we do something similar for the standard set except this time we aren't interested in keeping only best reciprocal hits, but all hits.
+
+```{r}
+# make an empty list to store results
+standard_reciprocals <- c()
+# loop through every row - this works because if the gene is not in the
+# query column, then it obviously is not a reciprocal
+for (i in 1:nrow(standard)) {
+  # take query and subject of this row
+  q <- standard$query[i]
+  s <- standard$subject[i]
+  # if the query is also in the subject column, continue
+  if (q %in% standard$subject) {
+    # find what the queries are for where this gene is a subject
+    alt <- dplyr::filter(standard, subject==q) %$% query
+    # if the subject was a query of the original query subject match, then
+    # we keep it
+    if (s %in% alt) {
+      standard_reciprocals <- c(standard_reciprocals,q)
+    } else {
+      next()
+    }
+  } else {
+    next()
+  }
+}
+```
+
 Now we should have our list of reciprocal best hits! For the standard set, we don't care about the reciporical best hits so we will just remove duplicate rows.
 
 ```{r}
 standard_hits <- standard %>% 
+  dplyr::filter(query %in% standard_reciprocals & subject %in% standard_reciprocals) %>%
   dplyr::select(query, subject) %>% 
-  dplyr::distinct() %>%
-  dplyr::anti_join(reciprocal_best_hits)
+  dplyr::distinct()
 ```
 
 ```{r}
@@ -265,11 +293,50 @@ readr::write_tsv(x=standard_hits,path="../output/thirdset/standard_hits.tsv")
 How many frameshift events in our standard set?
 
 ```{r}
-length(standard_hits[[1]])/2
+# first remove all reciprocal best hits
+anti <- dplyr::anti_join(standard_hits,reciprocal_best_hits)
+# set count to zero and make an empty list
+count <- 0
+hits <- list()
+# loop through table lacking reciprocal best hits making sure we
+# count cases of A to B and B to A as one event, but
+# cases of A to B and A to C as two events and A to B and B to C as two events
+for (i in 1:nrow(anti)) {
+  row <- anti[i,]
+  if (is.null(hits[[row$query]])) {
+    if (is.null(hits[[row$subject]])) {
+      count <- count + 1
+      hits[[row$query]] <- row$subject
+      next()
+    } else if (row$query %in% hits[[row$subject]]) {
+      hits[[row$query]] <- row$subject
+      next()
+    } else {
+      count <- count + 1
+      hits[[row$query]] <- row$subject
+      next()
+    }
+  } else if (row$subject %in% hits[[row$query]]) {
+    next()
+  } else {
+    count <- count + 1
+    hits[[row$query]] <- c(hits[[row$query]],row$subject)
+    next()
+  }
+}
+# add the count plus the number of reciprocal best hits divided in half to 
+# get the total count of standard frameshifts
+count + length(reciprocal_best_hits[[1]])/2
+```
+
+Just to be sure, if we join the standard table with the conservative table, do we get everything that we have in the conservative table?
+
+```{r}
+length(reciprocal_best_hits[[1]]) == length(dplyr::inner_join(standard_hits,reciprocal_best_hits)[[1]])
 ```
 
 How many genes in our standard set?
 
 ```{r}
-length(standard_hits[[1]])
+length(unique(standard_hits$query,standard_hits$subject))
 ```

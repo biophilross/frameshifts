@@ -12,6 +12,7 @@ We woud like to categorize the genes into parent and offspring pairs. In order t
 ```{r}
 library(tidyverse)
 library(cowplot)
+library(org.Hs.eg.db)
 ```
 
 ## Ortholog retrieval
@@ -40,40 +41,45 @@ frog       <- biomaRt::useMart("ensembl", dataset = "xtropicalis_gene_ensembl")
 coelacanth <- biomaRt::useMart("ensembl", dataset = "lchalumnae_gene_ensembl")
 fugu       <- biomaRt::useMart("ensembl", dataset = "ttruncatus_gene_ensembl")
 zebrafish  <- biomaRt::useMart("ensembl", dataset = "drerio_gene_ensembl")
-#hagfish    <- biomaRt::useMart("ensembl", dataset = "eburgeri_gene_ensembl")
-#lamprey    <- biomaRt::useMart("ensembl", dataset = "pmarinus_gene_ensembl")
+hagfish    <- biomaRt::useMart("ensembl", dataset = "eburgeri_gene_ensembl")
+lamprey    <- biomaRt::useMart("ensembl", dataset = "pmarinus_gene_ensembl")
 worm       <- biomaRt::useMart("ensembl", dataset = "celegans_gene_ensembl")
 fly        <- biomaRt::useMart("ensembl", dataset = "dmelanogaster_gene_ensembl")
 yeast      <- biomaRt::useMart("ensembl", dataset = "scerevisiae_gene_ensembl")
 
-#species_lookup_table <- c("human","chimp","orangutan","rhesus","marmoset","mouse",
-#                  "guinea_pig","dog","cow","armadillo","oppossum","platypus",
-#                  "chicken","lizard","frog","coelacanth","fugu","zebrafish",
-#                  "hagfish","lamprey","worm","fly","yeast")
-
 species_lookup_table <- c("human","chimp","orangutan","rhesus","marmoset","mouse",
                   "guinea_pig","dog","cow","armadillo","oppossum","platypus",
                   "chicken","lizard","frog","coelacanth","fugu","zebrafish",
-                  "worm","fly","yeast")
+                  "hagfish","lamprey","worm","fly","yeast")
 
-#branch_lookup_table <- c("16","15","14","13","12","11","11","10","10","9","8",
-#                         "7","6","6","5","4","3","3","2","2","1","1","0")
+#species_lookup_table <- c("human","chimp","orangutan","rhesus","marmoset","mouse",
+#                  "guinea_pig","dog","cow","armadillo","oppossum","platypus",
+#                  "chicken","lizard","frog","coelacanth","fugu","zebrafish",
+#                  "worm","fly","yeast")
 
-branch_lookup_table <- c("15","14","13","12","11","10","10","9","9","8",
-                         "7","6","5","5","4","3","2","2","1","1","0")
+branch_lookup_table <- c("16","15","14","13","12","11","11","10","10","9","8",
+                         "7","6","6","5","4","3","3","2","2","1","1","0")
 
-branch_lengths <- tibble(branch=c(15:1),mya=c(6,6,7,12,18,27,30,60,60,90,60,30,50,350,500))
+#branch_lookup_table <- c("15","14","13","12","11","10","10","9","9","8",
+#                         "7","6","5","5","4","3","2","2","1","1","0")
 
-#dbs <- c(human,chimp,orangutan,rhesus,marmoset,mouse,guinea_pig,dog,cow,
-#         armadillo,opossum,platypus,chicken,lizard,frog,coelacanth,fugu,
-#         zebrafish,hagfish,lamprey,worm,fly,yeast)
+branch_lengths <- tibble(branch=c(16:0),branch_length=c(6,6,7,12,18,27,30,60,60,90,60,30,50,100,250,500,700))
 
 dbs <- c(human,chimp,orangutan,rhesus,marmoset,mouse,guinea_pig,dog,cow,
          armadillo,opossum,platypus,chicken,lizard,frog,coelacanth,fugu,
-         zebrafish,worm,fly,yeast)
+         zebrafish,hagfish,lamprey,worm,fly,yeast)
+
+#dbs <- c(human,chimp,orangutan,rhesus,marmoset,mouse,guinea_pig,dog,cow,
+#         armadillo,opossum,platypus,chicken,lizard,frog,coelacanth,fugu,
+#         zebrafish,worm,fly,yeast)
 ```
 
 ```{r}
+# Function to retrieve homologs from non-human species and return the:
+#   human gene id
+#   alternative organism gene id
+#   alternative organism name
+#   the branch number corresponding to the last common ancestor of the two homologs
 retrieve_orhologs <- function(species_lookup_table, branch_lookup_table, dbs, gene_list) {
   out <- tibble::tibble(human_id=character(),
                         ortholog_id=character(),
@@ -104,25 +110,7 @@ retrieve_orhologs <- function(species_lookup_table, branch_lookup_table, dbs, ge
 ```{r}
 conservative_orthos <- retrieve_orhologs(species_lookup_table,branch_lookup_table,dbs,conservative_gene_list)
 
-in_humans <- length(unique(conservative_gene_list)) - length(unique(conservative_orthos$human_id))
-
-g <- conservative_orthos %>% 
-  dplyr::group_by(human_id) %>% 
-  dplyr::summarize(oldest=(min(as.integer(branch)))) %>%
-  dplyr::ungroup() %>%
-  dplyr::bind_rows(.,tibble::tibble(human_id=as.character(1:in_humans),oldest=rep(16,in_humans))) %>%
-  dplyr::group_by(oldest) %>%
-  dplyr::summarize(n=n()) %>%
-  dplyr::ungroup() %>%
-  dplyr::inner_join(branch_lengths,by=c("oldest"="branch")) %>%
-  ggplot(aes(x=oldest,y=n/mya)) + geom_bar(stat="identity") +
-  xlab("Oldest Branch") + 
-  ylab("Events per Million Years") +
-  scale_x_continuous(breaks=0:15,labels=c("0","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15"))
-
-print(g)
-cowplot::save_plot("../output/aging/conservative_ages.svg",g)
-cowplot::save_plot("../output/aging/conservative_ages.png",g)
+conservative_in_humans <- length(unique(conservative_gene_list)) - length(unique(conservative_orthos$human_id))
 ```
 
 ### Standard set orthologs
@@ -130,71 +118,144 @@ cowplot::save_plot("../output/aging/conservative_ages.png",g)
 ```{r}
 standard_orthos <- retrieve_orhologs(species_lookup_table,branch_lookup_table,dbs,standard_gene_list)
 
-in_humans <- length(unique(standard_gene_list)) - length(unique(standard_orthos$human_id))
-
-g <- standard_orthos %>% 
-  dplyr::group_by(human_id) %>% 
-  dplyr::summarize(oldest=(min(as.integer(branch)))) %>%
-  dplyr::ungroup() %>%
-  dplyr::bind_rows(.,tibble::tibble(human_id=as.character(1:in_humans),oldest=rep(16,in_humans))) %>%
-  dplyr::group_by(oldest) %>%
-  dplyr::summarize(n=n()) %>%
-  dplyr::ungroup() %>%
-  dplyr::inner_join(branch_lengths,by=c("oldest"="branch")) %>%
-  ggplot(aes(x=oldest,y=n/mya)) + geom_bar(stat="identity") +
-  xlab("Oldest Branch") + 
-  ylab("Events per Million Years") +
-  scale_x_continuous(breaks=0:15,labels=c("0","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15"))
-
-print(g)
-cowplot::save_plot("../output/aging/standard_ages.svg",g)
-cowplot::save_plot("../output/aging/standard_ages.png",g)
+standard_in_humans <- length(unique(standard_gene_list)) - length(unique(standard_orthos$human_id))
 ```
 
 ## Parent-offspring assignments
 
+### Conservative set
+
 ```{r}
 conservative_rbh <- readr::read_tsv("../output/thirdset/conservative_reciprocal_best_hits.tsv",col_names=T)
-
-tmp1 <- conservative_orthos %>% 
+human_orthos <- conservative_orthos %>% 
   dplyr::group_by(human_id) %>% 
   dplyr::summarize(oldest=(min(as.integer(branch)))) %>%
-  dplyr::ungroup() %>%
+  dplyr::ungroup()  
+
+tmp1 <- human_orthos %>%
   dplyr::inner_join(conservative_rbh, by=c("human_id"="query")) %>%
   dplyr::rename(query=human_id,query_branch=oldest)
 
-tmp2 <- conservative_orthos %>% 
-  dplyr::group_by(human_id) %>% 
-  dplyr::summarize(oldest=(min(as.integer(branch)))) %>%
-  dplyr::ungroup() %>%
+tmp2 <- human_orthos %>%
   dplyr::inner_join(conservative_rbh, by=c("human_id"="subject")) %>%
   dplyr::rename(subject=human_id,subject_branch=oldest)
 
-potbl <- dplyr::inner_join(tmp1,tmp2)
+conservative_potbl <- dplyr::inner_join(tmp1,tmp2)
 rm(tmp1,tmp2)
 
-potbl$query_relation <- apply(potbl, 1, function(row) {ifelse(row[[2]] == row[[4]],"same",ifelse(row[[2]] < row[[4]],"parent","offspring"))})
-potbl$subject_relation <- apply(potbl, 1, function(row) {ifelse(row[[2]] == row[[4]],"same",ifelse(row[[2]] > row[[4]],"parent","offspring"))})
+conservative_potbl$query_relation <- apply(conservative_potbl, 1, function(row) {ifelse(row[[2]] == row[[4]],"same",ifelse(row[[2]] < row[[4]],"parent","offspring"))})
+conservative_potbl$subject_relation <- apply(conservative_potbl, 1, function(row) {ifelse(row[[2]] == row[[4]],"same",ifelse(row[[2]] > row[[4]],"parent","offspring"))})
 
-query   <- potbl[,c(1,2,5)] %>% dplyr::rename(gene_id=query,branch=query_branch,relation=query_relation)
-subject <- potbl[,c(3,4,6)] %>% dplyr::rename(gene_id=subject,branch=subject_branch,relation=subject_relation)
-potbl   <- dplyr::bind_rows(query,subject) %>% dplyr::distinct()
+gtbl <- dplyr::inner_join(as.data.frame(org.Hs.egGENENAME),as.data.frame(org.Hs.egENSEMBL)) %>%
+  dplyr::select(ensembl_id,gene_name) %>%
+  tibble::as_tibble()
 
-g <- ggplot(potbl,aes(x=branch)) + 
-  geom_bar(stat="count") + 
-  facet_grid(~relation)
+conservative_potbl <- dplyr::inner_join(conservative_potbl,gtbl,by=c("query"="ensembl_id")) %>%
+  dplyr::rename(query_gene_name=gene_name)
 
-print(g)
+conservative_potbl <- dplyr::inner_join(conservative_potbl,gtbl,by=c("subject"="ensembl_id")) %>%
+  dplyr::rename(subject_gene_name=gene_name)
+
+query   <- conservative_potbl[,c(1,2,5)] %>% dplyr::rename(gene_id=query,branch=query_branch,relation=query_relation)
+subject <- conservative_potbl[,c(3,4,6)] %>% dplyr::rename(gene_id=subject,branch=subject_branch,relation=subject_relation)
+conservative_plot_this <- dplyr::bind_rows(query,subject) %>% dplyr::distinct()
+
+conservative_normalized_events <- conservative_plot_this %>% 
+  dplyr::group_by(gene_id) %>% 
+  dplyr::group_by(branch,relation) %>%
+  dplyr::summarize(`Number of genes`=n()) %>%
+  dplyr::ungroup() %>%
+  tidyr::spread(key=relation,value=`Number of genes`,fill=0) %>%
+  dplyr::mutate(`Number of Events`=offspring+(same/2)) %>%
+  dplyr::inner_join(branch_lengths) %>%
+  dplyr::bind_rows(.,tibble::tibble(branch=16,offspring=conservative_in_humans,parent=0,same=0,`Number of Events`=conservative_in_humans,branch_length=6)) %>%
+  dplyr::mutate(`Events per million years`=`Number of Events`/branch_length)
+
+readr::write_tsv(x=conservative_normalized_events,"../output/aging/conservative_normalized_events.tsv")
+
+g <- conservative_normalized_events %>%
+  ggplot(aes(x=branch,y=`Events per million years`)) + 
+  geom_bar(stat="identity") +
+  xlab("Oldest Branch") + 
+  ylab("Events per Million Years") +
+  ggtitle("Conservative") + 
+  scale_x_continuous(breaks=0:16,labels=c("0","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16"))
  
-cowplot::save_plot("../output/aging/parent_offspring.svg",g)
-cowplot::save_plot("../output/aging/parent_offspring.png",g)
+cowplot::save_plot("../output/aging/conservative_events_over_time.svg",g)
+cowplot::save_plot("../output/aging/conservative_events_over_time.png",g)
+print(g)
+```
+
+### Standard set
+
+```{r}
+standard_hits <- readr::read_tsv("../output/thirdset/standard_hits.tsv",col_names=T)
+human_orthos <- standard_orthos %>% 
+  dplyr::group_by(human_id) %>% 
+  dplyr::summarize(oldest=(min(as.integer(branch)))) %>%
+  dplyr::ungroup()  
+
+tmp1 <- human_orthos %>%
+  dplyr::inner_join(standard_hits, by=c("human_id"="query")) %>%
+  dplyr::rename(query=human_id,query_branch=oldest)
+
+tmp2 <- human_orthos %>%
+  dplyr::inner_join(standard_hits, by=c("human_id"="subject")) %>%
+  dplyr::rename(subject=human_id,subject_branch=oldest)
+
+standard_potbl <- dplyr::inner_join(tmp1,tmp2)
+rm(tmp1,tmp2)
+
+standard_potbl$query_relation <- apply(standard_potbl, 1, function(row) {ifelse(row[[2]] == row[[4]],"same",ifelse(row[[2]] < row[[4]],"parent","offspring"))})
+standard_potbl$subject_relation <- apply(standard_potbl, 1, function(row) {ifelse(row[[2]] == row[[4]],"same",ifelse(row[[2]] > row[[4]],"parent","offspring"))})
+
+gtbl <- dplyr::inner_join(as.data.frame(org.Hs.egGENENAME),as.data.frame(org.Hs.egENSEMBL)) %>%
+  dplyr::select(ensembl_id,gene_name) %>%
+  tibble::as_tibble()
+
+standard_potbl <- dplyr::inner_join(standard_potbl,gtbl,by=c("query"="ensembl_id")) %>%
+  dplyr::rename(query_gene_name=gene_name)
+
+standard_potbl <- dplyr::inner_join(standard_potbl,gtbl,by=c("subject"="ensembl_id")) %>%
+  dplyr::rename(subject_gene_name=gene_name)
+
+query   <- standard_potbl[,c(1,2,5)] %>% dplyr::rename(gene_id=query,branch=query_branch,relation=query_relation)
+subject <- standard_potbl[,c(3,4,6)] %>% dplyr::rename(gene_id=subject,branch=subject_branch,relation=subject_relation)
+standard_plot_this <- dplyr::bind_rows(query,subject) %>% dplyr::distinct()
+
+standard_normalized_events <- standard_plot_this %>% 
+  dplyr::group_by(gene_id) %>% 
+  dplyr::group_by(branch,relation) %>%
+  dplyr::summarize(`Number of genes`=n()) %>%
+  dplyr::ungroup() %>%
+  tidyr::spread(key=relation,value=`Number of genes`,fill=0) %>%
+  dplyr::mutate(`Number of Events`=offspring+(same/2)) %>%
+  dplyr::inner_join(branch_lengths) %>%
+  dplyr::bind_rows(.,tibble::tibble(branch=16,offspring=standard_in_humans,parent=0,same=0,`Number of Events`=conservative_in_humans,branch_length=6)) %>%
+  dplyr::mutate(`Events per million years`=`Number of Events`/branch_length)
+
+readr::write_tsv(x=standard_normalized_events,"../output/aging/standard_normalized_events.tsv")
+
+g <- standard_normalized_events %>%
+  ggplot(aes(x=branch,y=`Events per million years`)) + 
+  geom_bar(stat="identity") +
+  xlab("Oldest Branch") + 
+  ylab("Events per Million Years") +
+  ggtitle("Standard") + 
+  scale_x_continuous(breaks=0:16,labels=c("0","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16"))
+ 
+cowplot::save_plot("../output/aging/standard_events_over_time.svg",g)
+cowplot::save_plot("../output/aging/standard_events_over_time.png",g)
+print(g)
 ```
 
 ## Tissue expression analysis
 
 ### What tissues are these genes expressed in?
 
-```{r}
+#### Conservative set
+
+```{r,fig.height=8}
 tpm_threshold <- 2
 relationships <- c("same","parent","offspring")
 gtex <- readr::read_tsv("../data/GTEx_Analysis_2016-01-15_v7_RNASeQCv1.1.8_gene_median_tpm.gct",skip=2,col_names=T) %>%
@@ -204,8 +265,25 @@ gtex <- readr::read_tsv("../data/GTEx_Analysis_2016-01-15_v7_RNASeQCv1.1.8_gene_
 # remove annoying ".#" parts of each gene ID
 gtex$gene_id <- sapply(stringr::str_split(gtex$gene_id,"[.]"), function(x) {x[1]})
 
-fgtex <- dplyr::inner_join(gtex,potbl) %>%
+fgtex <- dplyr::inner_join(gtex,conservative_plot_this) %>%
   dplyr::distinct()
+
+tissue_expression <- fgtex %>%
+  dplyr::filter(exp > tpm_threshold) %>%
+  dplyr::group_by(tissue) %>%
+  dplyr::summarise(n=n()) %>%
+  dplyr::arrange(desc(n))
+
+g <- ggplot(tissue_expression, aes(x=reorder(tissue, n),y=n)) +
+  geom_bar(stat="identity") +
+  coord_flip() +
+  ylab("Number of genes") +
+  xlab("") + 
+  ggtitle("Total")
+
+cowplot::save_plot(paste0("../output/aging/conservative_total_tissue_expression_barplot.png"),plot=g)
+
+print(g)
 
 for (r in relationships) {
   tissue_expression <- fgtex %>%
@@ -222,7 +300,51 @@ for (r in relationships) {
     xlab("") + 
     ggtitle(r)
   
-  cowplot::save_plot(paste0("../output/aging/",r,"_tissue_expression_barplot.png"),plot=g)
+  cowplot::save_plot(paste0("../output/aging/conservative_",r,"_tissue_expression_barplot.png"),plot=g)
+  
+  print(g)
+}
+```
+
+#### Standard set
+
+```{r,fig.height=8}
+fgtex <- dplyr::inner_join(gtex,standard_plot_this) %>%
+  dplyr::distinct()
+
+tissue_expression <- fgtex %>%
+  dplyr::filter(exp > tpm_threshold) %>%
+  dplyr::group_by(tissue) %>%
+  dplyr::summarise(n=n()) %>%
+  dplyr::arrange(desc(n))
+
+g <- ggplot(tissue_expression, aes(x=reorder(tissue, n),y=n)) +
+  geom_bar(stat="identity") +
+  coord_flip() +
+  ylab("Number of genes") +
+  xlab("") + 
+  ggtitle("Total")
+
+cowplot::save_plot(paste0("../output/aging/standard_total_tissue_expression_barplot.png"),plot=g)
+
+print(g)
+
+for (r in relationships) {
+  tissue_expression <- fgtex %>%
+    dplyr::filter(relation==r) %>%
+    dplyr::filter(exp > tpm_threshold) %>%
+    dplyr::group_by(tissue) %>%
+    dplyr::summarise(n=n()) %>%
+    dplyr::arrange(desc(n))
+  
+  g <- ggplot(tissue_expression, aes(x=reorder(tissue, n),y=n)) +
+    geom_bar(stat="identity") +
+    coord_flip() +
+    ylab("Number of genes") +
+    xlab("") + 
+    ggtitle(r)
+  
+  cowplot::save_plot(paste0("../output/aging/standard_",r,"_tissue_expression_barplot.png"),plot=g)
   
   print(g)
 }
@@ -230,31 +352,154 @@ for (r in relationships) {
 
 ### How many tissues are most genes expressed in?
 
+#### Conservative set
+
 ```{r}
-for (relation in relationships) {
-  gene_expression <- fgtex %>%
-    dplyr::filter(relation==relation) %>%
+fgtex <- dplyr::inner_join(gtex,conservative_plot_this) %>%
+  dplyr::distinct()
+
+# in the standard set, some genes have more than one relationship to other genes
+# i.e. Gene A is same to Gene B, but the parent of Gene C
+# the last line, dplyr::mutate(n=ifelse(n>53,n/2,n)), takes this into account
+# When they have two, the number is always double what it should be
+gene_expression <- fgtex %>%
+  dplyr::group_by(gene_id) %>%
+  dplyr::summarise(n = sum(exp > tpm_threshold)) %>%
+  dplyr::mutate(n=ifelse(n>53,n/2,n)) 
+
+g <- ggplot(gene_expression, aes(x=n)) +
+  geom_histogram(color="grey70") +
+  xlab("Number of Tissues") +
+  ylab("Number of Genes") + 
+  ggtitle("Total")
+
+cowplot::save_plot("../output/aging/conservative_total_gene_expression_distribution.png",plot=g)
+
+print(g)
+
+for (r in relationships) {
+  gene_expression <- gtex %>%
+    dplyr::inner_join(conservative_plot_this) %>%
+    dplyr::distinct() %>%
+    dplyr::filter(relation==r) %>%
     dplyr::group_by(gene_id) %>%
     dplyr::summarise(n = sum(exp > tpm_threshold))
   
   g <- ggplot(gene_expression, aes(x=n)) +
     geom_histogram(color="grey70") +
     xlab("Number of Tissues") +
-    ylab("Number of Genes")
+    ylab("Number of Genes") + 
+    ggtitle(r)
   
-  cowplot::save_plot(paste0("../output/aging/",relation,"_gene_expression_distribution.png"),plot=g)
+  cowplot::save_plot(paste0("../output/aging/conservative_",r,"_gene_expression_distribution.png"),plot=g)
   
   print(g)
 }
 ```
 
 ```{r}
-g <- ggplot(fgtex, aes(x=relation,y=log2(exp+1))) +
+g <- fgtex %>%
+  ggplot(aes(x=relation,y=log2(exp+1))) +
   geom_boxplot() +
   xlab("Relationship") +
   ylab("Log2 Expression")
   
-cowplot::save_plot(paste0("../output/aging/",relation,"_gene_expression_distribution.png"),plot=g)
+cowplot::save_plot("../output/aging/conservative_gene_expression_comparison.png",plot=g)
   
 print(g)
+```
+
+#### Standard set
+
+```{r}
+fgtex <- dplyr::inner_join(gtex,standard_plot_this) %>%
+  dplyr::distinct()
+
+# in the standard set, some genes have more than one relationship to other genes
+# i.e. Gene A is same to Gene B, but the parent of Gene C
+# the last line, dplyr::mutate(n=ifelse(n>53,n/2,n)), takes this into account
+# When they have two, the number is always double what it should be
+gene_expression <- fgtex %>%
+  dplyr::group_by(gene_id) %>%
+  dplyr::summarise(n = sum(exp > tpm_threshold)) %>%
+  dplyr::mutate(n=ifelse(n>53,n/2,n)) 
+
+g <- ggplot(gene_expression, aes(x=n)) +
+  geom_histogram(color="grey70") +
+  xlab("Number of Tissues") +
+  ylab("Number of Genes") + 
+  ggtitle("Total")
+
+cowplot::save_plot("../output/aging/standard_total_gene_expression_distribution.png",plot=g)
+
+print(g)
+
+for (r in relationships) {
+  gene_expression <- fgtex %>%
+    dplyr::filter(relation==r) %>%
+    dplyr::group_by(gene_id) %>%
+    dplyr::summarise(n = sum(exp > tpm_threshold))
+  
+  g <- ggplot(gene_expression, aes(x=n)) +
+    geom_histogram(color="grey70") +
+    xlab("Number of Tissues") +
+    ylab("Number of Genes") + 
+    ggtitle(r)
+  
+  cowplot::save_plot(paste0("../output/aging/standard_",r,"_gene_expression_distribution.png"),plot=g)
+  
+  print(g)
+}
+```
+
+```{r}
+g <- fgtex %>%
+  ggplot(aes(x=relation,y=log2(exp+1))) +
+  geom_boxplot() +
+  xlab("Relationship") +
+  ylab("Log2 Expression")
+  
+cowplot::save_plot("../output/aging/standard_gene_expression_comparison.png",plot=g)
+  
+print(g)
+```
+
+## Save results to file
+
+```{r}
+one <- gtex %>% 
+  dplyr::filter(exp > tpm_threshold) %>% 
+  dplyr::group_by(gene_id) %>% 
+  dplyr::summarise(n=n()) %>% 
+  dplyr::inner_join(conservative_potbl,by=c("gene_id"="query")) %>% 
+  dplyr::rename(query_tissues=n)
+
+out <- gtex %>% 
+  dplyr::filter(exp > tpm_threshold) %>% 
+  dplyr::group_by(gene_id) %>% 
+  dplyr::summarise(n=n()) %>% 
+  dplyr::inner_join(one,by=c("gene_id"="subject")) %>% 
+  dplyr::rename(query_id=gene_id,subject_id=gene_id.y,subject_tissues=n) %>%
+  dplyr::select(query_id,query_tissues,query_branch,query_relation,query_gene_name,
+                subject_id,subject_tissues,subject_branch,subject_relation,subject_gene_name)
+
+readr::write_tsv(x=out,path="../output/aging/conservative_data_table.tsv")
+
+one <- gtex %>% 
+  dplyr::filter(exp > tpm_threshold) %>% 
+  dplyr::group_by(gene_id) %>% 
+  dplyr::summarise(n=n()) %>% 
+  dplyr::inner_join(standard_potbl,by=c("gene_id"="query")) %>% 
+  dplyr::rename(query_tissues=n)
+
+out <- gtex %>% 
+  dplyr::filter(exp > tpm_threshold) %>% 
+  dplyr::group_by(gene_id) %>% 
+  dplyr::summarise(n=n()) %>% 
+  dplyr::inner_join(one,by=c("gene_id"="subject")) %>% 
+  dplyr::rename(query_id=gene_id,subject_id=gene_id.y,subject_tissues=n) %>%
+  dplyr::select(query_id,query_tissues,query_branch,query_relation,query_gene_name,
+                subject_id,subject_tissues,subject_branch,subject_relation,subject_gene_name)
+
+readr::write_tsv(x=out,path="../output/aging/standard_data_table.tsv")
 ```

@@ -329,13 +329,12 @@ div.section {
 </div>
 
 
-<p><strong>Last updated:</strong> 2018-10-16</p>
+<p><strong>Last updated:</strong> 2018-11-05</p>
 <strong>workflowr checks:</strong> <small>(Click a bullet for more information)</small>
 <ul>
 <li>
 <details>
-<p><summary> <strong style="color:blue;">✔</strong> <strong>R Markdown file:</strong> up-to-date </summary></p>
-<p>Great! Since the R Markdown file has been committed to the Git repository, you know the exact version of the code that produced these results.</p>
+<p><summary> <strong style="color:red;">✖</strong> <strong>R Markdown file:</strong> uncommitted changes </summary> The R Markdown file has unstaged changes. To know which version of the R Markdown file created these results, you’ll want to first commit it to the Git repo. If you’re still working on the analysis, you can ignore this warning. When you’re finished, you can run <code>wflow_publish</code> to commit the R Markdown file and build the HTML.</p>
 </details>
 </li>
 <li>
@@ -358,20 +357,46 @@ div.section {
 </li>
 <li>
 <details>
-<p><summary> <strong style="color:blue;">✔</strong> <strong>Repository version:</strong> <a href="https://github.com/pzross/frameshifts/tree/6be1a496ed207469eaaf11f26a534c8c15767537" target="_blank">6be1a49</a> </summary></p>
+<p><summary> <strong style="color:blue;">✔</strong> <strong>Repository version:</strong> <a href="https://github.com/pzross/frameshifts/tree/8720c9677e74df0f16076dc44add2350307d457a" target="_blank">8720c96</a> </summary></p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility. The version displayed above was the version of the Git repository at the time these results were generated. <br><br> Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
 <pre><code>
 Ignored files:
     Ignored:    .RData
     Ignored:    .Rhistory
     Ignored:    .Rproj.user/
-    Ignored:    output/analyze/
 
 Untracked files:
-    Untracked:  analysis/analyze_frameshifts.Rmd
-    Untracked:  docs/figure/
-    Untracked:  output/aging/
-    Untracked:  output/thirdset/standard_hits.tsv
+    Untracked:  analysis/working.R
+    Untracked:  docs/figure/analyze_frameshifts.Rmd/
+    Untracked:  output/aging/conservative_events_over_time.svg
+    Untracked:  output/aging/conservative_normalized_events.tsv
+    Untracked:  output/aging/normalized_events.tsv
+    Untracked:  output/aging/standard_events_over_time.svg
+    Untracked:  output/aging/standard_normalized_events.tsv
+    Untracked:  output/all_bp_genes.tsv
+    Untracked:  output/all_mf_genes.tsv
+    Untracked:  output/all_tissues.tsv
+    Untracked:  output/analyze/
+    Untracked:  output/conservative_data_table.tsv
+    Untracked:  output/offspring_botable.tsv
+    Untracked:  output/offspring_bptable.tsv
+    Untracked:  output/offspring_mftable.tsv
+    Untracked:  output/offspring_tissues.tsv
+    Untracked:  output/parent_bptable.tsv
+    Untracked:  output/parent_mftable.tsv
+    Untracked:  output/parent_tissues.tsv
+    Untracked:  output/standard_data_table.tsv
+
+Unstaged changes:
+    Modified:   analysis/aging.Rmd
+    Modified:   analysis/analyze_frameshifts.Rmd
+    Modified:   analysis/index.Rmd
+    Modified:   analysis/parse_blast.Rmd
+    Deleted:    output/aging/conservative_ages.svg
+    Deleted:    output/aging/parent_offspring.svg
+    Deleted:    output/aging/standard_ages.svg
+    Deleted:    output/aging/standard_aging.svg
+    Modified:   output/thirdset/standard_hits.tsv
 
 </code></pre>
 Note that any generated files, e.g. HTML, png, CSS, etc., are not included in this status report because it is ok for generated content to have uncommitted changes.
@@ -402,6 +427,23 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td style="text-align:left;">
+html
+</td>
+<td style="text-align:left;">
+<a href="https://cdn.rawgit.com/pzross/frameshifts/3b75970627314f92c6c8199484e443f98cc6670c/docs/parse_blast.html" target="_blank">3b75970</a>
+</td>
+<td style="text-align:left;">
+Philipp Ross
+</td>
+<td style="text-align:left;">
+2018-10-16
+</td>
+<td style="text-align:left;">
+Build site.
+</td>
+</tr>
 <tr>
 <td style="text-align:left;">
 Rmd
@@ -470,6 +512,7 @@ Attaching package: &#39;dplyr&#39;</code></pre>
 <pre><code>The following objects are masked from &#39;package:base&#39;:
 
     intersect, setdiff, setequal, union</code></pre>
+<pre class="r"><code>library(magrittr)</code></pre>
 <div id="filtering-initial-blast-results" class="section level2">
 <h2>Filtering initial BLAST results</h2>
 <p>First we need to split up the query and subject IDs so we’re matching just on Ensmbl gene IDs.</p>
@@ -530,7 +573,7 @@ readr::write_tsv(conservative, path=&quot;../output/thirdset/conservativeset.tsv
 </div>
 <div id="finding-reciprocal-best-hits-for-the-conservative-set" class="section level2">
 <h2>Finding reciprocal best hits for the conservative set</h2>
-<p>Now to find only the reciprocal best hits. We do this by making sure the best match for the query gene is also the best match for the subject gene. They each need to have the highest percent identity for each other and have complementary frame shifts. An aligment of query to subject with frame shifts of 1 and 3 respectively, should have reciprocal frame shifts of 3 and 1 or -3 and -1 or -1 and -3 or 1 and 3, respectively.</p>
+<p>Now to find only the reciprocal best hits. We do this by making sure the best match for the query gene is also the best match for the subject gene. They each need to have the highest percent identity for each other and have complementary frame shifts. An aligment of query to subject with frame shifts of 1 and 3 respectively, should have reciprocal frame shifts of 3 and 1 or -3 and -1 or -1 and -3 or 1 and 3.</p>
 <p>We do this using the not so pretty code below:</p>
 <pre class="r"><code># make an empty table placeholder
 otable &lt;- tibble::tibble(query=character(),
@@ -675,7 +718,7 @@ otable &lt;- dplyr::anti_join(otable,dupqtable)</code></pre>
 <pre><code>Joining, by = c(&quot;query&quot;, &quot;subject&quot;, &quot;evalue&quot;, &quot;alnlength&quot;, &quot;identity&quot;, &quot;identical&quot;, &quot;mismatches&quot;, &quot;qframe&quot;, &quot;sframe&quot;)</code></pre>
 <pre class="r"><code>otable &lt;- dplyr::anti_join(otable,dupstable)</code></pre>
 <pre><code>Joining, by = c(&quot;query&quot;, &quot;subject&quot;, &quot;evalue&quot;, &quot;alnlength&quot;, &quot;identity&quot;, &quot;identical&quot;, &quot;mismatches&quot;, &quot;qframe&quot;, &quot;sframe&quot;)</code></pre>
-<pre class="r"><code># remove things that were added to dump list,but due to ordering of queries
+<pre class="r"><code># remove things that were added to dump list, but due to ordering of queries
 # and matches, they were not removed
 otable &lt;- dplyr::filter(otable, !(query %in% dump_list))
 otable &lt;- dplyr::filter(otable, !(subject %in% dump_list))
@@ -700,20 +743,81 @@ readr::write_tsv(x=reciprocal_best_hits,path=&quot;../output/thirdset/conservati
 </div>
 <div id="total-events-in-standard-set" class="section level2">
 <h2>Total events in standard set</h2>
+<p>Now we do something similar for the standard set except this time we aren’t interested in keeping only best reciprocal hits, but all hits.</p>
+<pre class="r"><code># make an empty list to store results
+standard_reciprocals &lt;- c()
+# loop through every row - this works because if the gene is not in the
+# query column, then it obviously is not a reciprocal
+for (i in 1:nrow(standard)) {
+  # take query and subject of this row
+  q &lt;- standard$query[i]
+  s &lt;- standard$subject[i]
+  # if the query is also in the subject column, continue
+  if (q %in% standard$subject) {
+    # find what the queries are for where this gene is a subject
+    alt &lt;- dplyr::filter(standard, subject==q) %$% query
+    # if the subject was a query of the original query subject match, then
+    # we keep it
+    if (s %in% alt) {
+      standard_reciprocals &lt;- c(standard_reciprocals,q)
+    } else {
+      next()
+    }
+  } else {
+    next()
+  }
+}</code></pre>
 <p>Now we should have our list of reciprocal best hits! For the standard set, we don’t care about the reciporical best hits so we will just remove duplicate rows.</p>
 <pre class="r"><code>standard_hits &lt;- standard %&gt;% 
+  dplyr::filter(query %in% standard_reciprocals &amp; subject %in% standard_reciprocals) %&gt;%
   dplyr::select(query, subject) %&gt;% 
-  dplyr::distinct() %&gt;%
-  dplyr::anti_join(reciprocal_best_hits)</code></pre>
-<pre><code>Joining, by = c(&quot;query&quot;, &quot;subject&quot;)</code></pre>
+  dplyr::distinct()</code></pre>
 <pre class="r"><code># write to an output file
 readr::write_tsv(x=standard_hits,path=&quot;../output/thirdset/standard_hits.tsv&quot;)</code></pre>
 <p>How many frameshift events in our standard set?</p>
-<pre class="r"><code>length(standard_hits[[1]])/2</code></pre>
-<pre><code>[1] 1296</code></pre>
+<pre class="r"><code># first remove all reciprocal best hits
+anti &lt;- dplyr::anti_join(standard_hits,reciprocal_best_hits)</code></pre>
+<pre><code>Joining, by = c(&quot;query&quot;, &quot;subject&quot;)</code></pre>
+<pre class="r"><code># set count to zero and make an empty list
+count &lt;- 0
+hits &lt;- list()
+# loop through table lacking reciprocal best hits making sure we
+# count cases of A to B and B to A as one event, but
+# cases of A to B and A to C as two events and A to B and B to C as two events
+for (i in 1:nrow(anti)) {
+  row &lt;- anti[i,]
+  if (is.null(hits[[row$query]])) {
+    if (is.null(hits[[row$subject]])) {
+      count &lt;- count + 1
+      hits[[row$query]] &lt;- row$subject
+      next()
+    } else if (row$query %in% hits[[row$subject]]) {
+      hits[[row$query]] &lt;- row$subject
+      next()
+    } else {
+      count &lt;- count + 1
+      hits[[row$query]] &lt;- row$subject
+      next()
+    }
+  } else if (row$subject %in% hits[[row$query]]) {
+    next()
+  } else {
+    count &lt;- count + 1
+    hits[[row$query]] &lt;- c(hits[[row$query]],row$subject)
+    next()
+  }
+}
+# add the count plus the number of reciprocal best hits divided in half to 
+# get the total count of standard frameshifts
+count + length(reciprocal_best_hits[[1]])/2</code></pre>
+<pre><code>[1] 610</code></pre>
+<p>Just to be sure, if we join the standard table with the conservative table, do we get everything that we have in the conservative table?</p>
+<pre class="r"><code>length(reciprocal_best_hits[[1]]) == length(dplyr::inner_join(standard_hits,reciprocal_best_hits)[[1]])</code></pre>
+<pre><code>Joining, by = c(&quot;query&quot;, &quot;subject&quot;)</code></pre>
+<pre><code>[1] TRUE</code></pre>
 <p>How many genes in our standard set?</p>
-<pre class="r"><code>length(standard_hits[[1]])</code></pre>
-<pre><code>[1] 2592</code></pre>
+<pre class="r"><code>length(unique(standard_hits$query,standard_hits$subject))</code></pre>
+<pre><code>[1] 1164</code></pre>
 </div>
 <div id="session-information" class="section level2">
 <h2>Session information</h2>
@@ -738,20 +842,20 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] bindrcpp_0.2.2 dplyr_0.7.6    readr_1.1.1   
+[1] bindrcpp_0.2.2 magrittr_1.5   dplyr_0.7.6    readr_1.1.1   
 
 loaded via a namespace (and not attached):
  [1] Rcpp_0.12.19      bindr_0.1.1       knitr_1.20       
- [4] whisker_0.3-2     magrittr_1.5      workflowr_1.1.1  
- [7] hms_0.4.2         tidyselect_0.2.4  R6_2.3.0         
-[10] rlang_0.2.2       stringr_1.3.1     tools_3.5.0      
-[13] R.oo_1.22.0       git2r_0.23.0      htmltools_0.3.6  
-[16] assertthat_0.2.0  yaml_2.2.0        rprojroot_1.3-2  
-[19] digest_0.6.17     tibble_1.4.2      crayon_1.3.4     
-[22] purrr_0.2.5       R.utils_2.7.0     glue_1.3.0       
-[25] evaluate_0.11     rmarkdown_1.10    stringi_1.2.4    
-[28] compiler_3.5.0    pillar_1.3.0      backports_1.1.2  
-[31] R.methodsS3_1.7.1 pkgconfig_2.0.2  </code></pre>
+ [4] whisker_0.3-2     workflowr_1.1.1   hms_0.4.2        
+ [7] tidyselect_0.2.4  R6_2.3.0          rlang_0.2.2      
+[10] stringr_1.3.1     tools_3.5.0       R.oo_1.22.0      
+[13] git2r_0.23.0      htmltools_0.3.6   assertthat_0.2.0 
+[16] yaml_2.2.0        rprojroot_1.3-2   digest_0.6.17    
+[19] tibble_1.4.2      crayon_1.3.4      purrr_0.2.5      
+[22] R.utils_2.7.0     glue_1.3.0        evaluate_0.11    
+[25] rmarkdown_1.10    stringi_1.2.4     compiler_3.5.0   
+[28] pillar_1.3.0      backports_1.1.2   R.methodsS3_1.7.1
+[31] pkgconfig_2.0.2  </code></pre>
 </div>
 
 <!-- Adjust MathJax settings so that all math formulae are shown using
@@ -765,12 +869,6 @@ footer is added to webpages before the MathJax javascript. -->
     "HTML-CSS": { availableFonts: ["TeX"] }
   });
 </script>
-
-<hr>
-<p>
-    
-</p>
-<hr>
 
 <!-- To enable disqus, uncomment the section below and provide your disqus_shortname -->
 

@@ -227,7 +227,7 @@ div.section {
 </div>
 
 
-<p><strong>Last updated:</strong> 2018-10-16</p>
+<p><strong>Last updated:</strong> 2018-11-06</p>
 <strong>workflowr checks:</strong> <small>(Click a bullet for more information)</small>
 <ul>
 <li>
@@ -237,17 +237,37 @@ div.section {
 </li>
 <li>
 <details>
-<p><summary> <strong style="color:blue;">✔</strong> <strong>Repository version:</strong> <a href="https://github.com/pzross/frameshifts/tree/6001ee19ad0262238ed28ca679690ffbc8da0425" target="_blank">6001ee1</a> </summary></p>
+<p><summary> <strong style="color:blue;">✔</strong> <strong>Repository version:</strong> <a href="https://github.com/pzross/frameshifts/tree/8720c9677e74df0f16076dc44add2350307d457a" target="_blank">8720c96</a> </summary></p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility. The version displayed above was the version of the Git repository at the time these results were generated. <br><br> Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
 <pre><code>
 Ignored files:
     Ignored:    .RData
     Ignored:    .Rhistory
     Ignored:    .Rproj.user/
-    Ignored:    output/analyze/
+
+Untracked files:
+    Untracked:  analysis/final_tables.Rmd
+    Untracked:  docs/figure/analyze_frameshifts.Rmd/
+    Untracked:  output/aging/conservative_data_table.tsv
+    Untracked:  output/aging/conservative_events_over_time.svg
+    Untracked:  output/aging/conservative_normalized_events.tsv
+    Untracked:  output/aging/standard_data_table.tsv
+    Untracked:  output/aging/standard_events_over_time.svg
+    Untracked:  output/aging/standard_normalized_events.tsv
+    Untracked:  output/analyze/
+    Untracked:  output/final_tables/
 
 Unstaged changes:
+    Modified:   analysis/aging.Rmd
+    Modified:   analysis/analyze_frameshifts.Rmd
     Modified:   analysis/index.Rmd
+    Modified:   analysis/parse_blast.Rmd
+    Deleted:    output/aging/conservative_ages.svg
+    Deleted:    output/aging/conservative_aging.svg
+    Deleted:    output/aging/parent_offspring.svg
+    Deleted:    output/aging/standard_ages.svg
+    Deleted:    output/aging/standard_aging.svg
+    Modified:   output/thirdset/standard_hits.tsv
 
 </code></pre>
 Note that any generated files, e.g. HTML, png, CSS, etc., are not included in this status report because it is ok for generated content to have uncommitted changes.
@@ -278,6 +298,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td style="text-align:left;">
+Rmd
+</td>
+<td style="text-align:left;">
+<a href="https://github.com/pzross/frameshifts/blob/8720c9677e74df0f16076dc44add2350307d457a/analysis/index.Rmd" target="_blank">8720c96</a>
+</td>
+<td style="text-align:left;">
+Philipp Ross
+</td>
+<td style="text-align:left;">
+2018-10-16
+</td>
+<td style="text-align:left;">
+update index
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+html
+</td>
+<td style="text-align:left;">
+<a href="https://cdn.rawgit.com/pzross/frameshifts/8720c9677e74df0f16076dc44add2350307d457a/docs/index.html" target="_blank">8720c96</a>
+</td>
+<td style="text-align:left;">
+Philipp Ross
+</td>
+<td style="text-align:left;">
+2018-10-16
+</td>
+<td style="text-align:left;">
+update index
+</td>
+</tr>
 <tr>
 <td style="text-align:left;">
 Rmd
@@ -334,14 +388,15 @@ Start workflowr project.
 </ul>
 </details>
 <hr />
-<div id="parse-blast" class="section level3">
-<h3><a href="parse_blast.html">Parse Blast</a></h3>
-</div>
-<div id="analyze-frameshifts" class="section level3">
-<h3><a href="analyze_frameshifts.html">Analyze frameshifts</a></h3>
-</div>
-<div id="aging-frameshifted-genes" class="section level3">
-<h3><a href="aging.html">Aging frameshifted genes</a></h3>
+<p>Turns out new genes might frequently be generated through frameshift duplication events. Here I analyze the results of TBLASTX run of all human genes against all other human genes, isolating hits that are out of frame from one another.</p>
+<div id="workflow" class="section level3">
+<h3>Workflow</h3>
+<ul>
+<li><p><a href="parse_blast.html">Parse Blast</a></p></li>
+<li><p><a href="analyze_frameshifts.html">Analyze frameshifts</a></p></li>
+<li><p><a href="aging.html">Aging frameshifted genes</a></p></li>
+<li><p><a href="final_tables.html">Making final tables</a></p></li>
+</ul>
 </div>
 
 <!-- Adjust MathJax settings so that all math formulae are shown using
@@ -355,12 +410,6 @@ footer is added to webpages before the MathJax javascript. -->
     "HTML-CSS": { availableFonts: ["TeX"] }
   });
 </script>
-
-<hr>
-<p>
-    
-</p>
-<hr>
 
 <!-- To enable disqus, uncomment the section below and provide your disqus_shortname -->
 

@@ -1,0 +1,196 @@
+---
+title: "Final tables"
+author: "Philipp Ross"
+date: "2018-11-05"
+output: workflowr::wflow_html
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r}
+library(tidyverse)
+library(magrittr)
+```
+
+Code to combine previous data sets to make final tables for a manuscript.
+
+```{r}
+gtex <- readr::read_tsv("../data/GTEx_Analysis_2016-01-15_v7_RNASeQCv1.1.8_gene_median_tpm.gct",skip=2,col_names=T) %>%
+  dplyr::select(-Description) %>%
+  tidyr::gather(key = tissue, value = exp, -gene_id)
+
+# remove annoying ".#" parts of each gene ID
+gtex$gene_id <- sapply(stringr::str_split(gtex$gene_id,"[.]"), function(x) {x[1]})
+
+tpm_threshold <- 2
+```
+
+### Conservative set
+
+```{r}
+cdt <- readr::read_tsv("../output/aging/conservative_data_table.tsv")
+
+parent_genes1 <- cdt %>%
+  dplyr::filter(query_relation=="parent" & subject_relation=="offspring") %$%
+  query_id
+parent_genes2 <- cdt %>%
+  dplyr::filter(query_relation=="offspring" & subject_relation=="parent") %$%
+  subject_id
+parent_genes <- c(parent_genes1,parent_genes2)
+rm(parent_genes1,parent_genes2)
+
+offspring_genes1 <- cdt %>%
+  dplyr::filter(query_relation=="offspring" & subject_relation=="parent") %$%
+  query_id
+offspring_genes2 <- cdt %>%
+  dplyr::filter(query_relation=="parent" & subject_relation=="offspring") %$%
+  subject_id
+offspring_genes <- c(offspring_genes1,offspring_genes2)
+rm(offspring_genes1,offspring_genes2)
+
+all_genes <- c(unique(cdt$query_id,cdt$subject_id))
+
+conservative_bptable <- readr::read_tsv("../output/analyze/conservative_bpcount_table.tsv")
+conservative_bptable %>%
+  dplyr::filter(ENSEMBL %in% all_genes) %>%
+  dplyr::select(`Biological Process`,`Number of genes`) %>%
+  dplyr::arrange(desc(`Number of genes`)) %>%
+  dplyr::distinct() %>%
+  readr::write_tsv("../output/final_tables/conservative_all_bp_genes.tsv")
+conservative_mftable <-  readr::read_tsv("../output/analyze/conservative_mfcount_table.tsv")
+conservative_mftable %>%
+  dplyr::filter(ENSEMBL %in% all_genes) %>%
+  dplyr::select(`Molecular function`,`Number of genes`) %>%
+  dplyr::arrange(desc(`Number of genes`)) %>%
+  dplyr::distinct() %>%
+  readr::write_tsv("../output/final_tables/conservative_all_mf_genes.tsv")
+
+offspring_bptable <- dplyr::filter(conservative_bptable, ENSEMBL %in% offspring_genes) %>%
+  dplyr::group_by(`Biological Process`) %>%
+  dplyr::summarize(n=n()) %>%
+  dplyr::arrange(desc(n))
+readr::write_tsv(offspring_bptable,"../output/final_tables/conservative_offspring_bptable.tsv")
+parent_bptable <- dplyr::filter(conservative_bptable, ENSEMBL %in% parent_genes) %>%
+  dplyr::group_by(`Biological Process`) %>%
+  dplyr::summarize(n=n()) %>%
+  dplyr::arrange(desc(n))
+readr::write_tsv(parent_bptable,"../output/final_tables/conservative_parent_bptable.tsv")
+
+offspring_mftable <- dplyr::filter(conservative_mftable, ENSEMBL %in% offspring_genes) %>%
+  dplyr::group_by(`Molecular function`) %>%
+  dplyr::summarize(n=n()) %>%
+  dplyr::arrange(desc(n))
+readr::write_tsv(offspring_mftable,"../output/final_tables/conservative_offspring_mftable.tsv")
+parent_mftable <- dplyr::filter(conservative_mftable, ENSEMBL %in% parent_genes) %>%
+  dplyr::group_by(`Molecular function`) %>%
+  dplyr::summarize(n=n()) %>%
+  dplyr::arrange(desc(n))
+readr::write_tsv(parent_mftable,"../output/final_tables/conservative_parent_mftable.tsv")
+
+offspring_tissues <- gtex %>%
+  dplyr::filter(gene_id %in% offspring_genes) %>%
+  dplyr::filter(exp > tpm_threshold) %>%
+  dplyr::group_by(tissue) %>%
+  dplyr::summarise(`Number of genes`=n()) %>%
+  dplyr::arrange(desc(`Number of genes`))
+readr::write_tsv(offspring_tissues,"../output/final_tables/conservative_offspring_tissues.tsv")
+parent_tissues <- gtex %>%
+  dplyr::filter(gene_id %in% parent_genes) %>%
+  dplyr::filter(exp > tpm_threshold) %>%
+  dplyr::group_by(tissue) %>%
+  dplyr::summarise(`Number of genes`=n()) %>%
+  dplyr::arrange(desc(`Number of genes`))
+readr::write_tsv(parent_tissues,"../output/final_tables/conservative_parent_tissues.tsv")
+all_tissues <- gtex %>%
+  dplyr::filter(gene_id %in% all_genes) %>%
+  dplyr::filter(exp > tpm_threshold) %>%
+  dplyr::group_by(tissue) %>%
+  dplyr::summarise(`Number of genes`=n()) %>%
+  dplyr::arrange(desc(`Number of genes`))
+readr::write_tsv(all_tissues,"../output/final_tables/conservative_all_tissues.tsv")
+```
+
+### Standard set
+
+```{r}
+sdt <- readr::read_tsv("../output/aging/standard_data_table.tsv")
+
+parent_genes1 <- sdt %>%
+  dplyr::filter(query_relation=="parent" & subject_relation=="offspring") %$%
+  query_id
+parent_genes2 <- sdt %>%
+  dplyr::filter(query_relation=="offspring" & subject_relation=="parent") %$%
+  subject_id
+parent_genes <- c(parent_genes1,parent_genes2)
+rm(parent_genes1,parent_genes2)
+
+offspring_genes1 <- sdt %>%
+  dplyr::filter(query_relation=="offspring" & subject_relation=="parent") %$%
+  query_id
+offspring_genes2 <- sdt %>%
+  dplyr::filter(query_relation=="parent" & subject_relation=="offspring") %$%
+  subject_id
+offspring_genes <- c(offspring_genes1,offspring_genes2)
+rm(offspring_genes1,offspring_genes2)
+
+all_genes <- c(unique(sdt$query_id,sdt$subject_id))
+
+standard_bptable <- readr::read_tsv("../output/analyze/standard_bpcount_table.tsv")
+standard_bptable %>%
+  dplyr::filter(ENSEMBL %in% all_genes) %>%
+  dplyr::select(`Biological Process`,`Number of genes`) %>%
+  dplyr::arrange(desc(`Number of genes`)) %>%
+  dplyr::distinct() %>%
+  readr::write_tsv("../output/final_tables/standard_all_bp_genes.tsv")
+standard_mftable <-  readr::read_tsv("../output/analyze/standard_mfcount_table.tsv")
+standard_mftable %>%
+  dplyr::filter(ENSEMBL %in% all_genes) %>%
+  dplyr::select(`Molecular function`,`Number of genes`) %>%
+  dplyr::arrange(desc(`Number of genes`)) %>%
+  dplyr::distinct() %>%
+  readr::write_tsv("../output/final_tables/standard_all_mf_genes.tsv")
+
+offspring_bptable <- dplyr::filter(standard_bptable, ENSEMBL %in% offspring_genes) %>%
+  dplyr::group_by(`Biological Process`) %>%
+  dplyr::summarize(n=n()) %>%
+  dplyr::arrange(desc(n))
+readr::write_tsv(offspring_bptable,"../output/final_tables/standard_offspring_bptable.tsv")
+parent_bptable <- dplyr::filter(standard_bptable, ENSEMBL %in% parent_genes) %>%
+  dplyr::group_by(`Biological Process`) %>%
+  dplyr::summarize(n=n()) %>%
+  dplyr::arrange(desc(n))
+readr::write_tsv(parent_bptable,"../output/final_tables/standard_parent_bptable.tsv")
+
+offspring_mftable <- dplyr::filter(standard_mftable, ENSEMBL %in% offspring_genes) %>%
+  dplyr::group_by(`Molecular function`) %>%
+  dplyr::summarize(n=n()) %>%
+  dplyr::arrange(desc(n))
+readr::write_tsv(offspring_mftable,"../output/final_tables/standard_offspring_mftable.tsv")
+parent_mftable <- dplyr::filter(standard_mftable, ENSEMBL %in% parent_genes) %>%
+  dplyr::group_by(`Molecular function`) %>%
+  dplyr::summarize(n=n()) %>%
+  dplyr::arrange(desc(n))
+readr::write_tsv(parent_mftable,"../output/final_tables/standard_parent_mftable.tsv")
+
+offspring_tissues <- gtex %>%
+  dplyr::filter(gene_id %in% offspring_genes) %>%
+  dplyr::filter(exp > tpm_threshold) %>%
+  dplyr::group_by(tissue) %>%
+  dplyr::summarise(`Number of genes`=n()) %>%
+  dplyr::arrange(desc(`Number of genes`))
+readr::write_tsv(offspring_tissues,"../output/final_tables/standard_offspring_tissues.tsv")
+parent_tissues <- gtex %>%
+  dplyr::filter(gene_id %in% parent_genes) %>%
+  dplyr::filter(exp > tpm_threshold) %>%
+  dplyr::group_by(tissue) %>%
+  dplyr::summarise(`Number of genes`=n()) %>%
+  dplyr::arrange(desc(`Number of genes`))
+readr::write_tsv(parent_tissues,"../output/final_tables/standard_parent_tissues.tsv")
+all_tissues <- gtex %>%
+  dplyr::filter(gene_id %in% all_genes) %>%
+  dplyr::filter(exp > tpm_threshold) %>%
+  dplyr::group_by(tissue) %>%
+  dplyr::summarise(`Number of genes`=n()) %>%
+  dplyr::arrange(desc(`Number of genes`))
+readr::write_tsv(all_tissues,"../output/final_tables/standard_all_tissues.tsv")
+```
