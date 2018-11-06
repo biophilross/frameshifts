@@ -329,12 +329,13 @@ div.section {
 </div>
 
 
-<p><strong>Last updated:</strong> 2018-11-05</p>
+<p><strong>Last updated:</strong> 2018-11-06</p>
 <strong>workflowr checks:</strong> <small>(Click a bullet for more information)</small>
 <ul>
 <li>
 <details>
-<p><summary> <strong style="color:red;">✖</strong> <strong>R Markdown file:</strong> uncommitted changes </summary> The R Markdown file has unstaged changes. To know which version of the R Markdown file created these results, you’ll want to first commit it to the Git repo. If you’re still working on the analysis, you can ignore this warning. When you’re finished, you can run <code>wflow_publish</code> to commit the R Markdown file and build the HTML.</p>
+<p><summary> <strong style="color:blue;">✔</strong> <strong>R Markdown file:</strong> up-to-date </summary></p>
+<p>Great! Since the R Markdown file has been committed to the Git repository, you know the exact version of the code that produced these results.</p>
 </details>
 </li>
 <li>
@@ -357,7 +358,7 @@ div.section {
 </li>
 <li>
 <details>
-<p><summary> <strong style="color:blue;">✔</strong> <strong>Repository version:</strong> <a href="https://github.com/pzross/frameshifts/tree/8720c9677e74df0f16076dc44add2350307d457a" target="_blank">8720c96</a> </summary></p>
+<p><summary> <strong style="color:blue;">✔</strong> <strong>Repository version:</strong> <a href="https://github.com/pzross/frameshifts/tree/938af074d777594e3ee8a6c9489035f9837de659" target="_blank">938af07</a> </summary></p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility. The version displayed above was the version of the Git repository at the time these results were generated. <br><br> Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
 <pre><code>
 Ignored files:
@@ -365,37 +366,8 @@ Ignored files:
     Ignored:    .Rhistory
     Ignored:    .Rproj.user/
 
-Untracked files:
-    Untracked:  analysis/working.R
-    Untracked:  output/aging/conservative_events_over_time.svg
-    Untracked:  output/aging/conservative_normalized_events.tsv
-    Untracked:  output/aging/normalized_events.tsv
-    Untracked:  output/aging/standard_events_over_time.svg
-    Untracked:  output/aging/standard_normalized_events.tsv
-    Untracked:  output/all_bp_genes.tsv
-    Untracked:  output/all_mf_genes.tsv
-    Untracked:  output/all_tissues.tsv
-    Untracked:  output/analyze/
-    Untracked:  output/conservative_data_table.tsv
-    Untracked:  output/offspring_botable.tsv
-    Untracked:  output/offspring_bptable.tsv
-    Untracked:  output/offspring_mftable.tsv
-    Untracked:  output/offspring_tissues.tsv
-    Untracked:  output/parent_bptable.tsv
-    Untracked:  output/parent_mftable.tsv
-    Untracked:  output/parent_tissues.tsv
-    Untracked:  output/standard_data_table.tsv
-
 Unstaged changes:
     Modified:   analysis/aging.Rmd
-    Modified:   analysis/analyze_frameshifts.Rmd
-    Modified:   analysis/index.Rmd
-    Modified:   analysis/parse_blast.Rmd
-    Deleted:    output/aging/conservative_ages.svg
-    Deleted:    output/aging/parent_offspring.svg
-    Deleted:    output/aging/standard_ages.svg
-    Deleted:    output/aging/standard_aging.svg
-    Modified:   output/thirdset/standard_hits.tsv
 
 </code></pre>
 Note that any generated files, e.g. HTML, png, CSS, etc., are not included in this status report because it is ok for generated content to have uncommitted changes.
@@ -426,6 +398,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td style="text-align:left;">
+Rmd
+</td>
+<td style="text-align:left;">
+<a href="https://github.com/pzross/frameshifts/blob/938af074d777594e3ee8a6c9489035f9837de659/analysis/analyze_frameshifts.Rmd" target="_blank">938af07</a>
+</td>
+<td style="text-align:left;">
+Philipp Ross
+</td>
+<td style="text-align:left;">
+2018-11-06
+</td>
+<td style="text-align:left;">
+analysis finished
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+html
+</td>
+<td style="text-align:left;">
+<a href="https://cdn.rawgit.com/pzross/frameshifts/938af074d777594e3ee8a6c9489035f9837de659/docs/analyze_frameshifts.html" target="_blank">938af07</a>
+</td>
+<td style="text-align:left;">
+Philipp Ross
+</td>
+<td style="text-align:left;">
+2018-11-06
+</td>
+<td style="text-align:left;">
+analysis finished
+</td>
+</tr>
 <tr>
 <td style="text-align:left;">
 Rmd
@@ -607,15 +613,77 @@ conservative_mfcount &lt;- tibble::tibble(GOID=conservative_gomf@result$ID,
 
 # Plot these enrichments
 g &lt;- clusterProfiler::dotplot(conservative_gobp,showCategory=30)
-cowplot::save_plot(&quot;../output/analyze/conservative_biological_process_go_enrichment.png&quot;,plot=g)
-cowplot::save_plot(&quot;../output/analyze/conservative_biological_process_go_enrichment.svg&quot;,plot=g)
+cowplot::save_plot(&quot;../output/analyze/conservative_biological_process_go_enrichment.png&quot;,plot=g,base_height=8,base_width=16)
+cowplot::save_plot(&quot;../output/analyze/conservative_biological_process_go_enrichment.svg&quot;,plot=g,base_height=8,base_width=16)
 print(g)</code></pre>
 <p><img src="figure/analyze_frameshifts.Rmd/unnamed-chunk-2-1.png" width="960" style="display: block; margin: auto;" /></p>
+<details>
+<summary><em>Expand here to see past versions of unnamed-chunk-2-1.png:</em></summary>
+<table style = "border-collapse:separate; border-spacing:5px;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Version
+</th>
+<th style="text-align:left;">
+Author
+</th>
+<th style="text-align:left;">
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<a href="https://github.com/pzross/frameshifts/blob/938af074d777594e3ee8a6c9489035f9837de659/docs/figure/analyze_frameshifts.Rmd/unnamed-chunk-2-1.png" target="_blank">938af07</a>
+</td>
+<td style="text-align:left;">
+Philipp Ross
+</td>
+<td style="text-align:left;">
+2018-11-06
+</td>
+</tr>
+</tbody>
+</table>
+</details>
 <pre class="r"><code>g &lt;- clusterProfiler::dotplot(conservative_gomf,showCategory=20)
-cowplot::save_plot(&quot;../output/analyze/conservative_molecular_function_go_enrichment.png&quot;,plot=g)
-cowplot::save_plot(&quot;../output/analyze/conservative_molecular_function_go_enrichment.svg&quot;,plot=g)
+cowplot::save_plot(&quot;../output/analyze/conservative_molecular_function_go_enrichment.png&quot;,plot=g,base_height=8,base_width=16)
+cowplot::save_plot(&quot;../output/analyze/conservative_molecular_function_go_enrichment.svg&quot;,plot=g,base_height=8,base_width=16)
 print(g)</code></pre>
 <p><img src="figure/analyze_frameshifts.Rmd/unnamed-chunk-2-2.png" width="960" style="display: block; margin: auto;" /></p>
+<details>
+<summary><em>Expand here to see past versions of unnamed-chunk-2-2.png:</em></summary>
+<table style = "border-collapse:separate; border-spacing:5px;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Version
+</th>
+<th style="text-align:left;">
+Author
+</th>
+<th style="text-align:left;">
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<a href="https://github.com/pzross/frameshifts/blob/938af074d777594e3ee8a6c9489035f9837de659/docs/figure/analyze_frameshifts.Rmd/unnamed-chunk-2-2.png" target="_blank">938af07</a>
+</td>
+<td style="text-align:left;">
+Philipp Ross
+</td>
+<td style="text-align:left;">
+2018-11-06
+</td>
+</tr>
+</tbody>
+</table>
+</details>
 </div>
 <div id="standard-set" class="section level3">
 <h3>Standard set</h3>
@@ -683,15 +751,77 @@ rows [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
 
 # Plot these enrichments
 g &lt;- clusterProfiler::dotplot(standard_gobp, showCategory=30)
-cowplot::save_plot(&quot;../output/analyze/standard_biological_process_go_enrichment.png&quot;, plot=g)
-cowplot::save_plot(&quot;../output/analyze/standard_biological_process_go_enrichment.svg&quot;, plot=g)
+cowplot::save_plot(&quot;../output/analyze/standard_biological_process_go_enrichment.png&quot;,plot=g,base_height=8,base_width=16)
+cowplot::save_plot(&quot;../output/analyze/standard_biological_process_go_enrichment.svg&quot;,plot=g,base_height=8,base_width=16)
 print(g)</code></pre>
 <p><img src="figure/analyze_frameshifts.Rmd/unnamed-chunk-3-1.png" width="960" style="display: block; margin: auto;" /></p>
+<details>
+<summary><em>Expand here to see past versions of unnamed-chunk-3-1.png:</em></summary>
+<table style = "border-collapse:separate; border-spacing:5px;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Version
+</th>
+<th style="text-align:left;">
+Author
+</th>
+<th style="text-align:left;">
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<a href="https://github.com/pzross/frameshifts/blob/938af074d777594e3ee8a6c9489035f9837de659/docs/figure/analyze_frameshifts.Rmd/unnamed-chunk-3-1.png" target="_blank">938af07</a>
+</td>
+<td style="text-align:left;">
+Philipp Ross
+</td>
+<td style="text-align:left;">
+2018-11-06
+</td>
+</tr>
+</tbody>
+</table>
+</details>
 <pre class="r"><code>g &lt;- clusterProfiler::dotplot(standard_gomf, showCategory=20)
-cowplot::save_plot(&quot;../output/analyze/standard_molecular_function_go_enrichment.png&quot;, plot=g)
-cowplot::save_plot(&quot;../output/analyze/standard_molecular_function_go_enrichment.svg&quot;, plot=g)
+cowplot::save_plot(&quot;../output/analyze/standard_molecular_function_go_enrichment.png&quot;,plot=g,base_height=8,base_width=16)
+cowplot::save_plot(&quot;../output/analyze/standard_molecular_function_go_enrichment.svg&quot;,plot=g,base_height=8,base_width=16)
 print(g)</code></pre>
 <p><img src="figure/analyze_frameshifts.Rmd/unnamed-chunk-3-2.png" width="960" style="display: block; margin: auto;" /></p>
+<details>
+<summary><em>Expand here to see past versions of unnamed-chunk-3-2.png:</em></summary>
+<table style = "border-collapse:separate; border-spacing:5px;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Version
+</th>
+<th style="text-align:left;">
+Author
+</th>
+<th style="text-align:left;">
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<a href="https://github.com/pzross/frameshifts/blob/938af074d777594e3ee8a6c9489035f9837de659/docs/figure/analyze_frameshifts.Rmd/unnamed-chunk-3-2.png" target="_blank">938af07</a>
+</td>
+<td style="text-align:left;">
+Philipp Ross
+</td>
+<td style="text-align:left;">
+2018-11-06
+</td>
+</tr>
+</tbody>
+</table>
+</details>
 </div>
 </div>
 <div id="gtex-tissue-expression-analysis" class="section level2">
@@ -733,6 +863,37 @@ cowplot::save_plot(&quot;../output/analyze/conservative_gene_expression_distribu
 <pre class="r"><code>print(g)</code></pre>
 <pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
 <p><img src="figure/analyze_frameshifts.Rmd/unnamed-chunk-4-1.png" width="672" style="display: block; margin: auto;" /></p>
+<details>
+<summary><em>Expand here to see past versions of unnamed-chunk-4-1.png:</em></summary>
+<table style = "border-collapse:separate; border-spacing:5px;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Version
+</th>
+<th style="text-align:left;">
+Author
+</th>
+<th style="text-align:left;">
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<a href="https://github.com/pzross/frameshifts/blob/938af074d777594e3ee8a6c9489035f9837de659/docs/figure/analyze_frameshifts.Rmd/unnamed-chunk-4-1.png" target="_blank">938af07</a>
+</td>
+<td style="text-align:left;">
+Philipp Ross
+</td>
+<td style="text-align:left;">
+2018-11-06
+</td>
+</tr>
+</tbody>
+</table>
+</details>
 <pre class="r"><code># group by tissue to create a table of how many genes are express in each
 # tissue type
 tissue_expression &lt;- fgtex %&gt;%
@@ -751,6 +912,37 @@ cowplot::save_plot(&quot;../output/analyze/conservative_tissue_expression_barplo
 cowplot::save_plot(&quot;../output/analyze/conservative_tissue_expression_barplot.svg&quot;,plot=g)
 print(g)</code></pre>
 <p><img src="figure/analyze_frameshifts.Rmd/unnamed-chunk-4-2.png" width="672" style="display: block; margin: auto;" /></p>
+<details>
+<summary><em>Expand here to see past versions of unnamed-chunk-4-2.png:</em></summary>
+<table style = "border-collapse:separate; border-spacing:5px;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Version
+</th>
+<th style="text-align:left;">
+Author
+</th>
+<th style="text-align:left;">
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<a href="https://github.com/pzross/frameshifts/blob/938af074d777594e3ee8a6c9489035f9837de659/docs/figure/analyze_frameshifts.Rmd/unnamed-chunk-4-2.png" target="_blank">938af07</a>
+</td>
+<td style="text-align:left;">
+Philipp Ross
+</td>
+<td style="text-align:left;">
+2018-11-06
+</td>
+</tr>
+</tbody>
+</table>
+</details>
 </div>
 </div>
 <div id="standard-set-1" class="section level2">
@@ -776,6 +968,37 @@ cowplot::save_plot(&quot;../output/analyze/standard_gene_expression_distribution
 <pre class="r"><code>print(g)</code></pre>
 <pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
 <p><img src="figure/analyze_frameshifts.Rmd/unnamed-chunk-5-1.png" width="672" style="display: block; margin: auto;" /></p>
+<details>
+<summary><em>Expand here to see past versions of unnamed-chunk-5-1.png:</em></summary>
+<table style = "border-collapse:separate; border-spacing:5px;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Version
+</th>
+<th style="text-align:left;">
+Author
+</th>
+<th style="text-align:left;">
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<a href="https://github.com/pzross/frameshifts/blob/938af074d777594e3ee8a6c9489035f9837de659/docs/figure/analyze_frameshifts.Rmd/unnamed-chunk-5-1.png" target="_blank">938af07</a>
+</td>
+<td style="text-align:left;">
+Philipp Ross
+</td>
+<td style="text-align:left;">
+2018-11-06
+</td>
+</tr>
+</tbody>
+</table>
+</details>
 <pre class="r"><code># group by tissue to create a table of how many genes are express in each
 # tissue type
 tissue_expression &lt;- fgtex %&gt;%
@@ -794,6 +1017,37 @@ cowplot::save_plot(&quot;../output/analyze/standard_tissue_expression_barplot.pn
 cowplot::save_plot(&quot;../output/analyze/standard_tissue_expression_barplot.svg&quot;,plot=g)
 print(g)</code></pre>
 <p><img src="figure/analyze_frameshifts.Rmd/unnamed-chunk-5-2.png" width="672" style="display: block; margin: auto;" /></p>
+<details>
+<summary><em>Expand here to see past versions of unnamed-chunk-5-2.png:</em></summary>
+<table style = "border-collapse:separate; border-spacing:5px;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Version
+</th>
+<th style="text-align:left;">
+Author
+</th>
+<th style="text-align:left;">
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<a href="https://github.com/pzross/frameshifts/blob/938af074d777594e3ee8a6c9489035f9837de659/docs/figure/analyze_frameshifts.Rmd/unnamed-chunk-5-2.png" target="_blank">938af07</a>
+</td>
+<td style="text-align:left;">
+Philipp Ross
+</td>
+<td style="text-align:left;">
+2018-11-06
+</td>
+</tr>
+</tbody>
+</table>
+</details>
 </div>
 <div id="session-information" class="section level2">
 <h2>Session information</h2>

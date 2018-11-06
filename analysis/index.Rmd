@@ -17,3 +17,8 @@ Turns out new genes might frequently be generated through frameshift duplication
 * [Aging frameshifted genes](aging.html)
 
 * [Making final tables](final_tables.html)
+
+### Issues
+
+1. We are losing events from the time we discover them to when I create the normalized events table - why?
+2. We cannot calculate the standardized normalized events the same as for the conservative events. Because some genes have multiple reciprocal relationships are both "offspring" and "same", for example, and thus need to be counted twice instead of just once.

@@ -21,7 +21,8 @@ We can use biomart to download several orthologs and find out how far back we ca
 
 ```{r}
 conservative_gene_list <- readr::read_tsv("../output/thirdset/conservative_reciprocal_best_hits.tsv",col_names=T)$query
-standard_gene_list <- readr::read_tsv("../output/thirdset/standard_hits.tsv",col_names=T)$query
+standard_hits <- readr::read_tsv("../output/thirdset/standard_hits.tsv",col_names=T)
+standard_gene_list <- dplyr::union(standard_hits$query,standard_hits$subject)
 
 human      <- biomaRt::useMart("ensembl", dataset = "hsapiens_gene_ensembl")
 chimp      <- biomaRt::useMart("ensembl", dataset = "ptroglodytes_gene_ensembl")
@@ -223,16 +224,20 @@ query   <- standard_potbl[,c(1,2,5)] %>% dplyr::rename(gene_id=query,branch=quer
 subject <- standard_potbl[,c(3,4,6)] %>% dplyr::rename(gene_id=subject,branch=subject_branch,relation=subject_relation)
 standard_plot_this <- dplyr::bind_rows(query,subject) %>% dplyr::distinct()
 
-standard_normalized_events <- standard_plot_this %>% 
-  dplyr::group_by(gene_id) %>% 
-  dplyr::group_by(branch,relation) %>%
-  dplyr::summarize(`Number of genes`=n()) %>%
-  dplyr::ungroup() %>%
-  tidyr::spread(key=relation,value=`Number of genes`,fill=0) %>%
-  dplyr::mutate(`Number of Events`=offspring+(same/2)) %>%
-  dplyr::inner_join(branch_lengths) %>%
-  dplyr::bind_rows(.,tibble::tibble(branch=16,offspring=standard_in_humans,parent=0,same=0,`Number of Events`=conservative_in_humans,branch_length=6)) %>%
-  dplyr::mutate(`Events per million years`=`Number of Events`/branch_length)
+# We can't simply divide "same" by 2 here because some genes have multiple reciprocal hits
+# which means they are sometimes assigned as offspring or parent and same at the same time.
+# We need to identify those genes and count them as two events rather than one.
+#
+# standard_normalized_events <- standard_plot_this %>% 
+#   dplyr::group_by(gene_id) %>% 
+#   dplyr::group_by(branch,relation) %>%
+#   dplyr::summarize(`Number of genes`=n()) %>%
+#   dplyr::ungroup() %>%
+#   tidyr::spread(key=relation,value=`Number of genes`,fill=0) %>%
+#   dplyr::mutate(`Number of Events`=offspring+(same/2)) %>%
+#   dplyr::inner_join(branch_lengths) %>%
+#   dplyr::bind_rows(.,tibble::tibble(branch=16,offspring=standard_in_humans,parent=0,same=0,`Number of Events`=standard_in_humans,branch_length=6)) %>%
+#   dplyr::mutate(`Events per million years`=`Number of Events`/branch_length)
 
 readr::write_tsv(x=standard_normalized_events,"../output/aging/standard_normalized_events.tsv")
 
