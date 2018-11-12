@@ -10,7 +10,7 @@ Turns out new genes might frequently be generated through frameshift duplication
 
 ### Workflow
 
-* [Parse Blast](parse_blast.html)
+* [Parse BLAST results](parse_blast.html)
 
 * [Analyze frameshifts](analyze_frameshifts.html)
 
@@ -18,7 +18,17 @@ Turns out new genes might frequently be generated through frameshift duplication
 
 * [Making final tables](final_tables.html)
 
-### Issues
+### ToDo
 
-1. We are losing events from the time we discover them to when I create the normalized events table - why?
-2. We cannot calculate the standardized normalized events the same as for the conservative events. Because some genes have multiple reciprocal relationships are both "offspring" and "same", for example, and thus need to be counted twice instead of just once.
+1. Split GO analyses into parent offspring genes and compare
+  * Does not result in enrichment
+
+2. Add more species - amphioxus, corn worm, nematostella, trichoplax
+  * Are not available through Biomart
+
+### Resources
+
+Other resources to try:
+
+1. https://omabrowser.org/
+2. https://bioconductor.org/packages/release/bioc/html/OmaDB.html

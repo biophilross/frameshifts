@@ -1,5 +1,5 @@
 ---
-title: "Parse Blast Results"
+title: "Parse BLAST Results"
 author: "Philipp Ross"
 date: "2018-01-10"
 output: workflowr::wflow_html
@@ -301,8 +301,8 @@ hits <- list()
 # loop through table lacking reciprocal best hits making sure we
 # count cases of A to B and B to A as one event, but
 # cases of A to B and A to C as two events and A to B and B to C as two events
-for (i in 1:nrow(anti)) {
-  row <- anti[i,]
+for (i in 1:nrow(standard_hits)) {
+  row <- standard_hits[i,]
   if (is.null(hits[[row$query]])) {
     if (is.null(hits[[row$subject]])) {
       count <- count + 1
@@ -326,7 +326,7 @@ for (i in 1:nrow(anti)) {
 }
 # add the count plus the number of reciprocal best hits divided in half to 
 # get the total count of standard frameshifts
-count + length(reciprocal_best_hits[[1]])/2
+print(count)
 ```
 
 Just to be sure, if we join the standard table with the conservative table, do we get everything that we have in the conservative table?

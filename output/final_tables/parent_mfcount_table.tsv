@@ -1,0 +1,1076 @@
+GOID	Molecular function	Number of genes	ENTREZID	ENSEMBL	SYMBOL
+GO:0000982	transcription factor activity, RNA polymerase II proximal promoter sequence-specific DNA binding	16	4904	ENSG00000065978	YBX1
+GO:0001228	transcriptional activator activity, RNA polymerase II transcription regulatory region sequence-specific DNA binding	16	8538	ENSG00000043039	BARX2
+GO:0005525	GTP binding	13	27175	ENSG00000037042	TUBG2
+GO:0032550	purine ribonucleoside binding	13	27175	ENSG00000037042	TUBG2
+GO:0001883	purine nucleoside binding	13	27175	ENSG00000037042	TUBG2
+GO:0032549	ribonucleoside binding	13	27175	ENSG00000037042	TUBG2
+GO:0001882	nucleoside binding	13	27175	ENSG00000037042	TUBG2
+GO:0032561	guanyl ribonucleotide binding	13	27175	ENSG00000037042	TUBG2
+GO:0019001	guanyl nucleotide binding	13	27175	ENSG00000037042	TUBG2
+GO:0000978	RNA polymerase II proximal promoter sequence-specific DNA binding	13	4904	ENSG00000065978	YBX1
+GO:0000987	proximal promoter sequence-specific DNA binding	13	4904	ENSG00000065978	YBX1
+GO:0001077	transcriptional activator activity, RNA polymerase II proximal promoter sequence-specific DNA binding	11	4904	ENSG00000065978	YBX1
+GO:0003924	GTPase activity	11	27175	ENSG00000037042	TUBG2
+GO:0001664	G-protein coupled receptor binding	9	7482	ENSG00000134245	WNT2B
+GO:0003713	transcription coactivator activity	9	2648	ENSG00000108773	KAT2A
+GO:0005200	structural constituent of cytoskeleton	8	27175	ENSG00000037042	TUBG2
+GO:0022804	active transmembrane transporter activity	8	292	ENSG00000005022	SLC25A5
+GO:0048037	cofactor binding	8	27102	ENSG00000086232	EIF2AK1
+GO:0001227	transcriptional repressor activity, RNA polymerase II transcription regulatory region sequence-specific DNA binding	7	6913	ENSG00000092607	TBX15
+GO:0005088	Ras guanyl-nucleotide exchange factor activity	7	7984	ENSG00000050327	ARHGEF5
+GO:0005085	guanyl-nucleotide exchange factor activity	7	7984	ENSG00000050327	ARHGEF5
+GO:0008509	anion transmembrane transporter activity	7	292	ENSG00000005022	SLC25A5
+GO:0000287	magnesium ion binding	6	10079	ENSG00000054793	ATP9A
+GO:0046982	protein heterodimerization activity	6	6913	ENSG00000092607	TBX15
+GO:0001078	transcriptional repressor activity, RNA polymerase II proximal promoter sequence-specific DNA binding	5	6913	ENSG00000092607	TBX15
+GO:0016705	oxidoreductase activity, acting on paired donors, with incorporation or reduction of molecular oxygen	5	1559	ENSG00000138109	CYP2C9
+GO:0005506	iron ion binding	5	1559	ENSG00000138109	CYP2C9
+GO:0016829	lyase activity	5	2677	ENSG00000115486	GGCX
+GO:0008514	organic anion transmembrane transporter activity	5	292	ENSG00000005022	SLC25A5
+GO:0015291	secondary active transmembrane transporter activity	5	292	ENSG00000005022	SLC25A5
+GO:0030246	carbohydrate binding	5	10332	ENSG00000104938	CLEC4M
+GO:0005216	ion channel activity	5	610	ENSG00000099822	HCN2
+GO:0022838	substrate-specific channel activity	5	610	ENSG00000099822	HCN2
+GO:0016887	ATPase activity	5	10079	ENSG00000054793	ATP9A
+GO:0046873	metal ion transmembrane transporter activity	5	610	ENSG00000099822	HCN2
+GO:0015267	channel activity	5	610	ENSG00000099822	HCN2
+GO:0022803	passive transmembrane transporter activity	5	610	ENSG00000099822	HCN2
+GO:0030374	ligand-dependent nuclear receptor transcription coactivator activity	4	79084	ENSG00000116455	WDR77
+GO:0003705	transcription factor activity, RNA polymerase II distal enhancer sequence-specific binding	4	1044	ENSG00000113722	CDX1
+GO:0001104	RNA polymerase II transcription cofactor activity	4	6913	ENSG00000092607	TBX15
+GO:0043492	ATPase activity, coupled to movement of substances	4	10079	ENSG00000054793	ATP9A
+GO:0020037	heme binding	4	27102	ENSG00000086232	EIF2AK1
+GO:0046906	tetrapyrrole binding	4	27102	ENSG00000086232	EIF2AK1
+GO:0015276	ligand-gated ion channel activity	4	610	ENSG00000099822	HCN2
+GO:0022834	ligand-gated channel activity	4	610	ENSG00000099822	HCN2
+GO:0035257	nuclear hormone receptor binding	4	6801	ENSG00000115808	STRN
+GO:0005342	organic acid transmembrane transporter activity	4	9057	ENSG00000103064	SLC7A6
+GO:0046943	carboxylic acid transmembrane transporter activity	4	9057	ENSG00000103064	SLC7A6
+GO:0017048	Rho GTPase binding	4	7984	ENSG00000050327	ARHGEF5
+GO:0051427	hormone receptor binding	4	6801	ENSG00000115808	STRN
+GO:0001076	transcription factor activity, RNA polymerase II transcription factor binding	4	6913	ENSG00000092607	TBX15
+GO:0042393	histone binding	4	26038	ENSG00000116254	CHD5
+GO:0005539	glycosaminoglycan binding	4	3075	ENSG00000000971	CFH
+GO:0003714	transcription corepressor activity	4	6913	ENSG00000092607	TBX15
+GO:1901681	sulfur compound binding	4	3075	ENSG00000000971	CFH
+GO:0016746	transferase activity, transferring acyl groups	4	2648	ENSG00000108773	KAT2A
+GO:0042277	peptide binding	4	10332	ENSG00000104938	CLEC4M
+GO:0033218	amide binding	4	10332	ENSG00000104938	CLEC4M
+GO:0022839	ion gated channel activity	4	610	ENSG00000099822	HCN2
+GO:0022836	gated channel activity	4	610	ENSG00000099822	HCN2
+GO:0015631	tubulin binding	4	9218	ENSG00000101558	VAPA
+GO:0042623	ATPase activity, coupled	4	10079	ENSG00000054793	ATP9A
+GO:0015077	monovalent inorganic cation transmembrane transporter activity	4	610	ENSG00000099822	HCN2
+GO:0003779	actin binding	4	816	ENSG00000058404	CAMK2B
+GO:0004175	endopeptidase activity	4	3002	ENSG00000100453	GZMB
+GO:0050839	cell adhesion molecule binding	4	9218	ENSG00000101558	VAPA
+GO:0017154	semaphorin receptor activity	3	55558	ENSG00000130827	PLXNA3
+GO:0031683	G-protein beta/gamma-subunit complex binding	3	1069	ENSG00000147400	CETN2
+GO:0005109	frizzled binding	3	7482	ENSG00000134245	WNT2B
+GO:0043394	proteoglycan binding	3	3075	ENSG00000000971	CFH
+GO:0019825	oxygen binding	3	1559	ENSG00000138109	CYP2C9
+GO:0015179	L-amino acid transmembrane transporter activity	3	9057	ENSG00000103064	SLC7A6
+GO:0031491	nucleosome binding	3	8289	ENSG00000117713	ARID1A
+GO:0005230	extracellular ligand-gated ion channel activity	3	57030	ENSG00000104888	SLC17A7
+GO:0015171	amino acid transmembrane transporter activity	3	9057	ENSG00000103064	SLC7A6
+GO:0015297	antiporter activity	3	292	ENSG00000005022	SLC25A5
+GO:0008276	protein methyltransferase activity	3	79084	ENSG00000116455	WDR77
+GO:0005253	anion channel activity	3	57030	ENSG00000104888	SLC17A7
+GO:0008170	N-methyltransferase activity	3	79084	ENSG00000116455	WDR77
+GO:0015238	drug transmembrane transporter activity	3	292	ENSG00000005022	SLC25A5
+GO:0004497	monooxygenase activity	3	1559	ENSG00000138109	CYP2C9
+GO:0016407	acetyltransferase activity	3	2648	ENSG00000108773	KAT2A
+GO:0031490	chromatin DNA binding	3	29841	ENSG00000134317	GRHL1
+GO:0042826	histone deacetylase binding	3	2648	ENSG00000108773	KAT2A
+GO:0016651	oxidoreductase activity, acting on NAD(P)H	3	4694	ENSG00000125356	NDUFA1
+GO:0016616	oxidoreductase activity, acting on the CH-OH group of donors, NAD or NADP as acceptor	3	160287	ENSG00000166800	LDHAL6A
+GO:0004702	signal transducer, downstream of receptor, with serine/threonine kinase activity	3	5595	ENSG00000102882	MAPK3
+GO:0001653	peptide receptor activity	3	4882	ENSG00000159899	NPR2
+GO:0005319	lipid transporter activity	3	10079	ENSG00000054793	ATP9A
+GO:0016614	oxidoreductase activity, acting on CH-OH group of donors	3	160287	ENSG00000166800	LDHAL6A
+GO:0004386	helicase activity	3	26038	ENSG00000116254	CHD5
+GO:0008201	heparin binding	3	3075	ENSG00000000971	CFH
+GO:0008757	S-adenosylmethionine-dependent methyltransferase activity	3	79084	ENSG00000116455	WDR77
+GO:0015103	inorganic anion transmembrane transporter activity	3	57030	ENSG00000104888	SLC17A7
+GO:0019902	phosphatase binding	3	5595	ENSG00000102882	MAPK3
+GO:0005057	signal transducer activity, downstream of receptor	3	5595	ENSG00000102882	MAPK3
+GO:0004713	protein tyrosine kinase activity	3	5159	ENSG00000113721	PDGFRB
+GO:0031406	carboxylic acid binding	3	63826	ENSG00000167720	SRR
+GO:0043177	organic acid binding	3	63826	ENSG00000167720	SRR
+GO:0003823	antigen binding	3	10332	ENSG00000104938	CLEC4M
+GO:0008168	methyltransferase activity	3	79084	ENSG00000116455	WDR77
+GO:0016747	transferase activity, transferring acyl groups other than amino-acyl groups	3	2648	ENSG00000108773	KAT2A
+GO:0061630	ubiquitin protein ligase activity	3	57161	ENSG00000139946	PELI2
+GO:0016741	transferase activity, transferring one-carbon groups	3	79084	ENSG00000116455	WDR77
+GO:0061659	ubiquitin-like protein ligase activity	3	57161	ENSG00000139946	PELI2
+GO:0004252	serine-type endopeptidase activity	3	3002	ENSG00000100453	GZMB
+GO:0008017	microtubule binding	3	9218	ENSG00000101558	VAPA
+GO:0008236	serine-type peptidase activity	3	3002	ENSG00000100453	GZMB
+GO:0050662	coenzyme binding	3	63826	ENSG00000167720	SRR
+GO:0017171	serine hydrolase activity	3	3002	ENSG00000100453	GZMB
+GO:0016757	transferase activity, transferring glycosyl groups	3	80351	ENSG00000107854	TNKS2
+GO:0031625	ubiquitin protein ligase binding	3	292	ENSG00000005022	SLC25A5
+GO:0044389	ubiquitin-like protein ligase binding	3	292	ENSG00000005022	SLC25A5
+GO:0045296	cadherin binding	3	9218	ENSG00000101558	VAPA
+GO:0042578	phosphoric ester hydrolase activity	3	8611	ENSG00000067113	PLPP1
+GO:0003729	mRNA binding	3	50804	ENSG00000104177	MYEF2
+GO:0005543	phospholipid binding	3	257364	ENSG00000173548	SNX33
+GO:0004842	ubiquitin-protein transferase activity	3	57161	ENSG00000139946	PELI2
+GO:0019787	ubiquitin-like protein transferase activity	3	57161	ENSG00000139946	PELI2
+GO:0048018	receptor ligand activity	3	2247	ENSG00000138685	FGF2
+GO:0016273	arginine N-methyltransferase activity	2	79084	ENSG00000116455	WDR77
+GO:0016274	protein-arginine N-methyltransferase activity	2	79084	ENSG00000116455	WDR77
+GO:0047555	3',5'-cyclic-GMP phosphodiesterase activity	2	5145	ENSG00000132915	PDE6A
+GO:0004697	protein kinase C activity	2	5583	ENSG00000027075	PRKCH
+GO:0004383	guanylate cyclase activity	2	4882	ENSG00000159899	NPR2
+GO:0008391	arachidonic acid monooxygenase activity	2	1559	ENSG00000138109	CYP2C9
+GO:0008392	arachidonic acid epoxygenase activity	2	1559	ENSG00000138109	CYP2C9
+GO:0004016	adenylate cyclase activity	2	4882	ENSG00000159899	NPR2
+GO:0035173	histone kinase activity	2	5585	ENSG00000123143	PKN1
+GO:0005234	extracellularly glutamate-gated ion channel activity	2	57030	ENSG00000104888	SLC17A7
+GO:0099095	ligand-gated anion channel activity	2	57030	ENSG00000104888	SLC17A7
+GO:0004012	phospholipid-translocating ATPase activity	2	10079	ENSG00000054793	ATP9A
+GO:0043395	heparan sulfate proteoglycan binding	2	3075	ENSG00000000971	CFH
+GO:0016849	phosphorus-oxygen lyase activity	2	4882	ENSG00000159899	NPR2
+GO:0009975	cyclase activity	2	4882	ENSG00000159899	NPR2
+GO:0070840	dynein complex binding	2	23299	ENSG00000185963	BICD2
+GO:0004114	3',5'-cyclic-nucleotide phosphodiesterase activity	2	5145	ENSG00000132915	PDE6A
+GO:0030552	cAMP binding	2	610	ENSG00000099822	HCN2
+GO:0004112	cyclic-nucleotide phosphodiesterase activity	2	5145	ENSG00000132915	PDE6A
+GO:0001106	RNA polymerase II transcription corepressor activity	2	6913	ENSG00000092607	TBX15
+GO:0008519	ammonium transmembrane transporter activity	2	83884	ENSG00000120329	SLC25A2
+GO:0016712	oxidoreductase activity, acting on paired donors, with incorporation or reduction of molecular oxygen, reduced flavin or flavoprotein as one donor, and incorporation of one atom of oxygen	2	1559	ENSG00000138109	CYP2C9
+GO:0001205	transcriptional activator activity, RNA polymerase II distal enhancer sequence-specific DNA binding	2	1044	ENSG00000113722	CDX1
+GO:0015020	glucuronosyltransferase activity	2	7365	ENSG00000109181	UGT2B10
+GO:0008395	steroid hydroxylase activity	2	1559	ENSG00000138109	CYP2C9
+GO:0016790	thiolester hydrolase activity	2	58489	ENSG00000136379	ABHD17C
+GO:0048487	beta-tubulin binding	2	55207	ENSG00000134108	ARL8B
+GO:0030551	cyclic nucleotide binding	2	610	ENSG00000099822	HCN2
+GO:0001105	RNA polymerase II transcription coactivator activity	2	10498	ENSG00000142453	CARM1
+GO:0000993	RNA polymerase II core binding	2	26523	ENSG00000092847	AGO1
+GO:1901618	organic hydroxy compound transmembrane transporter activity	2	6571	ENSG00000165646	SLC18A2
+GO:0005231	excitatory extracellular ligand-gated ion channel activity	2	57030	ENSG00000104888	SLC17A7
+GO:0001191	transcriptional repressor activity, RNA polymerase II transcription factor binding	2	6913	ENSG00000092607	TBX15
+GO:0005080	protein kinase C binding	2	5585	ENSG00000123143	PKN1
+GO:0043175	RNA polymerase core enzyme binding	2	26523	ENSG00000092847	AGO1
+GO:0045182	translation regulator activity	2	27102	ENSG00000086232	EIF2AK1
+GO:0005326	neurotransmitter transporter activity	2	57030	ENSG00000104888	SLC17A7
+GO:0005548	phospholipid transporter activity	2	10079	ENSG00000054793	ATP9A
+GO:0022824	transmitter-gated ion channel activity	2	2906	ENSG00000105464	GRIN2D
+GO:0022835	transmitter-gated channel activity	2	2906	ENSG00000105464	GRIN2D
+GO:0048306	calcium-dependent protein binding	2	10332	ENSG00000104938	CLEC4M
+GO:0001098	basal transcription machinery binding	2	26523	ENSG00000092847	AGO1
+GO:0001099	basal RNA polymerase II transcription machinery binding	2	26523	ENSG00000092847	AGO1
+GO:0016655	oxidoreductase activity, acting on NAD(P)H, quinone or similar compound as acceptor	2	4694	ENSG00000125356	NDUFA1
+GO:0005518	collagen binding	2	22795	ENSG00000087303	NID2
+GO:0001190	transcriptional activator activity, RNA polymerase II transcription factor binding	2	10498	ENSG00000142453	CARM1
+GO:0003730	mRNA 3'-UTR binding	2	10642	ENSG00000159217	IGF2BP1
+GO:0019829	cation-transporting ATPase activity	2	514	ENSG00000124172	ATP5F1E
+GO:0034212	peptide N-acetyltransferase activity	2	2648	ENSG00000108773	KAT2A
+GO:0048365	Rac GTPase binding	2	5585	ENSG00000123143	PKN1
+GO:0022853	active ion transmembrane transporter activity	2	514	ENSG00000124172	ATP5F1E
+GO:0042625	ATPase coupled ion transmembrane transporter activity	2	514	ENSG00000124172	ATP5F1E
+GO:0046934	phosphatidylinositol-4,5-bisphosphate 3-kinase activity	2	5159	ENSG00000113721	PDGFRB
+GO:0048029	monosaccharide binding	2	10332	ENSG00000104938	CLEC4M
+GO:0052813	phosphatidylinositol bisphosphate kinase activity	2	5159	ENSG00000113721	PDGFRB
+GO:0070063	RNA polymerase binding	2	26523	ENSG00000092847	AGO1
+GO:0035004	phosphatidylinositol 3-kinase activity	2	5159	ENSG00000113721	PDGFRB
+GO:0005089	Rho guanyl-nucleotide exchange factor activity	2	7984	ENSG00000050327	ARHGEF5
+GO:0005254	chloride channel activity	2	57030	ENSG00000104888	SLC17A7
+GO:0008080	N-acetyltransferase activity	2	2648	ENSG00000108773	KAT2A
+GO:0030165	PDZ domain binding	2	8321	ENSG00000157240	FZD1
+GO:0035258	steroid hormone receptor binding	2	6801	ENSG00000115808	STRN
+GO:0008081	phosphoric diester hydrolase activity	2	5145	ENSG00000132915	PDE6A
+GO:0051213	dioxygenase activity	2	129450	ENSG00000162971	TYW5
+GO:0015108	chloride transmembrane transporter activity	2	57030	ENSG00000104888	SLC17A7
+GO:0051087	chaperone binding	2	1356	ENSG00000047457	CP
+GO:0016410	N-acyltransferase activity	2	2648	ENSG00000108773	KAT2A
+GO:0015294	solute:cation symporter activity	2	57030	ENSG00000104888	SLC17A7
+GO:0003697	single-stranded DNA binding	2	4904	ENSG00000065978	YBX1
+GO:0035326	enhancer binding	2	1044	ENSG00000113722	CDX1
+GO:0099094	ligand-gated cation channel activity	2	610	ENSG00000099822	HCN2
+GO:0008238	exopeptidase activity	2	135293	ENSG00000146281	PM20D2
+GO:0030594	neurotransmitter receptor activity	2	2906	ENSG00000105464	GRIN2D
+GO:0042626	ATPase activity, coupled to transmembrane movement of substances	2	514	ENSG00000124172	ATP5F1E
+GO:0019903	protein phosphatase binding	2	2648	ENSG00000108773	KAT2A
+GO:0015405	P-P-bond-hydrolysis-driven transmembrane transporter activity	2	514	ENSG00000124172	ATP5F1E
+GO:0015399	primary active transmembrane transporter activity	2	514	ENSG00000124172	ATP5F1E
+GO:0015078	proton transmembrane transporter activity	2	514	ENSG00000124172	ATP5F1E
+GO:0140030	modification-dependent protein binding	2	26038	ENSG00000116254	CHD5
+GO:0008528	G-protein coupled peptide receptor activity	2	643	ENSG00000160683	CXCR5
+GO:0019838	growth factor binding	2	27286	ENSG00000102359	SRPX2
+GO:0070851	growth factor receptor binding	2	5159	ENSG00000113721	PDGFRB
+GO:0019842	vitamin binding	2	63826	ENSG00000167720	SRR
+GO:0015085	calcium ion transmembrane transporter activity	2	2906	ENSG00000105464	GRIN2D
+GO:0015293	symporter activity	2	57030	ENSG00000104888	SLC17A7
+GO:0001047	core promoter binding	2	26523	ENSG00000092847	AGO1
+GO:0022843	voltage-gated cation channel activity	2	610	ENSG00000099822	HCN2
+GO:0008194	UDP-glycosyltransferase activity	2	7365	ENSG00000109181	UGT2B10
+GO:0015081	sodium ion transmembrane transporter activity	2	610	ENSG00000099822	HCN2
+GO:0003735	structural constituent of ribosome	2	51258	ENSG00000111639	MRPL51
+GO:0030674	protein binding, bridging	2	10750	ENSG00000154016	GRAP
+GO:0060090	molecular adaptor activity	2	10750	ENSG00000154016	GRAP
+GO:0005244	voltage-gated ion channel activity	2	610	ENSG00000099822	HCN2
+GO:0005516	calmodulin binding	2	816	ENSG00000058404	CAMK2B
+GO:0022832	voltage-gated channel activity	2	610	ENSG00000099822	HCN2
+GO:0019887	protein kinase regulator activity	2	245711	ENSG00000163806	SPDYA
+GO:0016758	transferase activity, transferring hexosyl groups	2	7365	ENSG00000109181	UGT2B10
+GO:0005125	cytokine activity	2	2247	ENSG00000138685	FGF2
+GO:0019207	kinase regulator activity	2	245711	ENSG00000163806	SPDYA
+GO:0035091	phosphatidylinositol binding	2	257364	ENSG00000173548	SNX33
+GO:0005096	GTPase activator activity	2	2776	ENSG00000156052	GNAQ
+GO:0005261	cation channel activity	2	610	ENSG00000099822	HCN2
+GO:0030695	GTPase regulator activity	2	2776	ENSG00000156052	GNAQ
+GO:0060589	nucleoside-triphosphatase regulator activity	2	2776	ENSG00000156052	GNAQ
+GO:0004857	enzyme inhibitor activity	2	57805	ENSG00000158941	CCAR2
+GO:0003680	AT DNA binding	1	5456	ENSG00000196767	POU3F4
+GO:0004983	neuropeptide Y receptor activity	1	10887	ENSG00000169618	PROKR1
+GO:0005225	volume-sensitive anion channel activity	1	84230	ENSG00000171488	LRRC8C
+GO:0005351	carbohydrate:proton symporter activity	1	154091	ENSG00000146411	SLC2A12
+GO:0005436	sodium:phosphate symporter activity	1	57030	ENSG00000104888	SLC17A7
+GO:0005522	profilin binding	1	23433	ENSG00000119729	RHOQ
+GO:0008474	palmitoyl-(protein) hydrolase activity	1	58489	ENSG00000136379	ABHD17C
+GO:0015217	ADP transmembrane transporter activity	1	292	ENSG00000005022	SLC25A5
+GO:0015651	quaternary ammonium group transmembrane transporter activity	1	83884	ENSG00000120329	SLC25A2
+GO:0016725	oxidoreductase activity, acting on CH or CH2 groups	1	1559	ENSG00000138109	CYP2C9
+GO:0031957	very long-chain fatty acid-CoA ligase activity	1	23205	ENSG00000103740	ACSBG1
+GO:0035325	Toll-like receptor binding	1	7096	ENSG00000174125	TLR1
+GO:0070016	armadillo repeat domain binding	1	6801	ENSG00000115808	STRN
+GO:0071723	lipopeptide binding	1	7096	ENSG00000174125	TLR1
+GO:0098599	palmitoyl hydrolase activity	1	58489	ENSG00000136379	ABHD17C
+GO:0004596	peptide alpha-N-acetyltransferase activity	1	84779	ENSG00000156269	NAA11
+GO:0005221	intracellular cyclic nucleotide activated cation channel activity	1	610	ENSG00000099822	HCN2
+GO:0008503	benzodiazepine receptor activity	1	2557	ENSG00000109158	GABRA4
+GO:0032052	bile acid binding	1	1109	ENSG00000198610	AKR1C4
+GO:0033130	acetylcholine receptor binding	1	116372	ENSG00000150551	LYPD1
+GO:0034452	dynactin binding	1	23299	ENSG00000185963	BICD2
+GO:0042577	lipid phosphatase activity	1	8611	ENSG00000067113	PLPP1
+GO:0043295	glutathione binding	1	2944	ENSG00000134184	GSTM1
+GO:0043855	cyclic nucleotide-gated ion channel activity	1	610	ENSG00000099822	HCN2
+GO:0048407	platelet-derived growth factor binding	1	5159	ENSG00000113721	PDGFRB
+GO:0000295	adenine nucleotide transmembrane transporter activity	1	292	ENSG00000005022	SLC25A5
+GO:0005346	purine ribonucleotide transmembrane transporter activity	1	292	ENSG00000005022	SLC25A5
+GO:0008093	cytoskeletal adaptor activity	1	23299	ENSG00000185963	BICD2
+GO:0022851	GABA-gated chloride ion channel activity	1	2557	ENSG00000109158	GABRA4
+GO:0030548	acetylcholine receptor regulator activity	1	116372	ENSG00000150551	LYPD1
+GO:0035925	mRNA 3'-UTR AU-rich region binding	1	677	ENSG00000185650	ZFP36L1
+GO:0099602	neurotransmitter receptor regulator activity	1	116372	ENSG00000150551	LYPD1
+GO:1900750	oligopeptide binding	1	2944	ENSG00000134184	GSTM1
+GO:0004032	alditol:NADP+ 1-oxidoreductase activity	1	1109	ENSG00000198610	AKR1C4
+GO:0004467	long-chain fatty acid-CoA ligase activity	1	23205	ENSG00000103740	ACSBG1
+GO:0008020	G-protein coupled photoreceptor activity	1	23596	ENSG00000054277	OPN3
+GO:0008195	phosphatidate phosphatase activity	1	8611	ENSG00000067113	PLPP1
+GO:0015114	phosphate ion transmembrane transporter activity	1	57030	ENSG00000104888	SLC17A7
+GO:0015216	purine nucleotide transmembrane transporter activity	1	292	ENSG00000005022	SLC25A5
+GO:0016840	carbon-nitrogen lyase activity	1	63826	ENSG00000167720	SRR
+GO:0034450	ubiquitin-ubiquitin ligase activity	1	57161	ENSG00000139946	PELI2
+GO:0039706	co-receptor binding	1	89780	ENSG00000154342	WNT3A
+GO:0050321	tau-protein kinase activity	1	5562	ENSG00000132356	PRKAA1
+GO:0004089	carbonate dehydratase activity	1	763	ENSG00000174990	CA5A
+GO:0004707	MAP kinase activity	1	5595	ENSG00000102882	MAPK3
+GO:0005313	L-glutamate transmembrane transporter activity	1	57030	ENSG00000104888	SLC17A7
+GO:0005344	oxygen carrier activity	1	3045	ENSG00000223609	HBD
+GO:0005388	calcium-transporting ATPase activity	1	344905	ENSG00000187527	ATP13A5
+GO:0015172	acidic amino acid transmembrane transporter activity	1	57030	ENSG00000104888	SLC17A7
+GO:0017110	nucleoside-diphosphatase activity	1	957	ENSG00000187097	ENTPD5
+GO:0019215	intermediate filament binding	1	3861	ENSG00000186847	KRT14
+GO:0032794	GTPase activating protein binding	1	91010	ENSG00000161791	FMNL3
+GO:0004115	3',5'-cyclic-AMP phosphodiesterase activity	1	5139	ENSG00000172572	PDE3A
+GO:0004708	MAP kinase kinase activity	1	5595	ENSG00000102882	MAPK3
+GO:0005161	platelet-derived growth factor receptor binding	1	5159	ENSG00000113721	PDGFRB
+GO:0009881	photoreceptor activity	1	23596	ENSG00000054277	OPN3
+GO:0016594	glycine binding	1	63826	ENSG00000167720	SRR
+GO:0050811	GABA receptor binding	1	11337	ENSG00000170296	GABARAP
+GO:0004551	nucleotide diphosphatase activity	1	170685	ENSG00000122824	NUDT10
+GO:0005237	inhibitory extracellular ligand-gated ion channel activity	1	2557	ENSG00000109158	GABRA4
+GO:0016668	oxidoreductase activity, acting on a sulfur group of donors, NAD(P) as acceptor	1	84817	ENSG00000129235	TXNDC17
+GO:0016805	dipeptidase activity	1	135293	ENSG00000146281	PM20D2
+GO:0017160	Ral GTPase binding	1	5583	ENSG00000027075	PRKCH
+GO:0034185	apolipoprotein binding	1	5340	ENSG00000122194	PLG
+GO:0070492	oligosaccharide binding	1	5968	ENSG00000172023	REG1B
+GO:0015095	magnesium ion transmembrane transporter activity	1	54805	ENSG00000148842	CNNM2
+GO:0015215	nucleotide transmembrane transporter activity	1	292	ENSG00000005022	SLC25A5
+GO:0016722	oxidoreductase activity, oxidizing metal ions	1	1356	ENSG00000047457	CP
+GO:0016755	transferase activity, transferring amino-acyl groups	1	2038	ENSG00000166947	EPB42
+GO:0030280	structural constituent of epidermis	1	6704	ENSG00000203785	SPRR2E
+GO:0030676	Rac guanyl-nucleotide exchange factor activity	1	8997	ENSG00000160145	KALRN
+GO:0042834	peptidoglycan binding	1	5968	ENSG00000172023	REG1B
+GO:0045236	CXCR chemokine receptor binding	1	6374	ENSG00000163735	CXCL5
+GO:0046933	proton-transporting ATP synthase activity, rotational mechanism	1	514	ENSG00000124172	ATP5F1E
+GO:0055106	ubiquitin-protein transferase regulator activity	1	6015	ENSG00000204227	RING1
+GO:0005402	carbohydrate:cation symporter activity	1	154091	ENSG00000146411	SLC2A12
+GO:0005537	mannose binding	1	10332	ENSG00000104938	CLEC4M
+GO:0010485	H4 histone acetyltransferase activity	1	2648	ENSG00000108773	KAT2A
+GO:0015125	bile acid transmembrane transporter activity	1	1109	ENSG00000198610	AKR1C4
+GO:0016854	racemase and epimerase activity	1	63826	ENSG00000167720	SRR
+GO:0047617	acyl-CoA hydrolase activity	1	26027	ENSG00000162390	ACOT11
+GO:0070182	DNA polymerase binding	1	55215	ENSG00000140525	FANCI
+GO:0070577	lysine-acetylated histone binding	1	10498	ENSG00000142453	CARM1
+GO:0071837	HMG box domain binding	1	5455	ENSG00000198914	POU3F3
+GO:0097602	cullin family protein binding	1	54442	ENSG00000167977	KCTD5
+GO:0140033	acetylation-dependent protein binding	1	10498	ENSG00000142453	CARM1
+GO:0004890	GABA-A receptor activity	1	2557	ENSG00000109158	GABRA4
+GO:0004970	ionotropic glutamate receptor activity	1	2906	ENSG00000105464	GRIN2D
+GO:0031690	adrenergic receptor binding	1	156	ENSG00000173020	GRK2
+GO:0016289	CoA hydrolase activity	1	26027	ENSG00000162390	ACOT11
+GO:0016408	C-acyltransferase activity	1	39	ENSG00000120437	ACAT2
+GO:0031418	L-ascorbic acid binding	1	79701	ENSG00000181396	OGFOD3
+GO:0070006	metalloaminopeptidase activity	1	4325	ENSG00000156103	MMP16
+GO:0001871	pattern binding	1	2220	ENSG00000160339	FCN2
+GO:0003950	NAD+ ADP-ribosyltransferase activity	1	80351	ENSG00000107854	TNKS2
+GO:0005355	glucose transmembrane transporter activity	1	154091	ENSG00000146411	SLC2A12
+GO:0008327	methyl-CpG binding	1	79084	ENSG00000116455	WDR77
+GO:0008483	transaminase activity	1	2673	ENSG00000198380	GFPT1
+GO:0015645	fatty acid ligase activity	1	23205	ENSG00000103740	ACSBG1
+GO:0016922	ligand-dependent nuclear receptor binding	1	8289	ENSG00000117713	ARID1A
+GO:0017049	GTP-Rho binding	1	5585	ENSG00000123143	PKN1
+GO:0030247	polysaccharide binding	1	2220	ENSG00000160339	FCN2
+GO:0008106	alcohol dehydrogenase (NADP+) activity	1	1109	ENSG00000198610	AKR1C4
+GO:0015149	hexose transmembrane transporter activity	1	154091	ENSG00000146411	SLC2A12
+GO:0016917	GABA receptor activity	1	2557	ENSG00000109158	GABRA4
+GO:0042813	Wnt-activated receptor activity	1	8321	ENSG00000157240	FZD1
+GO:0005248	voltage-gated sodium channel activity	1	610	ENSG00000099822	HCN2
+GO:0016769	transferase activity, transferring nitrogenous groups	1	2673	ENSG00000198380	GFPT1
+GO:0048027	mRNA 5'-UTR binding	1	10642	ENSG00000159217	IGF2BP1
+GO:0015145	monosaccharide transmembrane transporter activity	1	154091	ENSG00000146411	SLC2A12
+GO:0015605	organophosphate ester transmembrane transporter activity	1	292	ENSG00000005022	SLC25A5
+GO:0035198	miRNA binding	1	26523	ENSG00000092847	AGO1
+GO:0042974	retinoic acid receptor binding	1	1488	ENSG00000175029	CTBP2
+GO:0015295	solute:proton symporter activity	1	154091	ENSG00000146411	SLC2A12
+GO:0017091	AU-rich element binding	1	677	ENSG00000185650	ZFP36L1
+GO:0030547	receptor inhibitor activity	1	116372	ENSG00000150551	LYPD1
+GO:0080025	phosphatidylinositol-3,5-bisphosphate binding	1	157807	ENSG00000177182	CLVS1
+GO:0001637	G-protein coupled chemoattractant receptor activity	1	643	ENSG00000160683	CXCR5
+GO:0004950	chemokine receptor activity	1	643	ENSG00000160683	CXCR5
+GO:0005104	fibroblast growth factor receptor binding	1	2247	ENSG00000138685	FGF2
+GO:0015101	organic cation transmembrane transporter activity	1	83884	ENSG00000120329	SLC25A2
+GO:0016405	CoA-ligase activity	1	23205	ENSG00000103740	ACSBG1
+GO:0008066	glutamate receptor activity	1	2906	ENSG00000105464	GRIN2D
+GO:0071889	14-3-3 protein binding	1	677	ENSG00000185650	ZFP36L1
+GO:0004683	calmodulin-dependent protein kinase activity	1	816	ENSG00000058404	CAMK2B
+GO:0033764	steroid dehydrogenase activity, acting on the CH-OH group of donors, NAD or NADP as acceptor	1	1109	ENSG00000198610	AKR1C4
+GO:0042605	peptide antigen binding	1	10332	ENSG00000104938	CLEC4M
+GO:0051119	sugar transmembrane transporter activity	1	154091	ENSG00000146411	SLC2A12
+GO:0051721	protein phosphatase 2A binding	1	6801	ENSG00000115808	STRN
+GO:0071855	neuropeptide receptor binding	1	56246	ENSG00000170262	MRAP
+GO:0004033	aldo-keto reductase (NADP) activity	1	1109	ENSG00000198610	AKR1C4
+GO:0004364	glutathione transferase activity	1	2944	ENSG00000134184	GSTM1
+GO:0043548	phosphatidylinositol 3-kinase binding	1	5159	ENSG00000113721	PDGFRB
+GO:0051959	dynein light intermediate chain binding	1	23299	ENSG00000185963	BICD2
+GO:0099604	ligand-gated calcium channel activity	1	2906	ENSG00000105464	GRIN2D
+GO:0016878	acid-thiol ligase activity	1	23205	ENSG00000103740	ACSBG1
+GO:0015301	anion:anion antiporter activity	1	292	ENSG00000005022	SLC25A5
+GO:0017147	Wnt-protein binding	1	8321	ENSG00000157240	FZD1
+GO:0043014	alpha-tubulin binding	1	55207	ENSG00000134108	ARL8B
+GO:0016229	steroid dehydrogenase activity	1	1109	ENSG00000198610	AKR1C4
+GO:0061980	regulatory RNA binding	1	26523	ENSG00000092847	AGO1
+GO:0042056	chemoattractant activity	1	2247	ENSG00000138685	FGF2
+GO:0044769	ATPase activity, coupled to transmembrane movement of ions, rotational mechanism	1	514	ENSG00000124172	ATP5F1E
+GO:0001784	phosphotyrosine residue binding	1	5595	ENSG00000102882	MAPK3
+GO:0004693	cyclin-dependent protein serine/threonine kinase activity	1	8814	ENSG00000100490	CDKL1
+GO:0005217	intracellular ligand-gated ion channel activity	1	610	ENSG00000099822	HCN2
+GO:0016620	oxidoreductase activity, acting on the aldehyde or oxo group of donors, NAD or NADP as acceptor	1	1109	ENSG00000198610	AKR1C4
+GO:0000979	RNA polymerase II core promoter sequence-specific DNA binding	1	6658	ENSG00000134595	SOX3
+GO:0097472	cyclin-dependent protein kinase activity	1	8814	ENSG00000100490	CDKL1
+GO:1901505	carbohydrate derivative transmembrane transporter activity	1	292	ENSG00000005022	SLC25A5
+GO:0016831	carboxy-lyase activity	1	2677	ENSG00000115486	GGCX
+GO:0005310	dicarboxylic acid transmembrane transporter activity	1	57030	ENSG00000104888	SLC17A7
+GO:0015144	carbohydrate transmembrane transporter activity	1	154091	ENSG00000146411	SLC2A12
+GO:0015932	nucleobase-containing compound transmembrane transporter activity	1	292	ENSG00000005022	SLC25A5
+GO:0099529	neurotransmitter receptor activity involved in regulation of postsynaptic membrane potential	1	2557	ENSG00000109158	GABRA4
+GO:1904315	transmitter-gated ion channel activity involved in regulation of postsynaptic membrane potential	1	2557	ENSG00000109158	GABRA4
+GO:0015662	ATPase activity, coupled to transmembrane movement of ions, phosphorylative mechanism	1	344905	ENSG00000187527	ATP13A5
+GO:0016877	ligase activity, forming carbon-sulfur bonds	1	23205	ENSG00000103740	ACSBG1
+GO:0030331	estrogen receptor binding	1	6801	ENSG00000115808	STRN
+GO:0098960	postsynaptic neurotransmitter receptor activity	1	2557	ENSG00000109158	GABRA4
+GO:0001221	transcription cofactor binding	1	7975	ENSG00000198517	MAFK
+GO:0004712	protein serine/threonine/tyrosine kinase activity	1	5595	ENSG00000102882	MAPK3
+GO:0017046	peptide hormone binding	1	4882	ENSG00000159899	NPR2
+GO:0140104	molecular carrier activity	1	3045	ENSG00000223609	HBD
+GO:0015036	disulfide oxidoreductase activity	1	84817	ENSG00000129235	TXNDC17
+GO:0016303	1-phosphatidylinositol-3-kinase activity	1	2247	ENSG00000138685	FGF2
+GO:0050681	androgen receptor binding	1	5585	ENSG00000123143	PKN1
+GO:0016709	oxidoreductase activity, acting on paired donors, with incorporation or reduction of molecular oxygen, NAD(P)H as one donor, and incorporation of one atom of oxygen	1	1109	ENSG00000198610	AKR1C4
+GO:0045309	protein phosphorylated amino acid binding	1	5595	ENSG00000102882	MAPK3
+GO:0004177	aminopeptidase activity	1	4325	ENSG00000156103	MMP16
+GO:0004601	peroxidase activity	1	84817	ENSG00000129235	TXNDC17
+GO:0005272	sodium channel activity	1	610	ENSG00000099822	HCN2
+GO:0016706	oxidoreductase activity, acting on paired donors, with incorporation or reduction of molecular oxygen, 2-oxoglutarate as one donor, and incorporation of one atom each of oxygen into both donors	1	129450	ENSG00000162971	TYW5
+GO:0016903	oxidoreductase activity, acting on the aldehyde or oxo group of donors	1	1109	ENSG00000198610	AKR1C4
+GO:0031492	nucleosomal DNA binding	1	3151	ENSG00000198830	HMGN2
+GO:0008137	NADH dehydrogenase (ubiquinone) activity	1	4694	ENSG00000125356	NDUFA1
+GO:0050136	NADH dehydrogenase (quinone) activity	1	4694	ENSG00000125356	NDUFA1
+GO:0003954	NADH dehydrogenase activity	1	4694	ENSG00000125356	NDUFA1
+GO:0001102	RNA polymerase II activating transcription factor binding	1	4808	ENSG00000177551	NHLH2
+GO:0008009	chemokine activity	1	6374	ENSG00000163735	CXCL5
+GO:0016684	oxidoreductase activity, acting on peroxide as acceptor	1	84817	ENSG00000129235	TXNDC17
+GO:0004715	non-membrane spanning protein tyrosine kinase activity	1	10750	ENSG00000154016	GRAP
+GO:0008188	neuropeptide receptor activity	1	10887	ENSG00000169618	PROKR1
+GO:0052742	phosphatidylinositol kinase activity	1	2247	ENSG00000138685	FGF2
+GO:0016763	transferase activity, transferring pentosyl groups	1	80351	ENSG00000107854	TNKS2
+GO:0042165	neurotransmitter binding	1	63826	ENSG00000167720	SRR
+GO:0016830	carbon-carbon lyase activity	1	2677	ENSG00000115486	GGCX
+GO:0016836	hydro-lyase activity	1	763	ENSG00000174990	CA5A
+GO:0030170	pyridoxal phosphate binding	1	63826	ENSG00000167720	SRR
+GO:0070279	vitamin B6 binding	1	63826	ENSG00000167720	SRR
+GO:0000049	tRNA binding	1	129450	ENSG00000162971	TYW5
+GO:0005507	copper ion binding	1	1356	ENSG00000047457	CP
+GO:0008028	monocarboxylic acid transmembrane transporter activity	1	1109	ENSG00000198610	AKR1C4
+GO:0004402	histone acetyltransferase activity	1	2648	ENSG00000108773	KAT2A
+GO:0005070	SH3/SH2 adaptor activity	1	10750	ENSG00000154016	GRAP
+GO:0051287	NAD binding	1	1488	ENSG00000175029	CTBP2
+GO:0016765	transferase activity, transferring alkyl or aryl (other than methyl) groups	1	2944	ENSG00000134184	GSTM1
+GO:0019003	GDP binding	1	55207	ENSG00000134108	ARL8B
+GO:0061733	peptide-lysine-N-acetyltransferase activity	1	2648	ENSG00000108773	KAT2A
+GO:0097110	scaffold protein binding	1	5595	ENSG00000102882	MAPK3
+GO:0008235	metalloexopeptidase activity	1	4325	ENSG00000156103	MMP16
+GO:0016597	amino acid binding	1	63826	ENSG00000167720	SRR
+GO:0042054	histone methyltransferase activity	1	10498	ENSG00000142453	CARM1
+GO:0016667	oxidoreductase activity, acting on a sulfur group of donors	1	84817	ENSG00000129235	TXNDC17
+GO:0033293	monocarboxylic acid binding	1	1109	ENSG00000198610	AKR1C4
+GO:0099516	ion antiporter activity	1	292	ENSG00000005022	SLC25A5
+GO:0016279	protein-lysine N-methyltransferase activity	1	25895	ENSG00000123427	EEF1AKMT3
+GO:0016278	lysine N-methyltransferase activity	1	25895	ENSG00000123427	EEF1AKMT3
+GO:0035064	methylated histone binding	1	26038	ENSG00000116254	CHD5
+GO:0140034	methylation-dependent protein binding	1	26038	ENSG00000116254	CHD5
+GO:0003725	double-stranded RNA binding	1	26523	ENSG00000092847	AGO1
+GO:0004714	transmembrane receptor protein tyrosine kinase activity	1	5159	ENSG00000113721	PDGFRB
+GO:0042379	chemokine receptor binding	1	6374	ENSG00000163735	CXCL5
+GO:0031434	mitogen-activated protein kinase kinase binding	1	5159	ENSG00000113721	PDGFRB
+GO:0016835	carbon-oxygen lyase activity	1	763	ENSG00000174990	CA5A
+GO:0033613	activating transcription factor binding	1	4808	ENSG00000177551	NHLH2
+GO:0001618	virus receptor activity	1	10332	ENSG00000104938	CLEC4M
+GO:0030295	protein kinase activator activity	1	245711	ENSG00000163806	SPDYA
+GO:0104005	hijacked molecular function	1	10332	ENSG00000104938	CLEC4M
+GO:0000980	RNA polymerase II distal enhancer sequence-specific DNA binding	1	1044	ENSG00000113722	CDX1
+GO:0072341	modified amino acid binding	1	2944	ENSG00000134184	GSTM1
+GO:0015370	solute:sodium symporter activity	1	57030	ENSG00000104888	SLC17A7
+GO:0051219	phosphoprotein binding	1	5595	ENSG00000102882	MAPK3
+GO:0005201	extracellular matrix structural constituent	1	1311	ENSG00000105664	COMP
+GO:0003727	single-stranded RNA binding	1	26523	ENSG00000092847	AGO1
+GO:0004709	MAP kinase kinase kinase activity	1	5159	ENSG00000113721	PDGFRB
+GO:0019209	kinase activator activity	1	245711	ENSG00000163806	SPDYA
+GO:0008013	beta-catenin binding	1	10498	ENSG00000142453	CARM1
+GO:0035591	signaling adaptor activity	1	10750	ENSG00000154016	GRAP
+GO:0019199	transmembrane receptor protein kinase activity	1	5159	ENSG00000113721	PDGFRB
+GO:0016209	antioxidant activity	1	84817	ENSG00000129235	TXNDC17
+GO:0001046	core promoter sequence-specific DNA binding	1	6658	ENSG00000134595	SOX3
+GO:0016811	hydrolase activity, acting on carbon-nitrogen (but not peptide) bonds, in linear amides	1	135293	ENSG00000146281	PM20D2
+GO:0005496	steroid binding	1	1109	ENSG00000198610	AKR1C4
+GO:0004896	cytokine receptor activity	1	643	ENSG00000160683	CXCR5
+GO:0001158	enhancer sequence-specific DNA binding	1	1044	ENSG00000113722	CDX1
+GO:0005249	voltage-gated potassium channel activity	1	610	ENSG00000099822	HCN2
+GO:0042562	hormone binding	1	4882	ENSG00000159899	NPR2
+GO:0004860	protein kinase inhibitor activity	1	94032	ENSG00000163888	CAMK2N2
+GO:0019210	kinase inhibitor activity	1	94032	ENSG00000163888	CAMK2N2
+GO:1902936	phosphatidylinositol bisphosphate binding	1	157807	ENSG00000177182	CLVS1
+GO:0004222	metalloendopeptidase activity	1	4325	ENSG00000156103	MMP16
+GO:0009055	electron transfer activity	1	1109	ENSG00000198610	AKR1C4
+GO:0005178	integrin binding	1	2247	ENSG00000138685	FGF2
+GO:0005262	calcium channel activity	1	2906	ENSG00000105464	GRIN2D
+GO:0036459	thiol-dependent ubiquitinyl hydrolase activity	1	2648	ENSG00000108773	KAT2A
+GO:0101005	ubiquitinyl hydrolase activity	1	2648	ENSG00000108773	KAT2A
+GO:0031072	heat shock protein binding	1	25895	ENSG00000123427	EEF1AKMT3
+GO:0140101	catalytic activity, acting on a tRNA	1	129450	ENSG00000162971	TYW5
+GO:0005267	potassium channel activity	1	610	ENSG00000099822	HCN2
+GO:0019783	ubiquitin-like protein-specific protease activity	1	2648	ENSG00000108773	KAT2A
+GO:0002020	protease binding	1	1311	ENSG00000105664	COMP
+GO:0004519	endonuclease activity	1	85463	ENSG00000149289	ZC3H12C
+GO:0001085	RNA polymerase II transcription factor binding	1	4808	ENSG00000177551	NHLH2
+GO:0052689	carboxylic ester hydrolase activity	1	26027	ENSG00000162390	ACOT11
+GO:1901981	phosphatidylinositol phosphate binding	1	157807	ENSG00000177182	CLVS1
+GO:0016810	hydrolase activity, acting on carbon-nitrogen (but not peptide) bonds	1	135293	ENSG00000146281	PM20D2
+GO:0016853	isomerase activity	1	63826	ENSG00000167720	SRR
+GO:0016874	ligase activity	1	23205	ENSG00000103740	ACSBG1
+GO:0008083	growth factor activity	1	2247	ENSG00000138685	FGF2
+GO:0015079	potassium ion transmembrane transporter activity	1	610	ENSG00000099822	HCN2
+GO:0017137	Rab GTPase binding	1	23299	ENSG00000185963	BICD2
+GO:0008237	metallopeptidase activity	1	4325	ENSG00000156103	MMP16
+GO:0008022	protein C-terminus binding	1	5562	ENSG00000132356	PRKAA1
+GO:0008234	cysteine-type peptidase activity	1	2648	ENSG00000108773	KAT2A
+GO:0004518	nuclease activity	1	85463	ENSG00000149289	ZC3H12C
+GO:0016791	phosphatase activity	1	8611	ENSG00000067113	PLPP1
+GO:0005126	cytokine receptor binding	1	6374	ENSG00000163735	CXCL5
+GO:0140098	catalytic activity, acting on RNA	1	129450	ENSG00000162971	TYW5
+GO:0000982	transcription factor activity, RNA polymerase II proximal promoter sequence-specific DNA binding	16	6913	ENSG00000092607	TBX15
+GO:0001228	transcriptional activator activity, RNA polymerase II transcription regulatory region sequence-specific DNA binding	16	4904	ENSG00000065978	YBX1
+GO:0005525	GTP binding	13	7984	ENSG00000050327	ARHGEF5
+GO:0032550	purine ribonucleoside binding	13	7984	ENSG00000050327	ARHGEF5
+GO:0001883	purine nucleoside binding	13	7984	ENSG00000050327	ARHGEF5
+GO:0032549	ribonucleoside binding	13	7984	ENSG00000050327	ARHGEF5
+GO:0001882	nucleoside binding	13	7984	ENSG00000050327	ARHGEF5
+GO:0032561	guanyl ribonucleotide binding	13	7984	ENSG00000050327	ARHGEF5
+GO:0019001	guanyl nucleotide binding	13	7984	ENSG00000050327	ARHGEF5
+GO:0000978	RNA polymerase II proximal promoter sequence-specific DNA binding	13	6913	ENSG00000092607	TBX15
+GO:0000987	proximal promoter sequence-specific DNA binding	13	6913	ENSG00000092607	TBX15
+GO:0001077	transcriptional activator activity, RNA polymerase II proximal promoter sequence-specific DNA binding	11	8929	ENSG00000109132	PHOX2B
+GO:0003924	GTPase activity	11	2635	ENSG00000117226	GBP3
+GO:0001664	G-protein coupled receptor binding	9	89780	ENSG00000154342	WNT3A
+GO:0003713	transcription coactivator activity	9	79084	ENSG00000116455	WDR77
+GO:0005200	structural constituent of cytoskeleton	8	3881	ENSG00000094796	KRT31
+GO:0022804	active transmembrane transporter activity	8	9057	ENSG00000103064	SLC7A6
+GO:0048037	cofactor binding	8	2944	ENSG00000134184	GSTM1
+GO:0001227	transcriptional repressor activity, RNA polymerase II transcription regulatory region sequence-specific DNA binding	7	50804	ENSG00000104177	MYEF2
+GO:0005088	Ras guanyl-nucleotide exchange factor activity	7	816	ENSG00000058404	CAMK2B
+GO:0005085	guanyl-nucleotide exchange factor activity	7	816	ENSG00000058404	CAMK2B
+GO:0008509	anion transmembrane transporter activity	7	9057	ENSG00000103064	SLC7A6
+GO:0000287	magnesium ion binding	6	23031	ENSG00000099308	MAST3
+GO:0046982	protein heterodimerization activity	6	9218	ENSG00000101558	VAPA
+GO:0001078	transcriptional repressor activity, RNA polymerase II proximal promoter sequence-specific DNA binding	5	50804	ENSG00000104177	MYEF2
+GO:0016705	oxidoreductase activity, acting on paired donors, with incorporation or reduction of molecular oxygen	5	129450	ENSG00000162971	TYW5
+GO:0005506	iron ion binding	5	129450	ENSG00000162971	TYW5
+GO:0016829	lyase activity	5	4882	ENSG00000159899	NPR2
+GO:0008514	organic anion transmembrane transporter activity	5	9057	ENSG00000103064	SLC7A6
+GO:0015291	secondary active transmembrane transporter activity	5	9057	ENSG00000103064	SLC7A6
+GO:0030246	carbohydrate binding	5	142683	ENSG00000158764	ITLN2
+GO:0005216	ion channel activity	5	57030	ENSG00000104888	SLC17A7
+GO:0022838	substrate-specific channel activity	5	57030	ENSG00000104888	SLC17A7
+GO:0016887	ATPase activity	5	514	ENSG00000124172	ATP5F1E
+GO:0046873	metal ion transmembrane transporter activity	5	57030	ENSG00000104888	SLC17A7
+GO:0015267	channel activity	5	57030	ENSG00000104888	SLC17A7
+GO:0022803	passive transmembrane transporter activity	5	57030	ENSG00000104888	SLC17A7
+GO:0030374	ligand-dependent nuclear receptor transcription coactivator activity	4	5585	ENSG00000123143	PKN1
+GO:0003705	transcription factor activity, RNA polymerase II distal enhancer sequence-specific binding	4	2295	ENSG00000137273	FOXF2
+GO:0001104	RNA polymerase II transcription cofactor activity	4	6658	ENSG00000134595	SOX3
+GO:0043492	ATPase activity, coupled to movement of substances	4	514	ENSG00000124172	ATP5F1E
+GO:0020037	heme binding	4	1559	ENSG00000138109	CYP2C9
+GO:0046906	tetrapyrrole binding	4	1559	ENSG00000138109	CYP2C9
+GO:0015276	ligand-gated ion channel activity	4	57030	ENSG00000104888	SLC17A7
+GO:0022834	ligand-gated channel activity	4	57030	ENSG00000104888	SLC17A7
+GO:0035257	nuclear hormone receptor binding	4	8289	ENSG00000117713	ARID1A
+GO:0005342	organic acid transmembrane transporter activity	4	57030	ENSG00000104888	SLC17A7
+GO:0046943	carboxylic acid transmembrane transporter activity	4	57030	ENSG00000104888	SLC17A7
+GO:0017048	Rho GTPase binding	4	5585	ENSG00000123143	PKN1
+GO:0051427	hormone receptor binding	4	8289	ENSG00000117713	ARID1A
+GO:0001076	transcription factor activity, RNA polymerase II transcription factor binding	4	6658	ENSG00000134595	SOX3
+GO:0042393	histone binding	4	5585	ENSG00000123143	PKN1
+GO:0005539	glycosaminoglycan binding	4	1311	ENSG00000105664	COMP
+GO:0003714	transcription corepressor activity	4	6658	ENSG00000134595	SOX3
+GO:1901681	sulfur compound binding	4	1311	ENSG00000105664	COMP
+GO:0016746	transferase activity, transferring acyl groups	4	39	ENSG00000120437	ACAT2
+GO:0042277	peptide binding	4	2944	ENSG00000134184	GSTM1
+GO:0033218	amide binding	4	2944	ENSG00000134184	GSTM1
+GO:0022839	ion gated channel activity	4	57030	ENSG00000104888	SLC17A7
+GO:0022836	gated channel activity	4	57030	ENSG00000104888	SLC17A7
+GO:0015631	tubulin binding	4	55207	ENSG00000134108	ARL8B
+GO:0042623	ATPase activity, coupled	4	514	ENSG00000124172	ATP5F1E
+GO:0015077	monovalent inorganic cation transmembrane transporter activity	4	57030	ENSG00000104888	SLC17A7
+GO:0003779	actin binding	4	91010	ENSG00000161791	FMNL3
+GO:0004175	endopeptidase activity	4	5340	ENSG00000122194	PLG
+GO:0050839	cell adhesion molecule binding	4	2247	ENSG00000138685	FGF2
+GO:0017154	semaphorin receptor activity	3	91584	ENSG00000221866	PLXNA4
+GO:0031683	G-protein beta/gamma-subunit complex binding	3	9630	ENSG00000156049	GNA14
+GO:0005109	frizzled binding	3	89780	ENSG00000154342	WNT3A
+GO:0043394	proteoglycan binding	3	1311	ENSG00000105664	COMP
+GO:0019825	oxygen binding	3	1557	ENSG00000165841	CYP2C19
+GO:0015179	L-amino acid transmembrane transporter activity	3	57030	ENSG00000104888	SLC17A7
+GO:0031491	nucleosome binding	3	8467	ENSG00000153147	SMARCA5
+GO:0005230	extracellular ligand-gated ion channel activity	3	2906	ENSG00000105464	GRIN2D
+GO:0015171	amino acid transmembrane transporter activity	3	57030	ENSG00000104888	SLC17A7
+GO:0015297	antiporter activity	3	9057	ENSG00000103064	SLC7A6
+GO:0008276	protein methyltransferase activity	3	25895	ENSG00000123427	EEF1AKMT3
+GO:0005253	anion channel activity	3	2557	ENSG00000109158	GABRA4
+GO:0008170	N-methyltransferase activity	3	25895	ENSG00000123427	EEF1AKMT3
+GO:0015238	drug transmembrane transporter activity	3	57030	ENSG00000104888	SLC17A7
+GO:0004497	monooxygenase activity	3	1557	ENSG00000165841	CYP2C19
+GO:0016407	acetyltransferase activity	3	39	ENSG00000120437	ACAT2
+GO:0031490	chromatin DNA binding	3	3006	ENSG00000187837	HIST1H1C
+GO:0042826	histone deacetylase binding	3	5585	ENSG00000123143	PKN1
+GO:0016651	oxidoreductase activity, acting on NAD(P)H	3	84817	ENSG00000129235	TXNDC17
+GO:0016616	oxidoreductase activity, acting on the CH-OH group of donors, NAD or NADP as acceptor	3	1488	ENSG00000175029	CTBP2
+GO:0004702	signal transducer, downstream of receptor, with serine/threonine kinase activity	3	5159	ENSG00000113721	PDGFRB
+GO:0001653	peptide receptor activity	3	643	ENSG00000160683	CXCR5
+GO:0005319	lipid transporter activity	3	57198	ENSG00000143515	ATP8B2
+GO:0016614	oxidoreductase activity, acting on CH-OH group of donors	3	1488	ENSG00000175029	CTBP2
+GO:0004386	helicase activity	3	8467	ENSG00000153147	SMARCA5
+GO:0008201	heparin binding	3	1311	ENSG00000105664	COMP
+GO:0008757	S-adenosylmethionine-dependent methyltransferase activity	3	25895	ENSG00000123427	EEF1AKMT3
+GO:0015103	inorganic anion transmembrane transporter activity	3	2557	ENSG00000109158	GABRA4
+GO:0019902	phosphatase binding	3	2648	ENSG00000108773	KAT2A
+GO:0005057	signal transducer activity, downstream of receptor	3	5159	ENSG00000113721	PDGFRB
+GO:0004713	protein tyrosine kinase activity	3	2247	ENSG00000138685	FGF2
+GO:0031406	carboxylic acid binding	3	79701	ENSG00000181396	OGFOD3
+GO:0043177	organic acid binding	3	79701	ENSG00000181396	OGFOD3
+GO:0003823	antigen binding	3	5340	ENSG00000122194	PLG
+GO:0008168	methyltransferase activity	3	25895	ENSG00000123427	EEF1AKMT3
+GO:0016747	transferase activity, transferring acyl groups other than amino-acyl groups	3	39	ENSG00000120437	ACAT2
+GO:0061630	ubiquitin protein ligase activity	3	22838	ENSG00000146083	RNF44
+GO:0016741	transferase activity, transferring one-carbon groups	3	25895	ENSG00000123427	EEF1AKMT3
+GO:0061659	ubiquitin-like protein ligase activity	3	22838	ENSG00000146083	RNF44
+GO:0004252	serine-type endopeptidase activity	3	5340	ENSG00000122194	PLG
+GO:0008017	microtubule binding	3	1069	ENSG00000147400	CETN2
+GO:0008236	serine-type peptidase activity	3	5340	ENSG00000122194	PLG
+GO:0050662	coenzyme binding	3	1488	ENSG00000175029	CTBP2
+GO:0017171	serine hydrolase activity	3	5340	ENSG00000122194	PLG
+GO:0016757	transferase activity, transferring glycosyl groups	3	7365	ENSG00000109181	UGT2B10
+GO:0031625	ubiquitin protein ligase binding	3	53339	ENSG00000064726	BTBD1
+GO:0044389	ubiquitin-like protein ligase binding	3	53339	ENSG00000064726	BTBD1
+GO:0045296	cadherin binding	3	6712	ENSG00000173898	SPTBN2
+GO:0042578	phosphoric ester hydrolase activity	3	5145	ENSG00000132915	PDE6A
+GO:0003729	mRNA binding	3	10642	ENSG00000159217	IGF2BP1
+GO:0005543	phospholipid binding	3	6712	ENSG00000173898	SPTBN2
+GO:0004842	ubiquitin-protein transferase activity	3	22838	ENSG00000146083	RNF44
+GO:0019787	ubiquitin-like protein transferase activity	3	22838	ENSG00000146083	RNF44
+GO:0048018	receptor ligand activity	3	89780	ENSG00000154342	WNT3A
+GO:0016273	arginine N-methyltransferase activity	2	10498	ENSG00000142453	CARM1
+GO:0016274	protein-arginine N-methyltransferase activity	2	10498	ENSG00000142453	CARM1
+GO:0047555	3',5'-cyclic-GMP phosphodiesterase activity	2	5139	ENSG00000172572	PDE3A
+GO:0004697	protein kinase C activity	2	5585	ENSG00000123143	PKN1
+GO:0004383	guanylate cyclase activity	2	112	ENSG00000174233	ADCY6
+GO:0008391	arachidonic acid monooxygenase activity	2	1557	ENSG00000165841	CYP2C19
+GO:0008392	arachidonic acid epoxygenase activity	2	1557	ENSG00000165841	CYP2C19
+GO:0004016	adenylate cyclase activity	2	112	ENSG00000174233	ADCY6
+GO:0035173	histone kinase activity	2	5562	ENSG00000132356	PRKAA1
+GO:0005234	extracellularly glutamate-gated ion channel activity	2	2906	ENSG00000105464	GRIN2D
+GO:0099095	ligand-gated anion channel activity	2	2557	ENSG00000109158	GABRA4
+GO:0004012	phospholipid-translocating ATPase activity	2	57198	ENSG00000143515	ATP8B2
+GO:0043395	heparan sulfate proteoglycan binding	2	1311	ENSG00000105664	COMP
+GO:0016849	phosphorus-oxygen lyase activity	2	112	ENSG00000174233	ADCY6
+GO:0009975	cyclase activity	2	112	ENSG00000174233	ADCY6
+GO:0070840	dynein complex binding	2	387885	ENSG00000186710	CFAP73
+GO:0004114	3',5'-cyclic-nucleotide phosphodiesterase activity	2	5139	ENSG00000172572	PDE3A
+GO:0030552	cAMP binding	2	5139	ENSG00000172572	PDE3A
+GO:0004112	cyclic-nucleotide phosphodiesterase activity	2	5139	ENSG00000172572	PDE3A
+GO:0001106	RNA polymerase II transcription corepressor activity	2	6658	ENSG00000134595	SOX3
+GO:0008519	ammonium transmembrane transporter activity	2	6571	ENSG00000165646	SLC18A2
+GO:0016712	oxidoreductase activity, acting on paired donors, with incorporation or reduction of molecular oxygen, reduced flavin or flavoprotein as one donor, and incorporation of one atom of oxygen	2	1557	ENSG00000165841	CYP2C19
+GO:0001205	transcriptional activator activity, RNA polymerase II distal enhancer sequence-specific DNA binding	2	4990	ENSG00000184302	SIX6
+GO:0015020	glucuronosyltransferase activity	2	133688	ENSG00000145626	UGT3A1
+GO:0008395	steroid hydroxylase activity	2	1557	ENSG00000165841	CYP2C19
+GO:0016790	thiolester hydrolase activity	2	26027	ENSG00000162390	ACOT11
+GO:0048487	beta-tubulin binding	2	11337	ENSG00000170296	GABARAP
+GO:0030551	cyclic nucleotide binding	2	5139	ENSG00000172572	PDE3A
+GO:0001105	RNA polymerase II transcription coactivator activity	2	6666	ENSG00000177732	SOX12
+GO:0000993	RNA polymerase II core binding	2	57805	ENSG00000158941	CCAR2
+GO:1901618	organic hydroxy compound transmembrane transporter activity	2	1109	ENSG00000198610	AKR1C4
+GO:0005231	excitatory extracellular ligand-gated ion channel activity	2	2906	ENSG00000105464	GRIN2D
+GO:0001191	transcriptional repressor activity, RNA polymerase II transcription factor binding	2	6658	ENSG00000134595	SOX3
+GO:0005080	protein kinase C binding	2	112	ENSG00000174233	ADCY6
+GO:0043175	RNA polymerase core enzyme binding	2	57805	ENSG00000158941	CCAR2
+GO:0045182	translation regulator activity	2	10642	ENSG00000159217	IGF2BP1
+GO:0005326	neurotransmitter transporter activity	2	6571	ENSG00000165646	SLC18A2
+GO:0005548	phospholipid transporter activity	2	57198	ENSG00000143515	ATP8B2
+GO:0022824	transmitter-gated ion channel activity	2	2557	ENSG00000109158	GABRA4
+GO:0022835	transmitter-gated channel activity	2	2557	ENSG00000109158	GABRA4
+GO:0048306	calcium-dependent protein binding	2	2220	ENSG00000160339	FCN2
+GO:0001098	basal transcription machinery binding	2	57805	ENSG00000158941	CCAR2
+GO:0001099	basal RNA polymerase II transcription machinery binding	2	57805	ENSG00000158941	CCAR2
+GO:0016655	oxidoreductase activity, acting on NAD(P)H, quinone or similar compound as acceptor	2	1109	ENSG00000198610	AKR1C4
+GO:0005518	collagen binding	2	1311	ENSG00000105664	COMP
+GO:0001190	transcriptional activator activity, RNA polymerase II transcription factor binding	2	6666	ENSG00000177732	SOX12
+GO:0003730	mRNA 3'-UTR binding	2	677	ENSG00000185650	ZFP36L1
+GO:0019829	cation-transporting ATPase activity	2	344905	ENSG00000187527	ATP13A5
+GO:0034212	peptide N-acetyltransferase activity	2	84779	ENSG00000156269	NAA11
+GO:0048365	Rac GTPase binding	2	8997	ENSG00000160145	KALRN
+GO:0022853	active ion transmembrane transporter activity	2	344905	ENSG00000187527	ATP13A5
+GO:0042625	ATPase coupled ion transmembrane transporter activity	2	344905	ENSG00000187527	ATP13A5
+GO:0046934	phosphatidylinositol-4,5-bisphosphate 3-kinase activity	2	2247	ENSG00000138685	FGF2
+GO:0048029	monosaccharide binding	2	79701	ENSG00000181396	OGFOD3
+GO:0052813	phosphatidylinositol bisphosphate kinase activity	2	2247	ENSG00000138685	FGF2
+GO:0070063	RNA polymerase binding	2	57805	ENSG00000158941	CCAR2
+GO:0035004	phosphatidylinositol 3-kinase activity	2	2247	ENSG00000138685	FGF2
+GO:0005089	Rho guanyl-nucleotide exchange factor activity	2	8997	ENSG00000160145	KALRN
+GO:0005254	chloride channel activity	2	2557	ENSG00000109158	GABRA4
+GO:0008080	N-acetyltransferase activity	2	84779	ENSG00000156269	NAA11
+GO:0030165	PDZ domain binding	2	63826	ENSG00000167720	SRR
+GO:0035258	steroid hormone receptor binding	2	5585	ENSG00000123143	PKN1
+GO:0008081	phosphoric diester hydrolase activity	2	5139	ENSG00000172572	PDE3A
+GO:0051213	dioxygenase activity	2	79701	ENSG00000181396	OGFOD3
+GO:0015108	chloride transmembrane transporter activity	2	2557	ENSG00000109158	GABRA4
+GO:0051087	chaperone binding	2	5340	ENSG00000122194	PLG
+GO:0016410	N-acyltransferase activity	2	84779	ENSG00000156269	NAA11
+GO:0015294	solute:cation symporter activity	2	154091	ENSG00000146411	SLC2A12
+GO:0003697	single-stranded DNA binding	2	50804	ENSG00000104177	MYEF2
+GO:0035326	enhancer binding	2	80237	ENSG00000128886	ELL3
+GO:0099094	ligand-gated cation channel activity	2	2906	ENSG00000105464	GRIN2D
+GO:0008238	exopeptidase activity	2	4325	ENSG00000156103	MMP16
+GO:0030594	neurotransmitter receptor activity	2	2557	ENSG00000109158	GABRA4
+GO:0042626	ATPase activity, coupled to transmembrane movement of substances	2	344905	ENSG00000187527	ATP13A5
+GO:0019903	protein phosphatase binding	2	6801	ENSG00000115808	STRN
+GO:0015405	P-P-bond-hydrolysis-driven transmembrane transporter activity	2	344905	ENSG00000187527	ATP13A5
+GO:0015399	primary active transmembrane transporter activity	2	344905	ENSG00000187527	ATP13A5
+GO:0015078	proton transmembrane transporter activity	2	154091	ENSG00000146411	SLC2A12
+GO:0140030	modification-dependent protein binding	2	10498	ENSG00000142453	CARM1
+GO:0008528	G-protein coupled peptide receptor activity	2	10887	ENSG00000169618	PROKR1
+GO:0019838	growth factor binding	2	5159	ENSG00000113721	PDGFRB
+GO:0070851	growth factor receptor binding	2	2247	ENSG00000138685	FGF2
+GO:0019842	vitamin binding	2	79701	ENSG00000181396	OGFOD3
+GO:0015085	calcium ion transmembrane transporter activity	2	344905	ENSG00000187527	ATP13A5
+GO:0015293	symporter activity	2	154091	ENSG00000146411	SLC2A12
+GO:0001047	core promoter binding	2	6658	ENSG00000134595	SOX3
+GO:0022843	voltage-gated cation channel activity	2	2906	ENSG00000105464	GRIN2D
+GO:0008194	UDP-glycosyltransferase activity	2	133688	ENSG00000145626	UGT3A1
+GO:0015081	sodium ion transmembrane transporter activity	2	57030	ENSG00000104888	SLC17A7
+GO:0003735	structural constituent of ribosome	2	51023	ENSG00000163319	MRPS18C
+GO:0030674	protein binding, bridging	2	23299	ENSG00000185963	BICD2
+GO:0060090	molecular adaptor activity	2	23299	ENSG00000185963	BICD2
+GO:0005244	voltage-gated ion channel activity	2	2906	ENSG00000105464	GRIN2D
+GO:0005516	calmodulin binding	2	6801	ENSG00000115808	STRN
+GO:0022832	voltage-gated channel activity	2	2906	ENSG00000105464	GRIN2D
+GO:0019887	protein kinase regulator activity	2	94032	ENSG00000163888	CAMK2N2
+GO:0016758	transferase activity, transferring hexosyl groups	2	133688	ENSG00000145626	UGT3A1
+GO:0005125	cytokine activity	2	6374	ENSG00000163735	CXCL5
+GO:0019207	kinase regulator activity	2	94032	ENSG00000163888	CAMK2N2
+GO:0035091	phosphatidylinositol binding	2	157807	ENSG00000177182	CLVS1
+GO:0005096	GTPase activator activity	2	8997	ENSG00000160145	KALRN
+GO:0005261	cation channel activity	2	2906	ENSG00000105464	GRIN2D
+GO:0030695	GTPase regulator activity	2	8997	ENSG00000160145	KALRN
+GO:0060589	nucleoside-triphosphatase regulator activity	2	8997	ENSG00000160145	KALRN
+GO:0004857	enzyme inhibitor activity	2	94032	ENSG00000163888	CAMK2N2
+GO:0000982	transcription factor activity, RNA polymerase II proximal promoter sequence-specific DNA binding	16	50804	ENSG00000104177	MYEF2
+GO:0001228	transcriptional activator activity, RNA polymerase II transcription regulatory region sequence-specific DNA binding	16	8929	ENSG00000109132	PHOX2B
+GO:0005525	GTP binding	13	2635	ENSG00000117226	GBP3
+GO:0032550	purine ribonucleoside binding	13	2635	ENSG00000117226	GBP3
+GO:0001883	purine nucleoside binding	13	2635	ENSG00000117226	GBP3
+GO:0032549	ribonucleoside binding	13	2635	ENSG00000117226	GBP3
+GO:0001882	nucleoside binding	13	2635	ENSG00000117226	GBP3
+GO:0032561	guanyl ribonucleotide binding	13	2635	ENSG00000117226	GBP3
+GO:0019001	guanyl nucleotide binding	13	2635	ENSG00000117226	GBP3
+GO:0000978	RNA polymerase II proximal promoter sequence-specific DNA binding	13	26523	ENSG00000092847	AGO1
+GO:0000987	proximal promoter sequence-specific DNA binding	13	26523	ENSG00000092847	AGO1
+GO:0001077	transcriptional activator activity, RNA polymerase II proximal promoter sequence-specific DNA binding	11	56751	ENSG00000125492	BARHL1
+GO:0003924	GTPase activity	11	23433	ENSG00000119729	RHOQ
+GO:0001664	G-protein coupled receptor binding	9	9630	ENSG00000156049	GNA14
+GO:0003713	transcription coactivator activity	9	8289	ENSG00000117713	ARID1A
+GO:0005200	structural constituent of cytoskeleton	8	2038	ENSG00000166947	EPB42
+GO:0022804	active transmembrane transporter activity	8	57030	ENSG00000104888	SLC17A7
+GO:0048037	cofactor binding	8	1559	ENSG00000138109	CYP2C9
+GO:0001227	transcriptional repressor activity, RNA polymerase II transcription regulatory region sequence-specific DNA binding	7	6909	ENSG00000121068	TBX2
+GO:0005088	Ras guanyl-nucleotide exchange factor activity	7	2906	ENSG00000105464	GRIN2D
+GO:0005085	guanyl-nucleotide exchange factor activity	7	2906	ENSG00000105464	GRIN2D
+GO:0008509	anion transmembrane transporter activity	7	57030	ENSG00000104888	SLC17A7
+GO:0000287	magnesium ion binding	6	22983	ENSG00000105613	MAST1
+GO:0046982	protein heterodimerization activity	6	6493	ENSG00000159263	SIM2
+GO:0001078	transcriptional repressor activity, RNA polymerase II proximal promoter sequence-specific DNA binding	5	6909	ENSG00000121068	TBX2
+GO:0016705	oxidoreductase activity, acting on paired donors, with incorporation or reduction of molecular oxygen	5	1557	ENSG00000165841	CYP2C19
+GO:0005506	iron ion binding	5	1557	ENSG00000165841	CYP2C19
+GO:0016829	lyase activity	5	63826	ENSG00000167720	SRR
+GO:0008514	organic anion transmembrane transporter activity	5	57030	ENSG00000104888	SLC17A7
+GO:0015291	secondary active transmembrane transporter activity	5	57030	ENSG00000104888	SLC17A7
+GO:0030246	carbohydrate binding	5	2220	ENSG00000160339	FCN2
+GO:0005216	ion channel activity	5	2906	ENSG00000105464	GRIN2D
+GO:0022838	substrate-specific channel activity	5	2906	ENSG00000105464	GRIN2D
+GO:0016887	ATPase activity	5	57198	ENSG00000143515	ATP8B2
+GO:0046873	metal ion transmembrane transporter activity	5	2906	ENSG00000105464	GRIN2D
+GO:0015267	channel activity	5	2906	ENSG00000105464	GRIN2D
+GO:0022803	passive transmembrane transporter activity	5	2906	ENSG00000105464	GRIN2D
+GO:0030374	ligand-dependent nuclear receptor transcription coactivator activity	4	2247	ENSG00000138685	FGF2
+GO:0003705	transcription factor activity, RNA polymerase II distal enhancer sequence-specific binding	4	83595	ENSG00000171056	SOX7
+GO:0001104	RNA polymerase II transcription cofactor activity	4	10498	ENSG00000142453	CARM1
+GO:0043492	ATPase activity, coupled to movement of substances	4	57198	ENSG00000143515	ATP8B2
+GO:0020037	heme binding	4	1557	ENSG00000165841	CYP2C19
+GO:0046906	tetrapyrrole binding	4	1557	ENSG00000165841	CYP2C19
+GO:0015276	ligand-gated ion channel activity	4	2906	ENSG00000105464	GRIN2D
+GO:0022834	ligand-gated channel activity	4	2906	ENSG00000105464	GRIN2D
+GO:0035257	nuclear hormone receptor binding	4	5585	ENSG00000123143	PKN1
+GO:0005342	organic acid transmembrane transporter activity	4	83884	ENSG00000120329	SLC25A2
+GO:0046943	carboxylic acid transmembrane transporter activity	4	83884	ENSG00000120329	SLC25A2
+GO:0017048	Rho GTPase binding	4	8997	ENSG00000160145	KALRN
+GO:0051427	hormone receptor binding	4	5585	ENSG00000123143	PKN1
+GO:0001076	transcription factor activity, RNA polymerase II transcription factor binding	4	10498	ENSG00000142453	CARM1
+GO:0042393	histone binding	4	10498	ENSG00000142453	CARM1
+GO:0005539	glycosaminoglycan binding	4	2247	ENSG00000138685	FGF2
+GO:0003714	transcription corepressor activity	4	56956	ENSG00000143355	LHX9
+GO:1901681	sulfur compound binding	4	2944	ENSG00000134184	GSTM1
+GO:0016746	transferase activity, transferring acyl groups	4	84779	ENSG00000156269	NAA11
+GO:0042277	peptide binding	4	4882	ENSG00000159899	NPR2
+GO:0033218	amide binding	4	4882	ENSG00000159899	NPR2
+GO:0022839	ion gated channel activity	4	2906	ENSG00000105464	GRIN2D
+GO:0022836	gated channel activity	4	2906	ENSG00000105464	GRIN2D
+GO:0015631	tubulin binding	4	1069	ENSG00000147400	CETN2
+GO:0042623	ATPase activity, coupled	4	57198	ENSG00000143515	ATP8B2
+GO:0015077	monovalent inorganic cation transmembrane transporter activity	4	514	ENSG00000124172	ATP5F1E
+GO:0003779	actin binding	4	6712	ENSG00000173898	SPTBN2
+GO:0004175	endopeptidase activity	4	4325	ENSG00000156103	MMP16
+GO:0050839	cell adhesion molecule binding	4	6712	ENSG00000173898	SPTBN2
+GO:0017154	semaphorin receptor activity	3	5361	ENSG00000114554	PLXNA1
+GO:0031683	G-protein beta/gamma-subunit complex binding	3	2776	ENSG00000156052	GNAQ
+GO:0005109	frizzled binding	3	8321	ENSG00000157240	FZD1
+GO:0043394	proteoglycan binding	3	2220	ENSG00000160339	FCN2
+GO:0019825	oxygen binding	3	3045	ENSG00000223609	HBD
+GO:0015179	L-amino acid transmembrane transporter activity	3	83884	ENSG00000120329	SLC25A2
+GO:0031491	nucleosome binding	3	3151	ENSG00000198830	HMGN2
+GO:0005230	extracellular ligand-gated ion channel activity	3	2557	ENSG00000109158	GABRA4
+GO:0015171	amino acid transmembrane transporter activity	3	83884	ENSG00000120329	SLC25A2
+GO:0015297	antiporter activity	3	83884	ENSG00000120329	SLC25A2
+GO:0008276	protein methyltransferase activity	3	10498	ENSG00000142453	CARM1
+GO:0005253	anion channel activity	3	84230	ENSG00000171488	LRRC8C
+GO:0008170	N-methyltransferase activity	3	10498	ENSG00000142453	CARM1
+GO:0015238	drug transmembrane transporter activity	3	83884	ENSG00000120329	SLC25A2
+GO:0004497	monooxygenase activity	3	1109	ENSG00000198610	AKR1C4
+GO:0016407	acetyltransferase activity	3	84779	ENSG00000156269	NAA11
+GO:0031490	chromatin DNA binding	3	3151	ENSG00000198830	HMGN2
+GO:0042826	histone deacetylase binding	3	3206	ENSG00000253293	HOXA10
+GO:0016651	oxidoreductase activity, acting on NAD(P)H	3	1109	ENSG00000198610	AKR1C4
+GO:0016616	oxidoreductase activity, acting on the CH-OH group of donors, NAD or NADP as acceptor	3	1109	ENSG00000198610	AKR1C4
+GO:0004702	signal transducer, downstream of receptor, with serine/threonine kinase activity	3	9943	ENSG00000172939	OXSR1
+GO:0001653	peptide receptor activity	3	10887	ENSG00000169618	PROKR1
+GO:0005319	lipid transporter activity	3	1109	ENSG00000198610	AKR1C4
+GO:0016614	oxidoreductase activity, acting on CH-OH group of donors	3	1109	ENSG00000198610	AKR1C4
+GO:0004386	helicase activity	3	91351	ENSG00000181381	DDX60L
+GO:0008201	heparin binding	3	2247	ENSG00000138685	FGF2
+GO:0008757	S-adenosylmethionine-dependent methyltransferase activity	3	10498	ENSG00000142453	CARM1
+GO:0015103	inorganic anion transmembrane transporter activity	3	84230	ENSG00000171488	LRRC8C
+GO:0019902	phosphatase binding	3	6801	ENSG00000115808	STRN
+GO:0005057	signal transducer activity, downstream of receptor	3	9943	ENSG00000172939	OXSR1
+GO:0004713	protein tyrosine kinase activity	3	10750	ENSG00000154016	GRAP
+GO:0031406	carboxylic acid binding	3	1109	ENSG00000198610	AKR1C4
+GO:0043177	organic acid binding	3	1109	ENSG00000198610	AKR1C4
+GO:0003823	antigen binding	3	2220	ENSG00000160339	FCN2
+GO:0008168	methyltransferase activity	3	10498	ENSG00000142453	CARM1
+GO:0016747	transferase activity, transferring acyl groups other than amino-acyl groups	3	84779	ENSG00000156269	NAA11
+GO:0061630	ubiquitin protein ligase activity	3	84937	ENSG00000186187	ZNRF1
+GO:0016741	transferase activity, transferring one-carbon groups	3	10498	ENSG00000142453	CARM1
+GO:0061659	ubiquitin-like protein ligase activity	3	84937	ENSG00000186187	ZNRF1
+GO:0004252	serine-type endopeptidase activity	3	2220	ENSG00000160339	FCN2
+GO:0008017	microtubule binding	3	11337	ENSG00000170296	GABARAP
+GO:0008236	serine-type peptidase activity	3	2220	ENSG00000160339	FCN2
+GO:0050662	coenzyme binding	3	79701	ENSG00000181396	OGFOD3
+GO:0017171	serine hydrolase activity	3	2220	ENSG00000160339	FCN2
+GO:0016757	transferase activity, transferring glycosyl groups	3	133688	ENSG00000145626	UGT3A1
+GO:0031625	ubiquitin protein ligase binding	3	11337	ENSG00000170296	GABARAP
+GO:0044389	ubiquitin-like protein ligase binding	3	11337	ENSG00000170296	GABARAP
+GO:0045296	cadherin binding	3	829	ENSG00000116489	CAPZA1
+GO:0042578	phosphoric ester hydrolase activity	3	5139	ENSG00000172572	PDE3A
+GO:0003729	mRNA binding	3	677	ENSG00000185650	ZFP36L1
+GO:0005543	phospholipid binding	3	157807	ENSG00000177182	CLVS1
+GO:0004842	ubiquitin-protein transferase activity	3	84937	ENSG00000186187	ZNRF1
+GO:0019787	ubiquitin-like protein transferase activity	3	84937	ENSG00000186187	ZNRF1
+GO:0048018	receptor ligand activity	3	6374	ENSG00000163735	CXCL5
+GO:0000982	transcription factor activity, RNA polymerase II proximal promoter sequence-specific DNA binding	16	8929	ENSG00000109132	PHOX2B
+GO:0001228	transcriptional activator activity, RNA polymerase II transcription regulatory region sequence-specific DNA binding	16	1044	ENSG00000113722	CDX1
+GO:0005525	GTP binding	13	23433	ENSG00000119729	RHOQ
+GO:0032550	purine ribonucleoside binding	13	23433	ENSG00000119729	RHOQ
+GO:0001883	purine nucleoside binding	13	23433	ENSG00000119729	RHOQ
+GO:0032549	ribonucleoside binding	13	23433	ENSG00000119729	RHOQ
+GO:0001882	nucleoside binding	13	23433	ENSG00000119729	RHOQ
+GO:0032561	guanyl ribonucleotide binding	13	23433	ENSG00000119729	RHOQ
+GO:0019001	guanyl nucleotide binding	13	23433	ENSG00000119729	RHOQ
+GO:0000978	RNA polymerase II proximal promoter sequence-specific DNA binding	13	50804	ENSG00000104177	MYEF2
+GO:0000987	proximal promoter sequence-specific DNA binding	13	50804	ENSG00000104177	MYEF2
+GO:0001077	transcriptional activator activity, RNA polymerase II proximal promoter sequence-specific DNA binding	11	3169	ENSG00000129514	FOXA1
+GO:0003924	GTPase activity	11	55207	ENSG00000134108	ARL8B
+GO:0001664	G-protein coupled receptor binding	9	2776	ENSG00000156052	GNAQ
+GO:0003713	transcription coactivator activity	9	5585	ENSG00000123143	PKN1
+GO:0005200	structural constituent of cytoskeleton	8	84790	ENSG00000167553	TUBA1C
+GO:0022804	active transmembrane transporter activity	8	83884	ENSG00000120329	SLC25A2
+GO:0048037	cofactor binding	8	1557	ENSG00000165841	CYP2C19
+GO:0001227	transcriptional repressor activity, RNA polymerase II transcription regulatory region sequence-specific DNA binding	7	84504	ENSG00000148826	NKX6-2
+GO:0005088	Ras guanyl-nucleotide exchange factor activity	7	5159	ENSG00000113721	PDGFRB
+GO:0005085	guanyl-nucleotide exchange factor activity	7	5159	ENSG00000113721	PDGFRB
+GO:0008509	anion transmembrane transporter activity	7	2557	ENSG00000109158	GABRA4
+GO:0000287	magnesium ion binding	6	57198	ENSG00000143515	ATP8B2
+GO:0046982	protein heterodimerization activity	6	7096	ENSG00000174125	TLR1
+GO:0001078	transcriptional repressor activity, RNA polymerase II proximal promoter sequence-specific DNA binding	5	84504	ENSG00000148826	NKX6-2
+GO:0016705	oxidoreductase activity, acting on paired donors, with incorporation or reduction of molecular oxygen	5	79701	ENSG00000181396	OGFOD3
+GO:0005506	iron ion binding	5	79701	ENSG00000181396	OGFOD3
+GO:0016829	lyase activity	5	112	ENSG00000174233	ADCY6
+GO:0008514	organic anion transmembrane transporter activity	5	83884	ENSG00000120329	SLC25A2
+GO:0015291	secondary active transmembrane transporter activity	5	83884	ENSG00000120329	SLC25A2
+GO:0030246	carbohydrate binding	5	5968	ENSG00000172023	REG1B
+GO:0005216	ion channel activity	5	2557	ENSG00000109158	GABRA4
+GO:0022838	substrate-specific channel activity	5	2557	ENSG00000109158	GABRA4
+GO:0016887	ATPase activity	5	8467	ENSG00000153147	SMARCA5
+GO:0046873	metal ion transmembrane transporter activity	5	54805	ENSG00000148842	CNNM2
+GO:0015267	channel activity	5	2557	ENSG00000109158	GABRA4
+GO:0022803	passive transmembrane transporter activity	5	2557	ENSG00000109158	GABRA4
+GO:0030374	ligand-dependent nuclear receptor transcription coactivator activity	4	10498	ENSG00000142453	CARM1
+GO:0003705	transcription factor activity, RNA polymerase II distal enhancer sequence-specific binding	4	4990	ENSG00000184302	SIX6
+GO:0001104	RNA polymerase II transcription cofactor activity	4	6666	ENSG00000177732	SOX12
+GO:0043492	ATPase activity, coupled to movement of substances	4	344905	ENSG00000187527	ATP13A5
+GO:0020037	heme binding	4	3045	ENSG00000223609	HBD
+GO:0046906	tetrapyrrole binding	4	3045	ENSG00000223609	HBD
+GO:0015276	ligand-gated ion channel activity	4	2557	ENSG00000109158	GABRA4
+GO:0022834	ligand-gated channel activity	4	2557	ENSG00000109158	GABRA4
+GO:0035257	nuclear hormone receptor binding	4	1488	ENSG00000175029	CTBP2
+GO:0005342	organic acid transmembrane transporter activity	4	1109	ENSG00000198610	AKR1C4
+GO:0046943	carboxylic acid transmembrane transporter activity	4	1109	ENSG00000198610	AKR1C4
+GO:0017048	Rho GTPase binding	4	91010	ENSG00000161791	FMNL3
+GO:0051427	hormone receptor binding	4	1488	ENSG00000175029	CTBP2
+GO:0001076	transcription factor activity, RNA polymerase II transcription factor binding	4	6666	ENSG00000177732	SOX12
+GO:0042393	histone binding	4	8467	ENSG00000153147	SMARCA5
+GO:0005539	glycosaminoglycan binding	4	5968	ENSG00000172023	REG1B
+GO:0003714	transcription corepressor activity	4	1488	ENSG00000175029	CTBP2
+GO:1901681	sulfur compound binding	4	2247	ENSG00000138685	FGF2
+GO:0016746	transferase activity, transferring acyl groups	4	2038	ENSG00000166947	EPB42
+GO:0042277	peptide binding	4	7096	ENSG00000174125	TLR1
+GO:0033218	amide binding	4	7096	ENSG00000174125	TLR1
+GO:0022839	ion gated channel activity	4	2557	ENSG00000109158	GABRA4
+GO:0022836	gated channel activity	4	2557	ENSG00000109158	GABRA4
+GO:0015631	tubulin binding	4	11337	ENSG00000170296	GABARAP
+GO:0042623	ATPase activity, coupled	4	344905	ENSG00000187527	ATP13A5
+GO:0015077	monovalent inorganic cation transmembrane transporter activity	4	154091	ENSG00000146411	SLC2A12
+GO:0003779	actin binding	4	829	ENSG00000116489	CAPZA1
+GO:0004175	endopeptidase activity	4	2220	ENSG00000160339	FCN2
+GO:0050839	cell adhesion molecule binding	4	829	ENSG00000116489	CAPZA1
+GO:0000982	transcription factor activity, RNA polymerase II proximal promoter sequence-specific DNA binding	16	6909	ENSG00000121068	TBX2
+GO:0001228	transcriptional activator activity, RNA polymerase II transcription regulatory region sequence-specific DNA binding	16	1820	ENSG00000116017	ARID3A
+GO:0005525	GTP binding	13	55207	ENSG00000134108	ARL8B
+GO:0032550	purine ribonucleoside binding	13	55207	ENSG00000134108	ARL8B
+GO:0001883	purine nucleoside binding	13	55207	ENSG00000134108	ARL8B
+GO:0032549	ribonucleoside binding	13	55207	ENSG00000134108	ARL8B
+GO:0001882	nucleoside binding	13	55207	ENSG00000134108	ARL8B
+GO:0032561	guanyl ribonucleotide binding	13	55207	ENSG00000134108	ARL8B
+GO:0019001	guanyl nucleotide binding	13	55207	ENSG00000134108	ARL8B
+GO:0000978	RNA polymerase II proximal promoter sequence-specific DNA binding	13	8929	ENSG00000109132	PHOX2B
+GO:0000987	proximal promoter sequence-specific DNA binding	13	8929	ENSG00000109132	PHOX2B
+GO:0001077	transcriptional activator activity, RNA polymerase II proximal promoter sequence-specific DNA binding	11	29841	ENSG00000134317	GRHL1
+GO:0003924	GTPase activity	11	54509	ENSG00000139725	RHOF
+GO:0001664	G-protein coupled receptor binding	9	8321	ENSG00000157240	FZD1
+GO:0003713	transcription coactivator activity	9	2247	ENSG00000138685	FGF2
+GO:0005200	structural constituent of cytoskeleton	8	6712	ENSG00000173898	SPTBN2
+GO:0022804	active transmembrane transporter activity	8	514	ENSG00000124172	ATP5F1E
+GO:0048037	cofactor binding	8	63826	ENSG00000167720	SRR
+GO:0001227	transcriptional repressor activity, RNA polymerase II transcription regulatory region sequence-specific DNA binding	7	10194	ENSG00000179981	TSHZ1
+GO:0005088	Ras guanyl-nucleotide exchange factor activity	7	2247	ENSG00000138685	FGF2
+GO:0005085	guanyl-nucleotide exchange factor activity	7	2247	ENSG00000138685	FGF2
+GO:0008509	anion transmembrane transporter activity	7	83884	ENSG00000120329	SLC25A2
+GO:0000287	magnesium ion binding	6	63826	ENSG00000167720	SRR
+GO:0046982	protein heterodimerization activity	6	8347	ENSG00000180596	HIST1H2BC
+GO:0001078	transcriptional repressor activity, RNA polymerase II proximal promoter sequence-specific DNA binding	5	10194	ENSG00000179981	TSHZ1
+GO:0016705	oxidoreductase activity, acting on paired donors, with incorporation or reduction of molecular oxygen	5	1109	ENSG00000198610	AKR1C4
+GO:0005506	iron ion binding	5	3045	ENSG00000223609	HBD
+GO:0016829	lyase activity	5	763	ENSG00000174990	CA5A
+GO:0008514	organic anion transmembrane transporter activity	5	1109	ENSG00000198610	AKR1C4
+GO:0015291	secondary active transmembrane transporter activity	5	154091	ENSG00000146411	SLC2A12
+GO:0030246	carbohydrate binding	5	79701	ENSG00000181396	OGFOD3
+GO:0005216	ion channel activity	5	84230	ENSG00000171488	LRRC8C
+GO:0022838	substrate-specific channel activity	5	84230	ENSG00000171488	LRRC8C
+GO:0016887	ATPase activity	5	344905	ENSG00000187527	ATP13A5
+GO:0046873	metal ion transmembrane transporter activity	5	344905	ENSG00000187527	ATP13A5
+GO:0015267	channel activity	5	84230	ENSG00000171488	LRRC8C
+GO:0022803	passive transmembrane transporter activity	5	84230	ENSG00000171488	LRRC8C
+GO:0000982	transcription factor activity, RNA polymerase II proximal promoter sequence-specific DNA binding	16	56751	ENSG00000125492	BARHL1
+GO:0001228	transcriptional activator activity, RNA polymerase II transcription regulatory region sequence-specific DNA binding	16	56751	ENSG00000125492	BARHL1
+GO:0005525	GTP binding	13	54509	ENSG00000139725	RHOF
+GO:0032550	purine ribonucleoside binding	13	54509	ENSG00000139725	RHOF
+GO:0001883	purine nucleoside binding	13	54509	ENSG00000139725	RHOF
+GO:0032549	ribonucleoside binding	13	54509	ENSG00000139725	RHOF
+GO:0001882	nucleoside binding	13	54509	ENSG00000139725	RHOF
+GO:0032561	guanyl ribonucleotide binding	13	54509	ENSG00000139725	RHOF
+GO:0019001	guanyl nucleotide binding	13	54509	ENSG00000139725	RHOF
+GO:0000978	RNA polymerase II proximal promoter sequence-specific DNA binding	13	6909	ENSG00000121068	TBX2
+GO:0000987	proximal promoter sequence-specific DNA binding	13	6909	ENSG00000121068	TBX2
+GO:0001077	transcriptional activator activity, RNA polymerase II proximal promoter sequence-specific DNA binding	11	7547	ENSG00000156925	ZIC3
+GO:0003924	GTPase activity	11	9630	ENSG00000156049	GNA14
+GO:0001664	G-protein coupled receptor binding	9	6374	ENSG00000163735	CXCL5
+GO:0003713	transcription coactivator activity	9	10498	ENSG00000142453	CARM1
+GO:0005200	structural constituent of cytoskeleton	8	3868	ENSG00000186832	KRT16
+GO:0022804	active transmembrane transporter activity	8	154091	ENSG00000146411	SLC2A12
+GO:0048037	cofactor binding	8	1488	ENSG00000175029	CTBP2
+GO:0001227	transcriptional repressor activity, RNA polymerase II transcription regulatory region sequence-specific DNA binding	7	27022	ENSG00000187140	FOXD3
+GO:0005088	Ras guanyl-nucleotide exchange factor activity	7	8997	ENSG00000160145	KALRN
+GO:0005085	guanyl-nucleotide exchange factor activity	7	8997	ENSG00000160145	KALRN
+GO:0008509	anion transmembrane transporter activity	7	84230	ENSG00000171488	LRRC8C
+GO:0000287	magnesium ion binding	6	9943	ENSG00000172939	OXSR1
+GO:0046982	protein heterodimerization activity	6	54345	ENSG00000203883	SOX18
+GO:0000982	transcription factor activity, RNA polymerase II proximal promoter sequence-specific DNA binding	16	3169	ENSG00000129514	FOXA1
+GO:0001228	transcriptional activator activity, RNA polymerase II transcription regulatory region sequence-specific DNA binding	16	3169	ENSG00000129514	FOXA1
+GO:0005525	GTP binding	13	9630	ENSG00000156049	GNA14
+GO:0032550	purine ribonucleoside binding	13	9630	ENSG00000156049	GNA14
+GO:0001883	purine nucleoside binding	13	9630	ENSG00000156049	GNA14
+GO:0032549	ribonucleoside binding	13	9630	ENSG00000156049	GNA14
+GO:0001882	nucleoside binding	13	9630	ENSG00000156049	GNA14
+GO:0032561	guanyl ribonucleotide binding	13	9630	ENSG00000156049	GNA14
+GO:0019001	guanyl nucleotide binding	13	9630	ENSG00000156049	GNA14
+GO:0000978	RNA polymerase II proximal promoter sequence-specific DNA binding	13	29841	ENSG00000134317	GRHL1
+GO:0000987	proximal promoter sequence-specific DNA binding	13	29841	ENSG00000134317	GRHL1
+GO:0001077	transcriptional activator activity, RNA polymerase II proximal promoter sequence-specific DNA binding	11	10736	ENSG00000170577	SIX2
+GO:0003924	GTPase activity	11	2776	ENSG00000156052	GNAQ
+GO:0001664	G-protein coupled receptor binding	9	56246	ENSG00000170262	MRAP
+GO:0003713	transcription coactivator activity	9	89780	ENSG00000154342	WNT3A
+GO:0005200	structural constituent of cytoskeleton	8	3861	ENSG00000186847	KRT14
+GO:0022804	active transmembrane transporter activity	8	6571	ENSG00000165646	SLC18A2
+GO:0048037	cofactor binding	8	79701	ENSG00000181396	OGFOD3
+GO:0001227	transcriptional repressor activity, RNA polymerase II transcription regulatory region sequence-specific DNA binding	7	7975	ENSG00000198517	MAFK
+GO:0005088	Ras guanyl-nucleotide exchange factor activity	7	6712	ENSG00000173898	SPTBN2
+GO:0005085	guanyl-nucleotide exchange factor activity	7	6712	ENSG00000173898	SPTBN2
+GO:0008509	anion transmembrane transporter activity	7	1109	ENSG00000198610	AKR1C4
+GO:0000982	transcription factor activity, RNA polymerase II proximal promoter sequence-specific DNA binding	16	29841	ENSG00000134317	GRHL1
+GO:0001228	transcriptional activator activity, RNA polymerase II transcription regulatory region sequence-specific DNA binding	16	29841	ENSG00000134317	GRHL1
+GO:0005525	GTP binding	13	2776	ENSG00000156052	GNAQ
+GO:0032550	purine ribonucleoside binding	13	2776	ENSG00000156052	GNAQ
+GO:0001883	purine nucleoside binding	13	2776	ENSG00000156052	GNAQ
+GO:0032549	ribonucleoside binding	13	2776	ENSG00000156052	GNAQ
+GO:0001882	nucleoside binding	13	2776	ENSG00000156052	GNAQ
+GO:0032561	guanyl ribonucleotide binding	13	2776	ENSG00000156052	GNAQ
+GO:0019001	guanyl nucleotide binding	13	2776	ENSG00000156052	GNAQ
+GO:0000978	RNA polymerase II proximal promoter sequence-specific DNA binding	13	84504	ENSG00000148826	NKX6-2
+GO:0000987	proximal promoter sequence-specific DNA binding	13	84504	ENSG00000148826	NKX6-2
+GO:0001077	transcriptional activator activity, RNA polymerase II proximal promoter sequence-specific DNA binding	11	4808	ENSG00000177551	NHLH2
+GO:0003924	GTPase activity	11	84790	ENSG00000167553	TUBA1C
+GO:0001664	G-protein coupled receptor binding	9	156	ENSG00000173020	GRK2
+GO:0003713	transcription coactivator activity	9	1488	ENSG00000175029	CTBP2
+GO:0005200	structural constituent of cytoskeleton	8	81027	ENSG00000101162	TUBB1
+GO:0022804	active transmembrane transporter activity	8	344905	ENSG00000187527	ATP13A5
+GO:0048037	cofactor binding	8	3045	ENSG00000223609	HBD
+GO:0000982	transcription factor activity, RNA polymerase II proximal promoter sequence-specific DNA binding	16	84504	ENSG00000148826	NKX6-2
+GO:0001228	transcriptional activator activity, RNA polymerase II transcription regulatory region sequence-specific DNA binding	16	2295	ENSG00000137273	FOXF2
+GO:0005525	GTP binding	13	4882	ENSG00000159899	NPR2
+GO:0032550	purine ribonucleoside binding	13	4882	ENSG00000159899	NPR2
+GO:0001883	purine nucleoside binding	13	4882	ENSG00000159899	NPR2
+GO:0032549	ribonucleoside binding	13	4882	ENSG00000159899	NPR2
+GO:0001882	nucleoside binding	13	4882	ENSG00000159899	NPR2
+GO:0032561	guanyl ribonucleotide binding	13	4882	ENSG00000159899	NPR2
+GO:0019001	guanyl nucleotide binding	13	4882	ENSG00000159899	NPR2
+GO:0000978	RNA polymerase II proximal promoter sequence-specific DNA binding	13	7547	ENSG00000156925	ZIC3
+GO:0000987	proximal promoter sequence-specific DNA binding	13	7547	ENSG00000156925	ZIC3
+GO:0001077	transcriptional activator activity, RNA polymerase II proximal promoter sequence-specific DNA binding	11	6666	ENSG00000177732	SOX12
+GO:0003924	GTPase activity	11	148252	ENSG00000176490	DIRAS1
+GO:0001664	G-protein coupled receptor binding	9	344892	ENSG00000198471	RTP2
+GO:0003713	transcription coactivator activity	9	6666	ENSG00000177732	SOX12
+GO:0000982	transcription factor activity, RNA polymerase II proximal promoter sequence-specific DNA binding	16	7547	ENSG00000156925	ZIC3
+GO:0001228	transcriptional activator activity, RNA polymerase II transcription regulatory region sequence-specific DNA binding	16	7547	ENSG00000156925	ZIC3
+GO:0005525	GTP binding	13	84790	ENSG00000167553	TUBA1C
+GO:0032550	purine ribonucleoside binding	13	84790	ENSG00000167553	TUBA1C
+GO:0001883	purine nucleoside binding	13	84790	ENSG00000167553	TUBA1C
+GO:0032549	ribonucleoside binding	13	84790	ENSG00000167553	TUBA1C
+GO:0001882	nucleoside binding	13	84790	ENSG00000167553	TUBA1C
+GO:0032561	guanyl ribonucleotide binding	13	84790	ENSG00000167553	TUBA1C
+GO:0019001	guanyl nucleotide binding	13	84790	ENSG00000167553	TUBA1C
+GO:0000978	RNA polymerase II proximal promoter sequence-specific DNA binding	13	10736	ENSG00000170577	SIX2
+GO:0000987	proximal promoter sequence-specific DNA binding	13	10736	ENSG00000170577	SIX2
+GO:0001077	transcriptional activator activity, RNA polymerase II proximal promoter sequence-specific DNA binding	11	54345	ENSG00000203883	SOX18
+GO:0003924	GTPase activity	11	388646	ENSG00000213512	GBP7
+GO:0000982	transcription factor activity, RNA polymerase II proximal promoter sequence-specific DNA binding	16	10736	ENSG00000170577	SIX2
+GO:0001228	transcriptional activator activity, RNA polymerase II transcription regulatory region sequence-specific DNA binding	16	10736	ENSG00000170577	SIX2
+GO:0005525	GTP binding	13	148252	ENSG00000176490	DIRAS1
+GO:0032550	purine ribonucleoside binding	13	148252	ENSG00000176490	DIRAS1
+GO:0001883	purine nucleoside binding	13	148252	ENSG00000176490	DIRAS1
+GO:0032549	ribonucleoside binding	13	148252	ENSG00000176490	DIRAS1
+GO:0001882	nucleoside binding	13	148252	ENSG00000176490	DIRAS1
+GO:0032561	guanyl ribonucleotide binding	13	148252	ENSG00000176490	DIRAS1
+GO:0019001	guanyl nucleotide binding	13	148252	ENSG00000176490	DIRAS1
+GO:0000978	RNA polymerase II proximal promoter sequence-specific DNA binding	13	4808	ENSG00000177551	NHLH2
+GO:0000987	proximal promoter sequence-specific DNA binding	13	4808	ENSG00000177551	NHLH2
+GO:0001077	transcriptional activator activity, RNA polymerase II proximal promoter sequence-specific DNA binding	11	3206	ENSG00000253293	HOXA10
+GO:0003924	GTPase activity	11	81027	ENSG00000101162	TUBB1
+GO:0000982	transcription factor activity, RNA polymerase II proximal promoter sequence-specific DNA binding	16	4808	ENSG00000177551	NHLH2
+GO:0001228	transcriptional activator activity, RNA polymerase II transcription regulatory region sequence-specific DNA binding	16	4808	ENSG00000177551	NHLH2
+GO:0005525	GTP binding	13	388646	ENSG00000213512	GBP7
+GO:0032550	purine ribonucleoside binding	13	388646	ENSG00000213512	GBP7
+GO:0001883	purine nucleoside binding	13	388646	ENSG00000213512	GBP7
+GO:0032549	ribonucleoside binding	13	388646	ENSG00000213512	GBP7
+GO:0001882	nucleoside binding	13	388646	ENSG00000213512	GBP7
+GO:0032561	guanyl ribonucleotide binding	13	388646	ENSG00000213512	GBP7
+GO:0019001	guanyl nucleotide binding	13	388646	ENSG00000213512	GBP7
+GO:0000978	RNA polymerase II proximal promoter sequence-specific DNA binding	13	54345	ENSG00000203883	SOX18
+GO:0000987	proximal promoter sequence-specific DNA binding	13	54345	ENSG00000203883	SOX18
+GO:0000982	transcription factor activity, RNA polymerase II proximal promoter sequence-specific DNA binding	16	6666	ENSG00000177732	SOX12
+GO:0001228	transcriptional activator activity, RNA polymerase II transcription regulatory region sequence-specific DNA binding	16	6666	ENSG00000177732	SOX12
+GO:0005525	GTP binding	13	81027	ENSG00000101162	TUBB1
+GO:0032550	purine ribonucleoside binding	13	81027	ENSG00000101162	TUBB1
+GO:0001883	purine nucleoside binding	13	81027	ENSG00000101162	TUBB1
+GO:0032549	ribonucleoside binding	13	81027	ENSG00000101162	TUBB1
+GO:0001882	nucleoside binding	13	81027	ENSG00000101162	TUBB1
+GO:0032561	guanyl ribonucleotide binding	13	81027	ENSG00000101162	TUBB1
+GO:0019001	guanyl nucleotide binding	13	81027	ENSG00000101162	TUBB1
+GO:0000978	RNA polymerase II proximal promoter sequence-specific DNA binding	13	3206	ENSG00000253293	HOXA10
+GO:0000987	proximal promoter sequence-specific DNA binding	13	3206	ENSG00000253293	HOXA10
+GO:0000982	transcription factor activity, RNA polymerase II proximal promoter sequence-specific DNA binding	16	10194	ENSG00000179981	TSHZ1
+GO:0001228	transcriptional activator activity, RNA polymerase II transcription regulatory region sequence-specific DNA binding	16	4990	ENSG00000184302	SIX6
+GO:0000982	transcription factor activity, RNA polymerase II proximal promoter sequence-specific DNA binding	16	54345	ENSG00000203883	SOX18
+GO:0001228	transcriptional activator activity, RNA polymerase II transcription regulatory region sequence-specific DNA binding	16	54345	ENSG00000203883	SOX18
+GO:0000982	transcription factor activity, RNA polymerase II proximal promoter sequence-specific DNA binding	16	3206	ENSG00000253293	HOXA10
+GO:0001228	transcriptional activator activity, RNA polymerase II transcription regulatory region sequence-specific DNA binding	16	3206	ENSG00000253293	HOXA10

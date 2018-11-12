@@ -1,31 +1,33 @@
 Molecular function	n
-transcription factor activity, RNA polymerase II proximal promoter sequence-specific DNA binding	15
-transcriptional activator activity, RNA polymerase II transcription regulatory region sequence-specific DNA binding	14
+transcription factor activity, RNA polymerase II proximal promoter sequence-specific DNA binding	16
+transcriptional activator activity, RNA polymerase II transcription regulatory region sequence-specific DNA binding	16
 GTP binding	13
 guanyl nucleotide binding	13
 guanyl ribonucleotide binding	13
 nucleoside binding	13
+proximal promoter sequence-specific DNA binding	13
 purine nucleoside binding	13
 purine ribonucleoside binding	13
 ribonucleoside binding	13
-proximal promoter sequence-specific DNA binding	12
-RNA polymerase II proximal promoter sequence-specific DNA binding	12
+RNA polymerase II proximal promoter sequence-specific DNA binding	13
 GTPase activity	11
-transcriptional activator activity, RNA polymerase II proximal promoter sequence-specific DNA binding	10
+transcriptional activator activity, RNA polymerase II proximal promoter sequence-specific DNA binding	11
+G-protein coupled receptor binding	9
 transcription coactivator activity	9
-G-protein coupled receptor binding	8
-active transmembrane transporter activity	7
+active transmembrane transporter activity	8
+cofactor binding	8
+structural constituent of cytoskeleton	8
 anion transmembrane transporter activity	7
-cofactor binding	7
 guanyl-nucleotide exchange factor activity	7
 Ras guanyl-nucleotide exchange factor activity	7
 transcriptional repressor activity, RNA polymerase II transcription regulatory region sequence-specific DNA binding	7
 magnesium ion binding	6
 protein heterodimerization activity	6
-structural constituent of cytoskeleton	6
+ATPase activity	5
 carbohydrate binding	5
 channel activity	5
 ion channel activity	5
+iron ion binding	5
 lyase activity	5
 metal ion transmembrane transporter activity	5
 organic anion transmembrane transporter activity	5
@@ -36,61 +38,63 @@ substrate-specific channel activity	5
 transcriptional repressor activity, RNA polymerase II proximal promoter sequence-specific DNA binding	5
 actin binding	4
 amide binding	4
-ATPase activity	4
+ATPase activity, coupled	4
+ATPase activity, coupled to movement of substances	4
 carboxylic acid transmembrane transporter activity	4
 cell adhesion molecule binding	4
+endopeptidase activity	4
 gated channel activity	4
 glycosaminoglycan binding	4
+heme binding	4
 histone binding	4
 hormone receptor binding	4
 ion gated channel activity	4
-iron ion binding	4
 ligand-dependent nuclear receptor transcription coactivator activity	4
 ligand-gated channel activity	4
 ligand-gated ion channel activity	4
-mRNA binding	4
+monovalent inorganic cation transmembrane transporter activity	4
 nuclear hormone receptor binding	4
 organic acid transmembrane transporter activity	4
 peptide binding	4
 Rho GTPase binding	4
 RNA polymerase II transcription cofactor activity	4
 sulfur compound binding	4
+tetrapyrrole binding	4
 transcription corepressor activity	4
+transcription factor activity, RNA polymerase II distal enhancer sequence-specific binding	4
 transcription factor activity, RNA polymerase II transcription factor binding	4
 transferase activity, transferring acyl groups	4
+tubulin binding	4
 acetyltransferase activity	3
 amino acid transmembrane transporter activity	3
 anion channel activity	3
 antigen binding	3
 antiporter activity	3
-ATPase activity, coupled	3
-ATPase activity, coupled to movement of substances	3
 cadherin binding	3
 carboxylic acid binding	3
 chromatin DNA binding	3
 coenzyme binding	3
-core promoter binding	3
 drug transmembrane transporter activity	3
-endopeptidase activity	3
 extracellular ligand-gated ion channel activity	3
 frizzled binding	3
 G-protein beta/gamma-subunit complex binding	3
 helicase activity	3
-heme binding	3
 heparin binding	3
 histone deacetylase binding	3
 inorganic anion transmembrane transporter activity	3
 L-amino acid transmembrane transporter activity	3
 lipid transporter activity	3
 methyltransferase activity	3
+microtubule binding	3
 monooxygenase activity	3
-monovalent inorganic cation transmembrane transporter activity	3
+mRNA binding	3
 N-methyltransferase activity	3
 nucleosome binding	3
 organic acid binding	3
 oxidoreductase activity, acting on CH-OH group of donors	3
 oxidoreductase activity, acting on NAD(P)H	3
 oxidoreductase activity, acting on the CH-OH group of donors, NAD or NADP as acceptor	3
+oxygen binding	3
 peptide receptor activity	3
 phosphatase binding	3
 phospholipid binding	3
@@ -101,36 +105,44 @@ proteoglycan binding	3
 receptor ligand activity	3
 S-adenosylmethionine-dependent methyltransferase activity	3
 semaphorin receptor activity	3
+serine hydrolase activity	3
+serine-type endopeptidase activity	3
+serine-type peptidase activity	3
 signal transducer activity, downstream of receptor	3
 signal transducer, downstream of receptor, with serine/threonine kinase activity	3
-tetrapyrrole binding	3
-transcription factor activity, RNA polymerase II distal enhancer sequence-specific binding	3
 transferase activity, transferring acyl groups other than amino-acyl groups	3
 transferase activity, transferring glycosyl groups	3
 transferase activity, transferring one-carbon groups	3
-tubulin binding	3
 ubiquitin protein ligase activity	3
+ubiquitin protein ligase binding	3
 ubiquitin-like protein ligase activity	3
+ubiquitin-like protein ligase binding	3
 ubiquitin-like protein transferase activity	3
 ubiquitin-protein transferase activity	3
 3',5'-cyclic-GMP phosphodiesterase activity	2
 3',5'-cyclic-nucleotide phosphodiesterase activity	2
+active ion transmembrane transporter activity	2
 adenylate cyclase activity	2
 ammonium transmembrane transporter activity	2
 arachidonic acid epoxygenase activity	2
 arachidonic acid monooxygenase activity	2
 arginine N-methyltransferase activity	2
+ATPase activity, coupled to transmembrane movement of substances	2
+ATPase coupled ion transmembrane transporter activity	2
 basal RNA polymerase II transcription machinery binding	2
 basal transcription machinery binding	2
+beta-tubulin binding	2
 calcium ion transmembrane transporter activity	2
 calcium-dependent protein binding	2
 calmodulin binding	2
 cAMP binding	2
 cation channel activity	2
+cation-transporting ATPase activity	2
 chaperone binding	2
 chloride channel activity	2
 chloride transmembrane transporter activity	2
 collagen binding	2
+core promoter binding	2
 cyclase activity	2
 cyclic nucleotide binding	2
 cyclic-nucleotide phosphodiesterase activity	2
@@ -154,7 +166,6 @@ histone kinase activity	2
 kinase regulator activity	2
 ligand-gated anion channel activity	2
 ligand-gated cation channel activity	2
-microtubule binding	2
 modification-dependent protein binding	2
 molecular adaptor activity	2
 monosaccharide binding	2
@@ -167,7 +178,7 @@ nucleoside-triphosphatase regulator activity	2
 organic hydroxy compound transmembrane transporter activity	2
 oxidoreductase activity, acting on NAD(P)H, quinone or similar compound as acceptor	2
 oxidoreductase activity, acting on paired donors, with incorporation or reduction of molecular oxygen, reduced flavin or flavoprotein as one donor, and incorporation of one atom of oxygen	2
-oxygen binding	2
+P-P-bond-hydrolysis-driven transmembrane transporter activity	2
 PDZ domain binding	2
 peptide N-acetyltransferase activity	2
 phosphatidylinositol 3-kinase activity	2
@@ -178,12 +189,14 @@ phospholipid transporter activity	2
 phospholipid-translocating ATPase activity	2
 phosphoric diester hydrolase activity	2
 phosphorus-oxygen lyase activity	2
+primary active transmembrane transporter activity	2
 protein binding, bridging	2
 protein kinase C activity	2
 protein kinase C binding	2
 protein kinase regulator activity	2
 protein phosphatase binding	2
 protein-arginine N-methyltransferase activity	2
+proton transmembrane transporter activity	2
 Rac GTPase binding	2
 Rho guanyl-nucleotide exchange factor activity	2
 RNA polymerase binding	2
@@ -191,11 +204,7 @@ RNA polymerase core enzyme binding	2
 RNA polymerase II core binding	2
 RNA polymerase II transcription coactivator activity	2
 RNA polymerase II transcription corepressor activity	2
-serine hydrolase activity	2
-serine-type endopeptidase activity	2
-serine-type peptidase activity	2
 single-stranded DNA binding	2
-single-stranded RNA binding	2
 sodium ion transmembrane transporter activity	2
 solute:cation symporter activity	2
 steroid hormone receptor binding	2
@@ -210,8 +219,6 @@ transferase activity, transferring hexosyl groups	2
 translation regulator activity	2
 transmitter-gated channel activity	2
 transmitter-gated ion channel activity	2
-ubiquitin protein ligase binding	2
-ubiquitin-like protein ligase binding	2
 UDP-glycosyltransferase activity	2
 vitamin binding	2
 voltage-gated cation channel activity	2
@@ -225,7 +232,7 @@ acetylcholine receptor binding	1
 acetylcholine receptor regulator activity	1
 acid-thiol ligase activity	1
 acidic amino acid transmembrane transporter activity	1
-active ion transmembrane transporter activity	1
+activating transcription factor binding	1
 acyl-CoA hydrolase activity	1
 adenine nucleotide transmembrane transporter activity	1
 ADP transmembrane transporter activity	1
@@ -243,12 +250,10 @@ apolipoprotein binding	1
 armadillo repeat domain binding	1
 AT DNA binding	1
 ATPase activity, coupled to transmembrane movement of ions, phosphorylative mechanism	1
-ATPase activity, coupled to transmembrane movement of substances	1
-ATPase coupled ion transmembrane transporter activity	1
+ATPase activity, coupled to transmembrane movement of ions, rotational mechanism	1
 AU-rich element binding	1
 benzodiazepine receptor activity	1
 beta-catenin binding	1
-beta-tubulin binding	1
 bile acid binding	1
 bile acid transmembrane transporter activity	1
 C-acyltransferase activity	1
@@ -267,7 +272,6 @@ carboxy-lyase activity	1
 carboxylic ester hydrolase activity	1
 catalytic activity, acting on a tRNA	1
 catalytic activity, acting on RNA	1
-cation-transporting ATPase activity	1
 chemoattractant activity	1
 chemokine activity	1
 chemokine receptor activity	1
@@ -303,6 +307,7 @@ fibroblast growth factor receptor binding	1
 G-protein coupled chemoattractant receptor activity	1
 G-protein coupled photoreceptor activity	1
 GABA receptor activity	1
+GABA receptor binding	1
 GABA-A receptor activity	1
 GABA-gated chloride ion channel activity	1
 GDP binding	1
@@ -316,7 +321,6 @@ GTP-Rho binding	1
 GTPase activating protein binding	1
 H4 histone acetyltransferase activity	1
 heat shock protein binding	1
-heparan sulfate sulfotransferase activity	1
 hexose transmembrane transporter activity	1
 hijacked molecular function	1
 histone acetyltransferase activity	1
@@ -328,6 +332,7 @@ hydrolase activity, acting on carbon-nitrogen (but not peptide) bonds	1
 hydrolase activity, acting on carbon-nitrogen (but not peptide) bonds, in linear amides	1
 inhibitory extracellular ligand-gated ion channel activity	1
 integrin binding	1
+intermediate filament binding	1
 intracellular cyclic nucleotide activated cation channel activity	1
 intracellular ligand-gated ion channel activity	1
 ion antiporter activity	1
@@ -361,6 +366,7 @@ methylation-dependent protein binding	1
 miRNA binding	1
 mitogen-activated protein kinase kinase binding	1
 modified amino acid binding	1
+molecular carrier activity	1
 monocarboxylic acid binding	1
 monocarboxylic acid transmembrane transporter activity	1
 monosaccharide transmembrane transporter activity	1
@@ -397,7 +403,7 @@ oxidoreductase activity, acting on peroxide as acceptor	1
 oxidoreductase activity, acting on the aldehyde or oxo group of donors	1
 oxidoreductase activity, acting on the aldehyde or oxo group of donors, NAD or NADP as acceptor	1
 oxidoreductase activity, oxidizing metal ions	1
-P-P-bond-hydrolysis-driven transmembrane transporter activity	1
+oxygen carrier activity	1
 palmitoyl hydrolase activity	1
 palmitoyl-(protein) hydrolase activity	1
 pattern binding	1
@@ -424,7 +430,6 @@ polysaccharide binding	1
 postsynaptic neurotransmitter receptor activity	1
 potassium channel activity	1
 potassium ion transmembrane transporter activity	1
-primary active transmembrane transporter activity	1
 profilin binding	1
 protease binding	1
 protein C-terminus binding	1
@@ -434,7 +439,7 @@ protein phosphatase 2A binding	1
 protein phosphorylated amino acid binding	1
 protein serine/threonine/tyrosine kinase activity	1
 protein-lysine N-methyltransferase activity	1
-proton transmembrane transporter activity	1
+proton-transporting ATP synthase activity, rotational mechanism	1
 purine nucleotide transmembrane transporter activity	1
 purine ribonucleotide transmembrane transporter activity	1
 pyridoxal phosphate binding	1
@@ -446,11 +451,14 @@ Ral GTPase binding	1
 receptor inhibitor activity	1
 regulatory RNA binding	1
 retinoic acid receptor binding	1
+RNA polymerase II activating transcription factor binding	1
 RNA polymerase II core promoter sequence-specific DNA binding	1
 RNA polymerase II distal enhancer sequence-specific DNA binding	1
+RNA polymerase II transcription factor binding	1
 scaffold protein binding	1
 SH3/SH2 adaptor activity	1
 signaling adaptor activity	1
+single-stranded RNA binding	1
 sodium channel activity	1
 sodium:phosphate symporter activity	1
 solute:proton symporter activity	1
@@ -460,7 +468,6 @@ steroid dehydrogenase activity	1
 steroid dehydrogenase activity, acting on the CH-OH group of donors, NAD or NADP as acceptor	1
 structural constituent of epidermis	1
 sugar transmembrane transporter activity	1
-sulfotransferase activity	1
 tau-protein kinase activity	1
 thiol-dependent ubiquitinyl hydrolase activity	1
 Toll-like receptor binding	1
@@ -470,7 +477,6 @@ transferase activity, transferring alkyl or aryl (other than methyl) groups	1
 transferase activity, transferring amino-acyl groups	1
 transferase activity, transferring nitrogenous groups	1
 transferase activity, transferring pentosyl groups	1
-transferase activity, transferring sulfur-containing groups	1
 transmembrane receptor protein kinase activity	1
 transmembrane receptor protein tyrosine kinase activity	1
 transmitter-gated ion channel activity involved in regulation of postsynaptic membrane potential	1

@@ -2,14 +2,15 @@ Biological Process	n
 regulation of cell morphogenesis	11
 pattern specification process	10
 skeletal system development	10
+embryonic organ development	9
+embryonic organ morphogenesis	9
 forebrain development	9
 positive regulation of nervous system development	9
-embryonic organ development	8
-embryonic organ morphogenesis	8
 peptidyl-serine modification	8
 peptidyl-serine phosphorylation	8
 positive regulation of neurogenesis	8
 regionalization	8
+sensory organ morphogenesis	8
 anterior/posterior pattern specification	7
 cell fate commitment	7
 connective tissue development	7
@@ -18,60 +19,68 @@ developmental maturation	7
 divalent inorganic cation transport	7
 divalent metal ion transport	7
 epithelial tube morphogenesis	7
+eye development	7
 histone modification	7
+mesenchyme development	7
 positive regulation of cell projection organization	7
 positive regulation of protein serine/threonine kinase activity	7
 regulation of binding	7
+regulation of body fluid levels	7
 regulation of cell shape	7
 regulation of chemotaxis	7
 regulation of developmental growth	7
 regulation of neuron projection development	7
-sensory organ morphogenesis	7
 activation of protein kinase activity	6
+blood coagulation	6
 calcium ion transport	6
+camera-type eye development	6
 cartilage development	6
 central nervous system neuron differentiation	6
-eye development	6
-mesenchyme development	6
+coagulation	6
+extracellular matrix organization	6
+extracellular structure organization	6
+hemostasis	6
+mitochondrial transport	6
 muscle tissue development	6
 negative regulation of transport	6
 organic anion transport	6
 peptidyl-tyrosine modification	6
 peptidyl-tyrosine phosphorylation	6
+positive regulation of cellular protein localization	6
 positive regulation of MAP kinase activity	6
 Ras protein signal transduction	6
-regulation of body fluid levels	6
 regulation of cell morphogenesis involved in differentiation	6
 regulation of lipid metabolic process	6
 regulation of MAP kinase activity	6
+response to extracellular stimulus	6
+response to nutrient levels	6
 striated muscle tissue development	6
 synapse organization	6
 telencephalon development	6
+aging	5
 anatomical structure maturation	5
+autophagy	5
 axon development	5
 axon guidance	5
 axonogenesis	5
-blood coagulation	5
-camera-type eye development	5
 cardiac muscle tissue development	5
 cardiocyte differentiation	5
 cell chemotaxis	5
 cell maturation	5
 cellular process involved in reproduction in multicellular organism	5
 circadian rhythm	5
-coagulation	5
 coenzyme metabolic process	5
 cognition	5
+drug transport	5
 ear development	5
-extracellular matrix organization	5
-extracellular structure organization	5
 gland development	5
-hemostasis	5
 learning or memory	5
 lung development	5
 muscle cell differentiation	5
 negative regulation of cell development	5
 neuron projection guidance	5
+nucleoside monophosphate metabolic process	5
+nucleoside triphosphate metabolic process	5
 organ growth	5
 ossification	5
 peptidyl-threonine modification	5
@@ -79,38 +88,52 @@ peptidyl-threonine phosphorylation	5
 positive regulation of catabolic process	5
 positive regulation of cell morphogenesis involved in differentiation	5
 positive regulation of cellular catabolic process	5
-positive regulation of cellular protein localization	5
+positive regulation of establishment of protein localization	5
 positive regulation of neuron differentiation	5
 positive regulation of neuron projection development	5
 positive regulation of proteolysis	5
+process utilizing autophagic mechanism	5
 protein autophosphorylation	5
+purine nucleoside monophosphate metabolic process	5
+purine nucleoside triphosphate metabolic process	5
+purine ribonucleoside monophosphate metabolic process	5
+purine ribonucleoside triphosphate metabolic process	5
 regulation of GTPase activity	5
 regulation of membrane potential	5
 regulation of organ morphogenesis	5
 regulation of protein binding	5
+regulation of protein localization to membrane	5
 regulation of synapse structure or activity	5
 regulation of vesicle-mediated transport	5
 respiratory system development	5
 respiratory tube development	5
 response to ammonium ion	5
-response to extracellular stimulus	5
-response to nutrient levels	5
+response to radiation	5
+response to starvation	5
 rhythmic process	5
+ribonucleoside monophosphate metabolic process	5
+ribonucleoside triphosphate metabolic process	5
 second-messenger-mediated signaling	5
 skeletal system morphogenesis	5
 activation of MAPK activity	4
-aging	4
 anion transmembrane transport	4
 appendage development	4
-autophagy	4
+ATP metabolic process	4
 bone development	4
 calcium ion transmembrane transport	4
+camera-type eye morphogenesis	4
 cell fate specification	4
 cellular response to drug	4
+cellular response to external stimulus	4
+cellular response to extracellular stimulus	4
+cellular response to nutrient levels	4
+cellular response to starvation	4
 developmental growth involved in morphogenesis	4
+digestive system development	4
+digestive tract development	4
 divalent inorganic cation homeostasis	4
-drug transport	4
 ear morphogenesis	4
+eye morphogenesis	4
 fatty acid metabolic process	4
 kidney development	4
 kidney morphogenesis	4
@@ -118,9 +141,10 @@ leukocyte migration	4
 limb development	4
 lipid modification	4
 locomotory behavior	4
+macroautophagy	4
 maintenance of cell number	4
 meiotic cell cycle	4
-mitochondrial transport	4
+mesenchymal cell differentiation	4
 modulation of chemical synaptic transmission	4
 muscle cell proliferation	4
 muscle organ development	4
@@ -132,9 +156,9 @@ nephron development	4
 nephron morphogenesis	4
 nuclear division	4
 nucleobase-containing small molecule biosynthetic process	4
-nucleoside monophosphate metabolic process	4
+nucleoside phosphate biosynthetic process	4
 nucleoside phosphate catabolic process	4
-nucleoside triphosphate metabolic process	4
+nucleotide biosynthetic process	4
 nucleotide catabolic process	4
 organelle fission	4
 organophosphate catabolic process	4
@@ -142,30 +166,27 @@ pallium development	4
 phagocytosis	4
 positive regulation of cell cycle	4
 positive regulation of cell migration	4
-positive regulation of establishment of protein localization	4
 positive regulation of muscle organ development	4
 positive regulation of muscle tissue development	4
 positive regulation of protein transport	4
 positive regulation of striated muscle tissue development	4
-process utilizing autophagic mechanism	4
 proteasomal protein catabolic process	4
 proteasome-mediated ubiquitin-dependent protein catabolic process	4
 protein acylation	4
 protein localization to cell periphery	4
 protein localization to plasma membrane	4
-purine nucleoside monophosphate metabolic process	4
-purine nucleoside triphosphate metabolic process	4
-purine ribonucleoside monophosphate metabolic process	4
-purine ribonucleoside triphosphate metabolic process	4
-pyruvate metabolic process	4
+protein targeting	4
+purine nucleotide biosynthetic process	4
+purine ribonucleotide biosynthetic process	4
+purine-containing compound biosynthetic process	4
 regulation of autophagy	4
 regulation of axon guidance	4
 regulation of axonogenesis	4
 regulation of DNA binding transcription factor activity	4
+regulation of mitochondrion organization	4
 regulation of muscle organ development	4
 regulation of muscle tissue development	4
 regulation of protein localization to cell periphery	4
-regulation of protein localization to membrane	4
 regulation of protein localization to plasma membrane	4
 regulation of small GTPase mediated signal transduction	4
 regulation of striated muscle tissue development	4
@@ -177,13 +198,12 @@ response to oxidative stress	4
 response to peptide	4
 response to peptide hormone	4
 response to purine-containing compound	4
-response to radiation	4
-response to starvation	4
 response to temperature stimulus	4
 response to xenobiotic stimulus	4
 Rho protein signal transduction	4
-ribonucleoside monophosphate metabolic process	4
-ribonucleoside triphosphate metabolic process	4
+ribonucleotide biosynthetic process	4
+ribose phosphate biosynthetic process	4
+roof of mouth development	4
 signal transduction by p53 class mediator	4
 stem cell differentiation	4
 stem cell population maintenance	4
@@ -198,7 +218,7 @@ amino acid transmembrane transport	3
 amino acid transport	3
 anatomical structure homeostasis	3
 animal organ formation	3
-ATP metabolic process	3
+ATP biosynthetic process	3
 axon extension	3
 axon extension involved in axon guidance	3
 B cell activation	3
@@ -206,7 +226,6 @@ bone morphogenesis	3
 branching involved in ureteric bud morphogenesis	3
 branching morphogenesis of an epithelial tube	3
 calcium ion homeostasis	3
-camera-type eye morphogenesis	3
 cAMP-mediated signaling	3
 canonical Wnt signaling pathway	3
 carbohydrate derivative catabolic process	3
@@ -223,13 +242,9 @@ cellular divalent inorganic cation homeostasis	3
 cellular response to abiotic stimulus	3
 cellular response to ammonium ion	3
 cellular response to environmental stimulus	3
-cellular response to external stimulus	3
-cellular response to extracellular stimulus	3
 cellular response to leukemia inhibitory factor	3
-cellular response to nutrient levels	3
 cellular response to peptide	3
 cellular response to peptide hormone stimulus	3
-cellular response to starvation	3
 cellular response to tumor necrosis factor	3
 central nervous system neuron development	3
 chemical synaptic transmission, postsynaptic	3
@@ -243,8 +258,6 @@ determination of bilateral symmetry	3
 determination of heart left/right asymmetry	3
 determination of left/right symmetry	3
 developmental cell growth	3
-digestive system development	3
-digestive tract development	3
 DNA biosynthetic process	3
 embryonic cranial skeleton morphogenesis	3
 embryonic heart tube development	3
@@ -256,7 +269,7 @@ endomembrane system organization	3
 epithelial cell migration	3
 epithelium migration	3
 ERK1 and ERK2 cascade	3
-eye morphogenesis	3
+establishment of protein localization to mitochondrion	3
 fat cell differentiation	3
 forebrain generation of neurons	3
 gene silencing	3
@@ -282,17 +295,16 @@ kidney epithelium development	3
 L-alpha-amino acid transmembrane transport	3
 L-amino acid transport	3
 leukocyte chemotaxis	3
-macroautophagy	3
 maintenance of location	3
 mammary gland development	3
 meiotic cell cycle process	3
 memory	3
-mesenchymal cell differentiation	3
 mesonephric epithelium development	3
 mesonephric tubule development	3
 mesonephric tubule morphogenesis	3
 mesonephros development	3
 midbrain development	3
+mitochondrial membrane organization	3
 monocarboxylic acid biosynthetic process	3
 monosaccharide transmembrane transport	3
 morphogenesis of a branching epithelium	3
@@ -323,8 +335,8 @@ neural precursor cell proliferation	3
 neuron projection extension	3
 neuron projection extension involved in neuron projection guidance	3
 nucleobase-containing compound transport	3
-nucleoside phosphate biosynthetic process	3
-nucleotide biosynthetic process	3
+nucleoside monophosphate biosynthetic process	3
+nucleoside triphosphate biosynthetic process	3
 organic acid biosynthetic process	3
 organic acid transmembrane transport	3
 organic acid transport	3
@@ -352,10 +364,12 @@ positive regulation of DNA binding transcription factor activity	3
 positive regulation of DNA biosynthetic process	3
 positive regulation of DNA metabolic process	3
 positive regulation of ERK1 and ERK2 cascade	3
+positive regulation of establishment of protein localization to mitochondrion	3
 positive regulation of growth	3
 positive regulation of GTPase activity	3
 positive regulation of lipase activity	3
 positive regulation of lipid metabolic process	3
+positive regulation of mitochondrion organization	3
 positive regulation of peptidase activity	3
 positive regulation of phospholipase activity	3
 positive regulation of phospholipase C activity	3
@@ -364,10 +378,15 @@ positive regulation of small molecule metabolic process	3
 positive regulation of Wnt signaling pathway	3
 protein acetylation	3
 protein import	3
-purine nucleotide biosynthetic process	3
-purine ribonucleotide biosynthetic process	3
-purine-containing compound biosynthetic process	3
+protein localization to mitochondrion	3
+protein-containing complex disassembly	3
+proton transmembrane transport	3
+purine nucleoside monophosphate biosynthetic process	3
+purine nucleoside triphosphate biosynthetic process	3
+purine ribonucleoside monophosphate biosynthetic process	3
+purine ribonucleoside triphosphate biosynthetic process	3
 pyruvate biosynthetic process	3
+pyruvate metabolic process	3
 receptor internalization	3
 receptor metabolic process	3
 receptor-mediated endocytosis	3
@@ -375,6 +394,7 @@ regulation of actin cytoskeleton organization	3
 regulation of actin filament-based process	3
 regulation of anatomical structure size	3
 regulation of angiogenesis	3
+regulation of apoptotic signaling pathway	3
 regulation of axon extension	3
 regulation of axon extension involved in axon guidance	3
 regulation of blood circulation	3
@@ -393,6 +413,7 @@ regulation of DNA metabolic process	3
 regulation of embryonic development	3
 regulation of endocytosis	3
 regulation of ERK1 and ERK2 cascade	3
+regulation of establishment of protein localization to mitochondrion	3
 regulation of extent of cell growth	3
 regulation of G-protein coupled receptor protein signaling pathway	3
 regulation of heart contraction	3
@@ -404,7 +425,6 @@ regulation of macroautophagy	3
 regulation of metal ion transport	3
 regulation of microtubule cytoskeleton organization	3
 regulation of microtubule-based process	3
-regulation of mitochondrion organization	3
 regulation of morphogenesis of an epithelium	3
 regulation of multi-organism process	3
 regulation of organ growth	3
@@ -426,18 +446,21 @@ regulation of Wnt signaling pathway	3
 renal tubule development	3
 renal tubule morphogenesis	3
 replacement bone morphogenesis	3
+reproductive structure development	3
+reproductive system development	3
 response to acid chemical	3
 response to alkaloid	3
 response to cAMP	3
+response to ionizing radiation	3
 response to leukemia inhibitory factor	3
 response to light stimulus	3
 response to organophosphorus	3
 response to reactive oxygen species	3
 response to steroid hormone	3
 response to tumor necrosis factor	3
-ribonucleotide biosynthetic process	3
-ribose phosphate biosynthetic process	3
-roof of mouth development	3
+ribonucleoside monophosphate biosynthetic process	3
+ribonucleoside triphosphate biosynthetic process	3
+sex differentiation	3
 signal release	3
 small molecule catabolic process	3
 smooth muscle cell proliferation	3
@@ -449,6 +472,7 @@ tissue migration	3
 transition metal ion homeostasis	3
 ureteric bud development	3
 ureteric bud morphogenesis	3
+vacuole organization	3
 acetylcholine receptor signaling pathway	2
 actin filament organization	2
 action potential	2
@@ -469,14 +493,18 @@ antimicrobial humoral immune response mediated by antimicrobial peptide	2
 antimicrobial humoral response	2
 aorta development	2
 aorta morphogenesis	2
+apoptotic mitochondrial changes	2
 appendage morphogenesis	2
 artery development	2
 artery morphogenesis	2
 astrocyte differentiation	2
-ATP biosynthetic process	2
 ATP generation from ADP	2
+ATP hydrolysis coupled cation transmembrane transport	2
 ATP-dependent chromatin remodeling	2
 autonomic nervous system development	2
+autophagosome assembly	2
+autophagosome organization	2
+autophagy of mitochondrion	2
 axon ensheathment	2
 B cell proliferation	2
 blood vessel endothelial cell migration	2
@@ -495,9 +523,9 @@ cell cycle arrest	2
 cell cycle G1/S phase transition	2
 cell differentiation in spinal cord	2
 cell fate commitment involved in formation of primary germ layer	2
+cell killing	2
 cell migration involved in sprouting angiogenesis	2
 cell proliferation in forebrain	2
-cell-substrate adhesion	2
 cellular potassium ion transport	2
 cellular response to acetylcholine	2
 cellular response to acid chemical	2
@@ -516,6 +544,7 @@ chondrocyte proliferation	2
 chromatin silencing	2
 chromosome segregation	2
 collagen metabolic process	2
+cornification	2
 cranial nerve development	2
 cranial nerve morphogenesis	2
 cranial nerve structural organization	2
@@ -542,15 +571,22 @@ DNA-templated transcription, initiation	2
 dorsal/ventral pattern formation	2
 drug transmembrane transport	2
 embryonic appendage morphogenesis	2
+embryonic camera-type eye development	2
+embryonic camera-type eye morphogenesis	2
+embryonic digestive tract development	2
 embryonic digit morphogenesis	2
+embryonic eye morphogenesis	2
 embryonic limb morphogenesis	2
 endochondral bone growth	2
 endocrine system development	2
 endothelial cell migration	2
 energy derivation by oxidation of organic compounds	2
 ensheathment of neurons	2
+epidermal cell differentiation	2
+epidermis development	2
 epithelial cell proliferation	2
-establishment of protein localization to mitochondrion	2
+epithelial to mesenchymal transition	2
+establishment of protein localization to membrane	2
 establishment of RNA localization	2
 excitatory postsynaptic potential	2
 facial nerve development	2
@@ -602,6 +638,8 @@ inositol phosphate metabolic process	2
 interleukin-1-mediated signaling pathway	2
 intracellular steroid hormone receptor signaling pathway	2
 JNK cascade	2
+keratinization	2
+keratinocyte differentiation	2
 kidney mesenchyme development	2
 learning	2
 leukocyte differentiation	2
@@ -641,6 +679,9 @@ methylation	2
 microtubule-based movement	2
 middle ear morphogenesis	2
 mitochondrial gene expression	2
+mitochondrial outer membrane permeabilization	2
+mitochondrial outer membrane permeabilization involved in programmed cell death	2
+mitochondrion disassembly	2
 mitotic nuclear division	2
 modification of morphology or physiology of other organism	2
 monoamine transport	2
@@ -693,8 +734,6 @@ nicotinamide nucleotide metabolic process	2
 nucleic acid transport	2
 nucleoside diphosphate metabolic process	2
 nucleoside diphosphate phosphorylation	2
-nucleoside monophosphate biosynthetic process	2
-nucleoside triphosphate biosynthetic process	2
 nucleosome organization	2
 nucleotide phosphorylation	2
 oocyte development	2
@@ -702,9 +741,11 @@ oocyte differentiation	2
 oocyte maturation	2
 oogenesis	2
 organ induction	2
+organelle disassembly	2
 organic acid catabolic process	2
 organic hydroxy compound biosynthetic process	2
 organic hydroxy compound transport	2
+oxidative phosphorylation	2
 oxidoreduction coenzyme metabolic process	2
 pancreas development	2
 parasympathetic nervous system development	2
@@ -744,7 +785,6 @@ positive regulation of endopeptidase activity	2
 positive regulation of endothelial cell migration	2
 positive regulation of epithelial cell migration	2
 positive regulation of epithelial cell proliferation	2
-positive regulation of establishment of protein localization to mitochondrion	2
 positive regulation of G-protein coupled receptor protein signaling pathway	2
 positive regulation of gene expression, epigenetic	2
 positive regulation of glial cell differentiation	2
@@ -761,7 +801,9 @@ positive regulation of JUN kinase activity	2
 positive regulation of kidney development	2
 positive regulation of leukocyte activation	2
 positive regulation of lipid kinase activity	2
-positive regulation of mitochondrion organization	2
+positive regulation of membrane permeability	2
+positive regulation of mitochondrial membrane permeability	2
+positive regulation of mitochondrial membrane permeability involved in apoptotic process	2
 positive regulation of multi-organism process	2
 positive regulation of neural precursor cell proliferation	2
 positive regulation of nucleotide biosynthetic process	2
@@ -775,6 +817,7 @@ positive regulation of protein acetylation	2
 positive regulation of protein catabolic process	2
 positive regulation of protein complex assembly	2
 positive regulation of protein kinase B signaling	2
+positive regulation of protein localization to membrane	2
 positive regulation of protein targeting to mitochondrion	2
 positive regulation of purine nucleotide biosynthetic process	2
 positive regulation of purine nucleotide metabolic process	2
@@ -806,9 +849,9 @@ protein dephosphorylation	2
 protein deubiquitination	2
 protein glycosylation	2
 protein homooligomerization	2
+protein insertion into membrane	2
 protein kinase B signaling	2
 protein localization to chromosome	2
-protein localization to mitochondrion	2
 protein maturation	2
 protein methylation	2
 protein modification by small protein removal	2
@@ -816,18 +859,11 @@ protein N-linked glycosylation	2
 protein polymerization	2
 protein polyubiquitination	2
 protein processing	2
-protein targeting	2
 protein targeting to mitochondrion	2
-protein-containing complex disassembly	2
 protein-DNA complex subunit organization	2
-proton transmembrane transport	2
 purine nucleoside diphosphate metabolic process	2
-purine nucleoside monophosphate biosynthetic process	2
-purine nucleoside triphosphate biosynthetic process	2
 purine nucleotide catabolic process	2
 purine ribonucleoside diphosphate metabolic process	2
-purine ribonucleoside monophosphate biosynthetic process	2
-purine ribonucleoside triphosphate biosynthetic process	2
 purine ribonucleotide catabolic process	2
 purine-containing compound catabolic process	2
 pyridine nucleotide biosynthetic process	2
@@ -836,7 +872,6 @@ pyridine-containing compound biosynthetic process	2
 pyridine-containing compound metabolic process	2
 reactive oxygen species metabolic process	2
 regulation of animal organ formation	2
-regulation of apoptotic signaling pathway	2
 regulation of ATP biosynthetic process	2
 regulation of ATP metabolic process	2
 regulation of B cell activation	2
@@ -866,7 +901,6 @@ regulation of endopeptidase activity	2
 regulation of endothelial cell migration	2
 regulation of epithelial cell migration	2
 regulation of epithelial cell proliferation	2
-regulation of establishment of protein localization to mitochondrion	2
 regulation of fat cell differentiation	2
 regulation of generation of precursor metabolites and energy	2
 regulation of glial cell differentiation	2
@@ -891,7 +925,11 @@ regulation of lipid kinase activity	2
 regulation of lymphocyte proliferation	2
 regulation of meiotic cell cycle	2
 regulation of membrane lipid distribution	2
+regulation of membrane permeability	2
 regulation of mesonephros development	2
+regulation of mitochondrial membrane permeability	2
+regulation of mitochondrial membrane permeability involved in apoptotic process	2
+regulation of mitochondrial outer membrane permeabilization involved in apoptotic signaling pathway	2
 regulation of mononuclear cell proliferation	2
 regulation of morphogenesis of a branching structure	2
 regulation of muscle system process	2
@@ -936,8 +974,6 @@ regulation of telomere maintenance via telomere lengthening	2
 regulation of transcription involved in cell fate commitment	2
 regulation of transcription regulatory region DNA binding	2
 reproductive behavior	2
-reproductive structure development	2
-reproductive system development	2
 response to acetylcholine	2
 response to anesthetic	2
 response to antibiotic	2
@@ -949,9 +985,9 @@ response to heat	2
 response to hydrogen peroxide	2
 response to insulin	2
 response to interleukin-1	2
-response to ionizing radiation	2
 response to lipopolysaccharide	2
 response to mechanical stimulus	2
+response to metal ion	2
 response to molecule of bacterial origin	2
 response to osmotic stress	2
 response to oxygen levels	2
@@ -959,8 +995,6 @@ response to retinoic acid	2
 retina development in camera-type eye	2
 retrograde vesicle-mediated transport, Golgi to ER	2
 ribonucleoside diphosphate metabolic process	2
-ribonucleoside monophosphate biosynthetic process	2
-ribonucleoside triphosphate biosynthetic process	2
 ribonucleotide catabolic process	2
 RNA catabolic process	2
 RNA localization	2
@@ -971,10 +1005,10 @@ semaphorin-plexin signaling pathway	2
 semaphorin-plexin signaling pathway involved in axon guidance	2
 semaphorin-plexin signaling pathway involved in neuron projection guidance	2
 sensory perception of pain	2
-sex differentiation	2
 signal transduction involved in cellular response to ammonium ion	2
 skeletal muscle organ development	2
 skeletal muscle tissue development	2
+skin development	2
 smooth muscle cell migration	2
 sodium ion transmembrane transport	2
 sodium ion transport	2
@@ -998,7 +1032,6 @@ telomere maintenance via telomere lengthening	2
 telomere organization	2
 thioester metabolic process	2
 trigeminal nerve development	2
-vacuole organization	2
 vesicle organization	2
 viral genome replication	2
 viral life cycle	2
@@ -1025,16 +1058,13 @@ androgen receptor signaling pathway	1
 anion homeostasis	1
 anterior/posterior axis specification	1
 apoptotic cell clearance	1
-apoptotic mitochondrial changes	1
 arachidonic acid metabolic process	1
 astrocyte activation	1
 astrocyte development	1
-ATP hydrolysis coupled cation transmembrane transport	1
 ATP synthesis coupled electron transport	1
+ATP synthesis coupled proton transport	1
 ATP transport	1
-autophagosome assembly	1
-autophagosome organization	1
-autophagy of mitochondrion	1
+autophagosome maturation	1
 axis elongation	1
 axis specification	1
 axon ensheathment in central nervous system	1
@@ -1083,7 +1113,8 @@ cell differentiation involved in metanephros development	1
 cell fate commitment involved in pattern specification	1
 cell fate determination	1
 cell fate specification involved in pattern specification	1
-cell killing	1
+cell junction assembly	1
+cell junction organization	1
 cell migration involved in heart development	1
 cell proliferation involved in kidney development	1
 cell proliferation involved in metanephros development	1
@@ -1092,6 +1123,8 @@ cell surface receptor signaling pathway involved in heart development	1
 cell-cell adhesion mediated by cadherin	1
 cell-cell adhesion via plasma-membrane adhesion molecules	1
 cell-matrix adhesion	1
+cell-substrate adhesion	1
+cell-substrate junction assembly	1
 cellular amino acid biosynthetic process	1
 cellular carbohydrate metabolic process	1
 cellular component assembly involved in morphogenesis	1
@@ -1131,6 +1164,8 @@ cellular response to metal ion	1
 cellular response to molecule of bacterial origin	1
 cellular response to monoamine stimulus	1
 cellular response to nerve growth factor stimulus	1
+cellular response to nitrogen levels	1
+cellular response to nitrogen starvation	1
 cellular response to osmotic stress	1
 cellular response to oxygen levels	1
 cellular response to platelet-derived growth factor stimulus	1
@@ -1184,12 +1219,12 @@ complement activation	1
 complement activation, lectin pathway	1
 contractile actin filament bundle assembly	1
 copper ion transport	1
-cornification	1
 coronary vasculature development	1
 coronary vasculature morphogenesis	1
 cortical actin cytoskeleton organization	1
 cortical cytoskeleton organization	1
 craniofacial suture morphogenesis	1
+cristae formation	1
 cyclic nucleotide biosynthetic process	1
 cyclic nucleotide catabolic process	1
 cyclic purine nucleotide metabolic process	1
@@ -1199,6 +1234,7 @@ cytokine production involved in immune response	1
 cytokine secretion	1
 cytokine secretion involved in immune response	1
 cytokinetic process	1
+cytolysis	1
 cytoplasmic microtubule organization	1
 cytoskeleton-dependent cytokinesis	1
 cytosolic transport	1
@@ -1207,6 +1243,9 @@ defense response to Gram-negative bacterium	1
 defense response to Gram-positive bacterium	1
 dendritic cell chemotaxis	1
 dendritic cell migration	1
+detection of chemical stimulus involved in sensory perception	1
+detection of chemical stimulus involved in sensory perception of bitter taste	1
+detection of chemical stimulus involved in sensory perception of taste	1
 detoxification	1
 developmental pigmentation	1
 dicarboxylic acid catabolic process	1
@@ -1234,12 +1273,8 @@ ectodermal placode development	1
 ectodermal placode formation	1
 ectodermal placode morphogenesis	1
 electron transport chain	1
-embryonic camera-type eye development	1
-embryonic camera-type eye morphogenesis	1
-embryonic digestive tract development	1
 embryonic digestive tract morphogenesis	1
 embryonic epithelial tube formation	1
-embryonic eye morphogenesis	1
 embryonic pattern specification	1
 endocardial cushion development	1
 endocardial cushion morphogenesis	1
@@ -1251,6 +1286,7 @@ endosome organization	1
 endothelial cell chemotaxis	1
 endothelial cell chemotaxis to fibroblast growth factor	1
 endothelial cell proliferation	1
+energy coupled proton transport, down electrochemical gradient	1
 energy reserve metabolic process	1
 entrainment of circadian clock	1
 entry into cell of other organism involved in symbiotic interaction	1
@@ -1258,11 +1294,8 @@ entry into host	1
 entry into host cell	1
 entry into other organism involved in symbiotic interaction	1
 ephrin receptor signaling pathway	1
-epidermal cell differentiation	1
-epidermis development	1
 epithelial cell differentiation involved in kidney development	1
 epithelial cell proliferation involved in liver morphogenesis	1
-epithelial to mesenchymal transition	1
 epithelial tube branching involved in lung morphogenesis	1
 epithelial tube formation	1
 ERAD pathway	1
@@ -1271,8 +1304,13 @@ erythrocyte differentiation	1
 erythrocyte homeostasis	1
 erythrocyte maturation	1
 establishment of organelle localization	1
+establishment of planar polarity	1
+establishment of planar polarity of embryonic epithelium	1
+establishment of tissue polarity	1
 establishment or maintenance of cell polarity	1
 extracellular matrix disassembly	1
+extrinsic apoptotic signaling pathway	1
+extrinsic apoptotic signaling pathway via death domain receptors	1
 face development	1
 fatty acid biosynthetic process	1
 fatty acid derivative biosynthetic process	1
@@ -1298,7 +1336,9 @@ G-protein coupled receptor internalization	1
 G0 to G1 transition	1
 G1 DNA damage checkpoint	1
 gamma-aminobutyric acid signaling pathway	1
+gas transport	1
 gene silencing by miRNA	1
+genitalia development	1
 germinal center formation	1
 glial cell activation	1
 glomerular mesangium development	1
@@ -1327,9 +1367,11 @@ growth hormone receptor signaling pathway	1
 growth hormone secretion	1
 GTP metabolic process	1
 guanosine-containing compound metabolic process	1
+hair cycle	1
 heart field specification	1
 heart formation	1
 hematopoietic stem cell proliferation	1
+hemidesmosome assembly	1
 hepatocyte proliferation	1
 hexose biosynthetic process	1
 hindbrain development	1
@@ -1357,6 +1399,7 @@ import across plasma membrane	1
 import into nucleus	1
 inner dynein arm assembly	1
 inner ear morphogenesis	1
+inner mitochondrial membrane organization	1
 inorganic cation import across plasma membrane	1
 inorganic ion import across plasma membrane	1
 inositol phosphate biosynthetic process	1
@@ -1364,6 +1407,9 @@ insulin receptor signaling pathway	1
 insulin secretion	1
 interaction with host	1
 interferon-gamma-mediated signaling pathway	1
+intermediate filament cytoskeleton organization	1
+intermediate filament organization	1
+intermediate filament-based process	1
 intracellular estrogen receptor signaling pathway	1
 intracellular signal transduction involved in G1 DNA damage checkpoint	1
 intraspecies interaction between organisms	1
@@ -1376,8 +1422,6 @@ IRE1-mediated unfolded protein response	1
 isoprenoid metabolic process	1
 JAK-STAT cascade	1
 JAK-STAT cascade involved in growth hormone signaling pathway	1
-keratinization	1
-keratinocyte differentiation	1
 kidney vasculature development	1
 killing of cells of other organism	1
 L-glutamate import	1
@@ -1387,6 +1431,7 @@ lactation	1
 lens development in camera-type eye	1
 leukocyte apoptotic process	1
 leukocyte homeostasis	1
+leukocyte mediated cytotoxicity	1
 lipid catabolic process	1
 lipid homeostasis	1
 lipid oxidation	1
@@ -1402,6 +1447,7 @@ lymph node development	1
 lymphocyte apoptotic process	1
 lymphocyte differentiation	1
 lymphocyte homeostasis	1
+lymphocyte mediated immunity	1
 lysosome organization	1
 lytic vacuole organization	1
 macromolecule deacylation	1
@@ -1447,10 +1493,8 @@ midbrain dopaminergic neuron differentiation	1
 miRNA mediated inhibition of translation	1
 miRNA metabolic process	1
 mitochondrial ATP synthesis coupled electron transport	1
+mitochondrial ATP synthesis coupled proton transport	1
 mitochondrial electron transport, NADH to ubiquinone	1
-mitochondrial membrane organization	1
-mitochondrial outer membrane permeabilization	1
-mitochondrial outer membrane permeabilization involved in programmed cell death	1
 mitochondrial respiratory chain complex assembly	1
 mitochondrial respiratory chain complex I assembly	1
 mitochondrial RNA metabolic process	1
@@ -1458,7 +1502,7 @@ mitochondrial transcription	1
 mitochondrial translation	1
 mitochondrial translational elongation	1
 mitochondrial translational termination	1
-mitochondrion disassembly	1
+mitochondrial transmembrane transport	1
 mitochondrion distribution	1
 mitochondrion localization	1
 mitotic cell cycle checkpoint	1
@@ -1469,9 +1513,11 @@ mitotic G1 DNA damage checkpoint	1
 mitotic G1/S transition checkpoint	1
 mitotic sister chromatid segregation	1
 mitotic spindle organization	1
+molting cycle	1
 mononuclear cell migration	1
 monosaccharide biosynthetic process	1
 monovalent inorganic cation homeostasis	1
+morphogenesis of a polarized epithelium	1
 morphogenesis of an epithelial bud	1
 morphogenesis of an epithelial fold	1
 mRNA stabilization	1
@@ -1490,6 +1536,8 @@ myoblast differentiation	1
 myofibril assembly	1
 myotube differentiation	1
 NADH dehydrogenase complex assembly	1
+natural killer cell mediated cytotoxicity	1
+natural killer cell mediated immunity	1
 ncRNA processing	1
 ncRNA transcription	1
 negative regulation of angiogenesis	1
@@ -1609,6 +1657,7 @@ Notch signaling pathway	1
 nuclear chromosome segregation	1
 nuclear transport	1
 nuclear-transcribed mRNA catabolic process	1
+nucleic acid phosphodiester bond hydrolysis	1
 nucleobase-containing small molecule catabolic process	1
 nucleocytoplasmic transport	1
 nucleoside metabolic process	1
@@ -1621,14 +1670,13 @@ nucleus organization	1
 oligodendrocyte development	1
 oligodendrocyte differentiation	1
 opsonization	1
-organelle disassembly	1
 organelle inheritance	1
 organelle transport along microtubule	1
 organic cation transport	1
 osteoblast differentiation	1
 outflow tract morphogenesis	1
 outflow tract septum morphogenesis	1
-oxidative phosphorylation	1
+oxygen transport	1
 paraxial mesoderm development	1
 paraxial mesoderm morphogenesis	1
 parturition	1
@@ -1665,6 +1713,7 @@ positive chemotaxis	1
 positive regulation of actin filament bundle assembly	1
 positive regulation of alcohol biosynthetic process	1
 positive regulation of amine transport	1
+positive regulation of apoptotic signaling pathway	1
 positive regulation of astrocyte differentiation	1
 positive regulation of B cell activation	1
 positive regulation of B cell proliferation	1
@@ -1720,13 +1769,11 @@ positive regulation of macroautophagy	1
 positive regulation of macrophage activation	1
 positive regulation of macrophage chemotaxis	1
 positive regulation of macrophage migration	1
-positive regulation of membrane permeability	1
 positive regulation of membrane protein ectodomain proteolysis	1
 positive regulation of mesonephros development	1
 positive regulation of metallopeptidase activity	1
 positive regulation of metanephros development	1
-positive regulation of mitochondrial membrane permeability	1
-positive regulation of mitochondrial membrane permeability involved in apoptotic process	1
+positive regulation of mitochondrial outer membrane permeabilization involved in apoptotic signaling pathway	1
 positive regulation of mitotic cell cycle	1
 positive regulation of mitotic nuclear division	1
 positive regulation of mononuclear cell proliferation	1
@@ -1750,9 +1797,9 @@ positive regulation of proteasomal ubiquitin-dependent protein catabolic process
 positive regulation of protein binding	1
 positive regulation of protein dephosphorylation	1
 positive regulation of protein import	1
+positive regulation of protein insertion into mitochondrial membrane involved in apoptotic signaling pathway	1
 positive regulation of protein localization to cell periphery	1
 positive regulation of protein localization to cell surface	1
-positive regulation of protein localization to membrane	1
 positive regulation of protein localization to plasma membrane	1
 positive regulation of protein polymerization	1
 positive regulation of protein secretion	1
@@ -1799,6 +1846,8 @@ protein folding	1
 protein heterooligomerization	1
 protein homotetramerization	1
 protein import into nucleus	1
+protein insertion into mitochondrial membrane	1
+protein insertion into mitochondrial membrane involved in apoptotic signaling pathway	1
 protein kinase C-activating G-protein coupled receptor signaling pathway	1
 protein lipidation	1
 protein localization to cell surface	1
@@ -1813,6 +1862,7 @@ protein localization to nucleus	1
 protein monoubiquitination	1
 protein palmitoylation	1
 protein stabilization	1
+protein targeting to membrane	1
 protein tetramerization	1
 protein-chromophore linkage	1
 protein-DNA complex assembly	1
@@ -1930,16 +1980,12 @@ regulation of macrophage migration	1
 regulation of megakaryocyte differentiation	1
 regulation of meiotic nuclear division	1
 regulation of membrane lipid metabolic process	1
-regulation of membrane permeability	1
 regulation of membrane protein ectodomain proteolysis	1
 regulation of mesoderm development	1
 regulation of mesoderm formation	1
 regulation of metallopeptidase activity	1
 regulation of metanephros development	1
 regulation of microtubule motor activity	1
-regulation of mitochondrial membrane permeability	1
-regulation of mitochondrial membrane permeability involved in apoptotic process	1
-regulation of mitochondrial outer membrane permeabilization involved in apoptotic signaling pathway	1
 regulation of mitotic cell cycle phase transition	1
 regulation of mitotic nuclear division	1
 regulation of mononuclear cell migration	1
@@ -1971,6 +2017,7 @@ regulation of proteasomal protein catabolic process	1
 regulation of proteasomal ubiquitin-dependent protein catabolic process	1
 regulation of protein dephosphorylation	1
 regulation of protein import	1
+regulation of protein insertion into mitochondrial membrane involved in apoptotic signaling pathway	1
 regulation of protein localization to cell surface	1
 regulation of protein polymerization	1
 regulation of protein tyrosine kinase activity	1
@@ -2062,7 +2109,6 @@ response to increased oxygen levels	1
 response to interferon-gamma	1
 response to isoquinoline alkaloid	1
 response to ketone	1
-response to metal ion	1
 response to monoamine	1
 response to morphine	1
 response to nerve growth factor	1
@@ -2075,6 +2121,7 @@ response to transforming growth factor beta	1
 response to unfolded protein	1
 response to UV	1
 response to X-ray	1
+response to zinc ion	1
 retina vasculature development in camera-type eye	1
 retinoic acid receptor signaling pathway	1
 ribonucleoprotein complex assembly	1
@@ -2088,7 +2135,9 @@ secondary alcohol biosynthetic process	1
 secondary alcohol metabolic process	1
 secondary palate development	1
 selective autophagy	1
+sensory perception of bitter taste	1
 sensory perception of light stimulus	1
+sensory perception of taste	1
 sequestering of calcium ion	1
 serine family amino acid biosynthetic process	1
 serine family amino acid metabolic process	1
@@ -2107,7 +2156,6 @@ skeletal muscle adaptation	1
 skeletal muscle cell differentiation	1
 skeletal muscle cell proliferation	1
 skeletal muscle satellite cell proliferation	1
-skin development	1
 snRNA metabolic process	1
 snRNA transcription	1
 snRNA transcription by RNA polymerase II	1
@@ -2138,7 +2186,6 @@ striated muscle adaptation	1
 striated muscle cell development	1
 striated muscle contraction	1
 substantia nigra development	1
-substrate-dependent cell migration	1
 sulfur compound biosynthetic process	1
 sympathetic nervous system development	1
 synapse maturation	1
@@ -2196,4 +2243,3 @@ Wnt signaling pathway involved in heart development	1
 Wnt signaling pathway involved in midbrain dopaminergic neuron differentiation	1
 Wnt signaling pathway, calcium modulating pathway	1
 xenophagy	1
-zymogen activation	1

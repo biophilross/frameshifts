@@ -1,54 +1,54 @@
 tissue	Number of genes
-Testis	106
-Pituitary	104
-Thyroid	102
-Breast - Mammary Tissue	100
-Lung	100
-Nerve - Tibial	100
-Prostate	100
-Vagina	100
-Bladder	99
-Fallopian Tube	99
-Brain - Hypothalamus	98
-Uterus	98
-Adipose - Subcutaneous	97
-Artery - Aorta	97
-Brain - Frontal Cortex (BA9)	97
-Cells - Transformed fibroblasts	97
-Cervix - Ectocervix	97
-Artery - Coronary	96
-Brain - Cortex	96
-Cervix - Endocervix	96
-Minor Salivary Gland	96
-Ovary	96
-Skin - Not Sun Exposed (Suprapubic)	96
-Adipose - Visceral (Omentum)	95
-Artery - Tibial	95
-Brain - Cerebellar Hemisphere	95
-Brain - Cerebellum	95
-Brain - Nucleus accumbens (basal ganglia)	95
-Brain - Spinal cord (cervical c-1)	95
-Colon - Sigmoid	95
-Colon - Transverse	95
-Kidney - Cortex	95
-Skin - Sun Exposed (Lower leg)	95
-Small Intestine - Terminal Ileum	95
-Esophagus - Gastroesophageal Junction	94
-Esophagus - Mucosa	94
-Spleen	94
-Esophagus - Muscularis	93
-Brain - Amygdala	92
-Brain - Anterior cingulate cortex (BA24)	92
-Brain - Caudate (basal ganglia)	92
-Brain - Substantia nigra	92
-Heart - Atrial Appendage	92
-Brain - Hippocampus	90
-Pancreas	90
-Stomach	90
-Brain - Putamen (basal ganglia)	89
-Adrenal Gland	87
-Cells - EBV-transformed lymphocytes	84
-Muscle - Skeletal	83
-Liver	81
-Heart - Left Ventricle	79
-Whole Blood	64
+Testis	111
+Pituitary	110
+Thyroid	108
+Lung	107
+Prostate	106
+Bladder	105
+Breast - Mammary Tissue	105
+Vagina	105
+Brain - Hypothalamus	104
+Fallopian Tube	104
+Nerve - Tibial	104
+Uterus	104
+Artery - Aorta	102
+Brain - Cortex	102
+Brain - Frontal Cortex (BA9)	102
+Cervix - Ectocervix	102
+Cervix - Endocervix	102
+Adipose - Subcutaneous	101
+Artery - Coronary	101
+Brain - Cerebellum	101
+Cells - Transformed fibroblasts	101
+Minor Salivary Gland	101
+Adipose - Visceral (Omentum)	100
+Artery - Tibial	100
+Brain - Cerebellar Hemisphere	100
+Brain - Spinal cord (cervical c-1)	100
+Colon - Sigmoid	100
+Ovary	100
+Skin - Not Sun Exposed (Suprapubic)	100
+Spleen	100
+Brain - Nucleus accumbens (basal ganglia)	99
+Colon - Transverse	99
+Esophagus - Gastroesophageal Junction	99
+Esophagus - Mucosa	99
+Skin - Sun Exposed (Lower leg)	99
+Small Intestine - Terminal Ileum	99
+Esophagus - Muscularis	98
+Kidney - Cortex	98
+Brain - Caudate (basal ganglia)	97
+Brain - Amygdala	96
+Brain - Anterior cingulate cortex (BA24)	96
+Brain - Substantia nigra	96
+Heart - Atrial Appendage	95
+Brain - Hippocampus	94
+Stomach	94
+Brain - Putamen (basal ganglia)	92
+Pancreas	92
+Adrenal Gland	89
+Cells - EBV-transformed lymphocytes	87
+Muscle - Skeletal	86
+Liver	84
+Heart - Left Ventricle	81
+Whole Blood	69

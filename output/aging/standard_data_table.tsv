@@ -5,12 +5,12 @@ ENSG00000005022	52	2	parent	solute carrier family 25 member 4	ENSG00000151729	53
 ENSG00000005073	6	2	same	homeobox D11	ENSG00000128713	15	2	same	homeobox A11
 ENSG00000005156	53	1	same	ring finger and FYVE like domain containing E3 ubiquitin protein ligase	ENSG00000092871	53	1	same	DNA ligase 3
 ENSG00000005339	53	2	same	E1A binding protein p300	ENSG00000100393	53	2	same	CREB binding protein
-ENSG00000006059	6	14	offspring	keratin 31	ENSG00000094796	1	3	parent	keratin 33A
+ENSG00000006059	6	14	offspring	keratin 31	ENSG00000094796	1	7	parent	keratin 33A
 ENSG00000006116	7	2	same	calcium voltage-gated channel auxiliary subunit gamma 2	ENSG00000166862	12	2	same	calcium voltage-gated channel auxiliary subunit gamma 3
 ENSG00000006451	53	2	same	RAS like proto-oncogene B	ENSG00000144118	53	2	same	RAS like proto-oncogene A
 ENSG00000007341	53	3	offspring	capping actin protein of muscle Z-line alpha subunit 1	ENSG00000116489	46	1	parent	suppression of tumorigenicity 7 like
 ENSG00000007341	34	3	offspring	Wnt family member 2B	ENSG00000134245	46	1	parent	suppression of tumorigenicity 7 like
-ENSG00000008226	53	0	parent	acetyl-CoA acyltransferase 1	ENSG00000060971	10	3	offspring	deleted in lung and esophageal cancer 1
+ENSG00000008226	53	0	parent	acetyl-CoA acyltransferase 1	ENSG00000060971	10	4	offspring	deleted in lung and esophageal cancer 1
 ENSG00000010017	53	3	offspring	RAN binding protein 10	ENSG00000141084	53	2	parent	RAN binding protein 9
 ENSG00000010292	53	1	offspring	mitochondrial ribosomal protein L51	ENSG00000111639	53	0	parent	non-SMC condensin I complex subunit D2
 ENSG00000016082	8	1	same	ISL LIM homeobox 2	ENSG00000159556	11	1	same	ISL LIM homeobox 1
@@ -22,8 +22,8 @@ ENSG00000027075	49	2	parent	protein kinase C epsilon	ENSG00000171132	47	3	offspr
 ENSG00000028839	36	3	offspring	solute carrier family 2 member 12	ENSG00000146411	53	1	parent	TATA-box binding protein like 1
 ENSG00000035403	53	1	same	adaptor related protein complex 3 mu 1 subunit	ENSG00000185009	53	1	same	vinculin
 ENSG00000035687	50	0	same	adenylosuccinate synthase like 1	ENSG00000185100	53	0	same	adenylosuccinate synthase
-ENSG00000037042	53	1	parent	tubulin gamma 1	ENSG00000131462	53	3	offspring	tubulin gamma 2
-ENSG00000037897	40	3	offspring	EEF1A lysine methyltransferase 3	ENSG00000123427	52	0	parent	methyltransferase like 1
+ENSG00000037042	53	1	parent	tubulin gamma 1	ENSG00000131462	53	9	offspring	tubulin gamma 2
+ENSG00000037897	40	4	offspring	EEF1A lysine methyltransferase 3	ENSG00000123427	52	0	parent	methyltransferase like 1
 ENSG00000038382	42	3	offspring	kalirin RhoGEF kinase	ENSG00000160145	52	2	parent	trio Rho guanine nucleotide exchange factor
 ENSG00000039123	52	2	offspring	phospholipid phosphatase 1	ENSG00000067113	53	0	parent	Mtr4 exosome RNA helicase
 ENSG00000043039	4	2	parent	BARX homeobox 1	ENSG00000131668	12	3	offspring	BARX homeobox 2
@@ -36,13 +36,13 @@ ENSG00000050327	14	1	parent	Rho guanine nucleotide exchange factor 35	ENSG000002
 ENSG00000054277	5	0	parent	kynurenine 3-monooxygenase	ENSG00000117009	36	1	offspring	opsin 3
 ENSG00000054690	53	2	same	phosphatidylinositol glycan anchor biosynthesis class H	ENSG00000100564	41	2	same	pleckstrin homology, MyTH4 and FERM domain containing H1
 ENSG00000054793	52	2	parent	ATPase phospholipid transporting 9B (putative)	ENSG00000166377	52	3	offspring	ATPase phospholipid transporting 9A (putative)
-ENSG00000057149	2	3	same	serpin family B member 4	ENSG00000206073	5	3	same	serpin family B member 3
+ENSG00000057149	2	5	same	serpin family B member 4	ENSG00000206073	5	5	same	serpin family B member 3
 ENSG00000058262	53	0	same	Sec61 translocon alpha 2 subunit	ENSG00000065665	53	0	same	Sec61 translocon alpha 1 subunit
 ENSG00000058404	23	2	parent	calcium/calmodulin dependent protein kinase II alpha	ENSG00000070808	22	3	offspring	calcium/calmodulin dependent protein kinase II beta
-ENSG00000059122	53	3	same	FLYWCH family member 2	ENSG00000162076	53	3	same	FLYWCH-type zinc finger 1
+ENSG00000059122	53	7	same	FLYWCH family member 2	ENSG00000162076	53	7	same	FLYWCH-type zinc finger 1
 ENSG00000059145	53	2	same	N-acetylglucosamine-1-phosphate transferase gamma subunit	ENSG00000090581	53	2	same	unkempt family like zinc finger
 ENSG00000060138	53	2	offspring	Y-box binding protein 1	ENSG00000065978	53	1	parent	Y-box binding protein 3
-ENSG00000060971	10	3	offspring	deleted in lung and esophageal cancer 1	ENSG00000008226	53	0	parent	acetyl-CoA acyltransferase 1
+ENSG00000060971	10	4	offspring	deleted in lung and esophageal cancer 1	ENSG00000008226	53	0	parent	acetyl-CoA acyltransferase 1
 ENSG00000064726	53	2	parent	BTB domain containing 2	ENSG00000133243	53	3	offspring	BTB domain containing 1
 ENSG00000065135	51	2	same	G protein subunit alpha i1	ENSG00000127955	53	2	same	G protein subunit alpha i3
 ENSG00000065243	53	3	offspring	protein kinase N1	ENSG00000123143	53	2	parent	protein kinase N2
@@ -86,7 +86,7 @@ ENSG00000091664	27	3	offspring	solute carrier family 17 member 7	ENSG00000104888
 ENSG00000092607	20	1	parent	T-box 18	ENSG00000112837	15	3	offspring	T-box 15
 ENSG00000092847	42	1	parent	argonaute 2, RISC catalytic component	ENSG00000123908	53	3	offspring	argonaute 1, RISC catalytic component
 ENSG00000092871	53	1	same	DNA ligase 3	ENSG00000005156	53	1	same	ring finger and FYVE like domain containing E3 ubiquitin protein ligase
-ENSG00000094796	1	3	parent	keratin 33A	ENSG00000006059	6	14	offspring	keratin 31
+ENSG00000094796	1	7	parent	keratin 33A	ENSG00000006059	6	14	offspring	keratin 31
 ENSG00000095917	35	13	same	tryptase alpha/beta 1	ENSG00000172236	23	13	same	tryptase delta 1
 ENSG00000096080	10	1	same	radial spoke head 9 homolog	ENSG00000172426	53	1	same	mitochondrial ribosomal protein S18A
 ENSG00000099290	53	1	same	WASH complex subunit 2C	ENSG00000172661	46	1	same	WASH complex subunit 2A
@@ -94,27 +94,25 @@ ENSG00000099308	53	2	parent	microtubule associated serine/threonine kinase 2	ENS
 ENSG00000099804	53	2	same	ubiquitin conjugating enzyme E2 R2	ENSG00000107341	53	2	same	cell division cycle 34
 ENSG00000099822	3	2	parent	hyperpolarization activated cyclic nucleotide gated potassium channel 4	ENSG00000138622	19	3	offspring	hyperpolarization activated cyclic nucleotide gated potassium and sodium channel 2
 ENSG00000099822	11	3	same	hyperpolarization activated cyclic nucleotide gated potassium channel 1	ENSG00000164588	19	3	same	hyperpolarization activated cyclic nucleotide gated potassium and sodium channel 2
-ENSG00000099974	53	3	same	D-dopachrome tautomerase	ENSG00000099977	42	3	same	D-dopachrome tautomerase like
-ENSG00000099974	53	3	same	D-dopachrome tautomerase like	ENSG00000099977	42	3	same	D-dopachrome tautomerase like
-ENSG00000099977	42	3	same	D-dopachrome tautomerase like	ENSG00000099974	53	3	same	D-dopachrome tautomerase
-ENSG00000099977	42	3	same	D-dopachrome tautomerase like	ENSG00000099974	53	3	same	D-dopachrome tautomerase like
+ENSG00000099974	53	4	same	D-dopachrome tautomerase	ENSG00000099977	42	4	same	D-dopachrome tautomerase like
+ENSG00000099977	42	4	same	D-dopachrome tautomerase like	ENSG00000099974	53	4	same	D-dopachrome tautomerase
 ENSG00000100023	46	2	offspring	yippee like 1	ENSG00000100027	53	1	parent	peptidylprolyl isomerase like 2
 ENSG00000100027	53	1	parent	peptidylprolyl isomerase like 2	ENSG00000100023	46	2	offspring	yippee like 1
 ENSG00000100030	53	3	offspring	mitogen-activated protein kinase 3	ENSG00000102882	53	1	parent	mitogen-activated protein kinase 1
-ENSG00000100077	53	3	offspring	G protein-coupled receptor kinase 2	ENSG00000173020	49	2	parent	G protein-coupled receptor kinase 3
+ENSG00000100077	53	4	offspring	G protein-coupled receptor kinase 2	ENSG00000173020	49	2	parent	G protein-coupled receptor kinase 3
 ENSG00000100146	41	2	same	SRY-box 9	ENSG00000125398	36	2	same	SRY-box 10
 ENSG00000100314	53	1	parent	zinc finger matrin-type 5	ENSG00000100319	14	3	offspring	calcium binding protein 7
 ENSG00000100319	14	3	offspring	calcium binding protein 7	ENSG00000100314	53	1	parent	zinc finger matrin-type 5
 ENSG00000100393	53	2	same	CREB binding protein	ENSG00000005339	53	2	same	E1A binding protein p300
-ENSG00000100450	6	3	same	granzyme B	ENSG00000100453	6	3	same	granzyme H
-ENSG00000100453	6	3	same	granzyme H	ENSG00000100450	6	3	same	granzyme B
+ENSG00000100450	6	10	offspring	granzyme B	ENSG00000100453	6	9	parent	granzyme H
+ENSG00000100453	6	9	parent	granzyme H	ENSG00000100450	6	10	offspring	granzyme B
 ENSG00000100490	52	1	parent	ATP synthase, H+ transporting, mitochondrial Fo complex subunit s (factor B)	ENSG00000125375	26	2	offspring	cyclin dependent kinase like 1
 ENSG00000100528	14	1	same	cornichon family AMPA receptor auxiliary protein 3	ENSG00000143786	53	1	same	cornichon family AMPA receptor auxiliary protein 1
 ENSG00000100554	53	0	same	eukaryotic translation initiation factor 2 subunit alpha	ENSG00000134001	53	0	same	ATPase H+ transporting V1 subunit D
 ENSG00000100564	41	2	same	pleckstrin homology, MyTH4 and FERM domain containing H1	ENSG00000054690	53	2	same	phosphatidylinositol glycan anchor biosynthesis class H
 ENSG00000100764	53	1	offspring	NRDE-2, necessary for RNA interference, domain containing	ENSG00000119720	53	0	parent	proteasome 26S subunit, ATPase 1
 ENSG00000100994	48	2	same	glycogen phosphorylase, muscle associated	ENSG00000068976	53	2	same	glycogen phosphorylase B
-ENSG00000101162	53	3	same	ATP synthase F1 subunit epsilon	ENSG00000124172	4	3	same	tubulin beta 1 class VI
+ENSG00000101162	53	6	offspring	ATP synthase F1 subunit epsilon	ENSG00000124172	4	3	parent	tubulin beta 1 class VI
 ENSG00000101200	6	2	same	oxytocin/neurophysin I prepropeptide	ENSG00000101405	2	2	same	arginine vasopressin
 ENSG00000101204	3	2	same	cholinergic receptor nicotinic alpha 2 subunit	ENSG00000120903	15	2	same	cholinergic receptor nicotinic alpha 4 subunit
 ENSG00000101350	46	1	same	kinesin family member 3C	ENSG00000084731	53	1	same	kinesin family member 3B
@@ -124,24 +122,24 @@ ENSG00000101624	53	0	parent	proteasome assembly chaperone 2	ENSG00000128789	19	2
 ENSG00000101811	53	2	same	cleavage stimulation factor subunit 2 tau variant	ENSG00000177613	53	2	same	cleavage stimulation factor subunit 2
 ENSG00000102030	1	10	offspring	N(alpha)-acetyltransferase 11, NatA catalytic subunit	ENSG00000156269	53	1	parent	N(alpha)-acetyltransferase 10, NatA catalytic subunit
 ENSG00000102038	53	2	offspring	SWI/SNF related, matrix associated, actin dependent regulator of chromatin, subfamily a, member 5	ENSG00000153147	51	1	parent	SWI/SNF related, matrix associated, actin dependent regulator of chromatin, subfamily a, member 1
-ENSG00000102053	47	3	same	zinc finger CCCH-type containing 12C	ENSG00000149289	27	3	same	zinc finger CCCH-type containing 12B
+ENSG00000102053	47	4	offspring	zinc finger CCCH-type containing 12C	ENSG00000149289	27	3	parent	zinc finger CCCH-type containing 12B
 ENSG00000102144	1	0	same	phosphoglycerate kinase 2	ENSG00000170950	53	0	same	phosphoglycerate kinase 1
 ENSG00000102359	48	2	parent	synaptotagmin like 4	ENSG00000102362	38	3	offspring	sushi repeat containing protein, X-linked 2
 ENSG00000102362	38	3	offspring	sushi repeat containing protein, X-linked 2	ENSG00000102359	48	2	parent	synaptotagmin like 4
-ENSG00000102743	1	3	offspring	solute carrier family 25 member 2	ENSG00000120329	39	2	parent	solute carrier family 25 member 15
+ENSG00000102743	1	9	offspring	solute carrier family 25 member 2	ENSG00000120329	39	2	parent	solute carrier family 25 member 15
 ENSG00000102753	53	0	same	karyopherin subunit alpha 4	ENSG00000186432	53	0	same	karyopherin subunit alpha 3
 ENSG00000102882	53	1	parent	mitogen-activated protein kinase 1	ENSG00000100030	53	3	offspring	mitogen-activated protein kinase 3
 ENSG00000103061	51	3	offspring	solute carrier family 7 member 6	ENSG00000103064	53	2	parent	solute carrier family 7 member 6 opposite strand
 ENSG00000103064	53	2	parent	solute carrier family 7 member 6 opposite strand	ENSG00000103061	51	3	offspring	solute carrier family 7 member 6
-ENSG00000103241	34	3	same	forkhead box F2	ENSG00000137273	37	3	same	forkhead box F1
+ENSG00000103241	34	6	offspring	forkhead box F2	ENSG00000137273	37	3	parent	forkhead box F1
 ENSG00000103740	52	0	parent	isocitrate dehydrogenase 3 (NAD(+)) alpha	ENSG00000166411	16	3	offspring	acyl-CoA synthetase bubblegum family member 1
 ENSG00000103769	53	1	same	RAB11B, member RAS oncogene family	ENSG00000185236	53	1	same	RAB11A, member RAS oncogene family
-ENSG00000104043	53	3	offspring	ATPase phospholipid transporting 8B2	ENSG00000143515	19	2	parent	ATPase phospholipid transporting 8B4 (putative)
+ENSG00000104043	53	4	offspring	ATPase phospholipid transporting 8B2	ENSG00000143515	19	2	parent	ATPase phospholipid transporting 8B4 (putative)
 ENSG00000104129	53	1	same	GTP cyclohydrolase I feedback regulator	ENSG00000137880	53	1	same	DnaJ heat shock protein family (Hsp40) member C17
 ENSG00000104177	2	1	parent	solute carrier family 24 member 5	ENSG00000188467	42	2	offspring	myelin expression factor 2
 ENSG00000104863	53	1	same	lin-7 homolog C, crumbs cell polarity complex component	ENSG00000148943	51	1	same	lin-7 homolog B, crumbs cell polarity complex component
 ENSG00000104888	5	2	parent	solute carrier family 17 member 6	ENSG00000091664	27	3	offspring	solute carrier family 17 member 7
-ENSG00000104903	37	2	parent	TAL bHLH transcription factor 1, erythroid differentiation factor	ENSG00000162367	47	3	offspring	LYL1, basic helix-loop-helix family member
+ENSG00000104903	37	2	parent	TAL bHLH transcription factor 1, erythroid differentiation factor	ENSG00000162367	47	5	offspring	LYL1, basic helix-loop-helix family member
 ENSG00000104938	18	9	parent	CD209 molecule	ENSG00000090659	4	14	offspring	C-type lectin domain family 4 member M
 ENSG00000105254	53	0	parent	RNA polymerase II subunit I	ENSG00000105258	53	1	offspring	tubulin folding cofactor B
 ENSG00000105258	53	1	offspring	tubulin folding cofactor B	ENSG00000105254	53	0	parent	RNA polymerase II subunit I
@@ -150,10 +148,10 @@ ENSG00000105464	18	2	parent	glutamate ionotropic receptor NMDA type subunit 2C	E
 ENSG00000105613	53	2	parent	microtubule associated serine/threonine kinase 2	ENSG00000086015	18	3	offspring	microtubule associated serine/threonine kinase 1
 ENSG00000105613	51	3	same	microtubule associated serine/threonine kinase 3	ENSG00000099308	18	3	same	microtubule associated serine/threonine kinase 1
 ENSG00000105617	53	0	parent	CCR4-NOT transcription complex subunit 3	ENSG00000088038	53	1	offspring	leukocyte receptor cluster member 1
-ENSG00000105618	53	3	offspring	TCF3 fusion partner	ENSG00000105619	53	0	parent	pre-mRNA processing factor 31
-ENSG00000105619	53	0	parent	pre-mRNA processing factor 31	ENSG00000105618	53	3	offspring	TCF3 fusion partner
+ENSG00000105618	53	5	offspring	TCF3 fusion partner	ENSG00000105619	53	0	parent	pre-mRNA processing factor 31
+ENSG00000105619	53	0	parent	pre-mRNA processing factor 31	ENSG00000105618	53	5	offspring	TCF3 fusion partner
 ENSG00000105649	13	2	same	RAB3C, member RAS oncogene family	ENSG00000152932	51	2	same	RAB3A, member RAS oncogene family
-ENSG00000105664	38	2	parent	thrombospondin 4	ENSG00000113296	22	3	offspring	cartilage oligomeric matrix protein
+ENSG00000105664	38	2	parent	thrombospondin 4	ENSG00000113296	22	7	offspring	cartilage oligomeric matrix protein
 ENSG00000105705	53	1	same	MAU2 sister chromatid cohesion factor	ENSG00000129933	53	1	same	SURP and G-patch domain containing 1
 ENSG00000105819	53	0	same	DnaJ heat shock protein family (Hsp40) member C2	ENSG00000105821	53	0	same	peptidase, mitochondrial processing beta subunit
 ENSG00000105821	53	0	same	peptidase, mitochondrial processing beta subunit	ENSG00000105819	53	0	same	DnaJ heat shock protein family (Hsp40) member C2
@@ -162,20 +160,19 @@ ENSG00000106004	18	3	offspring	homeobox C5	ENSG00000172789	31	2	parent	homeobox 
 ENSG00000106305	53	2	offspring	eukaryotic translation initiation factor 2 alpha kinase 1	ENSG00000086232	53	1	parent	aminoacyl tRNA synthetase complex interacting multifunctional protein 2
 ENSG00000106689	1	3	offspring	LIM homeobox 9	ENSG00000143355	12	2	parent	LIM homeobox 2
 ENSG00000106714	1	2	same	contactin associated protein like 3B	ENSG00000154529	5	2	same	contactin associated protein like 3
-ENSG00000107014	1	3	same	relaxin 1	ENSG00000107018	3	3	same	relaxin 2
-ENSG00000107018	3	3	same	relaxin 2	ENSG00000107014	1	3	same	relaxin 1
+ENSG00000107014	1	5	same	relaxin 1	ENSG00000107018	3	5	same	relaxin 2
+ENSG00000107018	3	5	same	relaxin 2	ENSG00000107014	1	5	same	relaxin 1
 ENSG00000107187	12	2	same	LIM homeobox 4	ENSG00000121454	1	2	same	LIM homeobox 3
 ENSG00000107341	53	2	same	cell division cycle 34	ENSG00000099804	53	2	same	ubiquitin conjugating enzyme E2 R2
 ENSG00000107404	53	2	same	dishevelled segment polarity protein 2	ENSG00000004975	53	2	same	dishevelled segment polarity protein 1
 ENSG00000107404	53	2	same	dishevelled segment polarity protein 3	ENSG00000161202	53	2	same	dishevelled segment polarity protein 1
 ENSG00000107796	49	2	same	actin, alpha 1, skeletal muscle	ENSG00000143632	53	2	same	actin, alpha 2, smooth muscle, aorta
 ENSG00000107796	27	2	same	actin, alpha, cardiac muscle 1	ENSG00000159251	53	2	same	actin, alpha 2, smooth muscle, aorta
-ENSG00000107854	53	2	parent	tankyrase	ENSG00000173273	53	3	offspring	tankyrase 2
+ENSG00000107854	53	2	parent	tankyrase	ENSG00000173273	53	4	offspring	tankyrase 2
 ENSG00000107937	1	0	same	isopentenyl-diphosphate delta isomerase 2	ENSG00000148377	53	0	same	GTP binding protein 4
 ENSG00000108242	4	12	offspring	cytochrome P450 family 2 subfamily C member 9	ENSG00000138109	7	11	parent	cytochrome P450 family 2 subfamily C member 18
 ENSG00000108242	4	12	offspring	cytochrome P450 family 2 subfamily C member 19	ENSG00000165841	7	11	parent	cytochrome P450 family 2 subfamily C member 18
 ENSG00000108379	4	3	offspring	Wnt family member 3A	ENSG00000154342	20	2	parent	Wnt family member 3
-ENSG00000108379	4	3	offspring	Wnt family member 3A	ENSG00000154342	20	2	parent	uncharacterized LOC101929777
 ENSG00000108468	53	1	same	chromobox 3	ENSG00000122565	53	1	same	chromobox 1
 ENSG00000108590	53	1	offspring	thioredoxin domain containing 17	ENSG00000129235	53	0	parent	mediator complex subunit 31
 ENSG00000108773	53	2	parent	lysine acetyltransferase 2B	ENSG00000114166	53	3	offspring	lysine acetyltransferase 2A
@@ -187,7 +184,7 @@ ENSG00000109272	4	12	same	platelet factor 4	ENSG00000163737	3	12	same	platelet f
 ENSG00000109787	47	2	parent	Kruppel like factor 12	ENSG00000118922	53	3	offspring	Kruppel like factor 3
 ENSG00000109805	26	2	offspring	ligand dependent nuclear receptor corepressor like	ENSG00000178177	10	0	parent	non-SMC condensin I complex subunit G
 ENSG00000111196	53	1	same	mago homolog, exon junction complex core component	ENSG00000162385	52	1	same	mago homolog B, exon junction complex core component
-ENSG00000111615	46	3	offspring	GLI pathogenesis related 1	ENSG00000139278	52	0	parent	KRR1, small subunit processome component homolog
+ENSG00000111615	46	4	offspring	GLI pathogenesis related 1	ENSG00000139278	52	0	parent	KRR1, small subunit processome component homolog
 ENSG00000111639	53	0	parent	non-SMC condensin I complex subunit D2	ENSG00000010292	53	1	offspring	mitochondrial ribosomal protein L51
 ENSG00000111642	18	3	offspring	chromodomain helicase DNA binding protein 5	ENSG00000116254	53	2	parent	chromodomain helicase DNA binding protein 4
 ENSG00000111725	53	3	offspring	protein kinase AMP-activated non-catalytic subunit beta 2	ENSG00000131791	53	1	parent	protein kinase AMP-activated non-catalytic subunit beta 1
@@ -199,19 +196,19 @@ ENSG00000112305	16	2	same	beta-1,3-glucuronyltransferase 2	ENSG00000112309	52	2	
 ENSG00000112309	52	2	same	small ArfGAP 1	ENSG00000112305	16	2	same	beta-1,3-glucuronyltransferase 2
 ENSG00000112659	53	2	same	cullin 7	ENSG00000044090	53	2	same	cullin 9
 ENSG00000112837	15	3	offspring	T-box 15	ENSG00000092607	20	1	parent	T-box 18
-ENSG00000112852	45	3	same	protocadherin beta 14	ENSG00000120327	14	3	same	protocadherin beta 2
-ENSG00000113205	43	3	parent	protocadherin beta 15	ENSG00000113248	8	6	offspring	protocadherin beta 3
-ENSG00000113205	19	3	parent	protocadherin beta 13	ENSG00000187372	8	6	offspring	protocadherin beta 3
-ENSG00000113209	15	10	offspring	protocadherin beta 6	ENSG00000113211	38	3	parent	protocadherin beta 5
-ENSG00000113211	38	3	parent	protocadherin beta 5	ENSG00000113209	15	10	offspring	protocadherin beta 6
+ENSG00000112852	45	10	offspring	protocadherin beta 14	ENSG00000120327	14	9	parent	protocadherin beta 2
+ENSG00000113205	43	9	offspring	protocadherin beta 15	ENSG00000113248	8	6	parent	protocadherin beta 3
+ENSG00000113205	19	10	offspring	protocadherin beta 13	ENSG00000187372	8	6	parent	protocadherin beta 3
+ENSG00000113209	15	10	offspring	protocadherin beta 6	ENSG00000113211	38	7	parent	protocadherin beta 5
+ENSG00000113211	38	7	parent	protocadherin beta 5	ENSG00000113209	15	10	offspring	protocadherin beta 6
 ENSG00000113212	29	9	parent	protocadherin beta 10	ENSG00000120324	20	10	offspring	protocadherin beta 7
 ENSG00000113212	7	9	parent	protocadherin beta 9	ENSG00000177839	20	10	offspring	protocadherin beta 7
-ENSG00000113248	8	6	offspring	protocadherin beta 3	ENSG00000113205	43	3	parent	protocadherin beta 15
-ENSG00000113296	22	3	offspring	cartilage oligomeric matrix protein	ENSG00000105664	38	2	parent	thrombospondin 4
+ENSG00000113248	8	6	parent	protocadherin beta 3	ENSG00000113205	43	9	offspring	protocadherin beta 15
+ENSG00000113296	22	7	offspring	cartilage oligomeric matrix protein	ENSG00000105664	38	2	parent	thrombospondin 4
 ENSG00000113504	14	2	same	solute carrier family 12 member 5	ENSG00000124140	53	2	same	solute carrier family 12 member 7
 ENSG00000113712	1	12	offspring	casein kinase 1 alpha 1 like	ENSG00000180138	53	1	parent	casein kinase 1 alpha 1
 ENSG00000113721	51	2	parent	platelet derived growth factor receptor alpha	ENSG00000134853	51	3	offspring	platelet derived growth factor receptor beta
-ENSG00000113722	2	2	parent	caudal type homeobox 2	ENSG00000165556	3	3	offspring	caudal type homeobox 1
+ENSG00000113722	2	2	parent	caudal type homeobox 2	ENSG00000165556	3	6	offspring	caudal type homeobox 1
 ENSG00000114166	53	3	offspring	lysine acetyltransferase 2A	ENSG00000108773	53	2	parent	lysine acetyltransferase 2B
 ENSG00000114331	53	2	same	ArfGAP with coiled-coil, ankyrin repeat and PH domains 3	ENSG00000131584	53	2	same	ArfGAP with coiled-coil, ankyrin repeat and PH domains 2
 ENSG00000114349	1	2	same	G protein subunit alpha transducin 2	ENSG00000134183	1	2	same	G protein subunit alpha transducin 1
@@ -245,7 +242,7 @@ ENSG00000119636	52	1	parent	aldehyde dehydrogenase 6 family member A1	ENSG000001
 ENSG00000119638	35	2	offspring	NIMA related kinase 8	ENSG00000160602	53	1	parent	NIMA related kinase 9
 ENSG00000119669	53	3	offspring	interferon regulatory factor 2 binding protein 2	ENSG00000168264	53	2	parent	interferon regulatory factor 2 binding protein like
 ENSG00000119669	53	3	offspring	interferon regulatory factor 2 binding protein 1	ENSG00000170604	53	2	parent	interferon regulatory factor 2 binding protein like
-ENSG00000119673	51	3	same	acyl-CoA thioesterase 1	ENSG00000184227	52	3	same	acyl-CoA thioesterase 2
+ENSG00000119673	51	9	same	acyl-CoA thioesterase 1	ENSG00000184227	52	9	same	acyl-CoA thioesterase 2
 ENSG00000119711	44	2	offspring	basal body orientation factor 1	ENSG00000119636	52	1	parent	aldehyde dehydrogenase 6 family member A1
 ENSG00000119720	53	0	parent	proteasome 26S subunit, ATPase 1	ENSG00000100764	53	1	offspring	NRDE-2, necessary for RNA interference, domain containing
 ENSG00000119723	50	3	offspring	ectonucleoside triphosphate diphosphohydrolase 5	ENSG00000187097	53	0	parent	coenzyme Q6, monooxygenase
@@ -255,10 +252,10 @@ ENSG00000119778	50	0	same	ATPase family, AAA domain containing 2	ENSG00000156802
 ENSG00000120075	31	2	same	homeobox A5	ENSG00000106004	18	2	same	homeobox B5
 ENSG00000120324	20	10	offspring	protocadherin beta 7	ENSG00000113212	29	9	parent	protocadherin beta 10
 ENSG00000120324	7	9	same	protocadherin beta 9	ENSG00000177839	29	9	same	protocadherin beta 10
-ENSG00000120327	14	3	same	protocadherin beta 2	ENSG00000112852	45	3	same	protocadherin beta 14
-ENSG00000120327	20	10	offspring	protocadherin beta 12	ENSG00000120328	45	3	parent	protocadherin beta 14
+ENSG00000120327	14	9	parent	protocadherin beta 2	ENSG00000112852	45	10	offspring	protocadherin beta 14
+ENSG00000120327	20	10	same	protocadherin beta 12	ENSG00000120328	45	10	same	protocadherin beta 14
 ENSG00000120328	6	10	same	protocadherin beta 11	ENSG00000197479	20	10	same	protocadherin beta 12
-ENSG00000120329	39	2	parent	solute carrier family 25 member 15	ENSG00000102743	1	3	offspring	solute carrier family 25 member 2
+ENSG00000120329	39	2	parent	solute carrier family 25 member 15	ENSG00000102743	1	9	offspring	solute carrier family 25 member 2
 ENSG00000120437	53	0	parent	t-complex 1	ENSG00000120438	53	1	offspring	acetyl-CoA acetyltransferase 2
 ENSG00000120438	53	1	offspring	acetyl-CoA acetyltransferase 2	ENSG00000120437	53	0	parent	t-complex 1
 ENSG00000120903	15	2	same	cholinergic receptor nicotinic alpha 4 subunit	ENSG00000101204	3	2	same	cholinergic receptor nicotinic alpha 2 subunit
@@ -266,7 +263,7 @@ ENSG00000121068	46	2	parent	T-box 3	ENSG00000135111	51	3	offspring	T-box 2
 ENSG00000121281	53	3	same	bromodomain containing 7	ENSG00000166164	37	3	same	adenylate cyclase 7
 ENSG00000121297	53	3	offspring	teashirt zinc finger homeobox 1	ENSG00000179981	40	1	parent	teashirt zinc finger homeobox 3
 ENSG00000121454	1	2	same	LIM homeobox 3	ENSG00000107187	12	2	same	LIM homeobox 4
-ENSG00000121481	53	3	offspring	ring finger protein 1	ENSG00000204227	52	2	parent	ring finger protein 2
+ENSG00000121481	53	4	offspring	ring finger protein 1	ENSG00000204227	52	2	parent	ring finger protein 2
 ENSG00000122136	3	6	same	odorant binding protein 2B	ENSG00000171102	2	6	same	odorant binding protein 2A
 ENSG00000122194	1	2	same	plasminogen-like B2	ENSG00000125551	2	2	same	plasminogen
 ENSG00000122194	3	2	same	plasminogen-like B1	ENSG00000183281	2	2	same	plasminogen
@@ -275,14 +272,14 @@ ENSG00000122224	53	1	parent	fatty acid synthase	ENSG00000169710	5	3	offspring	ly
 ENSG00000122483	53	2	parent	transmembrane p24 trafficking protein 5	ENSG00000117500	14	3	offspring	coiled-coil domain containing 18
 ENSG00000122565	53	1	same	chromobox 1	ENSG00000108468	53	1	same	chromobox 3
 ENSG00000122696	1	9	same	solute carrier family 25 member 52	ENSG00000141437	52	9	same	solute carrier family 25 member 51
-ENSG00000122824	34	3	parent	nudix hydrolase 11	ENSG00000196368	31	12	offspring	nudix hydrolase 10
+ENSG00000122824	34	9	parent	nudix hydrolase 11	ENSG00000196368	31	12	offspring	nudix hydrolase 10
 ENSG00000123064	2	3	offspring	cilia and flagella associated protein 73	ENSG00000186710	53	0	parent	DEAD-box helicase 54
 ENSG00000123143	53	2	parent	protein kinase N2	ENSG00000065243	53	3	offspring	protein kinase N1
-ENSG00000123427	52	0	parent	methyltransferase like 1	ENSG00000037897	40	3	offspring	EEF1A lysine methyltransferase 3
+ENSG00000123427	52	0	parent	methyltransferase like 1	ENSG00000037897	40	4	offspring	EEF1A lysine methyltransferase 3
 ENSG00000123908	53	3	offspring	argonaute 1, RISC catalytic component	ENSG00000092847	42	1	parent	argonaute 2, RISC catalytic component
-ENSG00000124103	3	3	same	family with sequence similarity 209 member B	ENSG00000213714	3	3	same	family with sequence similarity 209 member A
+ENSG00000124103	3	7	same	family with sequence similarity 209 member B	ENSG00000213714	3	7	same	family with sequence similarity 209 member A
 ENSG00000124140	53	2	same	solute carrier family 12 member 7	ENSG00000113504	14	2	same	solute carrier family 12 member 5
-ENSG00000124172	4	3	same	tubulin beta 1 class VI	ENSG00000101162	53	3	same	ATP synthase F1 subunit epsilon
+ENSG00000124172	4	3	parent	tubulin beta 1 class VI	ENSG00000101162	53	6	offspring	ATP synthase F1 subunit epsilon
 ENSG00000124216	40	1	same	snail family transcriptional repressor 2	ENSG00000019549	41	1	same	snail family transcriptional repressor 1
 ENSG00000124486	46	2	same	ubiquitin specific peptidase 9, Y-linked	ENSG00000114374	53	2	same	ubiquitin specific peptidase 9, X-linked
 ENSG00000124766	2	2	same	SRY-box 11	ENSG00000176887	50	2	same	SRY-box 4
@@ -292,7 +289,7 @@ ENSG00000125352	1	0	same	ring finger protein 113B	ENSG00000139797	53	0	same	ring
 ENSG00000125356	53	0	parent	ring finger protein 113A	ENSG00000125352	53	1	offspring	NADH:ubiquinone oxidoreductase subunit A1
 ENSG00000125375	26	2	offspring	cyclin dependent kinase like 1	ENSG00000100490	52	1	parent	ATP synthase, H+ transporting, mitochondrial Fo complex subunit s (factor B)
 ENSG00000125398	36	2	same	SRY-box 10	ENSG00000100146	41	2	same	SRY-box 9
-ENSG00000125430	10	9	offspring	heparan sulfate-glucosamine 3-sulfotransferase 3A1	ENSG00000153976	17	3	parent	heparan sulfate-glucosamine 3-sulfotransferase 3B1
+ENSG00000125430	10	9	same	heparan sulfate-glucosamine 3-sulfotransferase 3A1	ENSG00000153976	17	9	same	heparan sulfate-glucosamine 3-sulfotransferase 3B1
 ENSG00000125492	3	2	parent	BarH like homeobox 2	ENSG00000143032	2	3	offspring	BarH like homeobox 1
 ENSG00000125551	2	2	same	plasminogen	ENSG00000122194	1	2	same	plasminogen-like B2
 ENSG00000125551	3	2	same	plasminogen-like B1	ENSG00000183281	1	2	same	plasminogen-like B2
@@ -305,20 +302,19 @@ ENSG00000126785	53	2	same	ras homolog family member Q	ENSG00000119729	49	2	same	
 ENSG00000126814	53	6	offspring	high mobility group nucleosomal binding domain 2	ENSG00000198830	51	0	parent	tRNA methyltransferase 5
 ENSG00000126934	53	1	same	mitogen-activated protein kinase kinase 1	ENSG00000169032	53	1	same	mitogen-activated protein kinase kinase 2
 ENSG00000127125	22	3	offspring	zinc finger MYND-type containing 12	ENSG00000066185	53	0	parent	phosphopantothenoylcysteine synthetase
-ENSG00000127249	2	3	offspring	ATPase 13A5	ENSG00000187527	21	2	parent	ATPase 13A4
+ENSG00000127249	2	6	offspring	ATPase 13A5	ENSG00000187527	21	2	parent	ATPase 13A4
 ENSG00000127720	53	1	same	coiled-coil domain containing 59	ENSG00000133773	38	1	same	methyltransferase like 25
 ENSG00000127955	53	2	same	G protein subunit alpha i3	ENSG00000065135	51	2	same	G protein subunit alpha i1
 ENSG00000128245	53	2	same	tyrosine 3-monooxygenase/tryptophan 5-monooxygenase activation protein gamma	ENSG00000170027	53	2	same	tyrosine 3-monooxygenase/tryptophan 5-monooxygenase activation protein eta
 ENSG00000128340	45	1	same	Rac family small GTPase 3	ENSG00000169750	36	1	same	Rac family small GTPase 2
 ENSG00000128383	5	13	same	apolipoprotein B mRNA editing enzyme catalytic subunit 3B	ENSG00000179750	6	13	same	apolipoprotein B mRNA editing enzyme catalytic subunit 3A
-ENSG00000128383	5	13	same	apolipoprotein B mRNA editing enzyme catalytic subunit 3B	ENSG00000179750	6	13	same	APOBEC3A and APOBEC3B deletion hybrid
 ENSG00000128394	26	9	same	apolipoprotein B mRNA editing enzyme catalytic subunit 3D	ENSG00000243811	27	9	same	apolipoprotein B mRNA editing enzyme catalytic subunit 3F
 ENSG00000128394	44	9	same	apolipoprotein B mRNA editing enzyme catalytic subunit 3C	ENSG00000244509	27	9	same	apolipoprotein B mRNA editing enzyme catalytic subunit 3F
-ENSG00000128422	26	3	same	keratin 14	ENSG00000186847	13	3	same	keratin 17
+ENSG00000128422	26	8	offspring	keratin 14	ENSG00000186847	13	7	parent	keratin 17
 ENSG00000128713	15	2	same	homeobox A11	ENSG00000005073	6	2	same	homeobox D11
 ENSG00000128789	19	2	offspring	centrosomal protein 76	ENSG00000101624	53	0	parent	proteasome assembly chaperone 2
-ENSG00000128881	15	3	offspring	tau tubulin kinase 1	ENSG00000146216	50	1	parent	tau tubulin kinase 2
-ENSG00000128886	53	2	parent	protein disulfide isomerase family A member 3	ENSG00000167004	34	3	offspring	elongation factor for RNA polymerase II 3
+ENSG00000128881	15	4	offspring	tau tubulin kinase 1	ENSG00000146216	50	1	parent	tau tubulin kinase 2
+ENSG00000128886	53	2	parent	protein disulfide isomerase family A member 3	ENSG00000167004	34	7	offspring	elongation factor for RNA polymerase II 3
 ENSG00000129204	53	2	same	ubiquitin specific peptidase 32	ENSG00000170832	3	2	same	ubiquitin specific peptidase 6
 ENSG00000129235	53	0	parent	mediator complex subunit 31	ENSG00000108590	53	1	offspring	thioredoxin domain containing 17
 ENSG00000129235	51	2	offspring	KIAA0753	ENSG00000198920	53	1	parent	thioredoxin domain containing 17
@@ -328,7 +324,7 @@ ENSG00000129933	53	1	same	SURP and G-patch domain containing 1	ENSG00000105705	5
 ENSG00000129968	48	2	offspring	abhydrolase domain containing 17C	ENSG00000136379	53	1	parent	abhydrolase domain containing 17A
 ENSG00000130024	53	2	offspring	chromosome 6 open reading frame 120	ENSG00000185127	53	1	parent	PHD finger protein 10
 ENSG00000130449	45	2	parent	zinc finger SWIM-type containing 5	ENSG00000162415	53	3	offspring	zinc finger SWIM-type containing 6
-ENSG00000130544	52	3	parent	zinc finger protein 558	ENSG00000167785	19	13	offspring	zinc finger protein 557
+ENSG00000130544	52	10	parent	zinc finger protein 558	ENSG00000167785	19	13	offspring	zinc finger protein 557
 ENSG00000130733	53	2	offspring	coactivator associated arginine methyltransferase 1	ENSG00000142453	53	1	parent	Yip1 domain family member 2
 ENSG00000130827	52	2	parent	plexin A1	ENSG00000114554	53	3	offspring	plexin A3
 ENSG00000131015	4	8	same	retinoic acid early transcript 1L	ENSG00000155918	8	8	same	UL16 binding protein 2
@@ -337,17 +333,17 @@ ENSG00000131044	53	1	same	p53 and DNA damage regulated 1	ENSG00000088356	17	1	sa
 ENSG00000131094	7	3	same	complement C1q like 3	ENSG00000165985	33	3	same	complement C1q like 1
 ENSG00000131094	1	2	parent	complement C1q like 4	ENSG00000186897	33	3	offspring	complement C1q like 1
 ENSG00000131459	52	2	offspring	glutamine--fructose-6-phosphate transaminase 1	ENSG00000198380	50	1	parent	glutamine-fructose-6-phosphate transaminase 2
-ENSG00000131462	53	3	offspring	tubulin gamma 2	ENSG00000037042	53	1	parent	tubulin gamma 1
+ENSG00000131462	53	9	offspring	tubulin gamma 2	ENSG00000037042	53	1	parent	tubulin gamma 1
 ENSG00000131584	53	2	same	ArfGAP with coiled-coil, ankyrin repeat and PH domains 2	ENSG00000114331	53	2	same	ArfGAP with coiled-coil, ankyrin repeat and PH domains 3
 ENSG00000131668	12	3	offspring	BARX homeobox 2	ENSG00000043039	4	2	parent	BARX homeobox 1
-ENSG00000131721	1	3	same	Rhox homeobox family member 2B	ENSG00000203989	1	3	same	Rhox homeobox family member 2
+ENSG00000131721	1	12	same	Rhox homeobox family member 2B	ENSG00000203989	1	12	same	Rhox homeobox family member 2
 ENSG00000131791	53	1	parent	protein kinase AMP-activated non-catalytic subunit beta 1	ENSG00000111725	53	3	offspring	protein kinase AMP-activated non-catalytic subunit beta 2
 ENSG00000132356	36	1	parent	protein kinase AMP-activated catalytic subunit alpha 2	ENSG00000162409	53	3	offspring	protein kinase AMP-activated catalytic subunit alpha 1
 ENSG00000132475	1	1	same	H3 histone family member 3C	ENSG00000188375	53	1	same	H3 histone family member 3B
-ENSG00000132915	24	2	parent	phosphodiesterase 6B	ENSG00000133256	2	3	offspring	phosphodiesterase 6A
+ENSG00000132915	24	2	parent	phosphodiesterase 6B	ENSG00000133256	2	4	offspring	phosphodiesterase 6A
 ENSG00000133026	52	2	same	myosin heavy chain 11	ENSG00000133392	52	2	same	myosin heavy chain 10
 ENSG00000133243	53	3	offspring	BTB domain containing 1	ENSG00000064726	53	2	parent	BTB domain containing 2
-ENSG00000133256	2	3	offspring	phosphodiesterase 6A	ENSG00000132915	24	2	parent	phosphodiesterase 6B
+ENSG00000133256	2	4	offspring	phosphodiesterase 6A	ENSG00000132915	24	2	parent	phosphodiesterase 6B
 ENSG00000133392	52	2	same	myosin heavy chain 10	ENSG00000133026	52	2	same	myosin heavy chain 11
 ENSG00000133773	38	1	same	methyltransferase like 25	ENSG00000127720	53	1	same	coiled-coil domain containing 59
 ENSG00000133858	37	2	same	THAP domain containing 2	ENSG00000173451	53	2	same	zinc finger C3H1-type containing
@@ -359,16 +355,16 @@ ENSG00000134184	53	9	parent	glutathione S-transferase mu 2	ENSG00000213366	32	11
 ENSG00000134245	46	1	parent	suppression of tumorigenicity 7 like	ENSG00000007341	34	3	offspring	Wnt family member 2B
 ENSG00000134317	16	2	parent	grainyhead like transcription factor 2	ENSG00000083307	23	3	offspring	grainyhead like transcription factor 1
 ENSG00000134365	1	12	offspring	complement factor H related 3	ENSG00000116785	1	4	parent	complement factor H related 4
-ENSG00000134590	53	11	offspring	retrotransposon Gag like 8A	ENSG00000203950	53	3	parent	retrotransposon Gag like 8C
-ENSG00000134590	50	11	offspring	retrotransposon Gag like 8B	ENSG00000212747	53	3	parent	retrotransposon Gag like 8C
+ENSG00000134590	53	11	offspring	retrotransposon Gag like 8A	ENSG00000203950	53	9	parent	retrotransposon Gag like 8C
+ENSG00000134590	50	11	offspring	retrotransposon Gag like 8B	ENSG00000212747	53	9	parent	retrotransposon Gag like 8C
 ENSG00000134595	8	1	parent	SRY-box 1	ENSG00000182968	3	2	offspring	SRY-box 3
 ENSG00000134853	51	3	offspring	platelet derived growth factor receptor beta	ENSG00000113721	51	2	parent	platelet derived growth factor receptor alpha
 ENSG00000135018	53	9	offspring	ubiquilin 2	ENSG00000188021	53	1	parent	ubiquilin 1
 ENSG00000135100	53	2	same	chromosome 12 open reading frame 43	ENSG00000157895	6	2	same	HNF1 homeobox A
 ENSG00000135111	51	3	offspring	T-box 2	ENSG00000121068	46	2	parent	T-box 3
-ENSG00000135702	12	3	same	carbohydrate sulfotransferase 6	ENSG00000183196	10	3	same	carbohydrate sulfotransferase 5
+ENSG00000135702	12	9	same	carbohydrate sulfotransferase 6	ENSG00000183196	10	9	same	carbohydrate sulfotransferase 5
 ENSG00000135945	53	0	same	eukaryotic translation initiation factor 5B	ENSG00000158417	53	0	same	REV1, DNA directed polymerase
-ENSG00000136231	2	3	offspring	insulin like growth factor 2 mRNA binding protein 1	ENSG00000159217	3	2	parent	insulin like growth factor 2 mRNA binding protein 3
+ENSG00000136231	2	6	offspring	insulin like growth factor 2 mRNA binding protein 1	ENSG00000159217	3	2	parent	insulin like growth factor 2 mRNA binding protein 3
 ENSG00000136240	53	0	same	KDEL endoplasmic reticulum protein retention receptor 1	ENSG00000105438	53	0	same	KDEL endoplasmic reticulum protein retention receptor 2
 ENSG00000136379	53	1	parent	abhydrolase domain containing 17A	ENSG00000129968	48	2	offspring	abhydrolase domain containing 17C
 ENSG00000136404	51	3	same	HDGF like 3	ENSG00000166503	50	3	same	transmembrane 6 superfamily member 1
@@ -378,23 +374,23 @@ ENSG00000136925	52	2	same	tropomodulin 1	ENSG00000136842	52	2	same	thiosulfate s
 ENSG00000137075	53	3	offspring	ring finger protein 44	ENSG00000146083	53	2	parent	ring finger protein 38
 ENSG00000137193	53	2	same	Pim-3 proto-oncogene, serine/threonine kinase	ENSG00000198355	53	2	same	Pim-1 proto-oncogene, serine/threonine kinase
 ENSG00000137267	41	1	same	tubulin beta 2B class IIb	ENSG00000137285	53	1	same	tubulin beta 2A class IIa
-ENSG00000137273	37	3	same	forkhead box F1	ENSG00000103241	34	3	same	forkhead box F2
+ENSG00000137273	37	3	parent	forkhead box F1	ENSG00000103241	34	6	offspring	forkhead box F2
 ENSG00000137285	4	3	offspring	tubulin beta 1 class VI	ENSG00000101162	41	1	parent	tubulin beta 2B class IIb
 ENSG00000137285	53	1	same	tubulin beta 2A class IIa	ENSG00000137267	41	1	same	tubulin beta 2B class IIb
-ENSG00000137628	35	12	offspring	DExD/H-box 60 like	ENSG00000181381	36	3	parent	DExD/H-box helicase 60
+ENSG00000137628	35	12	offspring	DExD/H-box 60 like	ENSG00000181381	36	4	parent	DExD/H-box helicase 60
 ENSG00000137801	50	2	same	thrombospondin 2	ENSG00000186340	39	2	same	thrombospondin 1
 ENSG00000137880	53	1	same	DnaJ heat shock protein family (Hsp40) member C17	ENSG00000104129	53	1	same	GTP cyclohydrolase I feedback regulator
 ENSG00000138083	1	3	offspring	SIX homeobox 6	ENSG00000184302	7	2	parent	SIX homeobox 3
 ENSG00000138109	7	11	parent	cytochrome P450 family 2 subfamily C member 18	ENSG00000108242	4	12	offspring	cytochrome P450 family 2 subfamily C member 9
 ENSG00000138109	4	12	same	cytochrome P450 family 2 subfamily C member 19	ENSG00000165841	4	12	same	cytochrome P450 family 2 subfamily C member 9
-ENSG00000138161	6	3	parent	family with sequence similarity 24 member B	ENSG00000213185	10	6	offspring	CUB and zona pellucida like domains 1
+ENSG00000138161	6	10	offspring	family with sequence similarity 24 member B	ENSG00000213185	10	6	parent	CUB and zona pellucida like domains 1
 ENSG00000138286	53	1	parent	DnaJ heat shock protein family (Hsp40) member C9	ENSG00000213551	53	2	offspring	family with sequence similarity 149 member B1
 ENSG00000138622	19	3	offspring	hyperpolarization activated cyclic nucleotide gated potassium and sodium channel 2	ENSG00000099822	3	2	parent	hyperpolarization activated cyclic nucleotide gated potassium channel 4
-ENSG00000138685	42	1	parent	nudix hydrolase 6	ENSG00000170917	45	3	offspring	fibroblast growth factor 2
-ENSG00000139112	53	3	same	GABA type A receptor-associated protein	ENSG00000170296	53	3	same	GABA type A receptor associated protein like 1
+ENSG00000138685	42	1	parent	nudix hydrolase 6	ENSG00000170917	45	4	offspring	fibroblast growth factor 2
+ENSG00000139112	53	6	offspring	GABA type A receptor-associated protein	ENSG00000170296	53	4	parent	GABA type A receptor associated protein like 1
 ENSG00000139133	10	0	same	ALG10B, alpha-1,2-glucosyltransferase	ENSG00000175548	20	0	same	ALG10, alpha-1,2-glucosyltransferase
 ENSG00000139266	11	2	parent	membrane associated ring-CH-type finger 4	ENSG00000144583	53	3	offspring	membrane associated ring-CH-type finger 9
-ENSG00000139278	52	0	parent	KRR1, small subunit processome component homolog	ENSG00000111615	46	3	offspring	GLI pathogenesis related 1
+ENSG00000139278	52	0	parent	KRR1, small subunit processome component homolog	ENSG00000111615	46	4	offspring	GLI pathogenesis related 1
 ENSG00000139725	52	1	parent	transmembrane protein 120B	ENSG00000188735	32	2	offspring	ras homolog family member F, filopodia associated
 ENSG00000139797	53	0	same	ring finger protein 113A	ENSG00000125352	1	0	same	ring finger protein 113B
 ENSG00000139946	53	1	parent	pellino E3 ubiquitin protein ligase 1	ENSG00000197329	49	2	offspring	pellino E3 ubiquitin protein ligase family member 2
@@ -409,15 +405,15 @@ ENSG00000141437	52	9	same	solute carrier family 25 member 51	ENSG00000122696	1	9
 ENSG00000141556	42	1	same	UDP-GlcNAc:betaGal beta-1,3-N-acetylglucosaminyltransferase like 1	ENSG00000175711	53	1	same	tubulin folding cofactor D
 ENSG00000141570	53	3	same	chromobox 6	ENSG00000183741	23	3	same	chromobox 8
 ENSG00000141965	53	2	same	fem-1 homolog C	ENSG00000145780	42	2	same	fem-1 homolog A
-ENSG00000142207	4	3	offspring	melanocortin 2 receptor accessory protein	ENSG00000170262	52	0	parent	URB1 ribosome biogenesis 1 homolog (S. cerevisiae)
+ENSG00000142207	4	10	offspring	melanocortin 2 receptor accessory protein	ENSG00000170262	52	0	parent	URB1 ribosome biogenesis 1 homolog (S. cerevisiae)
 ENSG00000142453	53	1	parent	Yip1 domain family member 2	ENSG00000130733	53	2	offspring	coactivator associated arginine methyltransferase 1
 ENSG00000142615	1	3	same	chymotrypsin like elastase family member 2B	ENSG00000215704	2	3	same	chymotrypsin like elastase family member 2A
 ENSG00000142789	5	2	same	chymotrypsin like elastase family member 3B	ENSG00000219073	28	2	same	chymotrypsin like elastase family member 3A
 ENSG00000143032	2	3	offspring	BarH like homeobox 1	ENSG00000125492	3	2	parent	BarH like homeobox 2
-ENSG00000143184	3	3	same	X-C motif chemokine ligand 2	ENSG00000143185	1	3	same	X-C motif chemokine ligand 1
-ENSG00000143185	1	3	same	X-C motif chemokine ligand 1	ENSG00000143184	3	3	same	X-C motif chemokine ligand 2
+ENSG00000143184	3	4	same	X-C motif chemokine ligand 2	ENSG00000143185	1	4	same	X-C motif chemokine ligand 1
+ENSG00000143185	1	4	same	X-C motif chemokine ligand 1	ENSG00000143184	3	4	same	X-C motif chemokine ligand 2
 ENSG00000143355	12	2	parent	LIM homeobox 2	ENSG00000106689	1	3	offspring	LIM homeobox 9
-ENSG00000143515	19	2	parent	ATPase phospholipid transporting 8B4 (putative)	ENSG00000104043	53	3	offspring	ATPase phospholipid transporting 8B2
+ENSG00000143515	19	2	parent	ATPase phospholipid transporting 8B4 (putative)	ENSG00000104043	53	4	offspring	ATPase phospholipid transporting 8B2
 ENSG00000143632	27	2	same	actin, alpha, cardiac muscle 1	ENSG00000159251	49	2	same	actin, alpha 1, skeletal muscle
 ENSG00000143768	8	2	same	left-right determination factor 1	ENSG00000243709	11	2	same	left-right determination factor 2
 ENSG00000143786	53	1	same	cornichon family AMPA receptor auxiliary protein 1	ENSG00000100528	14	1	same	cornichon family AMPA receptor auxiliary protein 3
@@ -429,24 +425,19 @@ ENSG00000144199	53	2	parent	fumarylacetoacetate hydrolase domain containing 2A	E
 ENSG00000144278	53	2	same	polypeptide N-acetylgalactosaminyltransferase 1	ENSG00000141429	16	2	same	polypeptide N-acetylgalactosaminyltransferase 13
 ENSG00000144583	53	3	offspring	membrane associated ring-CH-type finger 9	ENSG00000139266	11	2	parent	membrane associated ring-CH-type finger 4
 ENSG00000145194	16	3	offspring	calcium/calmodulin dependent protein kinase II inhibitor 2	ENSG00000163888	27	2	parent	endothelin converting enzyme 2
-ENSG00000145194	16	3	offspring	calcium/calmodulin dependent protein kinase II inhibitor 2	ENSG00000163888	27	2	parent	EEF1A lysine methyltransferase 4
-ENSG00000145194	16	3	offspring	calcium/calmodulin dependent protein kinase II inhibitor 2	ENSG00000163888	27	2	parent	EEF1AKMT4-ECE2 readthrough
 ENSG00000145626	3	2	parent	UDP glycosyltransferase family 3 member A2	ENSG00000168671	3	12	offspring	UDP glycosyltransferase family 3 member A1
 ENSG00000145736	3	0	same	GTF2H2 family member C	ENSG00000183474	4	0	same	general transcription factor IIH subunit 2
-ENSG00000145736	3	0	same	GTF2H2 family member C	ENSG00000183474	4	0	same	GTF2H2 family member C
-ENSG00000145736	3	0	same	GTF2H2 family member C, copy 2	ENSG00000183474	4	0	same	general transcription factor IIH subunit 2
-ENSG00000145736	3	0	same	GTF2H2 family member C, copy 2	ENSG00000183474	4	0	same	GTF2H2 family member C
 ENSG00000145780	42	2	same	fem-1 homolog A	ENSG00000141965	53	2	same	fem-1 homolog C
 ENSG00000145863	7	3	offspring	gamma-aminobutyric acid type A receptor alpha4 subunit	ENSG00000109158	2	2	parent	gamma-aminobutyric acid type A receptor alpha6 subunit
 ENSG00000146038	1	14	offspring	kidney associated antigen 1	ENSG00000146049	6	3	parent	doublecortin domain containing 2
 ENSG00000146049	6	3	parent	doublecortin domain containing 2	ENSG00000146038	1	14	offspring	kidney associated antigen 1
 ENSG00000146083	53	2	parent	ring finger protein 38	ENSG00000137075	53	3	offspring	ring finger protein 44
-ENSG00000146216	50	1	parent	tau tubulin kinase 2	ENSG00000128881	15	3	offspring	tau tubulin kinase 1
+ENSG00000146216	50	1	parent	tau tubulin kinase 2	ENSG00000128881	15	4	offspring	tau tubulin kinase 1
 ENSG00000146281	53	0	parent	COP9 signalosome subunit 2	ENSG00000166200	52	3	offspring	peptidase M20 domain containing 2
 ENSG00000146411	53	1	parent	TATA-box binding protein like 1	ENSG00000028839	36	3	offspring	solute carrier family 2 member 12
 ENSG00000146707	16	2	same	zona pellucida glycoprotein 3	ENSG00000188372	53	2	same	POM121 and ZP3 fusion
-ENSG00000147274	53	3	parent	RNA binding motif protein, X-linked like 1	ENSG00000213516	53	6	offspring	RNA binding motif protein, X-linked
-ENSG00000147400	1	1	parent	centrin 1	ENSG00000177143	53	3	offspring	centrin 2
+ENSG00000147274	53	6	same	RNA binding motif protein, X-linked like 1	ENSG00000213516	53	6	same	RNA binding motif protein, X-linked
+ENSG00000147400	1	1	parent	centrin 1	ENSG00000177143	53	9	offspring	centrin 2
 ENSG00000147439	53	1	offspring	cell cycle and apoptosis regulator 2	ENSG00000158941	53	0	parent	bridging integrator 3
 ENSG00000148110	53	2	parent	major facilitator superfamily domain containing 14A	ENSG00000156875	53	3	offspring	major facilitator superfamily domain containing 14B
 ENSG00000148377	53	0	same	GTP binding protein 4	ENSG00000107937	1	0	same	isopentenyl-diphosphate delta isomerase 2
@@ -456,12 +447,12 @@ ENSG00000148826	53	1	parent	inositol polyphosphate-5-phosphatase A	ENSG000000683
 ENSG00000148826	6	2	parent	NK6 homeobox 1	ENSG00000163623	16	3	offspring	NK6 homeobox 2
 ENSG00000148842	53	2	parent	5'-nucleotidase, cytosolic II	ENSG00000076685	42	3	offspring	cyclin and CBS domain divalent metal cation transport mediator 2
 ENSG00000148943	51	1	same	lin-7 homolog B, crumbs cell polarity complex component	ENSG00000104863	53	1	same	lin-7 homolog C, crumbs cell polarity complex component
-ENSG00000149289	27	3	same	zinc finger CCCH-type containing 12B	ENSG00000102053	47	3	same	zinc finger CCCH-type containing 12C
-ENSG00000149289	43	2	parent	zinc finger CCCH-type containing 12A	ENSG00000163874	47	3	offspring	zinc finger CCCH-type containing 12C
+ENSG00000149289	27	3	parent	zinc finger CCCH-type containing 12B	ENSG00000102053	47	4	offspring	zinc finger CCCH-type containing 12C
+ENSG00000149289	43	2	parent	zinc finger CCCH-type containing 12A	ENSG00000163874	47	4	offspring	zinc finger CCCH-type containing 12C
 ENSG00000149929	53	1	parent	INO80 complex subunit E	ENSG00000169592	53	2	offspring	HIRA interacting protein 3
 ENSG00000150337	6	5	same	Fc fragment of IgG receptor Ib	ENSG00000198019	12	5	same	Fc fragment of IgG receptor Ia
 ENSG00000150551	5	1	parent	G protein-coupled receptor 39	ENSG00000183840	16	2	offspring	LY6/PLAUR domain containing 1
-ENSG00000151006	53	3	same	zinc finger protein 646	ENSG00000167395	50	3	same	serine protease 53
+ENSG00000151006	53	5	same	zinc finger protein 646	ENSG00000167395	50	5	same	serine protease 53
 ENSG00000151615	1	2	same	POU class 4 homeobox 1	ENSG00000152192	1	2	same	POU class 4 homeobox 2
 ENSG00000151665	53	2	offspring	ras homolog family member Q	ENSG00000119729	50	0	parent	phosphatidylinositol glycan anchor biosynthesis class F
 ENSG00000151693	53	2	same	integrin subunit beta 1 binding protein 1	ENSG00000119185	48	2	same	ArfGAP with SH3 domain, ankyrin repeat and PH domain 2
@@ -477,13 +468,12 @@ ENSG00000153147	51	1	parent	SWI/SNF related, matrix associated, actin dependent 
 ENSG00000153443	53	3	offspring	UBA like domain containing 2	ENSG00000185262	53	2	parent	UBA like domain containing 1
 ENSG00000153779	1	10	same	TGFB induced factor homeobox 2 like, Y-linked	ENSG00000176679	1	10	same	TGFB induced factor homeobox 2 like, X-linked
 ENSG00000153922	53	2	same	chromodomain helicase DNA binding protein 2	ENSG00000173575	53	2	same	chromodomain helicase DNA binding protein 1
-ENSG00000153976	17	3	parent	heparan sulfate-glucosamine 3-sulfotransferase 3B1	ENSG00000125430	10	9	offspring	heparan sulfate-glucosamine 3-sulfotransferase 3A1
+ENSG00000153976	17	9	same	heparan sulfate-glucosamine 3-sulfotransferase 3B1	ENSG00000125430	10	9	same	heparan sulfate-glucosamine 3-sulfotransferase 3A1
 ENSG00000154016	2	2	parent	solute carrier family 5 member 10	ENSG00000154025	12	3	offspring	GRB2 related adaptor protein
 ENSG00000154025	12	3	offspring	GRB2 related adaptor protein	ENSG00000154016	2	2	parent	solute carrier family 5 member 10
-ENSG00000154174	45	3	offspring	leukemia NUP98 fusion partner 1	ENSG00000206535	53	1	parent	translocase of outer mitochondrial membrane 70
-ENSG00000154274	42	3	same	RELT like 1	ENSG00000181826	13	3	same	chromosome 4 open reading frame 19
+ENSG00000154174	45	6	offspring	leukemia NUP98 fusion partner 1	ENSG00000206535	53	1	parent	translocase of outer mitochondrial membrane 70
+ENSG00000154274	42	3	parent	RELT like 1	ENSG00000181826	13	6	offspring	chromosome 4 open reading frame 19
 ENSG00000154342	20	2	parent	Wnt family member 3	ENSG00000108379	4	3	offspring	Wnt family member 3A
-ENSG00000154342	20	2	parent	uncharacterized LOC101929777	ENSG00000108379	4	3	offspring	Wnt family member 3A
 ENSG00000154529	5	2	same	contactin associated protein like 3	ENSG00000106714	1	2	same	contactin associated protein like 3B
 ENSG00000154767	52	1	offspring	LSM3 homolog, U6 small nuclear RNA and mRNA degradation associated	ENSG00000170860	53	0	parent	XPC complex subunit, DNA damage recognition and repair factor
 ENSG00000155428	6	14	same	tripartite motif containing 73	ENSG00000178809	15	14	same	tripartite motif containing 74
@@ -507,12 +497,12 @@ ENSG00000157734	53	2	same	peptidylprolyl isomerase B	ENSG00000166794	29	2	same	s
 ENSG00000157823	53	3	same	adaptor related protein complex 3 sigma 1 subunit	ENSG00000177879	53	3	same	adaptor related protein complex 3 sigma 2 subunit
 ENSG00000157827	51	3	offspring	formin like 3	ENSG00000161791	52	2	parent	formin like 2
 ENSG00000157895	6	2	same	HNF1 homeobox A	ENSG00000135100	53	2	same	chromosome 12 open reading frame 43
-ENSG00000158373	28	10	offspring	histone cluster 1 H2B family member c	ENSG00000180596	53	3	parent	histone cluster 1 H2B family member d
+ENSG00000158373	28	10	offspring	histone cluster 1 H2B family member c	ENSG00000180596	53	7	parent	histone cluster 1 H2B family member d
 ENSG00000158417	53	0	same	REV1, DNA directed polymerase	ENSG00000135945	53	0	same	eukaryotic translation initiation factor 5B
 ENSG00000158623	53	0	same	coatomer protein complex subunit gamma 1	ENSG00000181789	53	0	same	coatomer protein complex subunit gamma 2
 ENSG00000158764	11	2	parent	intelectin 1	ENSG00000179914	5	10	offspring	intelectin 2
 ENSG00000158941	53	0	parent	bridging integrator 3	ENSG00000147439	53	1	offspring	cell cycle and apoptosis regulator 2
-ENSG00000159217	3	2	parent	insulin like growth factor 2 mRNA binding protein 3	ENSG00000136231	2	3	offspring	insulin like growth factor 2 mRNA binding protein 1
+ENSG00000159217	3	2	parent	insulin like growth factor 2 mRNA binding protein 3	ENSG00000136231	2	6	offspring	insulin like growth factor 2 mRNA binding protein 1
 ENSG00000159251	53	2	same	actin, alpha 2, smooth muscle, aorta	ENSG00000107796	27	2	same	actin, alpha, cardiac muscle 1
 ENSG00000159251	49	2	same	actin, alpha 1, skeletal muscle	ENSG00000143632	27	2	same	actin, alpha, cardiac muscle 1
 ENSG00000159263	3	2	parent	single-minded family bHLH transcription factor 1	ENSG00000112246	6	3	offspring	single-minded family bHLH transcription factor 2
@@ -522,7 +512,6 @@ ENSG00000159556	11	1	same	ISL LIM homeobox 1	ENSG00000016082	8	1	same	ISL LIM ho
 ENSG00000159899	38	1	parent	natriuretic peptide receptor 1	ENSG00000169418	52	2	offspring	natriuretic peptide receptor 2
 ENSG00000160014	53	2	same	calmodulin 2	ENSG00000143933	53	2	same	calmodulin 3
 ENSG00000160014	53	2	same	calmodulin 1	ENSG00000198668	53	2	same	calmodulin 3
-ENSG00000160014	53	2	same	calmodulin 3	ENSG00000198668	53	2	same	calmodulin 3
 ENSG00000160145	52	2	parent	trio Rho guanine nucleotide exchange factor	ENSG00000038382	42	3	offspring	kalirin RhoGEF kinase
 ENSG00000160339	20	3	parent	ficolin 1	ENSG00000085265	9	12	offspring	ficolin 2
 ENSG00000160602	53	1	parent	NIMA related kinase 9	ENSG00000119638	35	2	offspring	NIMA related kinase 8
@@ -535,9 +524,9 @@ ENSG00000161202	53	2	same	dishevelled segment polarity protein 2	ENSG00000004975
 ENSG00000161202	53	2	same	dishevelled segment polarity protein 1	ENSG00000107404	53	2	same	dishevelled segment polarity protein 3
 ENSG00000161509	12	3	offspring	glutamate ionotropic receptor NMDA type subunit 2D	ENSG00000105464	18	2	parent	glutamate ionotropic receptor NMDA type subunit 2C
 ENSG00000161791	52	2	parent	formin like 2	ENSG00000157827	51	3	offspring	formin like 3
-ENSG00000162076	53	3	same	FLYWCH-type zinc finger 1	ENSG00000059122	53	3	same	FLYWCH family member 2
+ENSG00000162076	53	7	same	FLYWCH-type zinc finger 1	ENSG00000059122	53	7	same	FLYWCH family member 2
 ENSG00000162365	2	12	same	cytochrome P450 family 4 subfamily A member 11	ENSG00000187048	2	12	same	cytochrome P450 family 4 subfamily A member 22
-ENSG00000162367	47	3	offspring	LYL1, basic helix-loop-helix family member	ENSG00000104903	37	2	parent	TAL bHLH transcription factor 1, erythroid differentiation factor
+ENSG00000162367	47	5	offspring	LYL1, basic helix-loop-helix family member	ENSG00000104903	37	2	parent	TAL bHLH transcription factor 1, erythroid differentiation factor
 ENSG00000162385	52	1	same	mago homolog B, exon junction complex core component	ENSG00000111196	53	1	same	mago homolog, exon junction complex core component
 ENSG00000162390	2	1	parent	family with sequence similarity 151 member A	ENSG00000162391	24	2	offspring	acyl-CoA thioesterase 11
 ENSG00000162391	24	2	offspring	acyl-CoA thioesterase 11	ENSG00000162390	2	1	parent	family with sequence similarity 151 member A
@@ -553,18 +542,16 @@ ENSG00000163202	3	12	same	late cornified envelope 3E	ENSG00000185966	4	12	same	l
 ENSG00000163216	6	14	parent	small proline rich protein 2A	ENSG00000241794	4	15	offspring	small proline rich protein 2D
 ENSG00000163283	2	2	same	alkaline phosphatase, intestinal	ENSG00000163295	1	2	same	alkaline phosphatase, placental
 ENSG00000163295	1	2	same	alkaline phosphatase, placental	ENSG00000163283	2	2	same	alkaline phosphatase, intestinal
-ENSG00000163319	32	2	parent	abraxas 1, BRCA1 A complex subunit	ENSG00000163322	53	3	offspring	mitochondrial ribosomal protein S18C
-ENSG00000163322	53	3	offspring	mitochondrial ribosomal protein S18C	ENSG00000163319	32	2	parent	abraxas 1, BRCA1 A complex subunit
+ENSG00000163319	32	2	parent	abraxas 1, BRCA1 A complex subunit	ENSG00000163322	53	8	offspring	mitochondrial ribosomal protein S18C
+ENSG00000163322	53	8	offspring	mitochondrial ribosomal protein S18C	ENSG00000163319	32	2	parent	abraxas 1, BRCA1 A complex subunit
 ENSG00000163464	8	3	same	C-X-C motif chemokine receptor 2	ENSG00000180871	4	3	same	C-X-C motif chemokine receptor 1
 ENSG00000163623	16	3	offspring	NK6 homeobox 2	ENSG00000148826	6	2	parent	NK6 homeobox 1
 ENSG00000163735	53	1	parent	glyoxylate reductase 1 homolog	ENSG00000140632	5	12	offspring	C-X-C motif chemokine ligand 5
 ENSG00000163737	3	12	same	platelet factor 4 variant 1	ENSG00000109272	4	12	same	platelet factor 4
 ENSG00000163755	36	2	offspring	ceruloplasmin	ENSG00000047457	53	1	parent	HPS3, biogenesis of lysosomal organelles complex 2 subunit 1
 ENSG00000163806	53	0	parent	tRNA methyltransferase 61B	ENSG00000171103	1	2	offspring	speedy/RINGO cell cycle regulator family member A
-ENSG00000163874	47	3	offspring	zinc finger CCCH-type containing 12C	ENSG00000149289	43	2	parent	zinc finger CCCH-type containing 12A
+ENSG00000163874	47	4	offspring	zinc finger CCCH-type containing 12C	ENSG00000149289	43	2	parent	zinc finger CCCH-type containing 12A
 ENSG00000163888	27	2	parent	endothelin converting enzyme 2	ENSG00000145194	16	3	offspring	calcium/calmodulin dependent protein kinase II inhibitor 2
-ENSG00000163888	27	2	parent	EEF1A lysine methyltransferase 4	ENSG00000145194	16	3	offspring	calcium/calmodulin dependent protein kinase II inhibitor 2
-ENSG00000163888	27	2	parent	EEF1AKMT4-ECE2 readthrough	ENSG00000145194	16	3	offspring	calcium/calmodulin dependent protein kinase II inhibitor 2
 ENSG00000164588	19	3	same	hyperpolarization activated cyclic nucleotide gated potassium and sodium channel 2	ENSG00000099822	11	3	same	hyperpolarization activated cyclic nucleotide gated potassium channel 1
 ENSG00000164729	1	0	same	solute carrier family 35 member G5	ENSG00000177710	1	0	same	solute carrier family 35 member G3
 ENSG00000164736	48	3	offspring	SRY-box 7	ENSG00000171056	39	2	parent	SRY-box 17
@@ -579,12 +566,12 @@ ENSG00000165055	52	2	same	methyltransferase like 2A	ENSG00000087995	52	2	same	me
 ENSG00000165462	1	2	offspring	paired like homeobox 2b	ENSG00000109132	1	1	parent	paired like homeobox 2a
 ENSG00000165516	53	0	parent	nuclear export mediator factor	ENSG00000165525	53	2	offspring	kelch domain containing 2
 ENSG00000165525	53	2	offspring	kelch domain containing 2	ENSG00000165516	53	0	parent	nuclear export mediator factor
-ENSG00000165556	3	3	offspring	caudal type homeobox 1	ENSG00000113722	2	2	parent	caudal type homeobox 2
+ENSG00000165556	3	6	offspring	caudal type homeobox 1	ENSG00000113722	2	2	parent	caudal type homeobox 2
 ENSG00000165646	53	1	parent	PDZ domain containing 8	ENSG00000165650	52	2	offspring	solute carrier family 18 member A2
 ENSG00000165650	52	2	offspring	solute carrier family 18 member A2	ENSG00000165646	53	1	parent	PDZ domain containing 8
 ENSG00000165841	7	11	parent	cytochrome P450 family 2 subfamily C member 18	ENSG00000108242	4	12	offspring	cytochrome P450 family 2 subfamily C member 19
 ENSG00000165841	4	12	same	cytochrome P450 family 2 subfamily C member 9	ENSG00000138109	4	12	same	cytochrome P450 family 2 subfamily C member 19
-ENSG00000165879	53	9	offspring	FRAT2, WNT signaling pathway regulator	ENSG00000181274	50	3	parent	FRAT1, WNT signaling pathway regulator
+ENSG00000165879	53	9	same	FRAT2, WNT signaling pathway regulator	ENSG00000181274	50	9	same	FRAT1, WNT signaling pathway regulator
 ENSG00000165985	33	3	same	complement C1q like 1	ENSG00000131094	7	3	same	complement C1q like 3
 ENSG00000165985	12	2	parent	complement C1q like 2	ENSG00000144119	7	3	offspring	complement C1q like 3
 ENSG00000165985	1	2	parent	complement C1q like 4	ENSG00000186897	7	3	offspring	complement C1q like 3
@@ -597,22 +584,22 @@ ENSG00000166435	40	1	parent	ring finger protein 169	ENSG00000166439	45	3	offspri
 ENSG00000166439	45	3	offspring	X-ray radiation resistance associated 1	ENSG00000166435	40	1	parent	ring finger protein 169
 ENSG00000166503	50	3	same	transmembrane 6 superfamily member 1	ENSG00000136404	51	3	same	HDGF like 3
 ENSG00000166794	29	2	same	sorting nexin 22	ENSG00000157734	53	2	same	peptidylprolyl isomerase B
-ENSG00000166800	1	11	offspring	lactate dehydrogenase A like 6B	ENSG00000171989	1	3	parent	lactate dehydrogenase A like 6A
+ENSG00000166800	1	11	parent	lactate dehydrogenase A like 6B	ENSG00000171989	1	12	offspring	lactate dehydrogenase A like 6A
 ENSG00000166862	12	2	same	calcium voltage-gated channel auxiliary subunit gamma 3	ENSG00000006116	7	2	same	calcium voltage-gated channel auxiliary subunit gamma 2
-ENSG00000166946	9	3	offspring	erythrocyte membrane protein band 4.2	ENSG00000166947	53	2	parent	cyclin D1 binding protein 1
-ENSG00000166947	53	2	parent	cyclin D1 binding protein 1	ENSG00000166946	9	3	offspring	erythrocyte membrane protein band 4.2
+ENSG00000166946	9	5	offspring	erythrocyte membrane protein band 4.2	ENSG00000166947	53	2	parent	cyclin D1 binding protein 1
+ENSG00000166947	53	2	parent	cyclin D1 binding protein 1	ENSG00000166946	9	5	offspring	erythrocyte membrane protein band 4.2
 ENSG00000166984	9	1	same	t-complex 10 like	ENSG00000242220	1	1	same	t-complex 10 like 2
-ENSG00000167004	34	3	offspring	elongation factor for RNA polymerase II 3	ENSG00000128886	53	2	parent	protein disulfide isomerase family A member 3
+ENSG00000167004	34	7	offspring	elongation factor for RNA polymerase II 3	ENSG00000128886	53	2	parent	protein disulfide isomerase family A member 3
 ENSG00000167136	53	0	same	SPOUT domain containing methyltransferase 1	ENSG00000198917	53	0	same	endonuclease G
 ENSG00000167157	44	1	parent	paired related homeobox 1	ENSG00000116132	29	2	offspring	paired related homeobox 2
 ENSG00000167191	50	2	same	IQ motif containing K	ENSG00000174628	50	2	same	G protein-coupled receptor class C group 5 member B
-ENSG00000167395	50	3	same	serine protease 53	ENSG00000151006	53	3	same	zinc finger protein 646
+ENSG00000167395	50	5	same	serine protease 53	ENSG00000151006	53	5	same	zinc finger protein 646
 ENSG00000167552	53	3	offspring	tubulin alpha 1c	ENSG00000167553	53	2	parent	tubulin alpha 1a
 ENSG00000167553	53	2	parent	tubulin alpha 1a	ENSG00000167552	53	3	offspring	tubulin alpha 1c
 ENSG00000167633	1	9	same	killer cell immunoglobulin like receptor, two Ig domains and long cytoplasmic tail 3	ENSG00000243772	1	9	same	killer cell immunoglobulin like receptor, three Ig domains and long cytoplasmic tail 1
 ENSG00000167720	53	0	parent	TSR1, ribosome maturation factor	ENSG00000167721	50	1	offspring	serine racemase
 ENSG00000167721	50	1	offspring	serine racemase	ENSG00000167720	53	0	parent	TSR1, ribosome maturation factor
-ENSG00000167785	19	13	offspring	zinc finger protein 557	ENSG00000130544	52	3	parent	zinc finger protein 558
+ENSG00000167785	19	13	offspring	zinc finger protein 557	ENSG00000130544	52	10	parent	zinc finger protein 558
 ENSG00000167977	53	2	parent	potassium channel tetramerization domain containing 2	ENSG00000180901	53	3	offspring	potassium channel tetramerization domain containing 5
 ENSG00000168264	53	2	parent	interferon regulatory factor 2 binding protein like	ENSG00000119669	53	3	offspring	interferon regulatory factor 2 binding protein 2
 ENSG00000168264	53	3	same	interferon regulatory factor 2 binding protein 1	ENSG00000170604	53	3	same	interferon regulatory factor 2 binding protein 2
@@ -626,11 +613,11 @@ ENSG00000168906	53	1	offspring	gamma-glutamyl carboxylase	ENSG00000115486	53	0	p
 ENSG00000168916	53	1	same	zinc finger protein 609	ENSG00000180357	50	1	same	zinc finger protein 608
 ENSG00000168925	19	1	same	chymotrypsinogen B2	ENSG00000168928	16	1	same	chymotrypsinogen B1
 ENSG00000168928	16	1	same	chymotrypsinogen B1	ENSG00000168925	19	1	same	chymotrypsinogen B2
-ENSG00000168961	6	3	same	galectin 9C	ENSG00000171916	52	3	same	galectin 9
+ENSG00000168961	6	10	same	galectin 9C	ENSG00000171916	52	10	same	galectin 9
 ENSG00000169032	53	1	same	mitogen-activated protein kinase kinase 2	ENSG00000126934	53	1	same	mitogen-activated protein kinase kinase 1
 ENSG00000169059	1	12	same	variable charge, X-linked	ENSG00000182583	1	12	same	variable charge, X-linked 3A
-ENSG00000169131	52	3	same	zinc finger protein 354B	ENSG00000178338	53	3	same	zinc finger protein 354A
-ENSG00000169239	1	3	offspring	carbonic anhydrase 5A	ENSG00000174990	48	2	parent	carbonic anhydrase 5B
+ENSG00000169131	52	9	same	zinc finger protein 354B	ENSG00000178338	53	9	same	zinc finger protein 354A
+ENSG00000169239	1	7	offspring	carbonic anhydrase 5A	ENSG00000174990	48	2	parent	carbonic anhydrase 5B
 ENSG00000169385	4	9	same	ribonuclease A family member 3	ENSG00000169397	14	9	same	ribonuclease A family member 2
 ENSG00000169397	14	9	same	ribonuclease A family member 2	ENSG00000169385	4	9	same	ribonuclease A family member 3
 ENSG00000169418	52	2	offspring	natriuretic peptide receptor 2	ENSG00000159899	38	1	parent	natriuretic peptide receptor 1
@@ -638,27 +625,25 @@ ENSG00000169469	9	9	same	small proline rich protein 1A	ENSG00000169474	7	9	same	
 ENSG00000169474	7	9	same	small proline rich protein 1B	ENSG00000169469	9	9	same	small proline rich protein 1A
 ENSG00000169592	53	2	offspring	HIRA interacting protein 3	ENSG00000149929	53	1	parent	INO80 complex subunit E
 ENSG00000169594	25	1	same	basonuclin 2	ENSG00000173068	7	1	same	basonuclin 1
-ENSG00000169618	16	1	parent	prokineticin receptor 1	ENSG00000169621	1	3	offspring	prokineticin receptor 1
-ENSG00000169618	16	1	parent	aprataxin and PNKP like factor	ENSG00000169621	1	3	offspring	prokineticin receptor 1
-ENSG00000169621	1	3	offspring	prokineticin receptor 1	ENSG00000169618	16	1	parent	prokineticin receptor 1
-ENSG00000169621	1	3	offspring	prokineticin receptor 1	ENSG00000169618	16	1	parent	aprataxin and PNKP like factor
+ENSG00000169618	16	1	parent	prokineticin receptor 1	ENSG00000169621	1	4	offspring	prokineticin receptor 1
+ENSG00000169621	1	4	offspring	prokineticin receptor 1	ENSG00000169618	16	1	parent	prokineticin receptor 1
 ENSG00000169660	53	3	offspring	2-oxoglutarate and iron dependent oxygenase domain containing 3	ENSG00000181396	53	1	parent	hexosaminidase D
 ENSG00000169710	5	3	offspring	lymphocyte antigen 9	ENSG00000122224	53	1	parent	fatty acid synthase
 ENSG00000169750	36	1	same	Rac family small GTPase 2	ENSG00000128340	45	1	same	Rac family small GTPase 3
 ENSG00000170027	53	2	same	tyrosine 3-monooxygenase/tryptophan 5-monooxygenase activation protein eta	ENSG00000128245	53	2	same	tyrosine 3-monooxygenase/tryptophan 5-monooxygenase activation protein gamma
 ENSG00000170122	1	9	same	forkhead box D4 like 1	ENSG00000184492	3	9	same	forkhead box D4
-ENSG00000170262	52	0	parent	URB1 ribosome biogenesis 1 homolog (S. cerevisiae)	ENSG00000142207	4	3	offspring	melanocortin 2 receptor accessory protein
-ENSG00000170296	53	3	same	GABA type A receptor associated protein like 1	ENSG00000139112	53	3	same	GABA type A receptor-associated protein
+ENSG00000170262	52	0	parent	URB1 ribosome biogenesis 1 homolog (S. cerevisiae)	ENSG00000142207	4	10	offspring	melanocortin 2 receptor accessory protein
+ENSG00000170296	53	4	parent	GABA type A receptor associated protein like 1	ENSG00000139112	53	6	offspring	GABA type A receptor-associated protein
 ENSG00000170442	1	12	same	keratin 81	ENSG00000205426	4	12	same	keratin 86
 ENSG00000170456	53	2	same	DENN domain containing 5A	ENSG00000184014	48	2	same	DENN domain containing 5B
-ENSG00000170465	6	3	same	keratin 6B	ENSG00000185479	4	3	same	keratin 6C
+ENSG00000170465	6	9	same	keratin 6B	ENSG00000185479	4	9	same	keratin 6C
 ENSG00000170482	53	1	same	solute carrier family 23 member 2	ENSG00000089057	9	1	same	solute carrier family 23 member 1
 ENSG00000170549	30	2	same	iroquois homeobox 3	ENSG00000177508	14	2	same	iroquois homeobox 1
 ENSG00000170577	10	1	parent	SIX homeobox 1	ENSG00000126778	17	2	offspring	SIX homeobox 2
 ENSG00000170604	53	2	parent	interferon regulatory factor 2 binding protein like	ENSG00000119669	53	3	offspring	interferon regulatory factor 2 binding protein 1
 ENSG00000170832	3	2	same	ubiquitin specific peptidase 6	ENSG00000129204	53	2	same	ubiquitin specific peptidase 32
 ENSG00000170860	53	0	parent	XPC complex subunit, DNA damage recognition and repair factor	ENSG00000154767	52	1	offspring	LSM3 homolog, U6 small nuclear RNA and mRNA degradation associated
-ENSG00000170917	45	3	offspring	fibroblast growth factor 2	ENSG00000138685	42	1	parent	nudix hydrolase 6
+ENSG00000170917	45	4	offspring	fibroblast growth factor 2	ENSG00000138685	42	1	parent	nudix hydrolase 6
 ENSG00000170950	53	0	same	phosphoglycerate kinase 1	ENSG00000102144	1	0	same	phosphoglycerate kinase 2
 ENSG00000171017	40	3	offspring	leucine rich repeat containing 8 VRAC subunit C	ENSG00000171488	2	2	parent	leucine rich repeat containing 8 VRAC subunit E
 ENSG00000171056	39	2	parent	SRY-box 17	ENSG00000164736	48	3	offspring	SRY-box 7
@@ -673,12 +658,11 @@ ENSG00000171295	49	14	same	zinc finger protein 439	ENSG00000171291	44	14	same	zi
 ENSG00000171295	36	15	offspring	zinc finger protein 763	ENSG00000197054	44	14	parent	zinc finger protein 440
 ENSG00000171357	53	1	parent	protein O-linked mannose N-acetylglucosaminyltransferase 1 (beta 1,2-)	ENSG00000085998	46	3	offspring	leucine rich adaptor protein 1
 ENSG00000171488	2	2	parent	leucine rich repeat containing 8 VRAC subunit E	ENSG00000171017	40	3	offspring	leucine rich repeat containing 8 VRAC subunit C
-ENSG00000171786	5	3	same	nescient helix-loop-helix 2	ENSG00000177551	2	3	same	nescient helix-loop-helix 1
-ENSG00000171916	52	3	same	galectin 9	ENSG00000168961	6	3	same	galectin 9C
-ENSG00000171989	1	3	parent	lactate dehydrogenase A like 6A	ENSG00000166800	1	11	offspring	lactate dehydrogenase A like 6B
+ENSG00000171786	5	7	offspring	nescient helix-loop-helix 2	ENSG00000177551	2	4	parent	nescient helix-loop-helix 1
+ENSG00000171916	52	10	same	galectin 9	ENSG00000168961	6	10	same	galectin 9C
+ENSG00000171989	1	12	offspring	lactate dehydrogenase A like 6A	ENSG00000166800	1	11	parent	lactate dehydrogenase A like 6B
 ENSG00000172023	35	9	parent	regenerating family member 1 alpha	ENSG00000115386	10	12	offspring	regenerating family member 1 beta
 ENSG00000172062	35	1	same	survival of motor neuron 1, telomeric	ENSG00000205571	47	1	same	survival of motor neuron 1, telomeric
-ENSG00000172062	35	1	same	survival of motor neuron 2, centromeric	ENSG00000205571	47	1	same	survival of motor neuron 1, telomeric
 ENSG00000172236	23	13	same	tryptase delta 1	ENSG00000095917	35	13	same	tryptase alpha/beta 1
 ENSG00000172345	37	2	same	interleukin 16	ENSG00000172349	43	2	same	StAR related lipid transfer domain containing 5
 ENSG00000172349	43	2	same	StAR related lipid transfer domain containing 5	ENSG00000172345	37	2	same	interleukin 16
@@ -687,61 +671,56 @@ ENSG00000172572	21	2	parent	phosphodiesterase 3B	ENSG00000152270	30	3	offspring	
 ENSG00000172661	46	1	same	WASH complex subunit 2A	ENSG00000099290	53	1	same	WASH complex subunit 2C
 ENSG00000172785	53	2	same	COBW domain containing 2	ENSG00000136682	33	2	same	COBW domain containing 1
 ENSG00000172789	31	2	parent	homeobox A5	ENSG00000106004	18	3	offspring	homeobox C5
-ENSG00000172939	50	1	parent	serine/threonine kinase 39	ENSG00000198648	53	3	offspring	oxidative stress responsive 1
-ENSG00000173020	49	2	parent	G protein-coupled receptor kinase 3	ENSG00000100077	53	3	offspring	G protein-coupled receptor kinase 2
+ENSG00000172939	50	1	parent	serine/threonine kinase 39	ENSG00000198648	53	4	offspring	oxidative stress responsive 1
+ENSG00000173020	49	2	parent	G protein-coupled receptor kinase 3	ENSG00000100077	53	4	offspring	G protein-coupled receptor kinase 2
 ENSG00000173068	7	1	same	basonuclin 1	ENSG00000169594	25	1	same	basonuclin 2
 ENSG00000173175	52	3	offspring	adenylate cyclase 6	ENSG00000174233	48	1	parent	adenylate cyclase 5
-ENSG00000173273	53	3	offspring	tankyrase 2	ENSG00000107854	53	2	parent	tankyrase
+ENSG00000173273	53	4	offspring	tankyrase 2	ENSG00000107854	53	2	parent	tankyrase
 ENSG00000173404	1	2	same	INSM transcriptional repressor 2	ENSG00000168348	9	2	same	INSM transcriptional repressor 1
 ENSG00000173451	53	2	same	zinc finger C3H1-type containing	ENSG00000133858	37	2	same	THAP domain containing 2
 ENSG00000173480	53	12	same	zinc finger protein 587	ENSG00000198466	45	12	same	zinc finger protein 417
 ENSG00000173548	53	0	parent	IMP3, U3 small nucleolar ribonucleoprotein	ENSG00000177971	51	3	offspring	sorting nexin 33
 ENSG00000173575	53	2	same	chromodomain helicase DNA binding protein 1	ENSG00000153922	53	2	same	chromodomain helicase DNA binding protein 2
 ENSG00000173674	47	0	same	eukaryotic translation initiation factor 1A, Y-linked	ENSG00000198692	53	0	same	eukaryotic translation initiation factor 1A, X-linked
-ENSG00000173674	47	0	same	eukaryotic translation initiation factor 1A, Y-linked	ENSG00000198692	53	0	same	eukaryotic translation initiation factor 1A, X-chromosomal
 ENSG00000173898	53	1	parent	spectrin beta, non-erythrocytic 1	ENSG00000115306	31	2	offspring	spectrin beta, non-erythrocytic 2
-ENSG00000174125	7	2	parent	toll like receptor 6	ENSG00000174130	18	3	offspring	toll like receptor 1
-ENSG00000174130	18	3	offspring	toll like receptor 1	ENSG00000174125	7	2	parent	toll like receptor 6
+ENSG00000174125	7	2	parent	toll like receptor 6	ENSG00000174130	18	9	offspring	toll like receptor 1
+ENSG00000174130	18	9	offspring	toll like receptor 1	ENSG00000174125	7	2	parent	toll like receptor 6
 ENSG00000174233	48	1	parent	adenylate cyclase 5	ENSG00000173175	52	3	offspring	adenylate cyclase 6
 ENSG00000174628	50	2	same	G protein-coupled receptor class C group 5 member B	ENSG00000167191	50	2	same	IQ motif containing K
-ENSG00000174990	48	2	parent	carbonic anhydrase 5B	ENSG00000169239	1	3	offspring	carbonic anhydrase 5A
+ENSG00000174990	48	2	parent	carbonic anhydrase 5B	ENSG00000169239	1	7	offspring	carbonic anhydrase 5A
 ENSG00000175029	53	1	parent	zinc finger RANBP2-type containing 1	ENSG00000019995	51	3	offspring	C-terminal binding protein 2
-ENSG00000175077	1	3	same	receptor transporter protein 2	ENSG00000198471	3	3	same	receptor transporter protein 1
+ENSG00000175077	1	9	offspring	receptor transporter protein 2	ENSG00000198471	3	7	parent	receptor transporter protein 1
 ENSG00000175265	53	1	same	golgin A8 family member B	ENSG00000215252	53	1	same	golgin A8 family member A
 ENSG00000175548	20	0	same	ALG10, alpha-1,2-glucosyltransferase	ENSG00000139133	10	0	same	ALG10B, alpha-1,2-glucosyltransferase
-ENSG00000175564	50	2	parent	uncoupling protein 2	ENSG00000175567	12	3	offspring	uncoupling protein 3
-ENSG00000175567	12	3	offspring	uncoupling protein 3	ENSG00000175564	50	2	parent	uncoupling protein 2
+ENSG00000175564	50	2	parent	uncoupling protein 2	ENSG00000175567	12	6	offspring	uncoupling protein 3
+ENSG00000175567	12	6	offspring	uncoupling protein 3	ENSG00000175564	50	2	parent	uncoupling protein 2
 ENSG00000175711	53	1	same	tubulin folding cofactor D	ENSG00000141556	42	1	same	UDP-GlcNAc:betaGal beta-1,3-N-acetylglucosaminyltransferase like 1
 ENSG00000176490	15	1	parent	DIRAS family GTPase 2	ENSG00000165023	40	3	offspring	DIRAS family GTPase 1
 ENSG00000176679	1	10	same	TGFB induced factor homeobox 2 like, X-linked	ENSG00000153779	1	10	same	TGFB induced factor homeobox 2 like, Y-linked
 ENSG00000176887	50	2	same	SRY-box 4	ENSG00000124766	2	2	same	SRY-box 11
-ENSG00000176887	51	3	offspring	SRY-box 12	ENSG00000177732	2	2	parent	SRY-box 11
+ENSG00000176887	51	6	offspring	SRY-box 12	ENSG00000177732	2	2	parent	SRY-box 11
 ENSG00000177138	1	2	same	family with sequence similarity 9 member A	ENSG00000183304	1	2	same	family with sequence similarity 9 member B
-ENSG00000177143	53	3	offspring	centrin 2	ENSG00000147400	1	1	parent	centrin 1
+ENSG00000177143	53	9	offspring	centrin 2	ENSG00000147400	1	1	parent	centrin 1
 ENSG00000177182	53	2	parent	aspartate beta-hydroxylase	ENSG00000198363	9	3	offspring	clavesin 1
 ENSG00000177272	7	2	same	potassium voltage-gated channel subfamily A member 4	ENSG00000182255	4	2	same	potassium voltage-gated channel subfamily A member 3
 ENSG00000177508	14	2	same	iroquois homeobox 1	ENSG00000170549	30	2	same	iroquois homeobox 3
-ENSG00000177551	2	3	same	nescient helix-loop-helix 1	ENSG00000171786	5	3	same	nescient helix-loop-helix 2
+ENSG00000177551	2	4	parent	nescient helix-loop-helix 1	ENSG00000171786	5	7	offspring	nescient helix-loop-helix 2
 ENSG00000177613	53	2	same	cleavage stimulation factor subunit 2	ENSG00000101811	53	2	same	cleavage stimulation factor subunit 2 tau variant
 ENSG00000177710	1	0	same	solute carrier family 35 member G3	ENSG00000164729	1	0	same	solute carrier family 35 member G5
-ENSG00000177732	2	2	parent	SRY-box 11	ENSG00000176887	51	3	offspring	SRY-box 12
+ENSG00000177732	2	2	parent	SRY-box 11	ENSG00000176887	51	6	offspring	SRY-box 12
 ENSG00000177839	20	10	offspring	protocadherin beta 7	ENSG00000113212	7	9	parent	protocadherin beta 9
 ENSG00000177839	29	9	same	protocadherin beta 10	ENSG00000120324	7	9	same	protocadherin beta 9
 ENSG00000177879	53	3	same	adaptor related protein complex 3 sigma 2 subunit	ENSG00000157823	53	3	same	adaptor related protein complex 3 sigma 1 subunit
 ENSG00000177971	51	3	offspring	sorting nexin 33	ENSG00000173548	53	0	parent	IMP3, U3 small nucleolar ribonucleoprotein
 ENSG00000178177	10	0	parent	non-SMC condensin I complex subunit G	ENSG00000109805	26	2	offspring	ligand dependent nuclear receptor corepressor like
-ENSG00000178338	53	3	same	zinc finger protein 354A	ENSG00000169131	52	3	same	zinc finger protein 354B
+ENSG00000178338	53	9	same	zinc finger protein 354A	ENSG00000169131	52	9	same	zinc finger protein 354B
 ENSG00000178761	53	0	parent	mannose phosphate isomerase	ENSG00000178802	53	2	offspring	family with sequence similarity 219 member B
 ENSG00000178802	53	2	offspring	family with sequence similarity 219 member B	ENSG00000178761	53	0	parent	mannose phosphate isomerase
 ENSG00000178809	15	14	same	tripartite motif containing 74	ENSG00000155428	6	14	same	tripartite motif containing 73
-ENSG00000178934	4	3	same	galectin 7	ENSG00000205076	7	3	same	galectin 7
-ENSG00000178934	4	3	same	galectin 7	ENSG00000205076	7	3	same	galectin 7B
-ENSG00000178934	4	3	same	galectin 7B	ENSG00000205076	7	3	same	galectin 7
-ENSG00000178934	4	3	same	galectin 7B	ENSG00000205076	7	3	same	galectin 7B
+ENSG00000178934	4	6	same	galectin 7	ENSG00000205076	7	6	same	galectin 7
 ENSG00000179142	2	12	same	cytochrome P450 family 11 subfamily B member 1	ENSG00000160882	1	12	same	cytochrome P450 family 11 subfamily B member 2
 ENSG00000179361	37	3	offspring	AT-rich interaction domain 3A	ENSG00000116017	44	2	parent	AT-rich interaction domain 3B
 ENSG00000179750	6	13	same	apolipoprotein B mRNA editing enzyme catalytic subunit 3A	ENSG00000128383	5	13	same	apolipoprotein B mRNA editing enzyme catalytic subunit 3B
-ENSG00000179750	6	13	same	APOBEC3A and APOBEC3B deletion hybrid	ENSG00000128383	5	13	same	apolipoprotein B mRNA editing enzyme catalytic subunit 3B
 ENSG00000179914	5	10	offspring	intelectin 2	ENSG00000158764	11	2	parent	intelectin 1
 ENSG00000179981	40	1	parent	teashirt zinc finger homeobox 3	ENSG00000121297	53	3	offspring	teashirt zinc finger homeobox 1
 ENSG00000180138	53	1	parent	casein kinase 1 alpha 1	ENSG00000113712	1	12	offspring	casein kinase 1 alpha 1 like
@@ -749,34 +728,31 @@ ENSG00000180233	53	3	offspring	zinc and ring finger 1	ENSG00000186187	50	1	paren
 ENSG00000180340	46	2	same	frizzled class receptor 7	ENSG00000155760	30	2	same	frizzled class receptor 2
 ENSG00000180340	50	3	offspring	frizzled class receptor 1	ENSG00000157240	30	2	parent	frizzled class receptor 2
 ENSG00000180357	50	1	same	zinc finger protein 608	ENSG00000168916	53	1	same	zinc finger protein 609
-ENSG00000180596	53	3	parent	histone cluster 1 H2B family member d	ENSG00000158373	28	10	offspring	histone cluster 1 H2B family member c
+ENSG00000180596	53	7	parent	histone cluster 1 H2B family member d	ENSG00000158373	28	10	offspring	histone cluster 1 H2B family member c
 ENSG00000180660	7	2	same	mab-21 like 2	ENSG00000181541	14	2	same	mab-21 like 1
 ENSG00000180777	2	12	same	ankyrin repeat domain 30A	ENSG00000148513	2	12	same	ankyrin repeat domain 30B
-ENSG00000180818	20	3	offspring	homeobox A10	ENSG00000253293	11	2	parent	homeobox C10
+ENSG00000180818	20	4	offspring	homeobox A10	ENSG00000253293	11	2	parent	homeobox C10
 ENSG00000180871	4	3	same	C-X-C motif chemokine receptor 1	ENSG00000163464	8	3	same	C-X-C motif chemokine receptor 2
 ENSG00000180901	53	3	offspring	potassium channel tetramerization domain containing 5	ENSG00000167977	53	2	parent	potassium channel tetramerization domain containing 2
-ENSG00000181274	50	3	parent	FRAT1, WNT signaling pathway regulator	ENSG00000165879	53	9	offspring	FRAT2, WNT signaling pathway regulator
-ENSG00000181381	36	3	parent	DExD/H-box helicase 60	ENSG00000137628	35	12	offspring	DExD/H-box 60 like
+ENSG00000181274	50	9	same	FRAT1, WNT signaling pathway regulator	ENSG00000165879	53	9	same	FRAT2, WNT signaling pathway regulator
+ENSG00000181381	36	4	parent	DExD/H-box helicase 60	ENSG00000137628	35	12	offspring	DExD/H-box 60 like
 ENSG00000181396	53	1	parent	hexosaminidase D	ENSG00000169660	53	3	offspring	2-oxoglutarate and iron dependent oxygenase domain containing 3
 ENSG00000181449	8	1	same	SRY-box 1	ENSG00000182968	28	1	same	SRY-box 2
 ENSG00000181541	14	2	same	mab-21 like 1	ENSG00000180660	7	2	same	mab-21 like 2
 ENSG00000181789	53	0	same	coatomer protein complex subunit gamma 2	ENSG00000158623	53	0	same	coatomer protein complex subunit gamma 1
-ENSG00000181826	13	3	same	chromosome 4 open reading frame 19	ENSG00000154274	42	3	same	RELT like 1
+ENSG00000181826	13	6	offspring	chromosome 4 open reading frame 19	ENSG00000154274	42	3	parent	RELT like 1
 ENSG00000182255	4	2	same	potassium voltage-gated channel subfamily A member 3	ENSG00000177272	7	2	same	potassium voltage-gated channel subfamily A member 4
 ENSG00000182583	1	12	same	variable charge, X-linked 3A	ENSG00000169059	1	12	same	variable charge, X-linked
 ENSG00000182890	53	0	same	glutamate dehydrogenase 1	ENSG00000148672	4	0	same	glutamate dehydrogenase 2
 ENSG00000182968	3	2	offspring	SRY-box 3	ENSG00000134595	8	1	parent	SRY-box 1
 ENSG00000182968	28	1	same	SRY-box 2	ENSG00000181449	8	1	same	SRY-box 1
 ENSG00000183049	53	1	same	calcium/calmodulin dependent protein kinase I	ENSG00000134072	48	1	same	calcium/calmodulin dependent protein kinase ID
-ENSG00000183196	10	3	same	carbohydrate sulfotransferase 5	ENSG00000135702	12	3	same	carbohydrate sulfotransferase 6
+ENSG00000183196	10	9	same	carbohydrate sulfotransferase 5	ENSG00000135702	12	9	same	carbohydrate sulfotransferase 6
 ENSG00000183206	1	12	same	POTE ankyrin domain family member D	ENSG00000166351	1	12	same	POTE ankyrin domain family member C
 ENSG00000183281	2	2	same	plasminogen	ENSG00000122194	3	2	same	plasminogen-like B1
 ENSG00000183281	1	2	same	plasminogen-like B2	ENSG00000125551	3	2	same	plasminogen-like B1
 ENSG00000183304	1	2	same	family with sequence similarity 9 member B	ENSG00000177138	1	2	same	family with sequence similarity 9 member A
 ENSG00000183474	4	0	same	general transcription factor IIH subunit 2	ENSG00000145736	3	0	same	GTF2H2 family member C
-ENSG00000183474	4	0	same	general transcription factor IIH subunit 2	ENSG00000145736	3	0	same	GTF2H2 family member C, copy 2
-ENSG00000183474	4	0	same	GTF2H2 family member C	ENSG00000145736	3	0	same	GTF2H2 family member C
-ENSG00000183474	4	0	same	GTF2H2 family member C	ENSG00000145736	3	0	same	GTF2H2 family member C, copy 2
 ENSG00000183569	53	0	parent	ribosomal RNA processing 7 homolog A	ENSG00000189306	41	2	offspring	serine hydrolase like 2
 ENSG00000183682	35	3	same	bone morphogenetic protein 8b	ENSG00000116985	6	3	same	bone morphogenetic protein 8a
 ENSG00000183741	23	3	same	chromobox 8	ENSG00000141570	53	3	same	chromobox 6
@@ -785,13 +761,13 @@ ENSG00000183864	53	1	same	transducer of ERBB2, 1	ENSG00000141232	53	1	same	trans
 ENSG00000183960	6	2	same	potassium voltage-gated channel subfamily H member 4	ENSG00000089558	17	2	same	potassium voltage-gated channel subfamily H member 8
 ENSG00000184014	48	2	same	DENN domain containing 5B	ENSG00000170456	53	2	same	DENN domain containing 5A
 ENSG00000184083	53	2	same	family with sequence similarity 120A	ENSG00000048828	44	2	same	family with sequence similarity 120C
-ENSG00000184227	52	3	same	acyl-CoA thioesterase 2	ENSG00000119673	51	3	same	acyl-CoA thioesterase 1
+ENSG00000184227	52	9	same	acyl-CoA thioesterase 2	ENSG00000119673	51	9	same	acyl-CoA thioesterase 1
 ENSG00000184302	7	2	parent	SIX homeobox 3	ENSG00000138083	1	3	offspring	SIX homeobox 6
 ENSG00000184388	10	3	same	poly(A) binding protein cytoplasmic 1 like 2A	ENSG00000186288	9	3	same	poly(A) binding protein cytoplasmic 1 like 2B
-ENSG00000184486	4	4	offspring	POU class 3 homeobox 4	ENSG00000196767	14	2	parent	POU class 3 homeobox 2
+ENSG00000184486	4	3	offspring	POU class 3 homeobox 4	ENSG00000196767	14	2	parent	POU class 3 homeobox 2
 ENSG00000184492	3	9	same	forkhead box D4	ENSG00000170122	1	9	same	forkhead box D4 like 1
-ENSG00000184814	1	3	same	proline rich 23A	ENSG00000206260	1	3	same	proline rich 23B
-ENSG00000184908	11	3	same	chloride voltage-gated channel Ka	ENSG00000186510	8	3	same	chloride voltage-gated channel Kb
+ENSG00000184814	1	9	same	proline rich 23A	ENSG00000206260	1	9	same	proline rich 23B
+ENSG00000184908	11	10	same	chloride voltage-gated channel Ka	ENSG00000186510	8	10	same	chloride voltage-gated channel Kb
 ENSG00000185009	53	1	same	vinculin	ENSG00000035403	53	1	same	adaptor related protein complex 3 mu 1 subunit
 ENSG00000185100	53	0	same	adenylosuccinate synthase	ENSG00000035687	50	0	same	adenylosuccinate synthase like 1
 ENSG00000185127	53	1	parent	PHD finger protein 10	ENSG00000130024	53	2	offspring	chromosome 6 open reading frame 120
@@ -800,8 +776,8 @@ ENSG00000185262	53	2	parent	UBA like domain containing 1	ENSG00000153443	53	3	of
 ENSG00000185448	1	13	same	family with sequence similarity 47 member B	ENSG00000189132	1	13	same	family with sequence similarity 47 member A
 ENSG00000185448	1	13	same	family with sequence similarity 47 member C	ENSG00000198173	1	13	same	family with sequence similarity 47 member A
 ENSG00000185475	53	1	parent	transmembrane protein 223	ENSG00000168569	53	2	offspring	transmembrane protein 179B
-ENSG00000185479	4	3	same	keratin 6C	ENSG00000170465	6	3	same	keratin 6B
-ENSG00000185479	15	3	same	keratin 6A	ENSG00000205420	6	3	same	keratin 6B
+ENSG00000185479	4	9	same	keratin 6C	ENSG00000170465	6	9	same	keratin 6B
+ENSG00000185479	15	9	same	keratin 6A	ENSG00000205420	6	9	same	keratin 6B
 ENSG00000185650	53	2	parent	ZFP36 ring finger protein like 2	ENSG00000152518	53	3	offspring	ZFP36 ring finger protein like 1
 ENSG00000185963	37	1	parent	BICD cargo adaptor 1	ENSG00000151746	53	3	offspring	BICD cargo adaptor 2
 ENSG00000185966	4	12	same	late cornified envelope 3D	ENSG00000163202	3	12	same	late cornified envelope 3E
@@ -811,12 +787,12 @@ ENSG00000186288	9	3	same	poly(A) binding protein cytoplasmic 1 like 2B	ENSG00000
 ENSG00000186340	39	2	same	thrombospondin 1	ENSG00000137801	50	2	same	thrombospondin 2
 ENSG00000186432	53	0	same	karyopherin subunit alpha 3	ENSG00000102753	53	0	same	karyopherin subunit alpha 4
 ENSG00000186480	53	0	same	insulin induced gene 2	ENSG00000125629	53	0	same	insulin induced gene 1
-ENSG00000186510	8	3	same	chloride voltage-gated channel Kb	ENSG00000184908	11	3	same	chloride voltage-gated channel Ka
+ENSG00000186510	8	10	same	chloride voltage-gated channel Kb	ENSG00000184908	11	10	same	chloride voltage-gated channel Ka
 ENSG00000186564	5	2	offspring	forkhead box D3	ENSG00000187140	8	1	parent	forkhead box D2
 ENSG00000186710	53	0	parent	DEAD-box helicase 54	ENSG00000123064	2	3	offspring	cilia and flagella associated protein 73
-ENSG00000186832	26	3	same	keratin 14	ENSG00000186847	11	3	same	keratin 16
-ENSG00000186847	13	3	same	keratin 17	ENSG00000128422	26	3	same	keratin 14
-ENSG00000186847	11	3	same	keratin 16	ENSG00000186832	26	3	same	keratin 14
+ENSG00000186832	26	8	parent	keratin 14	ENSG00000186847	11	10	offspring	keratin 16
+ENSG00000186847	13	7	parent	keratin 17	ENSG00000128422	26	8	offspring	keratin 14
+ENSG00000186847	11	10	offspring	keratin 16	ENSG00000186832	26	8	parent	keratin 14
 ENSG00000186897	33	3	offspring	complement C1q like 1	ENSG00000131094	1	2	parent	complement C1q like 4
 ENSG00000187010	4	1	same	Rh blood group CcEe antigens	ENSG00000188672	2	1	same	Rh blood group D antigen
 ENSG00000187048	2	12	same	cytochrome P450 family 4 subfamily A member 22	ENSG00000162365	2	12	same	cytochrome P450 family 4 subfamily A member 11
@@ -828,7 +804,7 @@ ENSG00000187180	2	10	same	late cornified envelope 2D	ENSG00000187223	2	10	same	l
 ENSG00000187223	2	10	same	late cornified envelope 2B	ENSG00000159455	2	10	same	late cornified envelope 2D
 ENSG00000187223	2	10	same	late cornified envelope 2C	ENSG00000187180	2	10	same	late cornified envelope 2D
 ENSG00000187257	53	1	same	round spermatid basic protein 1	ENSG00000081019	53	1	same	round spermatid basic protein 1 like
-ENSG00000187527	21	2	parent	ATPase 13A4	ENSG00000127249	2	3	offspring	ATPase 13A5
+ENSG00000187527	21	2	parent	ATPase 13A4	ENSG00000127249	2	6	offspring	ATPase 13A5
 ENSG00000187630	53	6	same	dehydrogenase/reductase 4	ENSG00000157326	53	6	same	dehydrogenase/reductase 4 like 2
 ENSG00000187634	53	0	parent	NOC2 like nucleolar associated transcriptional repressor	ENSG00000188976	32	2	offspring	sterile alpha motif domain containing 11
 ENSG00000187837	11	3	parent	histone cluster 1 H1 family member e	ENSG00000168298	53	9	offspring	histone cluster 1 H1 family member c
@@ -846,31 +822,30 @@ ENSG00000189306	41	2	offspring	serine hydrolase like 2	ENSG00000183569	53	0	pare
 ENSG00000196126	52	7	same	major histocompatibility complex, class II, DR beta 5	ENSG00000198502	52	7	same	major histocompatibility complex, class II, DR beta 1
 ENSG00000196218	27	2	same	ryanodine receptor 2	ENSG00000198626	19	2	same	ryanodine receptor 1
 ENSG00000196363	40	1	same	WD repeat domain 5B	ENSG00000196981	53	1	same	WD repeat domain 5
-ENSG00000196368	31	12	offspring	nudix hydrolase 10	ENSG00000122824	34	3	parent	nudix hydrolase 11
+ENSG00000196368	31	12	offspring	nudix hydrolase 10	ENSG00000122824	34	9	parent	nudix hydrolase 11
 ENSG00000196475	44	3	same	glycerol kinase	ENSG00000198814	1	3	same	glycerol kinase 2
 ENSG00000196565	1	8	same	hemoglobin subunit gamma 1	ENSG00000213934	1	8	same	hemoglobin subunit gamma 2
 ENSG00000196735	29	11	same	major histocompatibility complex, class II, DQ alpha 1	ENSG00000237541	41	11	same	major histocompatibility complex, class II, DQ alpha 1
-ENSG00000196735	29	11	same	major histocompatibility complex, class II, DQ alpha 2	ENSG00000237541	41	11	same	major histocompatibility complex, class II, DQ alpha 1
 ENSG00000196757	49	14	offspring	zinc finger protein 439	ENSG00000171291	53	12	parent	zinc finger protein 700
 ENSG00000196757	36	15	offspring	zinc finger protein 763	ENSG00000197054	53	12	parent	zinc finger protein 700
-ENSG00000196767	14	2	parent	POU class 3 homeobox 2	ENSG00000184486	4	4	offspring	POU class 3 homeobox 4
-ENSG00000196767	15	5	offspring	POU class 3 homeobox 3	ENSG00000198914	4	4	parent	POU class 3 homeobox 4
+ENSG00000196767	14	2	parent	POU class 3 homeobox 2	ENSG00000184486	4	3	offspring	POU class 3 homeobox 4
+ENSG00000196767	15	5	offspring	POU class 3 homeobox 3	ENSG00000198914	4	3	parent	POU class 3 homeobox 4
 ENSG00000196792	53	2	offspring	striatin	ENSG00000115808	53	0	parent	striatin 3
 ENSG00000196911	53	2	same	karyopherin subunit alpha 6	ENSG00000025800	49	2	same	karyopherin subunit alpha 5
 ENSG00000196911	36	2	same	REL proto-oncogene, NF-kB subunit	ENSG00000162924	49	2	same	karyopherin subunit alpha 5
 ENSG00000196981	53	1	same	WD repeat domain 5	ENSG00000196363	40	1	same	WD repeat domain 5B
 ENSG00000197020	33	2	same	zinc finger protein 430	ENSG00000118620	35	2	same	zinc finger protein 100
-ENSG00000197021	53	3	same	chromosome X open reading frame 40A	ENSG00000197620	53	3	same	chromosome X open reading frame 40B
+ENSG00000197021	53	4	same	chromosome X open reading frame 40A	ENSG00000197620	53	4	same	chromosome X open reading frame 40B
 ENSG00000197054	44	14	parent	zinc finger protein 440	ENSG00000171295	36	15	offspring	zinc finger protein 763
 ENSG00000197172	1	13	same	MAGE family member A3	ENSG00000221867	1	13	same	MAGE family member A6
-ENSG00000197208	52	3	same	solute carrier family 22 member 5	ENSG00000197375	25	3	same	solute carrier family 22 member 4
+ENSG00000197208	52	4	same	solute carrier family 22 member 5	ENSG00000197375	25	4	same	solute carrier family 22 member 4
 ENSG00000197329	49	2	offspring	pellino E3 ubiquitin protein ligase family member 2	ENSG00000139946	53	1	parent	pellino E3 ubiquitin protein ligase 1
-ENSG00000197375	25	3	same	solute carrier family 22 member 4	ENSG00000197208	52	3	same	solute carrier family 22 member 5
+ENSG00000197375	25	4	same	solute carrier family 22 member 4	ENSG00000197208	52	4	same	solute carrier family 22 member 5
 ENSG00000197479	20	10	same	protocadherin beta 12	ENSG00000120328	6	10	same	protocadherin beta 11
-ENSG00000197620	53	3	same	chromosome X open reading frame 40B	ENSG00000197021	53	3	same	chromosome X open reading frame 40A
+ENSG00000197620	53	4	same	chromosome X open reading frame 40B	ENSG00000197021	53	4	same	chromosome X open reading frame 40A
 ENSG00000198019	12	5	same	Fc fragment of IgG receptor Ia	ENSG00000150337	6	5	same	Fc fragment of IgG receptor Ib
 ENSG00000198034	47	0	same	ribosomal protein S4, Y-linked 1	ENSG00000129824	53	0	same	ribosomal protein S4, X-linked
-ENSG00000198077	3	3	same	cytochrome P450 family 2 subfamily A member 6	ENSG00000255974	1	3	same	cytochrome P450 family 2 subfamily A member 7
+ENSG00000198077	3	7	same	cytochrome P450 family 2 subfamily A member 6	ENSG00000255974	1	7	same	cytochrome P450 family 2 subfamily A member 7
 ENSG00000198173	1	13	same	family with sequence similarity 47 member A	ENSG00000185448	1	13	same	family with sequence similarity 47 member C
 ENSG00000198173	1	13	same	family with sequence similarity 47 member B	ENSG00000189132	1	13	same	family with sequence similarity 47 member C
 ENSG00000198354	2	13	offspring	DDB1 and CUL4 associated factor 12 like 1	ENSG00000198889	5	2	parent	DDB1 and CUL4 associated factor 12 like 2
@@ -878,24 +853,22 @@ ENSG00000198355	53	2	same	Pim-1 proto-oncogene, serine/threonine kinase	ENSG0000
 ENSG00000198363	9	3	offspring	clavesin 1	ENSG00000177182	53	2	parent	aspartate beta-hydroxylase
 ENSG00000198380	50	1	parent	glutamine-fructose-6-phosphate transaminase 2	ENSG00000131459	52	2	offspring	glutamine--fructose-6-phosphate transaminase 1
 ENSG00000198466	45	12	same	zinc finger protein 417	ENSG00000173480	53	12	same	zinc finger protein 587
-ENSG00000198471	3	3	same	receptor transporter protein 1	ENSG00000175077	1	3	same	receptor transporter protein 2
+ENSG00000198471	3	7	parent	receptor transporter protein 1	ENSG00000175077	1	9	offspring	receptor transporter protein 2
 ENSG00000198502	52	7	same	major histocompatibility complex, class II, DR beta 1	ENSG00000196126	52	7	same	major histocompatibility complex, class II, DR beta 5
 ENSG00000198517	19	1	parent	transmembrane protein 184A	ENSG00000164855	53	2	offspring	MAF bZIP transcription factor K
 ENSG00000198610	40	11	parent	aldo-keto reductase family 1 member C1	ENSG00000187134	1	12	offspring	aldo-keto reductase family 1 member C4
 ENSG00000198626	19	2	same	ryanodine receptor 1	ENSG00000196218	27	2	same	ryanodine receptor 2
-ENSG00000198648	53	3	offspring	oxidative stress responsive 1	ENSG00000172939	50	1	parent	serine/threonine kinase 39
+ENSG00000198648	53	4	offspring	oxidative stress responsive 1	ENSG00000172939	50	1	parent	serine/threonine kinase 39
 ENSG00000198668	53	2	same	calmodulin 3	ENSG00000160014	53	2	same	calmodulin 1
-ENSG00000198668	53	2	same	calmodulin 3	ENSG00000160014	53	2	same	calmodulin 3
 ENSG00000198670	2	2	offspring	plasminogen	ENSG00000122194	1	1	parent	lipoprotein(a)
 ENSG00000198692	53	0	same	eukaryotic translation initiation factor 1A, X-linked	ENSG00000173674	47	0	same	eukaryotic translation initiation factor 1A, Y-linked
-ENSG00000198692	53	0	same	eukaryotic translation initiation factor 1A, X-chromosomal	ENSG00000173674	47	0	same	eukaryotic translation initiation factor 1A, Y-linked
 ENSG00000198740	53	2	parent	zinc finger and BTB domain containing 47	ENSG00000114853	53	3	offspring	zinc finger protein 652
 ENSG00000198754	52	1	same	3-oxoacid CoA-transferase 1	ENSG00000083720	2	1	same	3-oxoacid CoA-transferase 2
 ENSG00000198814	1	3	same	glycerol kinase 2	ENSG00000196475	44	3	same	glycerol kinase
 ENSG00000198830	51	0	parent	tRNA methyltransferase 5	ENSG00000126814	53	6	offspring	high mobility group nucleosomal binding domain 2
 ENSG00000198889	5	2	parent	DDB1 and CUL4 associated factor 12 like 2	ENSG00000198354	2	13	offspring	DDB1 and CUL4 associated factor 12 like 1
 ENSG00000198898	53	3	same	capping actin protein of muscle Z-line alpha subunit 1	ENSG00000116489	53	3	same	capping actin protein of muscle Z-line alpha subunit 2
-ENSG00000198914	4	4	parent	POU class 3 homeobox 4	ENSG00000196767	15	5	offspring	POU class 3 homeobox 3
+ENSG00000198914	4	3	parent	POU class 3 homeobox 4	ENSG00000196767	15	5	offspring	POU class 3 homeobox 3
 ENSG00000198917	53	0	same	endonuclease G	ENSG00000167136	53	0	same	SPOUT domain containing methyltransferase 1
 ENSG00000198920	53	1	parent	thioredoxin domain containing 17	ENSG00000129235	51	2	offspring	KIAA0753
 ENSG00000203785	6	14	parent	small proline rich protein 2A	ENSG00000241794	6	15	offspring	small proline rich protein 2E
@@ -903,49 +876,44 @@ ENSG00000203857	2	12	same	hydroxy-delta-5-steroid dehydrogenase, 3 beta- and ste
 ENSG00000203859	1	12	same	hydroxy-delta-5-steroid dehydrogenase, 3 beta- and steroid delta-isomerase 1	ENSG00000203857	2	12	same	hydroxy-delta-5-steroid dehydrogenase, 3 beta- and steroid delta-isomerase 2
 ENSG00000203883	39	2	parent	SRY-box 17	ENSG00000164736	50	3	offspring	SRY-box 18
 ENSG00000203923	1	13	same	SPANX family member N5	ENSG00000204363	1	13	same	SPANX family member N1
-ENSG00000203950	53	3	parent	retrotransposon Gag like 8C	ENSG00000134590	53	11	offspring	retrotransposon Gag like 8A
+ENSG00000203950	53	9	parent	retrotransposon Gag like 8C	ENSG00000134590	53	11	offspring	retrotransposon Gag like 8A
 ENSG00000203950	50	11	same	retrotransposon Gag like 8B	ENSG00000212747	53	11	same	retrotransposon Gag like 8A
-ENSG00000203989	1	3	same	Rhox homeobox family member 2	ENSG00000131721	1	3	same	Rhox homeobox family member 2B
+ENSG00000203989	1	12	same	Rhox homeobox family member 2	ENSG00000131721	1	12	same	Rhox homeobox family member 2B
 ENSG00000204116	53	1	same	cysteine rich hydrophobic domain 2	ENSG00000109220	50	1	same	cysteine rich hydrophobic domain 1
-ENSG00000204227	52	2	parent	ring finger protein 2	ENSG00000121481	53	3	offspring	ring finger protein 1
+ENSG00000204227	52	2	parent	ring finger protein 2	ENSG00000121481	53	4	offspring	ring finger protein 1
 ENSG00000204363	1	13	same	SPANX family member N1	ENSG00000203923	1	13	same	SPANX family member N5
 ENSG00000204388	53	3	same	heat shock protein family A (Hsp70) member 1A	ENSG00000204389	53	3	same	heat shock protein family A (Hsp70) member 1B
 ENSG00000204389	53	3	same	heat shock protein family A (Hsp70) member 1B	ENSG00000204388	53	3	same	heat shock protein family A (Hsp70) member 1A
-ENSG00000205076	7	3	same	galectin 7	ENSG00000178934	4	3	same	galectin 7
-ENSG00000205076	7	3	same	galectin 7	ENSG00000178934	4	3	same	galectin 7B
-ENSG00000205076	7	3	same	galectin 7B	ENSG00000178934	4	3	same	galectin 7
-ENSG00000205076	7	3	same	galectin 7B	ENSG00000178934	4	3	same	galectin 7B
+ENSG00000205076	7	6	same	galectin 7	ENSG00000178934	4	6	same	galectin 7
 ENSG00000205358	46	7	same	metallothionein 1G	ENSG00000125144	18	7	same	metallothionein 1H
-ENSG00000205420	6	3	same	keratin 6B	ENSG00000185479	15	3	same	keratin 6A
+ENSG00000205420	6	9	same	keratin 6B	ENSG00000185479	15	9	same	keratin 6A
 ENSG00000205426	4	12	same	keratin 86	ENSG00000170442	1	12	same	keratin 81
 ENSG00000205476	53	1	parent	cyclin K	ENSG00000090061	47	2	offspring	coiled-coil domain containing 85C
 ENSG00000205571	47	1	same	survival of motor neuron 1, telomeric	ENSG00000172062	35	1	same	survival of motor neuron 1, telomeric
-ENSG00000205571	47	1	same	survival of motor neuron 1, telomeric	ENSG00000172062	35	1	same	survival of motor neuron 2, centromeric
 ENSG00000205863	3	2	same	C1q and TNF related 9	ENSG00000240654	3	2	same	C1q and TNF related 9B
-ENSG00000206073	5	3	same	serpin family B member 3	ENSG00000057149	2	3	same	serpin family B member 4
+ENSG00000206073	5	5	same	serpin family B member 3	ENSG00000057149	2	5	same	serpin family B member 4
 ENSG00000206172	52	3	same	hemoglobin subunit alpha 2	ENSG00000188536	38	3	same	hemoglobin subunit alpha 1
-ENSG00000206260	1	3	same	proline rich 23B	ENSG00000184814	1	3	same	proline rich 23A
-ENSG00000206535	53	1	parent	translocase of outer mitochondrial membrane 70	ENSG00000154174	45	3	offspring	leukemia NUP98 fusion partner 1
-ENSG00000212747	53	3	parent	retrotransposon Gag like 8C	ENSG00000134590	50	11	offspring	retrotransposon Gag like 8B
+ENSG00000206260	1	9	same	proline rich 23B	ENSG00000184814	1	9	same	proline rich 23A
+ENSG00000206535	53	1	parent	translocase of outer mitochondrial membrane 70	ENSG00000154174	45	6	offspring	leukemia NUP98 fusion partner 1
+ENSG00000212747	53	9	parent	retrotransposon Gag like 8C	ENSG00000134590	50	11	offspring	retrotransposon Gag like 8B
 ENSG00000212747	53	11	same	retrotransposon Gag like 8A	ENSG00000203950	50	11	same	retrotransposon Gag like 8B
-ENSG00000213185	10	6	offspring	CUB and zona pellucida like domains 1	ENSG00000138161	6	3	parent	family with sequence similarity 24 member B
+ENSG00000213185	10	6	parent	CUB and zona pellucida like domains 1	ENSG00000138161	6	10	offspring	family with sequence similarity 24 member B
 ENSG00000213214	27	2	offspring	Rho guanine nucleotide exchange factor 5	ENSG00000050327	14	1	parent	Rho guanine nucleotide exchange factor 35
 ENSG00000213366	32	11	offspring	glutathione S-transferase mu 1	ENSG00000134184	53	9	parent	glutathione S-transferase mu 2
 ENSG00000213512	48	12	parent	guanylate binding protein 4	ENSG00000162654	1	13	offspring	guanylate binding protein 7
-ENSG00000213516	53	6	offspring	RNA binding motif protein, X-linked	ENSG00000147274	53	3	parent	RNA binding motif protein, X-linked like 1
+ENSG00000213516	53	6	same	RNA binding motif protein, X-linked	ENSG00000147274	53	6	same	RNA binding motif protein, X-linked like 1
 ENSG00000213551	53	2	offspring	family with sequence similarity 149 member B1	ENSG00000138286	53	1	parent	DnaJ heat shock protein family (Hsp40) member C9
-ENSG00000213714	3	3	same	family with sequence similarity 209 member A	ENSG00000124103	3	3	same	family with sequence similarity 209 member B
+ENSG00000213714	3	7	same	family with sequence similarity 209 member A	ENSG00000124103	3	7	same	family with sequence similarity 209 member B
 ENSG00000213934	1	8	same	hemoglobin subunit gamma 2	ENSG00000196565	1	8	same	hemoglobin subunit gamma 1
 ENSG00000215252	53	1	same	golgin A8 family member A	ENSG00000175265	53	1	same	golgin A8 family member B
 ENSG00000215704	2	3	same	chymotrypsin like elastase family member 2A	ENSG00000142615	1	3	same	chymotrypsin like elastase family member 2B
 ENSG00000219073	28	2	same	chymotrypsin like elastase family member 3A	ENSG00000142789	5	2	same	chymotrypsin like elastase family member 3B
 ENSG00000221866	50	1	parent	plexin A2	ENSG00000076356	30	3	offspring	plexin A4
 ENSG00000221867	1	13	same	MAGE family member A6	ENSG00000197172	1	13	same	MAGE family member A3
-ENSG00000223609	53	3	same	hemoglobin subunit beta	ENSG00000244734	12	3	same	hemoglobin subunit delta
-ENSG00000229183	1	3	same	pepsinogen 5, group I (pepsinogen A)	ENSG00000256713	1	3	same	pepsinogen 4, group I (pepsinogen A)
-ENSG00000229859	1	3	same	pepsinogen 5, group I (pepsinogen A)	ENSG00000256713	1	3	same	pepsinogen 3, group I (pepsinogen A)
+ENSG00000223609	53	12	parent	hemoglobin subunit beta	ENSG00000244734	12	15	offspring	hemoglobin subunit delta
+ENSG00000229183	1	4	same	pepsinogen 5, group I (pepsinogen A)	ENSG00000256713	1	4	same	pepsinogen 4, group I (pepsinogen A)
+ENSG00000229859	1	4	same	pepsinogen 5, group I (pepsinogen A)	ENSG00000256713	1	4	same	pepsinogen 3, group I (pepsinogen A)
 ENSG00000237541	41	11	same	major histocompatibility complex, class II, DQ alpha 1	ENSG00000196735	29	11	same	major histocompatibility complex, class II, DQ alpha 1
-ENSG00000237541	41	11	same	major histocompatibility complex, class II, DQ alpha 1	ENSG00000196735	29	11	same	major histocompatibility complex, class II, DQ alpha 2
 ENSG00000240654	3	2	same	C1q and TNF related 9B	ENSG00000205863	3	2	same	C1q and TNF related 9
 ENSG00000241794	4	15	offspring	small proline rich protein 2D	ENSG00000163216	6	14	parent	small proline rich protein 2A
 ENSG00000241794	6	15	offspring	small proline rich protein 2E	ENSG00000203785	6	14	parent	small proline rich protein 2A
@@ -958,10 +926,10 @@ ENSG00000244414	51	12	offspring	complement factor H	ENSG00000000971	2	9	parent	c
 ENSG00000244414	1	9	same	complement factor H related 2	ENSG00000080910	2	9	same	complement factor H related 1
 ENSG00000244509	27	9	same	apolipoprotein B mRNA editing enzyme catalytic subunit 3F	ENSG00000128394	44	9	same	apolipoprotein B mRNA editing enzyme catalytic subunit 3C
 ENSG00000244509	26	9	same	apolipoprotein B mRNA editing enzyme catalytic subunit 3D	ENSG00000243811	44	9	same	apolipoprotein B mRNA editing enzyme catalytic subunit 3C
-ENSG00000244734	12	3	same	hemoglobin subunit delta	ENSG00000223609	53	3	same	hemoglobin subunit beta
+ENSG00000244734	12	15	offspring	hemoglobin subunit delta	ENSG00000223609	53	12	parent	hemoglobin subunit beta
 ENSG00000249471	51	11	same	zinc finger protein 324	ENSG00000083812	27	11	same	zinc finger protein 324B
-ENSG00000253293	11	2	parent	homeobox C10	ENSG00000180818	20	3	offspring	homeobox A10
+ENSG00000253293	11	2	parent	homeobox C10	ENSG00000180818	20	4	offspring	homeobox A10
 ENSG00000254245	26	4	parent	protocadherin gamma subfamily A, 2	ENSG00000081853	21	9	offspring	protocadherin gamma subfamily A, 3
-ENSG00000255974	1	3	same	cytochrome P450 family 2 subfamily A member 7	ENSG00000198077	3	3	same	cytochrome P450 family 2 subfamily A member 6
-ENSG00000256713	1	3	same	pepsinogen 4, group I (pepsinogen A)	ENSG00000229183	1	3	same	pepsinogen 5, group I (pepsinogen A)
-ENSG00000256713	1	3	same	pepsinogen 3, group I (pepsinogen A)	ENSG00000229859	1	3	same	pepsinogen 5, group I (pepsinogen A)
+ENSG00000255974	1	7	same	cytochrome P450 family 2 subfamily A member 7	ENSG00000198077	3	7	same	cytochrome P450 family 2 subfamily A member 6
+ENSG00000256713	1	4	same	pepsinogen 4, group I (pepsinogen A)	ENSG00000229183	1	4	same	pepsinogen 5, group I (pepsinogen A)
+ENSG00000256713	1	4	same	pepsinogen 3, group I (pepsinogen A)	ENSG00000229859	1	4	same	pepsinogen 5, group I (pepsinogen A)

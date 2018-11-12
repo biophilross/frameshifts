@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 1152.00 576.00'>
+<defs>
+  <style type='text/css'><![CDATA[
+    line, polyline, path, rect, circle {
+      fill: none;
+      stroke: #000000;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10.00;
+    }
+  ]]></style>
+</defs>
+<rect width='100%' height='100%' style='stroke: none; fill: #FFFFFF;'/>
+<rect x='0.00' y='0.00' width='1152.00' height='576.00' style='stroke-width: 1.07; stroke: #FFFFFF; fill: #FFFFFF;' />
+<defs>
+  <clipPath id='cpNS40Nzk0NXwxMTQ2LjUyfDU1Ny4wMzV8MjIuNTMwNg=='>
+    <rect x='5.48' y='22.53' width='1141.04' height='534.50' />
+  </clipPath>
+</defs>
+<rect x='5.48' y='22.53' width='1141.04' height='534.50' style='stroke-width: 1.07; stroke: none; fill: #FFFFFF;' clip-path='url(#cpNS40Nzk0NXwxMTQ2LjUyfDU1Ny4wMzV8MjIuNTMwNg==)' />
+<rect x='5.48' y='22.53' width='1141.04' height='534.50' style='stroke-width: 1.07; stroke: #333333;' clip-path='url(#cpNS40Nzk0NXwxMTQ2LjUyfDU1Ny4wMzV8MjIuNTMwNg==)' />
+<defs>
+  <clipPath id='cpMHwxMTUyfDU3Nnww'>
+    <rect x='0.00' y='0.00' width='1152.00' height='576.00' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpMHwxMTUyfDU3Nnww)'><text x='547.32' y='568.03' style='font-size: 12.00px; font-family: Liberation Sans;' textLength='57.37px' lengthAdjust='spacingAndGlyphs'>GeneRatio</text></g>
+</svg>

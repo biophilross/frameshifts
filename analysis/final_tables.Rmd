@@ -10,6 +10,9 @@ editor_options:
 ```{r}
 library(tidyverse)
 library(magrittr)
+library(cowplot)
+library(org.Hs.eg.db)
+library(clusterProfiler)
 ```
 
 Code to combine previous data sets to make final tables for a manuscript.
@@ -25,7 +28,7 @@ gtex$gene_id <- sapply(stringr::str_split(gtex$gene_id,"[.]"), function(x) {x[1]
 tpm_threshold <- 2
 ```
 
-### Conservative set
+## Conservative set
 
 ```{r}
 cdt <- readr::read_tsv("../output/aging/conservative_data_table.tsv")
@@ -110,7 +113,129 @@ all_tissues <- gtex %>%
 readr::write_tsv(all_tissues,"../output/final_tables/conservative_all_tissues.tsv")
 ```
 
-### Standard set
+### GO analysis
+
+After aging our genes, we can split the GO analyses by parent and offspring genes.
+
+#### Parent genes
+
+```{r}
+parent_gene_df <- clusterProfiler::bitr(parent_genes, fromType = "ENSEMBL",
+                toType = c("ENSEMBL", "SYMBOL", "ENTREZID"),
+                OrgDb = org.Hs.eg.db)
+
+parent_gobp <- clusterProfiler::enrichGO(
+                gene          = parent_gene_df$ENTREZID,
+                OrgDb         = org.Hs.eg.db,
+                ont           = "BP",
+                pAdjustMethod = "BH",
+                pvalueCutoff  = 0.05,
+                qvalueCutoff  = 0.10)
+
+parent_bpcount <- tibble::tibble(GOID=parent_gobp@result$ID,
+                          `Biological Process`=parent_gobp@result$Description,
+                          `Number of genes`=parent_gobp@result$Count,
+                          Genes=parent_gobp@result$geneID) %>%
+  dplyr::arrange(desc(`Number of genes`)) %>%
+  tidyr::separate(col=Genes,into=paste0(rep("gene",31),1:31),sep="/") %>%
+  tidyr::gather(key=Number,value=ENTREZID,-`Biological Process`,-`Number of genes`,-GOID) %>% 
+  dplyr::inner_join(parent_gene_df) %>%
+  dplyr::select(-Number)
+
+readr::write_tsv(x=parent_bpcount,path="../output/final_tables/parent_bpcount_table.tsv")
+
+parent_gomf <- clusterProfiler::enrichGO(
+                 gene          = parent_gene_df$ENTREZID,
+                 OrgDb         = org.Hs.eg.db,
+                 ont           = "MF",
+                 pAdjustMethod = "BH",
+                 pvalueCutoff  = 0.05,
+                 qvalueCutoff  = 0.10)
+
+parent_mfcount <- tibble::tibble(GOID=parent_gomf@result$ID,
+                          `Molecular function`=parent_gomf@result$Description,
+                          `Number of genes`=parent_gomf@result$Count,
+                          Genes=parent_gomf@result$geneID) %>%
+  dplyr::arrange(desc(`Number of genes`)) %>%
+  tidyr::separate(col=Genes,into=paste0(rep("gene",31),1:31),sep="/") %>%
+  tidyr::gather(key=Number,value=ENTREZID,-`Molecular function`,-`Number of genes`,-GOID) %>% 
+  dplyr::inner_join(parent_gene_df) %>%
+  dplyr::select(-Number)
+
+readr::write_tsv(x=parent_mfcount,path="../output/final_tables/parent_mfcount_table.tsv")
+
+# Plot these enrichments
+g <- clusterProfiler::dotplot(parent_gobp,showCategory=30)
+cowplot::save_plot("../output/final_tables/parent_biological_process_go_enrichment.png",plot=g,base_height=8,base_width=16)
+cowplot::save_plot("../output/final_tables/parent_biological_process_go_enrichment.svg",plot=g,base_height=8,base_width=16)
+print(g)
+
+g <- clusterProfiler::dotplot(parent_gomf,showCategory=20)
+cowplot::save_plot("../output/final_tables/parent_molecular_function_go_enrichment.png",plot=g,base_height=8,base_width=16)
+cowplot::save_plot("../output/final_tables/parent_molecular_function_go_enrichment.svg",plot=g,base_height=8,base_width=16)
+print(g)
+```
+
+#### Offspring genes
+
+```{r}
+offspring_gene_df <- clusterProfiler::bitr(offspring_genes, fromType = "ENSEMBL",
+                toType = c("ENSEMBL", "SYMBOL", "ENTREZID"),
+                OrgDb = org.Hs.eg.db)
+
+offspring_gobp <- clusterProfiler::enrichGO(
+                gene          = offspring_gene_df$ENTREZID,
+                OrgDb         = org.Hs.eg.db,
+                ont           = "BP",
+                pAdjustMethod = "BH",
+                pvalueCutoff  = 0.05,
+                qvalueCutoff  = 0.10)
+
+offspring_bpcount <- tibble::tibble(GOID=offspring_gobp@result$ID,
+                          `Biological Process`=offspring_gobp@result$Description,
+                          `Number of genes`=offspring_gobp@result$Count,
+                          Genes=offspring_gobp@result$geneID) %>%
+  dplyr::arrange(desc(`Number of genes`)) %>%
+  tidyr::separate(col=Genes,into=paste0(rep("gene",31),1:31),sep="/") %>%
+  tidyr::gather(key=Number,value=ENTREZID,-`Biological Process`,-`Number of genes`,-GOID) %>% 
+  dplyr::inner_join(offspring_gene_df) %>%
+  dplyr::select(-Number)
+
+readr::write_tsv(x=offspring_bpcount,path="../output/final_tables/offspring_bpcount_table.tsv")
+
+offspring_gomf <- clusterProfiler::enrichGO(
+                 gene          = offspring_gene_df$ENTREZID,
+                 OrgDb         = org.Hs.eg.db,
+                 ont           = "MF",
+                 pAdjustMethod = "BH",
+                 pvalueCutoff  = 0.05,
+                 qvalueCutoff  = 0.10)
+
+offspring_mfcount <- tibble::tibble(GOID=offspring_gomf@result$ID,
+                          `Molecular function`=offspring_gomf@result$Description,
+                          `Number of genes`=offspring_gomf@result$Count,
+                          Genes=offspring_gomf@result$geneID) %>%
+  dplyr::arrange(desc(`Number of genes`)) %>%
+  tidyr::separate(col=Genes,into=paste0(rep("gene",31),1:31),sep="/") %>%
+  tidyr::gather(key=Number,value=ENTREZID,-`Molecular function`,-`Number of genes`,-GOID) %>% 
+  dplyr::inner_join(offspring_gene_df) %>%
+  dplyr::select(-Number)
+
+readr::write_tsv(x=offspring_mfcount,path="../output/final_tables/offspring_mfcount_table.tsv")
+
+# Plot these enrichments
+g <- clusterProfiler::dotplot(offspring_gobp,showCategory=30)
+cowplot::save_plot("../output/final_tables/offspring_biological_process_go_enrichment.png",plot=g,base_height=8,base_width=16)
+cowplot::save_plot("../output/final_tables/offspring_biological_process_go_enrichment.svg",plot=g,base_height=8,base_width=16)
+print(g)
+
+g <- clusterProfiler::dotplot(offspring_gomf,showCategory=20)
+cowplot::save_plot("../output/final_tables/offspring_molecular_function_go_enrichment.png",plot=g,base_height=8,base_width=16)
+cowplot::save_plot("../output/final_tables/offspring_molecular_function_go_enrichment.svg",plot=g,base_height=8,base_width=16)
+print(g)
+```
+
+## Standard set
 
 ```{r}
 sdt <- readr::read_tsv("../output/aging/standard_data_table.tsv")
@@ -193,4 +318,126 @@ all_tissues <- gtex %>%
   dplyr::summarise(`Number of genes`=n()) %>%
   dplyr::arrange(desc(`Number of genes`))
 readr::write_tsv(all_tissues,"../output/final_tables/standard_all_tissues.tsv")
+```
+
+### GO analysis
+
+After aging our genes, we can split the GO analyses by parent and offspring genes.
+
+#### Parent genes
+
+```{r}
+parent_gene_df <- clusterProfiler::bitr(parent_genes, fromType = "ENSEMBL",
+                toType = c("ENSEMBL", "SYMBOL", "ENTREZID"),
+                OrgDb = org.Hs.eg.db)
+
+parent_gobp <- clusterProfiler::enrichGO(
+                gene          = parent_gene_df$ENTREZID,
+                OrgDb         = org.Hs.eg.db,
+                ont           = "BP",
+                pAdjustMethod = "BH",
+                pvalueCutoff  = 0.05,
+                qvalueCutoff  = 0.10)
+
+parent_bpcount <- tibble::tibble(GOID=parent_gobp@result$ID,
+                          `Biological Process`=parent_gobp@result$Description,
+                          `Number of genes`=parent_gobp@result$Count,
+                          Genes=parent_gobp@result$geneID) %>%
+  dplyr::arrange(desc(`Number of genes`)) %>%
+  tidyr::separate(col=Genes,into=paste0(rep("gene",31),1:31),sep="/") %>%
+  tidyr::gather(key=Number,value=ENTREZID,-`Biological Process`,-`Number of genes`,-GOID) %>% 
+  dplyr::inner_join(parent_gene_df) %>%
+  dplyr::select(-Number)
+
+readr::write_tsv(x=parent_bpcount,path="../output/final_tables/parent_bpcount_table.tsv")
+
+parent_gomf <- clusterProfiler::enrichGO(
+                 gene          = parent_gene_df$ENTREZID,
+                 OrgDb         = org.Hs.eg.db,
+                 ont           = "MF",
+                 pAdjustMethod = "BH",
+                 pvalueCutoff  = 0.05,
+                 qvalueCutoff  = 0.10)
+
+parent_mfcount <- tibble::tibble(GOID=parent_gomf@result$ID,
+                          `Molecular function`=parent_gomf@result$Description,
+                          `Number of genes`=parent_gomf@result$Count,
+                          Genes=parent_gomf@result$geneID) %>%
+  dplyr::arrange(desc(`Number of genes`)) %>%
+  tidyr::separate(col=Genes,into=paste0(rep("gene",31),1:31),sep="/") %>%
+  tidyr::gather(key=Number,value=ENTREZID,-`Molecular function`,-`Number of genes`,-GOID) %>% 
+  dplyr::inner_join(parent_gene_df) %>%
+  dplyr::select(-Number)
+
+readr::write_tsv(x=parent_mfcount,path="../output/final_tables/parent_mfcount_table.tsv")
+
+# Plot these enrichments
+g <- clusterProfiler::dotplot(parent_gobp,showCategory=30)
+cowplot::save_plot("../output/final_tables/parent_biological_process_go_enrichment.png",plot=g,base_height=8,base_width=16)
+cowplot::save_plot("../output/final_tables/parent_biological_process_go_enrichment.svg",plot=g,base_height=8,base_width=16)
+print(g)
+
+g <- clusterProfiler::dotplot(parent_gomf,showCategory=20)
+cowplot::save_plot("../output/final_tables/parent_molecular_function_go_enrichment.png",plot=g,base_height=8,base_width=16)
+cowplot::save_plot("../output/final_tables/parent_molecular_function_go_enrichment.svg",plot=g,base_height=8,base_width=16)
+print(g)
+```
+
+#### Offspring genes
+
+```{r}
+offspring_gene_df <- clusterProfiler::bitr(offspring_genes, fromType = "ENSEMBL",
+                toType = c("ENSEMBL", "SYMBOL", "ENTREZID"),
+                OrgDb = org.Hs.eg.db)
+
+offspring_gobp <- clusterProfiler::enrichGO(
+                gene          = offspring_gene_df$ENTREZID,
+                OrgDb         = org.Hs.eg.db,
+                ont           = "BP",
+                pAdjustMethod = "BH",
+                pvalueCutoff  = 0.05,
+                qvalueCutoff  = 0.10)
+
+offspring_bpcount <- tibble::tibble(GOID=offspring_gobp@result$ID,
+                          `Biological Process`=offspring_gobp@result$Description,
+                          `Number of genes`=offspring_gobp@result$Count,
+                          Genes=offspring_gobp@result$geneID) %>%
+  dplyr::arrange(desc(`Number of genes`)) %>%
+  tidyr::separate(col=Genes,into=paste0(rep("gene",31),1:31),sep="/") %>%
+  tidyr::gather(key=Number,value=ENTREZID,-`Biological Process`,-`Number of genes`,-GOID) %>% 
+  dplyr::inner_join(offspring_gene_df) %>%
+  dplyr::select(-Number)
+
+readr::write_tsv(x=offspring_bpcount,path="../output/final_tables/offspring_bpcount_table.tsv")
+
+offspring_gomf <- clusterProfiler::enrichGO(
+                 gene          = offspring_gene_df$ENTREZID,
+                 OrgDb         = org.Hs.eg.db,
+                 ont           = "MF",
+                 pAdjustMethod = "BH",
+                 pvalueCutoff  = 0.05,
+                 qvalueCutoff  = 0.10)
+
+offspring_mfcount <- tibble::tibble(GOID=offspring_gomf@result$ID,
+                          `Molecular function`=offspring_gomf@result$Description,
+                          `Number of genes`=offspring_gomf@result$Count,
+                          Genes=offspring_gomf@result$geneID) %>%
+  dplyr::arrange(desc(`Number of genes`)) %>%
+  tidyr::separate(col=Genes,into=paste0(rep("gene",31),1:31),sep="/") %>%
+  tidyr::gather(key=Number,value=ENTREZID,-`Molecular function`,-`Number of genes`,-GOID) %>% 
+  dplyr::inner_join(offspring_gene_df) %>%
+  dplyr::select(-Number)
+
+readr::write_tsv(x=offspring_mfcount,path="../output/final_tables/offspring_mfcount_table.tsv")
+
+# Plot these enrichments
+g <- clusterProfiler::dotplot(offspring_gobp,showCategory=30)
+cowplot::save_plot("../output/final_tables/offspring_biological_process_go_enrichment.png",plot=g,base_height=8,base_width=16)
+cowplot::save_plot("../output/final_tables/offspring_biological_process_go_enrichment.svg",plot=g,base_height=8,base_width=16)
+print(g)
+
+g <- clusterProfiler::dotplot(offspring_gomf,showCategory=20)
+cowplot::save_plot("../output/final_tables/offspring_molecular_function_go_enrichment.png",plot=g,base_height=8,base_width=16)
+cowplot::save_plot("../output/final_tables/offspring_molecular_function_go_enrichment.svg",plot=g,base_height=8,base_width=16)
+print(g)
 ```
